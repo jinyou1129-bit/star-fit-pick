@@ -10,6 +10,9 @@
 window.SFP_LOOKS = [
   {
     id: "jiwon-aloro-velvet",
+    image: "assets/looks/jiwon-aloro-velvet.webp",
+    imageJpg: "assets/looks/jiwon-aloro-velvet.jpg",
+    imageAlt: "벨벳 광택 블랙 숏 다운 재킷과 퀼팅 벨벳 백팩, 화이트 니트와 블랙 쇼츠를 크림색 배경에 놓은 에디토리얼 플랫레이 연출컷",
     celeb: "김지원",
     group: "배우",
     type: "airport",
@@ -54,6 +57,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "jiwon-teramo-backpack",
+    image: "assets/looks/jiwon-teramo-backpack.webp",
+    imageJpg: "assets/looks/jiwon-teramo-backpack.jpg",
+    imageAlt: "퀼팅 벨벳 스몰 백팩과 크림 리브 니트 머플러, 블랙 가죽 장갑을 함께 놓은 플랫레이 연출컷",
     celeb: "김지원",
     group: "배우",
     type: "airport",
@@ -97,6 +103,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "jennie-subu-dot",
+    image: "assets/looks/jennie-subu-dot.webp",
+    imageJpg: "assets/looks/jennie-subu-dot.jpg",
+    imageAlt: "도트 패턴 패딩 윈터 샌들과 차콜 메리노 삭스, 크림 플리스 소품을 놓은 플랫레이 연출컷",
     celeb: "제니",
     group: "BLACKPINK",
     type: "daily",
@@ -141,6 +150,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "wooyoung-tomboy-check",
+    image: "assets/looks/wooyoung-tomboy-check.webp",
+    imageJpg: "assets/looks/wooyoung-tomboy-check.jpg",
+    imageAlt: "핑크 체크 포켓 셔츠와 화이트 티셔츠, 인디고 스트레이트 데님을 놓은 플랫레이 연출컷",
     celeb: "우영",
     group: "ATEEZ",
     type: "airport",
@@ -185,6 +197,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "yoonseok-kume-knit",
+    image: "assets/looks/yoonseok-kume-knit.webp",
+    imageJpg: "assets/looks/yoonseok-kume-knit.jpg",
+    imageAlt: "멜란지 그레이 컬러블록 넥라인 캐시미어 니트와 차콜 와이드 트라우저를 놓은 플랫레이 연출컷",
     celeb: "유연석",
     group: "배우",
     type: "variety",
@@ -227,6 +242,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "seungho-diesel-biker",
+    image: "assets/looks/seungho-diesel-biker.webp",
+    imageJpg: "assets/looks/seungho-diesel-biker.jpg",
+    imageAlt: "베이지·레드 컬러블록 레더 바이커 재킷과 블랙 티셔츠, 블랙 앵클 부츠를 놓은 플랫레이 연출컷",
     celeb: "신승호",
     group: "배우",
     type: "variety",
@@ -270,6 +288,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "doyeon-atelier-yak",
+    image: "assets/looks/doyeon-atelier-yak.webp",
+    imageJpg: "assets/looks/doyeon-atelier-yak.jpg",
+    imageAlt: "올리브 야크 머플러 니트와 슬림 블랙 트라우저, 가죽 벨트를 놓은 플랫레이 연출컷",
     celeb: "장도연",
     group: "개그우먼",
     type: "variety",
@@ -314,6 +335,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "yeeun-mahagrid-zip",
+    image: "assets/looks/yeeun-mahagrid-zip.webp",
+    imageJpg: "assets/looks/yeeun-mahagrid-zip.jpg",
+    imageAlt: "화이트 스티치 디테일의 그레이 크롭 집업 니트와 블랙 와이드 팬츠를 놓은 플랫레이 연출컷",
     celeb: "지예은",
     group: "배우",
     type: "variety",
@@ -358,6 +382,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "sechan-wakei-pants",
+    image: "assets/looks/sechan-wakei-pants.webp",
+    imageJpg: "assets/looks/sechan-wakei-pants.jpg",
+    imageAlt: "네이비 체크 스타 자수 스웨트팬츠와 블랙 맨투맨, 화이트 삭스를 놓은 플랫레이 연출컷",
     celeb: "양세찬",
     group: "개그맨",
     type: "variety",
@@ -400,6 +427,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "haha-adidas-hyperboost",
+    image: "assets/looks/haha-adidas-hyperboost.webp",
+    imageJpg: "assets/looks/haha-adidas-hyperboost.jpg",
+    imageAlt: "올블랙 니트 러닝 스니커즈와 그레이 테크니컬 삭스, 블랙 나일론 셸을 놓은 플랫레이 연출컷",
     celeb: "하하",
     group: "방송인",
     type: "variety",

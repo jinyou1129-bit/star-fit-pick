@@ -173,37 +173,43 @@
   }
 
   /* ---------------- card ---------------- */
+  function num2(n) { return String(n + 1).padStart(2, "0"); }
+  function picture(look, eager) {
+    var alt = look.imageAlt || (look.celeb + " " + look.item.name + " 착장 연출 이미지");
+    return '<picture>' +
+      (look.image ? '<source srcset="' + esc(look.image) + '" type="image/webp">' : "") +
+      '<img src="' + esc(look.imageJpg || look.image) + '" alt="' + esc(alt) + '" width="720" height="960"' +
+      (eager ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">' +
+      "</picture>";
+  }
+  function sceneLabel(look) {
+    return look.show === TYPE_LABEL[look.type] ? TYPE_LABEL[look.type] : look.show;
+  }
   function cardHTML(look, index) {
     var saved = saveRate(look);
     var inCloset = closet.indexOf(look.id) > -1;
     var cur = price(look);
     var sale = look.item.salePrice && look.item.salePrice < look.item.price;
     var moodNames = (look.mood || []).map(function (m) { return MOOD_LABEL[m]; }).join(" · ");
+    var href = "?look=" + encodeURIComponent(look.id);
     return '<article class="card" data-id="' + look.id + '" data-cat="' + look.category + '">' +
-      '<div class="card-art" style="' + artStyle(look) + '">' +
-        (saved > 0 ? '<span class="save-pill' + (saved < 40 ? " low" : "") + '">대안 −' + saved + "%</span>" : "") +
-        '<span class="art-brand">' + esc(look.item.brandEn || look.item.brand) + "</span>" +
-        '<span class="art-index">' + String(index + 1).padStart(2, "0") + "</span>" +
-        '<svg class="art-glyph" viewBox="0 0 120 120">' + (GLYPH[look.category] || GLYPH.top).replace(/^<svg[^>]*>|<\/svg>$/g, "") + "</svg>" +
-        '<div class="art-bottom">' +
-          '<span class="art-celeb">' + esc(look.celeb) + "</span>" +
-          '<span class="art-headline">' + esc(look.headline) + "</span>" +
-        "</div>" +
-        '<button type="button" class="heart" data-heart="' + look.id + '" aria-pressed="' + inCloset + '" aria-label="' + esc(look.celeb + " " + look.item.name + " 내 옷장에 담기") + '">' + (inCloset ? "♥" : "♡") + "</button>" +
-      "</div>" +
+      '<a class="card-media" href="' + href + '" aria-label="' + esc(look.celeb + " " + look.headline + " 상세 보기") + '">' +
+        '<span class="card-img" style="' + artStyle(look) + '">' + picture(look, index < 3) + "</span>" +
+        '<span class="card-badge scene">' + esc(sceneLabel(look)) + "</span>" +
+        (saved > 0 ? '<span class="card-badge save">대안 ' + saved + "%↓</span>" : "") +
+        '<span class="card-cap"><b>' + esc(look.celeb) + "</b><i>" + esc(look.headline) + "</i></span>" +
+      "</a>" +
+      '<button type="button" class="heart" data-heart="' + look.id + '" aria-pressed="' + inCloset + '" aria-label="' + esc(look.celeb + " " + look.item.name + " 내 옷장에 담기") + '">' + (inCloset ? "♥" : "♡") + "</button>" +
       '<div class="card-body">' +
-        '<div class="card-tags"><span class="tag-type">' + TYPE_LABEL[look.type] + "</span>" +
-          (moodNames ? '<span class="tag-mood">' + moodNames + "</span>" : "") +
-        "</div>" +
-        "<h3><a href=\"?look=" + encodeURIComponent(look.id) + '">' + esc(look.item.name) + "</a></h3>" +
-        '<p class="card-brand"><b>' + esc(look.item.brand) + "</b> · " + esc(look.item.sku) + "</p>" +
+        '<p class="card-kicker"><span class="k-brand">' + esc(look.item.brandEn || look.item.brand) + '</span><span class="k-num">' + num2(index) + "</span></p>" +
+        '<h3><a href="' + href + '">' + esc(look.item.name) + "</a></h3>" +
+        (moodNames ? '<p class="card-meta">' + esc(moodNames) + "</p>" : "") +
         '<div class="price-block">' +
           '<span class="price-now">' + won(cur) + "</span>" +
           (sale ? '<span class="price-list">' + won(look.item.price) + "</span>" : "") +
-          (sale ? '<span class="price-off">' + pct(look.item.price, cur) + "% OFF</span>" : "") +
         "</div>" +
-        '<div class="alt-line"><span class="alt-label">가성비 대안 · ' + esc(look.alt.brand) + "</span>" +
-          '<span class="alt-price">' + won(look.alt.price) + " <small>(" + saveRate(look) + "%↓)</small></span></div>" +
+        '<div class="alt-line"><span class="alt-label">대안 · ' + esc(look.alt.brand) + '</span>' +
+          '<span class="alt-price">' + won(look.alt.price) + " <small>" + saved + "%↓</small></span></div>" +
       "</div>" +
     "</article>";
   }
@@ -319,9 +325,10 @@
     document.body.classList.add("modal-open");
 
     $("#modal-art").setAttribute("style", artStyle(look));
-    $("#modal-art").innerHTML = '<svg class="modal-glyph" viewBox="0 0 120 120" aria-hidden="true">' +
-      (GLYPH[look.category] || GLYPH.top).replace(/^<svg[^>]*>|<\/svg>$/g, "") + "</svg>" +
-      '<span class="modal-art-label" id="modal-art-label"></span>';
+    $("#modal-art").innerHTML = picture(look, true) +
+      '<span class="modal-art-shade" aria-hidden="true"></span>' +
+      '<span class="modal-art-label" id="modal-art-label"></span>' +
+      '<span class="modal-art-note">STYLE ILLUSTRATION</span>';
     $("#modal-art-label").textContent = look.celeb + " · " + look.headline;
     $("#modal-eyebrow").textContent = look.show + " · " + look.group;
     $("#modal-title").textContent = look.item.name;
@@ -333,12 +340,25 @@
     var cur = price(look);
     var saved = saveAmount(look);
     var rate = saveRate(look);
+    var saleRow = look.item.salePrice && look.item.salePrice < look.item.price
+      ? '<small>정가 ' + won(look.item.price) + " · " + esc(look.item.saleNote) + "</small>" : "";
     $("#modal-compare").innerHTML =
-      '<div class="compare-cell"><span>정품</span><b>' + won(cur) + "</b><small>" + esc(look.item.brand) + " " + esc(look.item.sku) +
-      (look.item.salePrice && look.item.salePrice < look.item.price ? "<br>정가 " + won(look.item.price) + " · " + esc(look.item.saleNote) : "") +
-      "</small></div>" +
-      '<div class="compare-cell alt"><span>가성비 대안</span><b>' + won(look.alt.price) + "</b><small>" + esc(look.alt.brand) + " " + esc(look.alt.name) + "</small></div>" +
-      '<div class="saving-note"><span>정품 대신 대안템을 고르면</span><b>' + won(saved) + " 절약 (" + rate + "%↓)</b></div>";
+      '<table class="cmp">' +
+        '<caption class="sr-only">정품과 가성비 대안템 비교</caption>' +
+        '<thead><tr><th scope="col">구분</th><th scope="col">정품</th><th scope="col">가성비 대안</th></tr></thead>' +
+        '<tbody>' +
+          '<tr><th scope="row">가격</th>' +
+            '<td><b>' + won(cur) + "</b>" + saleRow + "</td>" +
+            '<td class="is-alt"><b>' + won(look.alt.price) + "</b><small>" + rate + "% 저렴</small></td></tr>" +
+          '<tr><th scope="row">브랜드</th>' +
+            '<td>' + esc(look.item.brand) + " <span class="cmp-en">" + esc(look.item.brandEn) + "</span></td>" +
+            '<td class="is-alt">' + esc(look.alt.brand) + "</td></tr>" +
+          '<tr><th scope="row">제품</th>' +
+            '<td>' + esc(look.item.name) + "<small>품번 " + esc(look.item.sku) + "</small></td>" +
+            '<td class="is-alt">' + esc(look.alt.name) + "</td></tr>" +
+        '</tbody>' +
+        '<tfoot><tr><td colspan="3"><span>대안템 선택 시</span> <b>' + won(saved) + ' 절약</b> <em>정품 대비 ' + rate + '%↓</em></td></tr></tfoot>' +
+      "</table>";
 
     var specs = [
       ["브랜드", look.item.brand + " (" + look.item.brandEn + ")"],
