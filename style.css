@@ -36,6 +36,8 @@ body{
   line-height:1.7;
   letter-spacing:-.01em;
   overflow-x:clip;
+  word-break:keep-all;
+  overflow-wrap:break-word;
 }
 img,svg{max-width:100%}
 a{color:var(--accent);text-decoration:none}
@@ -550,6 +552,10 @@ body.modal-open{overflow:hidden}
   .modal-card{border-radius:0;max-height:100dvh;height:100dvh}
   .modal-body{max-height:calc(100dvh - 150px)}
   .modal-art{max-height:150px;min-height:130px}
+}
+@media (max-width:480px){
+  .hero-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px}
+  .hero h1{font-size:clamp(1.86rem,8.4vw,2.2rem)}
 }
 @media (max-width:420px){
   .brand-text small{display:none}
