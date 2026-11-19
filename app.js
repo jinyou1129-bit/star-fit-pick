@@ -357,7 +357,7 @@
             '<td>' + esc(look.item.name) + "<small>품번 " + esc(look.item.sku) + "</small></td>" +
             '<td class="is-alt">' + esc(look.alt.name) + "</td></tr>" +
         '</tbody>' +
-        '<tfoot><tr><td colspan="3"><span>대안템 선택 시</span> <b>' + won(saved) + ' 절약</b> <em>정품 대비 ' + rate + '%↓</em></td></tr></tfoot>' +
+        '<tfoot><tr><td colspan="3"><div class="save-row"><span>대안템 선택 시</span> <b>' + won(saved) + ' 절약</b> <em>정품 대비 ' + rate + '%↓</em></div></td></tr></tfoot>' +
       "</table>";
 
     var specs = [

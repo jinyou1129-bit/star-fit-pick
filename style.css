@@ -305,7 +305,7 @@ select{
 .card:hover .card-img img{transform:scale(1.045)}
 .card-media::after{
   content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(12,9,7,.34) 0%,rgba(12,9,7,0) 30%,rgba(12,9,7,0) 46%,rgba(12,9,7,.68) 100%);
+  background:linear-gradient(180deg,rgba(12,9,7,.34) 0%,rgba(12,9,7,0) 28%,rgba(12,9,7,.14) 52%,rgba(12,9,7,.42) 72%,rgba(12,9,7,.82) 100%);
 }
 .card-badge{
   position:absolute;z-index:3;
@@ -553,9 +553,10 @@ select{
 .cmp tfoot td{
   background:var(--ink);color:#e8dbcb;padding:11px 12px;font-size:.76rem;letter-spacing:.01em;
 }
-.cmp tfoot span{color:#a99a86;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;margin-right:6px}
-.cmp tfoot b{color:#f2dfb8;font-size:.92rem}
-.cmp tfoot em{font-style:normal;color:#a99a86;margin-left:6px}
+.cmp tfoot .save-row{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.cmp tfoot span{color:#a99a86;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800}
+.cmp tfoot b{color:#f2dfb8;font-size:.94rem}
+.cmp tfoot em{font-style:normal;color:#a99a86;margin-left:auto}
 
 /* spec / buy / alt */
 .spec{display:grid;grid-template-columns:auto 1fr;gap:0;font-size:.82rem;margin:0}
