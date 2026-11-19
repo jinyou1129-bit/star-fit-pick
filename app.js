@@ -126,6 +126,7 @@
   function countBy(key, val) {
     return LOOKS.filter(function (l) {
       if (key === "mood") return (l.mood || []).indexOf(val) > -1;
+      if (key === "cat") return l.category === val;
       return l[key] === val;
     }).length;
   }
