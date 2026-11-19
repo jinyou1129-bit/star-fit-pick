@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="스타핏픽">
+  <rect width="64" height="64" rx="12" fill="#15120f"/>
+  <path d="M32 10l3.6 12.2L48 26l-12.4 3.8L32 42l-3.6-12.2L16 26l12.4-3.8z" fill="#e6c688"/>
+  <circle cx="46" cy="46" r="4" fill="#a8302a"/>
+</svg>
