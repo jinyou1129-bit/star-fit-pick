@@ -306,7 +306,7 @@
     t.textContent = msg;
     t.classList.add("show");
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2200);
+    toastTimer = setTimeout(function () { t.classList.remove("show"); t.textContent = ""; }, 2200);
   }
 
   /* ---------------- modal ---------------- */
@@ -319,6 +319,9 @@
     document.body.classList.add("modal-open");
 
     $("#modal-art").setAttribute("style", artStyle(look));
+    $("#modal-art").innerHTML = '<svg class="modal-glyph" viewBox="0 0 120 120" aria-hidden="true">' +
+      (GLYPH[look.category] || GLYPH.top).replace(/^<svg[^>]*>|<\/svg>$/g, "") + "</svg>" +
+      '<span class="modal-art-label" id="modal-art-label"></span>';
     $("#modal-art-label").textContent = look.celeb + " · " + look.headline;
     $("#modal-eyebrow").textContent = look.show + " · " + look.group;
     $("#modal-title").textContent = look.item.name;
@@ -389,7 +392,8 @@
       .map(function (x) { return x.l; });
 
     $("#modal-next").innerHTML = next.map(function (l) {
-      return '<a class="next-card" href="?look=' + encodeURIComponent(l.id) + '" data-open="' + l.id + '"><span>' + TYPE_LABEL[l.type] + " · " + esc(l.show) +
+      return '<a class="next-card" href="?look=' + encodeURIComponent(l.id) + '" data-open="' + l.id + '"><span>' + TYPE_LABEL[l.type] +
+        (l.show !== TYPE_LABEL[l.type] ? " · " + esc(l.show) : "") +
         "</span><b>" + esc(l.celeb) + "</b><small>" + esc(l.headline) + "</small></a>";
     }).join("");
 
@@ -469,7 +473,8 @@
           '<p class="result-desc">' + res.desc + "</p>" +
           '<div class="result-looks">' + res.looks.map(function (id) {
             var l = findLook(id); if (!l) return "";
-            return '<a class="result-look" href="?look=' + encodeURIComponent(id) + '" data-open="' + id + '"><span>' + TYPE_LABEL[l.type] + " · " + esc(l.show) +
+            return '<a class="result-look" href="?look=' + encodeURIComponent(id) + '" data-open="' + id + '"><span>' + TYPE_LABEL[l.type] +
+              (l.show !== TYPE_LABEL[l.type] ? " · " + esc(l.show) : "") +
               "</span><b>" + esc(l.celeb) + "</b><small>" + esc(l.item.brand) + " · " + won(price(l)) + "</small></a>";
           }).join("") + "</div>" +
           '<div class="quiz-actions"><button type="button" class="btn" data-mood-filter="' + best + '">' + res.name + " 코디만 보기</button>" +
@@ -499,7 +504,7 @@
       if (mf) {
         state.mood = mf.getAttribute("data-mood-filter");
         state.q = ""; state.type = ""; state.cat = ""; state.celeb = "";
-        $("#q").value = "";
+        $("#q").value = ""; $("#q-hero").value = "";
         paintChips(); renderGrid(); writeURL();
         document.getElementById("looks").scrollIntoView({ behavior: "smooth", block: "start" });
         return;
