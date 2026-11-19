@@ -541,6 +541,20 @@
   }
 
   /* ---------------- events ---------------- */
+  function updateMoreLabel(open) {
+    var btn = $("#filter-more");
+    if (!btn) return;
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.innerHTML = (open ? "필터 접기" : "필터 더보기 · 장면·카테고리·무드·셀럽") + ' <span aria-hidden="true">' + (open ? "▴" : "▾") + "</span>";
+  }
+  function syncFilterMore() {
+    var groups = $("#filter-groups");
+    if (!groups) return;
+    var active = !!(state.type || state.cat || state.mood || state.celeb);
+    var open = groups.classList.contains("open") || active;
+    groups.classList.toggle("open", open);
+    updateMoreLabel(open);
+  }
   function bind() {
     // search
     $("#q").addEventListener("input", function (e) {
@@ -568,6 +582,11 @@
     });
     $("#reset-filters").addEventListener("click", resetFilters);
     $("#empty-reset").addEventListener("click", resetFilters);
+    var moreBtn = $("#filter-more");
+    if (moreBtn) moreBtn.addEventListener("click", function () {
+      var open = $("#filter-groups").classList.toggle("open");
+      updateMoreLabel(open);
+    });
 
     // grid clicks
     $("#look-grid").addEventListener("click", function (e) {
@@ -643,7 +662,7 @@
 
   function resetFilters() {
     state = { q: "", type: "", cat: "", mood: "", celeb: "", budget: false, closet: false, sort: "recent" };
-    syncControls(); paintChips(); renderGrid(); writeURL();
+    syncControls(); paintChips(); renderGrid(); writeURL(); syncFilterMore();
   }
   function syncControls() {
     $("#q").value = state.q;
@@ -669,6 +688,7 @@
     initAds();
     updateCloset();
     quizHTML();
+    syncFilterMore();
     bindChips();
     bindQuiz();
     bind();
