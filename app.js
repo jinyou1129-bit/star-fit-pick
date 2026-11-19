@@ -351,7 +351,7 @@
             '<td><b>' + won(cur) + "</b>" + saleRow + "</td>" +
             '<td class="is-alt"><b>' + won(look.alt.price) + "</b><small>" + rate + "% 저렴</small></td></tr>" +
           '<tr><th scope="row">브랜드</th>' +
-            '<td>' + esc(look.item.brand) + " <span class="cmp-en">" + esc(look.item.brandEn) + "</span></td>" +
+            '<td>' + esc(look.item.brand) + ' <span class="cmp-en">' + esc(look.item.brandEn) + '</span></td>' +
             '<td class="is-alt">' + esc(look.alt.brand) + "</td></tr>" +
           '<tr><th scope="row">제품</th>' +
             '<td>' + esc(look.item.name) + "<small>품번 " + esc(look.item.sku) + "</small></td>" +
