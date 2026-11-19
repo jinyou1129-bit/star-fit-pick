@@ -5,15 +5,24 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>QA</title>
 <style>
-  body{margin:0;background:#2a2622;font-family:system-ui;display:flex;gap:22px;padding:16px;align-items:flex-start;flex-wrap:wrap}
-  figure{margin:0;display:flex;flex-direction:column;gap:8px;color:#e8ddcc;font-size:12px}
+  body{margin:0;background:#2a2622;font-family:system-ui;display:flex;gap:20px;padding:14px;align-items:flex-start;flex-wrap:wrap}
+  figure{margin:0;display:flex;flex-direction:column;gap:6px;color:#e8ddcc;font-size:12px}
   iframe{border:0;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.4);border-radius:8px}
 </style>
 </head>
 <body>
-<figure><figcaption>A · 390 아카이브</figcaption><iframe src="./?qa=a#looks" width="390" height="800" title="390 archive"></iframe></figure>
-<figure><figcaption>B · 360 아카이브</figcaption><iframe src="./?qa=b#looks" width="360" height="800" title="360 archive"></iframe></figure>
+<figure><figcaption>A · 390 착장 카드</figcaption><iframe data-scroll="760" src="./?qa=a" width="390" height="800" title="390 archive"></iframe></figure>
+<figure><figcaption>B · 360 착장 카드</figcaption><iframe data-scroll="820" src="./?qa=b" width="360" height="800" title="360 archive"></iframe></figure>
 <figure><figcaption>C · 390 상세 모달</figcaption><iframe src="./?qa=c&look=jiwon-aloro-velvet" width="390" height="800" title="390 modal"></iframe></figure>
-<figure><figcaption>D · 390 무드 테스트</figcaption><iframe src="./?qa=d#mood-test" width="390" height="800" title="390 quiz"></iframe></figure>
+<figure><figcaption>D · 390 무드 테스트</figcaption><iframe data-scroll="3150" src="./?qa=d" width="390" height="800" title="390 quiz"></iframe></figure>
+<script>
+  document.querySelectorAll('iframe[data-scroll]').forEach(function (f) {
+    f.addEventListener('load', function () {
+      var y = parseInt(f.getAttribute('data-scroll'), 10) || 0;
+      try { f.contentWindow.scrollTo(0, y); } catch (e) {}
+      setTimeout(function () { try { f.contentWindow.scrollTo(0, y); } catch (e) {} }, 600);
+    });
+  });
+</script>
 </body>
 </html>
