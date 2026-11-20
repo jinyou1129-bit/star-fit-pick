@@ -11,9 +11,10 @@
 </style>
 </head>
 <body>
-<iframe id="f" src="index.html?qa=1" title="390px preview"></iframe>
+<iframe id="f" src="about:blank" title="390px preview"></iframe>
 <script>
   var f = document.getElementById('f');
+  f.src = 'index.html?qa=1&t=' + Date.now();
   window.qaScroll = function (y) { f.contentWindow.scrollTo(0, y || 0); };
   window.qaModal = function (id) {
     var d = f.contentDocument;
