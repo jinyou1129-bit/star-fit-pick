@@ -408,13 +408,12 @@ ul,ol{padding:0;list-style:none}
 .modal-compare tbody td small{display:block;font-size:11.5px;color:var(--muted);font-weight:500;margin-top:2px}
 .modal-compare tfoot td{border-bottom:0;background:#fff5f6;color:#c62828;font-weight:800;font-size:12.5px;padding:12px 10px}
 .modal-compare tfoot td:only-child{text-align:center}
-.cmp{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
-.cmp.alt{border-color:#d5e6ff;background:#f7fbff}
-.cmp b{font-size:14px;color:var(--ink);display:block}
-.cmp small{font-size:12px;color:var(--muted)}
-.cmp .p{font-size:15px;font-weight:800;color:var(--ink);white-space:nowrap}
-.cmp.alt .p{color:var(--blue-deep)}
-.cmp-save{grid-column:1/-1;font-size:12.5px;color:var(--red);font-weight:700}
+.modal-compare tbody td.is-alt{background:#f8fbfd;color:var(--blue-deep)}
+.modal-compare .cmp-en{display:block;font-size:11px;color:var(--muted);font-weight:500;margin-top:2px;letter-spacing:.04em}
+.modal-compare tfoot .save-row{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.modal-compare tfoot .save-row b{font-size:13.5px;font-weight:800}
+.modal-compare tfoot .save-row em{font-style:normal;font-weight:700;font-size:12px}
+.modal-compare tfoot .save-row span{color:var(--sub);font-weight:600;font-size:12px}
 .spec{display:grid;grid-template-columns:92px 1fr;gap:8px 14px;font-size:13px}
 .spec dt{color:var(--muted);font-weight:600}
 .spec dd{color:var(--ink)}
