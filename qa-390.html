@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>390px QA</title>
+<style>
+  body{margin:0;background:#eef1f4;font-family:sans-serif;display:flex;gap:16px;padding:16px;align-items:flex-start}
+  figure{margin:0}
+  figcaption{font-size:12px;color:#333;margin-bottom:6px}
+  iframe{width:390px;height:900px;border:0;background:#fff;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+</style>
+</head>
+<body>
+<figure><figcaption>posts.html</figcaption><iframe id="a" src="posts.html" data-y="0"></iframe></figure>
+<figure><figcaption>look-jiwon-aloro-velvet</figcaption><iframe id="b" src="look-jiwon-aloro-velvet.html" data-y="0"></iframe></figure>
+<figure><figcaption>look-songkang-loewe-duffle (구매·관련 영역)</figcaption><iframe id="c" src="look-songkang-loewe-duffle.html" data-y="2400"></iframe></figure>
+<figure><figcaption>index.html (모달)</figcaption><iframe id="d" src="index.html?look=yihyun-rel-lyra" data-y="0"></iframe></figure>
+<script>
+  document.querySelectorAll('iframe').forEach(function (f) {
+    f.addEventListener('load', function () {
+      var y = parseInt(f.getAttribute('data-y'), 10) || 0;
+      setTimeout(function () { try { f.contentWindow.scrollTo(0, y); } catch (e) {} }, 500);
+    });
+  });
+</script>
+</body>
+</html>
