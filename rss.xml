@@ -3,10 +3,10 @@
   <channel>
     <title>스타핏픽 — 연예인 착장 사진과 브랜드·가격 좌표</title>
     <link>https://jinyou1129-bit.github.io/star-fit-pick/</link>
-    <description>공항패션·예능에 나온 연예인 착장을 실제 사진과 출처로 확인하고, 브랜드·제품명·정가·구매 좌표와 가성비 대안템을 비교합니다. 착장 포스팅 25편, 패션 가이드 14편, 검증 착장 25건.</description>
+    <description>공항패션·예능에 나온 연예인 착장을 실제 사진과 출처로 확인하고, 브랜드·제품명·정가·구매 좌표와 가성비 대안템을 비교합니다. 착장 포스팅 25편, 패션 가이드 14편, 검증 착장 25건, 착장 이상형 월드컵.</description>
     <language>ko</language>
     <copyright>© 2026 스타핏픽</copyright>
-    <lastBuildDate>Fri, 20 Nov 2026 17:20:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 18:40:00 +0900</lastBuildDate>
     <pubDate>Fri, 20 Nov 2026 13:56:00 +0900</pubDate>
     <ttl>720</ttl>
     <generator>스타핏픽</generator>
@@ -16,6 +16,14 @@
       <title>스타핏픽</title>
       <link>https://jinyou1129-bit.github.io/star-fit-pick/</link>
     </image>
+    <item>
+      <title>착장 이상형 월드컵: 25벌 중 16벌, 15번 고르면 내 취향 1위</title>
+      <link>https://jinyou1129-bit.github.io/star-fit-pick/worldcup.html</link>
+      <guid isPermaLink="true">https://jinyou1129-bit.github.io/star-fit-pick/worldcup.html</guid>
+      <description>장원영·카리나·김지원·안유진 등 연예인 착장 25벌 중 16벌로 즐기는 이상형 월드컵. 우승 착장은 정품 가격과 10만 원 이하 가성비 대안, 구매 좌표까지 한 화면에서 비교합니다.</description>
+      <category>체류 기능</category>
+      <pubDate>Fri, 20 Nov 2026 18:40:00 +0900</pubDate>
+    </item>
     <item>
       <title>장원영 공항 퍼자켓 벨리에 부클 컬리 33만 원, 8만 원대 플리스 대안 비교</title>
       <link>https://jinyou1129-bit.github.io/star-fit-pick/look-wonyoung-belier-fur.html</link>

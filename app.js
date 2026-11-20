@@ -301,12 +301,14 @@
     var mc = $("#modal-closet");
     if (mc && mc.dataset.id) mc.innerHTML = closet.indexOf(mc.dataset.id) > -1 ? "♥ 내 옷장에서 빼기" : "♡ 내 옷장에 담기";
     if (state.closet) renderGrid();
+    updateClosetCalc();
   }
   function openClosetPanel(open) {
     var panel = $("#closet-panel");
     var trigger = $("#closet-trigger");
     panel.hidden = !open;
     trigger.setAttribute("aria-expanded", open ? "true" : "false");
+    updateClosetCalc();
   }
 
   /* ---------------- toast ---------------- */
@@ -574,6 +576,242 @@
     }
   }
 
+  /* ---------------- 코디 추천기 (예산·장면·스타일) ---------------- */
+  var recPick = { budget: "", scene: "", style: "" };
+  var REC_GROUPS = [
+    {
+      key: "budget", el: "#rec-budget", opts: [
+        { v: "b10", t: "10만 원 이하", d: "대안템 기준", tag: "대안 10만 원 이하", fit: function (l) { return l.alt.price <= 100000; } },
+        { v: "b30", t: "30만 원 이하", d: "정품 판매가 기준", tag: "정품 30만 원 이하", fit: function (l) { return price(l) <= 300000; } },
+        { v: "bany", t: "상관없음", d: "정품·대안 모두", tag: "예산 무관", fit: function () { return true; } }
+      ]
+    },
+    {
+      key: "scene", el: "#rec-scene", opts: [
+        { v: "airport", t: "공항", d: "출국·입국길", tag: "공항 착장", fit: function (l) { return l.type === "airport"; } },
+        { v: "daily", t: "데일리", d: "일상·예능 사복", tag: "데일리 착장", fit: function (l) { return l.type === "daily" || l.type === "variety"; } },
+        {
+          v: "event", t: "연말·행사", d: "모임·파티", tag: "연말·행사 무드",
+          fit: function (l) { return /벨벳|퍼|시어링|레이스|블루종|무스탕|코트|가죽|베스트/.test(l.item.name + " " + (l.item.material || "")); }
+        }
+      ]
+    },
+    {
+      key: "style", el: "#rec-style", opts: [
+        { v: "casual", t: "캐주얼·고프코어", d: "스웨트·스니커·패딩", tag: "캐주얼·고프코어", fit: function (l) { return (l.mood || []).indexOf("street") > -1; } },
+        { v: "lovely", t: "러블리·니트", d: "니트·앙고라·퍼", tag: "러블리·니트", fit: function (l) { return (l.mood || []).indexOf("lovely") > -1; } },
+        { v: "chic", t: "시크·코트", d: "코트·미니멀", tag: "시크·코트", fit: function (l) { return (l.mood || []).indexOf("minimal") > -1; } }
+      ]
+    }
+  ];
+  function recOpt(key, v) {
+    if (!v) return null;
+    for (var i = 0; i < REC_GROUPS.length; i++) {
+      if (REC_GROUPS[i].key !== key) continue;
+      var opts = REC_GROUPS[i].opts;
+      for (var j = 0; j < opts.length; j++) if (opts[j].v === v) return opts[j];
+    }
+    return null;
+  }
+  function recScore(l) {
+    var b = recOpt("budget", recPick.budget), s = recOpt("scene", recPick.scene), st = recOpt("style", recPick.style);
+    var score = 34, hits = [];
+    if (b && b.fit(l)) { score += 20; hits.push(b.tag); }
+    if (s && s.fit(l)) { score += 24; hits.push(s.tag); }
+    if (st && st.fit(l)) { score += 22; hits.push(st.tag); }
+    return { score: score, hits: hits };
+  }
+  function paintRec() {
+    $all("[data-rec]").forEach(function (b) {
+      var key = b.getAttribute("data-rec");
+      b.setAttribute("aria-pressed", recPick[key] === b.getAttribute("data-val") ? "true" : "false");
+    });
+    var n = 0;
+    if (recPick.budget) n++;
+    if (recPick.scene) n++;
+    if (recPick.style) n++;
+    var c = $("#rec-count");
+    if (c) c.textContent = n + " / 3 선택";
+  }
+  function recCardHTML(x, i) {
+    var l = x.l;
+    var reason = x.hits.map(function (h) { return "<span>" + esc(h) + "</span>"; }).join("");
+    var inCloset = closet.indexOf(l.id) > -1;
+    return '<article class="rec-card">' +
+      '<button type="button" class="rec-card-media" data-open="' + l.id + '" aria-label="' + esc(l.celeb + " " + l.item.name + " 상세 보기") + '">' +
+        picture(l, i === 0) +
+        '<span class="rec-rank">TOP ' + (i + 1) + '</span>' +
+        '<span class="rec-match">조건 ' + x.hits.length + '/3 일치</span>' +
+      "</button>" +
+      '<div class="rec-card-body">' +
+        "<h4>" + esc(l.celeb) + " · " + esc(l.headline) + "<span>" + esc(l.item.brand) + " " + esc(l.item.name) + "</span></h4>" +
+        (reason ? '<div class="rec-reasons">' + reason + "</div>" : "") +
+        '<div class="rec-prices"><b>' + won(price(l)) + "</b><small>대안 " + won(l.alt.price) + " · " + saveRate(l) + "%↓</small></div>" +
+        '<div class="rec-card-actions">' +
+          '<button type="button" class="btn ghost" data-open="' + l.id + '">상세</button>' +
+          '<a class="btn ghost" href="' + esc(CFG.buildLink(l.alt.platform === "official" ? "naver" : l.alt.platform, l.alt.query)) + '" target="_blank" rel="noopener sponsored">대안 보기</a>' +
+          '<button type="button" class="btn ghost" data-rec-heart="' + l.id + '" aria-pressed="' + inCloset + '">' + (inCloset ? "♥" : "♡") + "</button>" +
+        "</div>" +
+      "</div>" +
+    "</article>";
+  }
+  function renderRec() {
+    var res = $("#rec-result");
+    if (!res) return;
+    var filled = 0;
+    if (recPick.budget) filled++;
+    if (recPick.scene) filled++;
+    if (recPick.style) filled++;
+    if (filled < 3) {
+      res.innerHTML = '<p class="rec-empty">' + (filled ? (3 - filled) + "가지만 더 고르면 추천 3벌이 나옵니다." : "세 가지를 고르면 여기에 추천 3벌이 나타납니다.") + "</p>";
+      return;
+    }
+    var scored = LOOKS.map(function (l) { var s = recScore(l); return { l: l, score: s.score, hits: s.hits }; });
+    scored.sort(function (a, b) {
+      if (b.score !== a.score) return b.score - a.score;
+      return saveRate(b.l) - saveRate(a.l);
+    });
+    var picked = [], used = {};
+    scored.forEach(function (x) {
+      if (picked.length < 3 && !used[x.l.celeb]) { used[x.l.celeb] = 1; picked.push(x); }
+    });
+    scored.forEach(function (x) {
+      if (picked.length < 3 && picked.indexOf(x) === -1) picked.push(x);
+    });
+    var best = picked[0];
+    var label = [recOpt("budget", recPick.budget).t, recOpt("scene", recPick.scene).t, recOpt("style", recPick.style).t].join(" · ");
+    res.innerHTML =
+      '<div class="rec-top">' +
+        "<h3>조건에 가장 가까운 3벌</h3>" +
+        '<p>' + esc(label) + " · 적합도 순</p>" +
+      "</div>" +
+      '<div class="rec-grid">' + picked.map(recCardHTML).join("") + "</div>" +
+      '<div class="rec-actions" style="margin-top:14px">' +
+        '<button type="button" class="btn small" data-rec-add-all="' + picked.map(function (x) { return x.l.id; }).join(",") + '">3벌 모두 내 옷장에 담기</button>' +
+        '<button type="button" class="btn ghost small" data-open="' + best.l.id + '">1순위 상세 보기</button>' +
+      "</div>";
+  }
+  function initRec() {
+    REC_GROUPS.forEach(function (g) {
+      var el = $(g.el);
+      if (!el) return;
+      el.innerHTML = g.opts.map(function (o) {
+        return '<button type="button" class="rec-opt" data-rec="' + g.key + '" data-val="' + o.v + '" aria-pressed="false">' +
+          o.t + "<small>" + esc(o.d) + "</small></button>";
+      }).join("");
+      el.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-rec]");
+        if (!b) return;
+        var key = b.getAttribute("data-rec"), val = b.getAttribute("data-val");
+        recPick[key] = recPick[key] === val ? "" : val;
+        paintRec();
+        renderRec();
+      });
+    });
+    var reset = $("#rec-reset");
+    if (reset) reset.addEventListener("click", function () {
+      recPick = { budget: "", scene: "", style: "" };
+      paintRec(); renderRec();
+    });
+    var res = $("#rec-result");
+    if (res) res.addEventListener("click", function (e) {
+      var heart = e.target.closest("[data-rec-heart]");
+      if (heart) {
+        var added = toggleCloset(heart.getAttribute("data-rec-heart"));
+        heart.setAttribute("aria-pressed", added ? "true" : "false");
+        heart.textContent = added ? "♥" : "♡";
+        return;
+      }
+      var all = e.target.closest("[data-rec-add-all]");
+      if (all) {
+        var ids = all.getAttribute("data-rec-add-all").split(",");
+        ids.forEach(function (id) { if (closet.indexOf(id) === -1) { closet.push(id); } });
+        writeCloset(closet);
+        updateCloset();
+        renderRec();
+        toast(ids.length + "벌을 내 옷장에 담았습니다");
+        return;
+      }
+      var opener = e.target.closest("[data-open]");
+      if (opener) { e.preventDefault(); openModal(opener.getAttribute("data-open")); }
+    });
+  }
+
+  /* ---------------- 옷장 절약 계산기 ---------------- */
+  function altUrlOf(l) {
+    return CFG.buildLink(l.alt.platform === "official" ? "naver" : l.alt.platform, l.alt.query);
+  }
+  function closetTotals() {
+    var items = closet.map(findLook).filter(Boolean);
+    var full = 0, alt = 0;
+    items.forEach(function (l) { full += price(l); alt += l.alt.price; });
+    var saved = Math.max(0, full - alt);
+    return { items: items, full: full, alt: alt, saved: saved, rate: full ? Math.round((saved / full) * 100) : 0 };
+  }
+  function updateClosetCalc() {
+    var t = closetTotals();
+    var calc = $("#closet-calc");
+    if (calc) calc.hidden = t.items.length === 0;
+    if ($("#cc-count")) $("#cc-count").textContent = t.items.length;
+    if ($("#cc-full")) $("#cc-full").textContent = "₩" + t.full.toLocaleString("ko-KR");
+    if ($("#cc-alt")) $("#cc-alt").textContent = "₩" + t.alt.toLocaleString("ko-KR");
+    if ($("#cc-save")) $("#cc-save").textContent = "₩" + t.saved.toLocaleString("ko-KR");
+    if ($("#cc-rate")) $("#cc-rate").textContent = "(" + t.rate + "%)";
+    var bar = $("#cc-bar-bar");
+    if (bar) bar.style.width = t.rate + "%";
+    var mini = $("#closet-mini");
+    if (mini) {
+      var panelOpen = $("#closet-panel") && !$("#closet-panel").hidden;
+      mini.hidden = !(t.items.length && !panelOpen);
+      if ($("#closet-mini-text")) $("#closet-mini-text").textContent = t.items.length + "벌";
+      if ($("#closet-mini-save")) $("#closet-mini-save").textContent = "₩" + t.saved.toLocaleString("ko-KR") + " 절약";
+    }
+  }
+  function compareRows() {
+    return closetTotals().items.map(function (l) {
+      return { l: l, full: price(l), alt: l.alt.price, save: saveAmount(l), rate: saveRate(l) };
+    });
+  }
+  function compareText() {
+    var rows = compareRows();
+    return rows.map(function (r) {
+      return r.l.celeb + " " + r.l.item.brand + " " + r.l.item.name + " | 정품 " + won(r.full) + " → 대안 " + won(r.alt) + " (" + r.rate + "%↓) | " + altUrlOf(r.l);
+    }).join("\n");
+  }
+  function openCompare() {
+    var rows = compareRows();
+    if (!rows.length) { toast("찜한 코디가 없습니다"); return; }
+    var t = closetTotals();
+    $("#compare-lead").textContent = "찜한 " + rows.length + "벌 정품 총액 ₩" + t.full.toLocaleString("ko-KR") +
+      " → 가성비 대안으로 맞추면 ₩" + t.alt.toLocaleString("ko-KR") + " (총 ₩" + t.saved.toLocaleString("ko-KR") + " 절약, " + t.rate + "%)";
+    $("#compare-table").innerHTML =
+      "<caption class=\"sr-only\">찜한 착장별 정품·대안 가격 비교</caption>" +
+      "<thead><tr><th scope=\"col\">착장</th><th scope=\"col\">정품</th><th scope=\"col\">가성비 대안</th><th scope=\"col\">절약</th><th scope=\"col\">링크</th></tr></thead><tbody>" +
+      rows.map(function (r) {
+        var l = r.l;
+        return "<tr><th scope=\"row\">" + esc(l.celeb) + "<small>" + esc(l.headline) + "</small></th>" +
+          "<td><b>" + won(r.full) + "</b><small>" + esc(l.item.brand) + "</small></td>" +
+          "<td><b>" + won(r.alt) + "</b><small>" + esc(l.alt.brand) + " · " + r.rate + "%↓</small></td>" +
+          "<td><b>" + won(r.save) + "</b></td>" +
+          "<td><a href=\"" + esc(altUrlOf(l)) + "\" target=\"_blank\" rel=\"noopener sponsored\">대안 보기 ↗</a><a href=\"" + esc(l.item.officialUrl) + "\" target=\"_blank\" rel=\"noopener sponsored\">정품 보기 ↗</a></td></tr>";
+      }).join("") +
+      "</tbody><tfoot><tr><td colspan=\"5\">총 ₩" + t.saved.toLocaleString("ko-KR") + " 절약 · 대안으로 맞추면 ₩" + t.alt.toLocaleString("ko-KR") + " / 정품 ₩" + t.full.toLocaleString("ko-KR") + "</td></tr></tfoot>";
+    $("#compare-modal").hidden = false;
+    document.body.classList.add("modal-open");
+    $("#compare-close").focus();
+  }
+  function closeCompare() {
+    var m = $("#compare-modal");
+    if (!m || m.hidden) return;
+    m.hidden = true;
+    if ($("#modal").hidden) document.body.classList.remove("modal-open");
+  }
+  function copyText(text, okMsg) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { toast(okMsg); }, function () { toast("복사가 막혔습니다. 표의 링크를 하나씩 눌러 주세요"); });
+    } else toast("복사가 지원되지 않는 브라우저입니다. 표의 링크를 눌러 주세요");
+  }
+
   /* ---------------- events ---------------- */
   function updateMoreLabel(open) {
     var btn = $("#filter-more");
@@ -654,6 +892,35 @@
     $("#closet-clear").addEventListener("click", function () {
       closet = []; writeCloset(closet); updateCloset(); renderGrid(); toast("옷장을 비웠습니다");
     });
+    var mini = $("#closet-mini");
+    if (mini) mini.addEventListener("click", function () {
+      openClosetPanel(true);
+      $("#closet-panel").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+    var ccCompare = $("#cc-compare");
+    if (ccCompare) ccCompare.addEventListener("click", openCompare);
+    var ccCopy = $("#cc-copy");
+    if (ccCopy) ccCopy.addEventListener("click", function () {
+      if (!compareRows().length) { toast("찜한 코디가 없습니다"); return; }
+      copyText(compareText(), "구매 링크 " + compareRows().length + "개를 복사했습니다");
+    });
+    var cmpClose = $("#compare-close");
+    if (cmpClose) cmpClose.addEventListener("click", closeCompare);
+    var cmpModal = $("#compare-modal");
+    if (cmpModal) cmpModal.addEventListener("click", function (e) {
+      if (e.target.closest("[data-cmp-close]")) closeCompare();
+    });
+    var cmpCopy = $("#compare-copy");
+    if (cmpCopy) cmpCopy.addEventListener("click", function () {
+      copyText(compareText(), "구매 링크를 모두 복사했습니다");
+    });
+    var cmpOpenAll = $("#compare-open-all");
+    if (cmpOpenAll) cmpOpenAll.addEventListener("click", function () {
+      var rows = compareRows();
+      if (!rows.length) { toast("찜한 코디가 없습니다"); return; }
+      rows.forEach(function (r) { window.open(altUrlOf(r.l), "_blank", "noopener"); });
+      toast("새 탭으로 열었습니다. 팝업이 막히면 표의 링크를 하나씩 눌러 주세요");
+    });
 
     // modal
     $("#modal").addEventListener("click", function (e) {
@@ -674,7 +941,8 @@
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") {
-        if (!$("#modal").hidden) closeModal();
+        if ($("#compare-modal") && !$("#compare-modal").hidden) closeCompare();
+        else if (!$("#modal").hidden) closeModal();
         else if (!$("#closet-panel").hidden) openClosetPanel(false);
       }
       // simple focus trap
@@ -723,6 +991,8 @@
     updateCloset();
     quizHTML();
     syncFilterMore();
+    initRec();
+    updateClosetCalc();
     bindChips();
     bindQuiz();
     bind();
