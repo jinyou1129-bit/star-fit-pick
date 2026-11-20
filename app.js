@@ -10,10 +10,10 @@
 
   /* ---------------- labels ---------------- */
   var TYPE_LABEL = { airport: "공항", variety: "예능", daily: "일상" };
-  var CAT_LABEL = { outer: "아우터", top: "상의", bottom: "하의", shoes: "신발", acc: "잡화" };
+  var CAT_LABEL = { outer: "아우터", top: "상의", bottom: "하의", dress: "원피스", shoes: "신발", acc: "잡화" };
   var MOOD_LABEL = { minimal: "미니멀", lovely: "러블리", vintage: "빈티지", street: "스트리트" };
   var TYPE_ORDER = ["airport", "variety", "daily"];
-  var CAT_ORDER = ["outer", "top", "bottom", "shoes", "acc"];
+  var CAT_ORDER = ["outer", "top", "bottom", "dress", "shoes", "acc"];
   var MOOD_ORDER = ["minimal", "lovely", "vintage", "street"];
   var BUDGET_CAP = 100000;
 
