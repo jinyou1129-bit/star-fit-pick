@@ -494,7 +494,7 @@ window.SFP_LOOKS = [
     scene: "SBS '틈만나면,' 66회 (2026.11.17 방송)",
     category: "outer",
     mood: ["vintage", "minimal"],
-    headline: "아가일 카디건 + 데님 셔츠",
+    headline: "20만 원대 아가일 카디건",
     item: {
       brand: "세터",
       brandEn: "SATUR",
@@ -509,6 +509,8 @@ window.SFP_LOOKS = [
       sizes: "S · M · L · XL (총장 57~65cm)",
       maker: "세터(SATUR) / 한국",
       season: "2026 FW",
+      cons: "여성 라인이라 남성 105~110은 어깨가 조일 수 있고, 소재 혼용률은 판매처 상세 확인 필요",
+      fit: "여성 라인 S~XL. 남성 105는 L~XL, 어깨가 넓으면 XL 권장",
       officialUrl: "https://www.musinsa.com/products/7061969"
     },
     story: "예능에서 유재석이 데님 셔츠 위에 걸친 네이비 아가일 카디건입니다. 어깨선이 떨어지는 루즈한 실루엣에 붉은색·녹색 다이아몬드 패턴이 들어가, 무채색 옷장에서도 얼굴 쪽에만 색을 올려 주는 아이템입니다.",
@@ -524,6 +526,8 @@ window.SFP_LOOKS = [
       name: "브러쉬드 아가일 니트 가디건 (네이비)",
       price: 48900,
       platform: "musinsa",
+      fit: "정핏에 가까운 아가일 가디건. 남성 105는 L",
+      cons: "패턴 색감이 더 진하고 울 혼방비가 낮아 보풀이 빨리 생김",
       note: "정가 79,000원, 무신사 아울렛 38% 적용 시 48,900원. 같은 아가일 패턴을 5만 원 아래로.",
       query: "블론드나인 브러쉬드 아가일 니트 가디건"
     },
@@ -542,7 +546,7 @@ window.SFP_LOOKS = [
     scene: "SBS '틈만나면,' 66회 (2026.11.17 방송)",
     category: "outer",
     mood: ["street", "vintage"],
-    headline: "노티컬 자수 빅 재킷",
+    headline: "79만 원 자수 빅 재킷",
     item: {
       brand: "폴로 랄프 로렌",
       brandEn: "Polo Ralph Lauren",
@@ -557,6 +561,8 @@ window.SFP_LOOKS = [
       sizes: "XS/KR90 · M/KR100 · L/KR105 (오버사이즈 핏)",
       maker: "랄프로렌 코리아 / 인도",
       season: "2026.05 제조",
+      cons: "전 사이즈 일시품절이 잦고, 자수 때문에 드라이클리닝이 안전",
+      fit: "오버사이즈 빅 핏. 105는 M, 110은 L 권장",
       officialUrl: "https://www.ralphlauren.co.kr/%EB%85%B8%ED%8B%B0%EC%BB%AC-%EC%9E%84%EB%B8%8C%EB%A1%9C%EC%9D%B4%EB%8D%94-%EB%B9%85-%EC%9E%AC%ED%82%B7-100091803.html"
     },
     story: "1990년대 빅 핏을 살린 오버사이즈 재킷입니다. 돛·세일보트·닻 자수가 옷 전체에 들어가고 왼쪽 가슴에 포니 자수가 놓입니다. 육성재는 흰 셔츠와 네이비 타이를 받쳐 재킷을 셔츠처럼 단정하게 입었습니다.",
@@ -572,6 +578,8 @@ window.SFP_LOOKS = [
       name: "CP 트윌 초어 재킷 [블랙]",
       price: 54890,
       platform: "musinsa",
+      fit: "코튼 트윌 워크 재킷 정핏, 빅 실루엣은 덜함",
+      cons: "자수·포니 로고가 없어 무드가 다름",
       note: "정가 109,900원, 무신사 아울렛 54,890원. 자수 대신 코튼 트윌과 넉넉한 핏으로 같은 작업복 무드를 5만 원대로.",
       query: "무신사 스탠다드 CP 트윌 초어 재킷"
     },
@@ -590,7 +598,7 @@ window.SFP_LOOKS = [
     scene: "MBC '나 혼자 산다' 671회 (2026.10.30 방송)",
     category: "top",
     mood: ["vintage", "lovely"],
-    headline: "M 인타르시아 레이어드 베스트",
+    headline: "156만 원 베스트 40% 할인",
     item: {
       brand: "마르니",
       brandEn: "MARNI",
@@ -605,6 +613,8 @@ window.SFP_LOOKS = [
       sizes: "IT 36~42 (모델 179cm / IT 38 착용)",
       maker: "MARNI / 이탈리아",
       season: "2026 FW",
+      cons: "정가 156만 원, 할인가도 93만 원대. 품절이 잦고 드라이클리닝 전용",
+      fit: "IT 38 기준 여유 있는 핏. 셔츠 위에 입으면 한 사이즈 크게 느껴짐",
       officialUrl: "https://www.marni.com/ko-kr/%ED%92%80%EC%98%A4%EB%B2%84-GCMD0673Q0UFH100INR92.html"
     },
     story: "깊은 V넥 안쪽에 초록 모크넥이 겹쳐 보이는 레이어드 구조의 민소매 니트입니다. 앞판 아래의 노란 M 인레이와 밑단의 기하학 패턴, 뒷면의 마르니 니트 패치까지 한 벌로 완성된 디자인입니다.",
@@ -620,6 +630,8 @@ window.SFP_LOOKS = [
       name: "코튼 케이블 브이 넥 니트 베스트 [블랙]",
       price: 27390,
       platform: "musinsa",
+      fit: "케이블 니트 베스트 정핏, 암홀이 조일 수 있음",
+      cons: "인타르시아 패턴·M 인레이가 없어 포인트가 약함",
       note: "정가 49,900원, 무신사 아울렛 45% 적용 시 27,390원. 인타르시아 대신 케이블 조직으로 같은 레이어드 무드를 3만 원 아래로.",
       query: "무신사 스탠다드 코튼 케이블 브이 넥 니트 베스트"
     },
@@ -638,7 +650,7 @@ window.SFP_LOOKS = [
     scene: "2026.11.11 김포국제공항 출국 · 도쿄 팬미팅",
     category: "acc",
     mood: ["minimal"],
-    headline: "아마조나 180 더플",
+    headline: "730만 원 더플백",
     item: {
       brand: "로에베",
       brandEn: "LOEWE",
@@ -653,6 +665,8 @@ window.SFP_LOOKS = [
       sizes: "원 사이즈",
       maker: "LOEWE / 스페인",
       season: "2026 FW",
+      cons: "국내 730만 원. 바이커 카프스킨이라 무게가 있고 스크래치에 예민",
+      fit: "원 사이즈, 손에 들거나 어깨에 메는 더플",
       officialUrl: "https://www.loewe.com/int/ko/%EB%82%A8%EC%84%B1/%EB%B0%B1/%EC%95%84%EB%A7%88%EC%A1%B0%EB%82%98/%EC%95%84%EB%A7%88%EC%A1%B0%EB%82%98-180-%EB%8D%94%ED%94%8C---%EB%B0%94%EC%9D%B4%EC%BB%A4-%EC%B9%B4%ED%94%84%EC%8A%A4%ED%82%A8/B039AMDX05-1100.html"
     },
     story: "로에베 브랜드 앰버서더인 송강이 11월 11일 김포공항 출국길에 든 더플백입니다. 아마조나 180 백을 여행용 더플로 다시 만든 모델로, 바이커 카프스킨을 써서 가죽이 유연하고 모서리가 살아 있습니다.",
@@ -668,6 +682,8 @@ window.SFP_LOOKS = [
       name: "워시드 캔버스 더플 백 [차콜 그레이]",
       price: 41890,
       platform: "musinsa",
+      fit: "캔버스 더플, 짐이 적으면 형태가 축 처짐",
+      cons: "가죽 질감·각 잡힌 실루엣은 원본과 다름",
       note: "정가 59,900원, 무신사 41,890원. 가죽 대신 캔버스지만 같은 원통형 더플 실루엣을 4만 원대로.",
       query: "무신사 스탠다드 워시드 캔버스 더플 백"
     },
@@ -686,7 +702,7 @@ window.SFP_LOOKS = [
     scene: "유튜브 '집대성' 빈집대성 ep.9 (2026.11.13 공개)",
     category: "dress",
     mood: ["lovely", "vintage"],
-    headline: "레이스 미니 원피스",
+    headline: "15만 원 레이스 원피스",
     item: {
       brand: "리엘",
       brandEn: "RE_L",
@@ -701,6 +717,8 @@ window.SFP_LOOKS = [
       sizes: "S (어깨 38.5 · 가슴 50 · 총장 82.5cm)",
       maker: "RPJ / 한국",
       season: "2026 FALL",
+      cons: "비침이 약간 있어 이너 필요, 드라이클리닝 전용",
+      fit: "S 단일. 총장 82.5cm로 160cm 기준 무릎 위",
       officialUrl: "https://re-l.co.kr/product/lyra-lace-mini-dress-ivory/4632/category/467/display/1/"
     },
     story: "영화 '최종면접' 홍보로 유튜브 '집대성'의 '빈집대성' ep.9에 나온 조이현이 브라운 가죽 재킷 안에 받쳐 입은 원피스입니다. 핀턱과 레이스가 몸판을 따라 이어지고, 허리 스트랩으로 실루엣을 조절합니다.",
@@ -716,6 +734,8 @@ window.SFP_LOOKS = [
       name: "빈티지 레이스 더블 레이어드 미니 원피스",
       price: 39400,
       platform: "musinsa",
+      fit: "미니 원피스 정핏",
+      cons: "레이스 밀도·안감 마감은 가격만큼 차이",
       note: "정가 47,000원, 무신사 39,400원. 레이스 두 겹 구조와 미니 기장을 4만 원 아래로.",
       query: "플레이스튜디오 빈티지 레이스 더블 레이어드 미니 원피스"
     },

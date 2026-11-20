@@ -362,6 +362,12 @@
           '<tr><th scope="row">제품</th>' +
             '<td>' + esc(look.item.name) + "<small>품번 " + esc(look.item.sku) + "</small></td>" +
             '<td class="is-alt">' + esc(look.alt.name) + "</td></tr>" +
+          '<tr><th scope="row">핏</th>' +
+            '<td>' + esc(look.item.fit || "—") + "</td>" +
+            '<td class="is-alt">' + esc(look.alt.fit || "—") + "</td></tr>" +
+          '<tr><th scope="row">아쉬운 점</th>' +
+            '<td>' + esc(look.item.cons || "—") + "</td>" +
+            '<td class="is-alt">' + esc(look.alt.cons || "—") + "</td></tr>" +
         '</tbody>' +
         '<tfoot><tr><td colspan="3"><div class="save-row"><span>대안템 선택 시</span> <b>' + won(saved) + ' 절약</b> <em>정품 대비 ' + rate + '%↓</em></div></td></tr></tfoot>' +
       "</table>";
