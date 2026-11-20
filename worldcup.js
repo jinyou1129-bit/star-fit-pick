@@ -171,6 +171,8 @@
     var d = derive();
     if (playEl) playEl.hidden = false;
     if (startEl) startEl.hidden = true;
+    var heroInner = document.querySelector(".wc-hero-inner");
+    if (heroInner) heroInner.classList.add("is-playing");
 
     if (!LOOKS.length) {
       stageEl.innerHTML = '<p class="wc-error">착장 데이터를 불러오지 못했습니다. 새로고침해 주세요.</p>';
@@ -208,7 +210,7 @@
         '<span class="wc-hint">마음에 드는 쪽을 누르면 다음 경기로 넘어갑니다.</span>' +
       "</div>";
 
-    if (done === 0) announce(roundName(0) + " 대진이 시작되었습니다. " + a.celeb + "와 " + b.celeb + "의 대결.");
+    if (done === 0) announce(roundName(0) + " 대진이 시작되었습니다. " + a.celeb + " vs " + b.celeb + ".");
   }
 
   function pick(id) {
@@ -225,12 +227,17 @@
     if (other) other.classList.add("is-out");
 
     setTimeout(function () {
+      var prevRound = d.round;
       game.picks.push({ win: id });
       saveStore();
       var next = derive();
       var w = byId[id];
-      if (next.order.length === 1) announce(w.celeb + "의 " + w.headline + ", 우승!");
-      else announce(w.celeb + "의 " + w.headline + "이 " + roundName(next.round) + "에 진출했습니다.");
+      if (next.order.length === 1) announce(w.celeb + "의 " + w.headline + ", 최종 우승!");
+      else if (next.round > prevRound) announce(w.celeb + "의 " + w.headline + ", " + roundName(next.round) + " 진출!");
+      else {
+        var na = byId[next.order[next.idx * 2]], nb = byId[next.order[next.idx * 2 + 1]];
+        announce(w.celeb + " 승리 · 다음 경기 " + (na && nb ? na.celeb + " vs " + nb.celeb : ""));
+      }
       busy = false;
       renderStage();
       if (stageEl && stageEl.offsetHeight) {
@@ -373,6 +380,8 @@
     game = { size: 16, seed: 1, picks: [], shared: true };
     if (playEl) playEl.hidden = false;
     if (startEl) startEl.hidden = true;
+    var heroInner = document.querySelector(".wc-hero-inner");
+    if (heroInner) heroInner.classList.add("is-playing");
     renderWinner({ order: [id], log: [], round: 4, idx: 0 }, { shared: true });
     announce("공유받은 우승 결과입니다: " + l.celeb + " " + l.headline);
     return true;
