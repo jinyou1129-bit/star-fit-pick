@@ -323,7 +323,7 @@ ul,ol{padding:0;list-style:none}
 .how-list li{background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);padding:24px;box-shadow:var(--shadow-1)}
 .how-num{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--blue);margin-bottom:10px}
 .how-list h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px}
-.how-list p{font-size:13.5px;color:var(--sub);line-height:1.7}
+.how-list p{font-size:13.5px;color:var(--sub);line-height:1.7;word-break:keep-all}
 .how-note{margin-top:20px;font-size:12.5px;color:var(--muted)}
 .how-note b{color:var(--ink)}
 
@@ -393,7 +393,7 @@ ul,ol{padding:0;list-style:none}
 .modal-eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
 .modal-body h2{font-size:23px;font-weight:800;letter-spacing:-.03em;color:var(--ink);margin-top:8px;line-height:1.35}
 .modal-scene{font-size:13px;color:var(--muted);margin-top:6px}
-.modal-story{font-size:14.5px;color:var(--sub);line-height:1.75;margin-top:14px}
+.modal-story{font-size:14.5px;color:var(--sub);line-height:1.75;margin-top:14px;word-break:keep-all}
 .modal-h3{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:26px 0 12px}
 .modal-compare{display:grid;gap:10px}
 .modal-compare table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13.5px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
@@ -455,7 +455,7 @@ ul,ol{padding:0;list-style:none}
 
 /* ---------------- guide pages ---------------- */
 .article-hero{padding:56px 0 32px;border-bottom:1px solid var(--line);background:linear-gradient(#fff,#fbfcfd)}
-.article-hero h1{font-size:clamp(26px,3.2vw,40px);line-height:1.25;letter-spacing:-.035em;font-weight:800;color:var(--ink);max-width:22ch}
+.article-hero h1{font-size:clamp(26px,3.2vw,40px);line-height:1.25;letter-spacing:-.035em;font-weight:800;color:var(--ink);max-width:22ch;word-break:keep-all}
 .article-meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12.5px;color:var(--muted)}
 .article-meta span{display:inline-flex;align-items:center;gap:6px}
 .article-wrap{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:56px;padding:44px 0 0;align-items:start}
@@ -463,13 +463,13 @@ ul,ol{padding:0;list-style:none}
 .article-body h2{font-size:21px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:38px 0 12px}
 .article-body h2:first-child{margin-top:0}
 .article-body h3{font-size:16.5px;font-weight:700;color:var(--ink);margin:24px 0 8px}
-.article-body p{font-size:15.5px;line-height:1.85;color:var(--sub);margin:0 0 14px}
+.article-body p{font-size:15.5px;line-height:1.85;color:var(--sub);margin:0 0 14px;word-break:keep-all}
 .article-body strong{color:var(--ink);font-weight:700}
 .article-body ul,.article-body ol{display:grid;gap:8px;margin:0 0 16px;padding-left:2px}
-.article-body ul li{position:relative;padding-left:14px;font-size:15px;line-height:1.8;color:var(--sub)}
+.article-body ul li{position:relative;padding-left:14px;font-size:15px;line-height:1.8;color:var(--sub);word-break:keep-all}
 .article-body ul li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--blue)}
 .article-body ol{counter-reset:li}
-.article-body ol li{position:relative;padding-left:22px;font-size:15px;line-height:1.8;color:var(--sub)}
+.article-body ol li{position:relative;padding-left:22px;font-size:15px;line-height:1.8;color:var(--sub);word-break:keep-all}
 .article-body ol li::before{counter-increment:li;content:counter(li);position:absolute;left:0;top:.35em;font-size:11px;font-weight:800;color:var(--blue)}
 .article-body blockquote{
   margin:20px 0;padding:16px 18px;border-left:3px solid var(--blue);background:var(--soft-2);
@@ -500,13 +500,13 @@ ul,ol{padding:0;list-style:none}
 .guide-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius-l);padding:26px;background:#fff;box-shadow:var(--shadow-1);transition:.18s}
 .guide-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
 .guide-card .tag{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
-.guide-card h3{font-size:17px;font-weight:800;letter-spacing:-.02em;color:var(--ink);line-height:1.45}
-.guide-card p{margin-top:10px;font-size:13.5px;color:var(--sub);line-height:1.7;flex:1}
+.guide-card h3{font-size:17px;font-weight:800;letter-spacing:-.02em;color:var(--ink);line-height:1.45;word-break:keep-all}
+.guide-card p{margin-top:10px;font-size:13.5px;color:var(--sub);line-height:1.7;flex:1;word-break:keep-all}
 .guide-card .more{margin-top:16px;font-size:13px;font-weight:700;color:var(--blue-deep)}
 
 /* ---------------- legal / simple pages ---------------- */
 .page-hero{padding:56px 0 28px;border-bottom:1px solid var(--line)}
-.page-hero h1{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.page-hero h1{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.03em;color:var(--ink);word-break:keep-all}
 .page-hero p{margin-top:10px;font-size:14.5px;color:var(--sub)}
 .page-body{max-width:760px;padding:36px 0 0}
 .page-body h2{font-size:18px;font-weight:800;margin:32px 0 10px;color:var(--ink)}
