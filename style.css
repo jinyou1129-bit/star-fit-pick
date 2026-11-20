@@ -525,7 +525,14 @@ ul,ol{padding:0;list-style:none}
   .guide-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:860px){
-  .site-nav{display:none}
+  .nav-row{flex-wrap:wrap;height:auto;padding-top:10px;gap:10px}
+  .site-nav{
+    display:flex;order:3;width:100%;gap:6px;overflow-x:auto;padding:0 0 10px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  }
+  .site-nav::-webkit-scrollbar{display:none}
+  .site-nav a{background:var(--soft);padding:7px 12px;border-radius:999px;font-size:13px;white-space:nowrap}
+  .brand{margin-right:auto}
   .how-list{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:repeat(2,1fr);gap:16px}
   .modal{grid-template-columns:1fr;padding:0;align-items:end}
