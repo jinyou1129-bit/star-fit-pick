@@ -1478,4 +1478,900 @@ window.SFP_LOOKS = [
     },
     palette: ["#f2ede2", "#c9bfae", "#6f5a44"]
   }
+,
+  {
+    id: "nayeon-prevail-bomber",
+    image: "assets/looks/nayeon-prevail-bomber.webp?v=2026112201",
+    imageJpg: "assets/looks/nayeon-prevail-bomber.jpg?v=2026112201",
+    photo: {label: "뉴스엔", kind: "photo", what: "2026.11.19 김포국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611190648425510"},
+    imageAlt: "김포공항 출국길, 검정 에코레더 퍼넬넥 더블 보머 재킷 차림으로 걷는 트와이스 나연",
+    celeb: "나연",
+    group: "TWICE",
+    type: "airport",
+    show: "공항",
+    scene: "2026.11.19 김포국제공항 출국 · 2026 MAMA 오사카",
+    category: "outer",
+    mood: ["minimal", "chic"],
+    headline: "26만 8천 원 레더 보머",
+    item: {
+        brand: "프리베일",
+        brandEn: "PREVAIL",
+        name: "PVIL Benny Leather Bomber",
+        nameEn: "PVIL Benny Leather Bomber",
+        sku: "PVIL Benny Leather Bomber (26FW)",
+        price: 268000,
+        salePrice: 214400,
+        saleNote: "공식몰 20% 할인가",
+        material: "겉감 폴리우레탄 100% · 안감 폴리에스터 100% (에코 레더)",
+        colors: "블랙",
+        sizes: "FREE 단일 · 총장 59cm·어깨 56cm·가슴 67cm·소매 55cm",
+        maker: "프리베일 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 크게 떨어지는 드롭 숄더. 단추를 풀면 앞판이 비대칭으로 겹치는 더블 여밈",
+        cons: "에코 레더라 통기성이 낮고, FREE 단일 사이즈여서 어깨가 좁은 사람은 소매가 길게 남음",
+        officialUrl: "https://prevail.kr/product/pvil-benny-leather-bomber/2026/category/42/display/1/"
+    },
+    story: "나연이 11월 19일 해외 일정으로 김포공항에 나올 때 입은 재킷입니다. 목을 세워 감싸는 퍼넬넥과 단추를 두 줄로 세운 더블 여밈, 어깨가 크게 떨어지는 드롭 숄더가 한 화면에 다 들어옵니다. 프리베일 공식몰 기준 정가 268,000원, 지금은 20% 할인이 붙어 214,400원입니다.",
+    point: "레더 보머는 짧게 끊기 때문에 아래에 긴 니트 원피스를 받치면 기장 대비가 생깁니다. 나연은 네이비 아가일 니트 원피스와 접어 신은 블랙 부츠로 상체 볼륨과 하체 길이를 나눴습니다. 단추를 다 채우면 각이 서고, 풀면 앞판이 비대칭으로 흘러 같은 옷이 두 가지로 보입니다.",
+    verified: "프리베일 공식몰 상품 페이지(정가 268,000원 → 214,400원, 겉감 폴리우레탄 100%·FREE 실측 총장 59cm 표기) 확인, 뉴스엔 11월 19일 김포공항 출국 촬영과 색·여밈 대조, 매거진제이 출국룩 정리와 교차 확인",
+    sources: [
+        {
+            label: "뉴스엔 2026.11.19 나연 출국 포토",
+            url: "https://www.newsen.com/news_view.php?uid=202611190648425510"
+        },
+        {
+            label: "프리베일 공식몰 PVIL Benny Leather Bomber",
+            url: "https://prevail.kr/product/pvil-benny-leather-bomber/2026/category/42/display/1/"
+        },
+        {
+            label: "매거진제이 11/19 나연 출국룩 정리",
+            url: "https://magazinejj.tistory.com/93"
+        }
+    ],
+    alt: {
+        brand: "위시드",
+        name: "베이직 카라넥 루즈핏 레더 블루종 자켓 (WIBCJK033)",
+        price: 55900,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 루즈핏, 엉덩이 위 기장",
+        cons: "퍼넬넥이 아닌 카라넥이고 더블 여밈이 아니라 앞판이 한 줄로 잠김",
+        note: "정가 69,900원, 무신사 20% 적용 55,900원. 같은 인조 레더 소재로 어깨를 떨어뜨린 실루엣을 4분의 1 가격에 맞춥니다.",
+        query: "위시드 베이직 카라넥 루즈핏 레더 블루종"
+    },
+    palette: ["#1b1b1d", "#3a3f5c", "#8b8f96"]
+  },
+  {
+    id: "sooin-grove-dove-fur",
+    image: "assets/looks/sooin-grove-dove-fur.webp?v=2026112201",
+    imageJpg: "assets/looks/sooin-grove-dove-fur.jpg?v=2026112201",
+    photo: {label: "뉴스엔", kind: "photo", what: "2026.11.18 인천국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611181608485510"},
+    imageAlt: "인천공항 출국길, 올리브 브라운 퍼 코트에 검정 미니스커트와 블랙 롱부츠를 매치한 미야오 수인",
+    celeb: "수인",
+    group: "MEOVV",
+    type: "airport",
+    show: "공항",
+    scene: "2026.11.18 인천국제공항 출국 · 미국 일정",
+    category: "outer",
+    mood: ["lovely", "casual"],
+    headline: "25만 8천 원 퍼 코트",
+    item: {
+        brand: "그로브",
+        brandEn: "GROVE",
+        name: "도브 퍼 코트_BROWN",
+        nameEn: "Dove Fur Coat - Brown",
+        sku: "GR-MB3WI-OCT03BROWN",
+        price: 258000,
+        salePrice: 154800,
+        saleNote: "무신사 40% 할인가 · 11월 20일 기준 품절",
+        material: "인조 퍼 (브랜드 표기 폴리에스터 계열) · 안감 폴리에스터",
+        colors: "브라운",
+        sizes: "S · M (무신사 옵션 표기)",
+        maker: "그로브 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 둥글게 떨어지는 오버핏, 엉덩이를 덮는 기장. 소매 끝과 밑단에 밴딩",
+        cons: "인조 퍼라 목을 세우면 털이 볼에 닿고, 브라운 단일 색이라 얼굴 톤을 크게 탐",
+        officialUrl: "https://www.musinsa.com/products/3698537"
+    },
+    story: "수인이 11월 18일 인천공항에서 미국 일정으로 출국할 때 입은 코트입니다. 올리브가 섞인 브라운 퍼가 어깨를 둥글게 감싸고, 소매 끝과 밑단이 밴딩으로 조여져 공처럼 부풀지 않습니다. 무신사 기준 정가 258,000원, 40% 할인이 붙어 154,800원이지만 11월 20일 현재 품절입니다.",
+    point: "퍼 코트가 엉덩이를 덮기 때문에 아래는 짧게 끊는 편이 낫습니다. 수인은 검정 미니스커트와 검정 롱부츠로 다리 전체를 한 색으로 묶었습니다. 퍼 색이 탁한 올리브 브라운이라, 안쪽에 어두운 색을 두면 얼굴 주변만 밝게 남습니다.",
+    verified: "무신사 상품 페이지(정가 258,000원 → 154,800원, 40% 할인, 품절 표기) 확인, 뉴스엔 11월 18일 인천공항 출국 촬영과 색·기장 대조, 유찬의패션아카이브 261118 착장 정리와 교차 확인",
+    sources: [
+        {
+            label: "뉴스엔 2026.11.18 미야오 수인 출국 포토",
+            url: "https://www.newsen.com/news_view.php?uid=202611181608485510"
+        },
+        {
+            label: "무신사 그로브 도브 퍼 코트_BROWN",
+            url: "https://www.musinsa.com/products/3698537"
+        },
+        {
+            label: "유찬의패션아카이브 261118 수인 착장 정리",
+            url: "https://youchan223.tistory.com/244"
+        }
+    ],
+    alt: {
+        brand: "비엔엑스",
+        name: "하이넥 시어링 양털 포켓 자켓 (BX4JK018L0)",
+        price: 78000,
+        platform: "musinsa",
+        fit: "하이넥에 어깨가 떨어지는 세미 오버핏",
+        cons: "코트 기장이 아니라 엉덩이 위에서 끊기고, 털 결이 짧아 부클 볼륨은 덜함",
+        note: "정가 130,000원, 무신사 40% 적용 78,000원. 양털 시어링 겉감으로 같은 탁한 브라운 계열을 만들고, 하이넥이 목을 덮어 퍼 코트의 인상을 절반쯤 대신합니다.",
+        query: "비엔엑스 하이넥 시어링 양털 포켓 자켓"
+    },
+    palette: ["#6b6146", "#1c1c1e", "#3b3b3d"]
+  },
+  {
+    id: "kiya-nomanual-crop-fur",
+    image: "assets/looks/kiya-nomanual-crop-fur.webp?v=2026112201",
+    imageJpg: "assets/looks/kiya-nomanual-crop-fur.jpg?v=2026112201",
+    photo: {label: "뉴스엔", kind: "photo", what: "2026.11.19 인천국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611190804053510"},
+    imageAlt: "인천공항 출국길, 털 배색 크롭 퍼 자켓에 버건디 톱과 연청 데님을 매치한 키키 키야",
+    celeb: "키야",
+    group: "KiiiKiii",
+    type: "airport",
+    show: "공항",
+    scene: "2026.11.19 인천공항 출국 · 2026 MAMA 오사카",
+    category: "outer",
+    mood: ["vintage", "casual"],
+    headline: "26만 3천 원 크롭 퍼",
+    item: {
+        brand: "노매뉴얼",
+        brandEn: "NO MANUAL",
+        name: "CONTRAST CROP FUR JACKET - BROWN",
+        nameEn: "Contrast Crop Fur Jacket - Brown",
+        sku: "NMGF62JK09BRW",
+        price: 263000,
+        salePrice: 249900,
+        saleNote: "무신사 5% 할인가",
+        material: "인조 퍼 배색 (겉감·배색 폴리에스터 계열) · 안감 폴리에스터",
+        colors: "브라운 · 아이보리",
+        sizes: "S · M (무신사 옵션 표기)",
+        maker: "노매뉴얼 / 한국",
+        season: "2026 FW",
+        fit: "허리 위에서 끊기는 크롭 기장, 몸판은 박스형이고 소매에 털 배색이 들어감",
+        cons: "크롭 기장이라 허리선이 그대로 드러나고, 털 배색 소매는 가방끈에 눌리면 자국이 남음",
+        officialUrl: "https://www.musinsa.com/products/7555110"
+    },
+    story: "키야가 11월 19일 오사카 MAMA 일정으로 인천공항에 나올 때 입은 자켓입니다. 몸판은 매끈한 소재, 소매와 앞여밈에는 털을 길게 세운 배색이 들어갑니다. 한 옷 안에서 질감이 두 번 바뀌는 구조입니다. 무신사 기준 정가 263,000원, 5% 할인이 붙어 249,900원입니다.",
+    point: "크롭 기장은 허리선을 그대로 드러냅니다. 키야는 버건디 크롭 톱으로 배꼽 위를 맞추고 연청 데님을 골반에 걸쳐, 상의와 하의 사이를 짧게 끊었습니다. 털 배색 소매가 부피를 만들기 때문에 가방은 어깨에 걸치지 않고 손에 들거나 팔꿈치에 거는 편이 낫습니다.",
+    verified: "무신사 상품 페이지(정가 263,000원 → 249,900원, 품번 NMGF62JK09BRW) 확인, 뉴스엔 11월 19일 인천공항 출국 촬영과 배색 구조 대조, 유찬의패션아카이브 261119 착장 정리와 교차 확인",
+    sources: [
+        {
+            label: "뉴스엔 2026.11.19 키키 키야 출국 포토",
+            url: "https://www.newsen.com/news_view.php?uid=202611190804053510"
+        },
+        {
+            label: "무신사 노매뉴얼 CONTRAST CROP FUR JACKET",
+            url: "https://www.musinsa.com/products/7555110"
+        },
+        {
+            label: "유찬의패션아카이브 261119 키야 착장 정리",
+            url: "https://youchan223.tistory.com/240"
+        }
+    ],
+    alt: {
+        brand: "스파오",
+        name: "[신세틱레더] 페이크 퍼 하프 코트 (SPJLG4VW04)",
+        price: 79900,
+        platform: "musinsa",
+        fit: "엉덩이 위 하프 기장, 어깨가 떨어지는 루즈핏",
+        cons: "크롭이 아니라 하프 기장이고, 소매 배색이 아니라 앞여밈 안쪽에 퍼가 들어감",
+        note: "정가 99,900원, 무신사 20% 적용 79,900원. 인조 퍼 안감과 신세틱 레더 겉감으로 털 자켓의 볼륨을 살리면서 가격은 3분의 1로 낮춥니다.",
+        query: "스파오 신세틱레더 페이크 퍼 하프 코트"
+    },
+    palette: ["#7a6a56", "#5a2430", "#5d7ba6"]
+  },
+  {
+    id: "youngseo-tomboy-fur",
+    image: "assets/looks/youngseo-tomboy-fur.webp?v=2026112201",
+    imageJpg: "assets/looks/youngseo-tomboy-fur.jpg?v=2026112201",
+    photo: {label: "뉴스엔", kind: "photo", what: "2026.11.18 김포국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611181758583510"},
+    imageAlt: "김포공항 출국길, 아이보리 헤어리 퍼 자켓에 검정 원피스와 베이지 슬라우치 부츠를 신은 올데이프로젝트 영서",
+    celeb: "영서",
+    group: "ALLDAY PROJECT",
+    type: "airport",
+    show: "공항",
+    scene: "2026.11.18 김포공항 출국 · 2026 MAMA 오사카",
+    category: "outer",
+    mood: ["lovely", "minimal"],
+    headline: "49만 9천 원 퍼 자켓",
+    item: {
+        brand: "스튜디오 톰보이",
+        brandEn: "STUDIO TOMBOY",
+        name: "헤어리 미들 신세틱 퍼 자켓_아이보리",
+        nameEn: "Hairy Middle Synthetic Fur Jacket - Ivory",
+        sku: "9106461301",
+        price: 499000,
+        salePrice: 399200,
+        saleNote: "29CM 20% 할인가",
+        material: "인조 퍼 (신세틱 퍼) · 안감 폴리에스터 (브랜드 표기)",
+        colors: "아이보리 · 블랙",
+        sizes: "S · M (29CM 옵션 표기)",
+        maker: "스튜디오 톰보이 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 자연스럽게 떨어지고 엉덩이를 덮는 미들 기장. 앞여밈 단추 없이 열어 입는 구조",
+        cons: "아이보리 인조 퍼라 목과 소매 끝이 쉽게 지저분해지고, 단추가 없어 바람이 들면 앞이 벌어짐",
+        officialUrl: "https://www.29cm.co.kr/products/4325100"
+    },
+    story: "영서가 11월 18일 김포공항에서 오사카 MAMA 일정으로 출국할 때 입은 퍼 자켓입니다. 털이 길게 올라온 아이보리 인조 퍼로, 어깨가 자연스럽게 떨어지고 엉덩이를 덮는 미들 기장입니다. 29CM 기준 정가 499,000원, 20% 할인이 붙어 399,200원입니다.",
+    point: "앞여밈 단추 없이 열어 입는 구조라 안쪽 옷이 그대로 보입니다. 영서는 검정 원피스와 검정 타이츠로 안쪽을 한 색으로 묶고, 베이지 슬라우치 부츠로 아래를 받쳤습니다. 아이보리 퍼와 검정 안쪽의 대비가 사진의 인상을 만듭니다.",
+    verified: "29CM 상품 페이지(정가 499,000원 → 399,200원, 품번 9106461301) 확인, 뉴스엔 11월 18일 김포공항 출국 촬영과 기장·색 대조, 유찬의패션아카이브 261118 착장 정리와 교차 확인",
+    sources: [
+        {
+            label: "뉴스엔 2026.11.18 올데이 프로젝트 영서 출국 포토",
+            url: "https://www.newsen.com/news_view.php?uid=202611181758583510"
+        },
+        {
+            label: "29CM 스튜디오 톰보이 헤어리 미들 신세틱 퍼 자켓",
+            url: "https://www.29cm.co.kr/products/4325100"
+        },
+        {
+            label: "유찬의패션아카이브 261118 영서 착장 정리",
+            url: "https://youchan223.tistory.com/236"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드 우먼",
+        name: "시어링 플리스 후디드 집업 [라이트 베이지]",
+        price: 80910,
+        platform: "musinsa",
+        fit: "정핏에 가까운 후디드 집업, 소매가 짧게 떨어짐",
+        cons: "미들 기장이 아니라 엉덩이 위에서 끊기고, 후드가 있어 목선이 닫힘",
+        note: "정가 89,900원, 무신사 10% 적용 80,910원. 양털 플리스로 아이보리 톤 볼륨을 만들고, 단추 대신 지퍼라 바람에는 더 유리합니다.",
+        query: "무신사 스탠다드 우먼 시어링 플리스 후디드 집업"
+    },
+    palette: ["#e9e2d4", "#161616", "#c4ab8d"]
+  },
+  {
+    id: "jiheon-grove-stripe",
+    image: "assets/looks/jiheon-grove-stripe.webp?v=2026112201",
+    imageJpg: "assets/looks/jiheon-grove-stripe.jpg?v=2026112201",
+    photo: {label: "백지헌 인스타그램", kind: "photo", what: "2026.11.19 공개 사진 (유찬의패션아카이브 경유 확인)", url: "https://youchan223.tistory.com/243"},
+    imageAlt: "파리 거리에서 블루 니트 아래 와인색 스트라이프 카라 셔츠를 받쳐 입고 서 있는 프로미스나인 백지헌",
+    celeb: "백지헌",
+    group: "fromis_9",
+    type: "daily",
+    show: "일상",
+    scene: "2026.11.19 백지헌 인스타그램 공개",
+    category: "top",
+    mood: ["preppy", "casual"],
+    headline: "13만 8천 원 스트라이프 셔츠",
+    item: {
+        brand: "그로브",
+        brandEn: "GROVE",
+        name: "26FW CARELL OVER-FIT STRIPE LS PIQUE SHIRT (WINE)",
+        nameEn: "Carell Over-fit Stripe LS Pique Shirt",
+        sku: "GF26TSK10_WN",
+        price: 138000,
+        salePrice: 122820,
+        saleNote: "무신사 11% 할인가 · 11월 20일 기준 품절",
+        material: "피케 (면·폴리에스터 혼방, 브랜드 표기)",
+        colors: "와인 · 네이비 · 그레이 등 3색",
+        sizes: "S · M · L (무신사 옵션 표기)",
+        maker: "그로브 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 떨어지는 오버핏, 밑단이 길어 니트 아래로 빼 입을 수 있는 기장",
+        cons: "피케 소재라 겨울 단독 착용은 어렵고, 와인색은 얼굴 톤을 가리며, 현재 품절",
+        officialUrl: "https://www.musinsa.com/products/7300485"
+    },
+    story: "백지헌이 11월 19일 인스타그램에 올린 사진 속 셔츠입니다. 와인색 바탕에 아이보리 스트라이프가 가로로 들어간 피케 셔츠로, 파란 니트 안쪽에 받쳐 입어 칼라와 밑단만 드러냈습니다. 그로브 기준 정가 138,000원, 무신사 판매가는 122,820원이며 11월 20일 현재 품절입니다.",
+    point: "스트라이프 셔츠를 니트 안에 넣을 때는 칼라와 밑단, 두 곳만 보이게 하는 것이 핵심입니다. 백지헌은 와인색 칼라를 니트 목선 위로 살짝 내밀고, 밑단은 니트 아래로 5cm 정도 빼서 허리선을 흐리게 했습니다.",
+    verified: "무신사 상품 페이지(품번 GF26TSK10_WN, 정가 138,000원·할인가 122,820원, 품절 표기) 확인, 유찬의패션아카이브 261119 착장 정리와 색·레이어드 구조 대조",
+    sources: [
+        {
+            label: "유찬의패션아카이브 261119 백지헌 착장 정리",
+            url: "https://youchan223.tistory.com/243"
+        },
+        {
+            label: "무신사 그로브 CARELL OVER-FIT STRIPE PIQUE SHIRT",
+            url: "https://www.musinsa.com/products/7300485"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "릴렉스드 섀도우 스트라이프 포플린 셔츠 [스카이블루/스트라이프]",
+        price: 27890,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 릴렉스드 핏, 밑단이 긴 셔츠 기장",
+        cons: "피케가 아닌 포플린이라 겉면이 매끈하고, 와인이 아닌 스카이블루 스트라이프",
+        note: "정가 39,900원, 무신사 30% 적용 27,890원. 얇은 스트라이프와 긴 밑단으로 니트 아래 빼 입는 방식은 그대로 따라 할 수 있습니다.",
+        query: "무신사 스탠다드 릴렉스드 섀도우 스트라이프 포플린 셔츠"
+    },
+    palette: ["#5c2330", "#26497f", "#c9c2b6"]
+  },
+  {
+    id: "seulgi-aviemuah-lambskin",
+    image: "assets/looks/seulgi-aviemuah-lambskin.webp?v=2026112201",
+    imageJpg: "assets/looks/seulgi-aviemuah-lambskin.jpg?v=2026112201",
+    photo: {label: "아비에무아 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://aviemuah.com/product/%EB%9E%A8%EC%8A%A4%ED%82%A8-%EB%9E%A9-%EC%A0%90%ED%8D%BC/2797/category/273/display/1/"},
+    imageAlt: "검정 천연 양가죽 램스킨 랩 점퍼의 브랜드 공식 제품 컷",
+    celeb: "슬기",
+    group: "Red Velvet",
+    type: "variety",
+    show: "유튜브",
+    scene: "2026.11 하이슬기 '슬기의 무계획 in 망원동' 편",
+    category: "outer",
+    mood: ["chic", "minimal"],
+    headline: "83만 5천 원 램스킨 점퍼",
+    item: {
+        brand: "아비에무아",
+        brandEn: "ÀVIE MUAH",
+        name: "램스킨 랩 점퍼",
+        nameEn: "Lambskin Wrap Jumper",
+        sku: "램스킨 랩 점퍼 (2차 리오더)",
+        price: 835000,
+        salePrice: 835000,
+        saleNote: "공식몰 정가 판매 · 2차 리오더 진행",
+        material: "겉감 천연 양가죽 · 안감 폴리에스터 54%·레이온 46%",
+        colors: "블랙",
+        sizes: "ONE (남녀공용) · 총장 65.5cm·가슴 60cm·어깨 50.5cm·암홀 31cm·소매 57cm·밑단 54cm",
+        maker: "아비에무아 / 대한민국",
+        season: "2026 FW",
+        fit: "어깨가 떨어지는 오버사이즈. 비대칭 플라켓과 지퍼·히든 스냅 이중 여밈",
+        cons: "천연 양가죽이라 물세탁·드라이클리닝 모두 안 되고, ONE 사이즈로 키가 작으면 총장 65.5cm가 엉덩이를 덮음",
+        officialUrl: "https://aviemuah.com/product/%EB%9E%A8%EC%8A%A4%ED%82%A8-%EB%9E%A9-%EC%A0%90%ED%8D%BC/2797/category/273/display/1/"
+    },
+    story: "슬기가 하이슬기 '슬기의 무계획 in 망원동' 편에서 입은 램스킨 점퍼입니다. 엠보싱 텍스처가 살아 있는 천연 양가죽에 하이넥과 비대칭 플라켓을 붙였고, 지퍼와 히든 스냅을 두 겹으로 여밉니다. 아비에무아 공식몰 기준 835,000원, 2차 리오더로 판매 중입니다.",
+    point: "랩 점퍼는 앞여밈이 비스듬해 목에서 허리까지 한 줄로 닫히지 않습니다. 그 틈으로 안쪽 상의가 드러나므로, 안에는 목이 높지 않은 티나 얇은 터틀넥을 고르는 편이 낫습니다. 오버사이즈이므로 아래는 일자로 떨어지는 팬츠가 균형에 맞습니다.",
+    verified: "아비에무아 공식몰 상품 페이지(835,000원, 겉감 천연 양가죽·안감 폴리에스터 54%/레이온 46%, ONE 사이즈 실측 표기) 확인, 톺톺 하이슬기 망원동 편 착장 목록과 교차 확인",
+    sources: [
+        {
+            label: "아비에무아 공식몰 램스킨 랩 점퍼",
+            url: "https://aviemuah.com/product/%EB%9E%A8%EC%8A%A4%ED%82%A8-%EB%9E%A9-%EC%A0%90%ED%8D%BC/2797/category/273/display/1/"
+        },
+        {
+            label: "톺톺 하이슬기 망원동 편 착장",
+            url: "https://toftof.kr/videos/hi-seulgi-mangwon-xdnx-2aiaia"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "크레이프 하이넥 블루종 재킷 [카키 그레이]",
+        price: 49890,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 루즈핏, 엉덩이 위 기장",
+        cons: "가죽이 아닌 크레이프 원단이고, 랩 여밈이 아니라 앞 지퍼 한 줄",
+        note: "정가 99,900원, 무신사 50% 적용 49,890원. 하이넥과 떨어지는 어깨로 점퍼의 실루엣을 살리고, 무게는 가죽의 절반 수준입니다.",
+        query: "무신사 스탠다드 크레이프 하이넥 블루종 재킷"
+    },
+    palette: ["#131313", "#5b5b57", "#8f8574"]
+  },
+  {
+    id: "nara-tonywack-tweed",
+    image: "assets/looks/nara-tonywack-tweed.webp?v=2026112201",
+    imageJpg: "assets/looks/nara-tonywack-tweed.jpg?v=2026112201",
+    photo: {label: "토니웩 공식", kind: "product", what: "브랜드 공식 룩북 컷 (실착 사진 아님)", url: "https://tonywack.tv/products/w-wool-tweed-jacket_-black"},
+    imageAlt: "검정 울 트위드 노카라 자켓에 골드 단추가 달린 토니웩 공식 룩북 컷",
+    celeb: "장나라",
+    group: "배우",
+    type: "variety",
+    show: "살롱드립",
+    scene: "2026.11.17 공개 · TEO 살롱드립 EP.164",
+    category: "outer",
+    mood: ["chic", "minimal"],
+    headline: "30만 9천 원 트위드",
+    item: {
+        brand: "토니웩",
+        brandEn: "TONYWACK",
+        name: "(W) WOOL TWEED JACKET_ BLACK",
+        nameEn: "Wool Tweed Jacket - Black",
+        sku: "(W) WOOL TWEED JACKET_ BLACK",
+        price: 309000,
+        salePrice: 309000,
+        saleNote: "공식몰 정가 · 11월 20일 기준 품절",
+        material: "울 62%·나일론 20%·모헤어 10%·알파카 8% · 안감 폴리에스터 50%/비스코스 50%",
+        colors: "블랙",
+        sizes: "S·M·L · S 총장 62cm·어깨 42cm·가슴 45cm·소매 60cm",
+        maker: "토니웩 / 한국",
+        season: "2026 FW",
+        fit: "어깨선이 살아 있는 슬림 스트레이트. 노카라에 금장 단추 다섯 개",
+        cons: "노카라라 목이 열려 목도리를 따로 챙겨야 하고, 슬림 핏이라 두꺼운 니트를 안에 넣기 어려움",
+        officialUrl: "https://tonywack.tv/products/w-wool-tweed-jacket_-black"
+    },
+    story: "장나라가 11월 17일 공개된 TEO 살롱드립 EP.164에서 입은 트위드 자켓입니다. 노카라에 금장 단추를 한 줄로 세운 블랙 트위드로, 어깨선이 살아 있는 슬림한 실루엣입니다. 토니웩 공식몰 기준 309,000원이며 11월 20일 현재 품절입니다.",
+    point: "노카라 트위드는 목선이 비어 보이기 쉬워, 안쪽에 목이 높은 이너를 넣거나 목도리를 더하는 편이 낫습니다. 슬림 핏이라 안에 두꺼운 니트를 넣으면 단추가 벌어집니다. 얇은 터틀넥이나 셔츠가 맞습니다.",
+    verified: "토니웩 공식 상품 페이지(309,000원, 울 62%·나일론 20%·모헤어 10%·알파카 8%, S/M/L 실측 표기, 품절) 확인, 톺톺 살롱드립 EP.164 착장 목록과 교차 확인",
+    sources: [
+        {
+            label: "토니웩 (W) WOOL TWEED JACKET_ BLACK",
+            url: "https://tonywack.tv/products/w-wool-tweed-jacket_-black"
+        },
+        {
+            label: "톺톺 살롱드립 EP.164 착장",
+            url: "https://toftof.kr/videos/salon-drip-ep164-jang-na-ra-kim-hye-yoon"
+        },
+        {
+            label: "매거진제이 살롱드립 EP.164 정리",
+            url: "https://magazinejj.tistory.com/94"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "트위드 미니멀 재킷 [블랙]",
+        price: 69890,
+        platform: "musinsa",
+        fit: "어깨가 살짝 떨어지는 스트레이트 핏, 엉덩이 위 기장",
+        cons: "노카라가 아닌 라펠형이고, 모헤어·알파카가 들어가지 않아 표면 결이 더 매끈함",
+        note: "정가 99,900원, 무신사 30% 적용 69,890원. 검정 트위드에 단추 여밈이라는 기본 구조를 그대로 가져오면서 가격은 4분의 1로 낮춥니다.",
+        query: "무신사 스탠다드 트위드 미니멀 재킷"
+    },
+    palette: ["#111112", "#c9a227", "#6a6a6c"]
+  },
+  {
+    id: "inah-rheme-denim-racer",
+    image: "assets/looks/inah-rheme-denim-racer.webp?v=2026112201",
+    imageJpg: "assets/looks/inah-rheme-denim-racer.jpg?v=2026112201",
+    photo: {label: "리임 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://rheme.co.kr/product/list.html?cate_no=115"},
+    imageAlt: "차콜 워싱 데님으로 만든 리임 레이서 자켓의 브랜드 공식 제품 컷",
+    celeb: "설인아",
+    group: "배우",
+    type: "variety",
+    show: "드라마",
+    scene: "2026.11 나의 유죄인간 10화 · 증거실 장면",
+    category: "outer",
+    mood: ["chic", "casual"],
+    headline: "31만 5천 원 데님 레이서",
+    item: {
+        brand: "리임",
+        brandEn: "RHEME",
+        name: "워싱 데님 레이서 자켓 (FADED DENIM RACER JACKET) - 차콜",
+        nameEn: "Faded Denim Racer Jacket - Charcoal",
+        sku: "RHWRM26SSJK05CH",
+        price: 315000,
+        salePrice: 283500,
+        saleNote: "SSF샵 10% 할인가 · 공식몰 정가 315,000원",
+        material: "워싱 데님 (면 혼방, 브랜드 표기)",
+        colors: "차콜 (차콜 워싱 단일)",
+        sizes: "ONE SIZE",
+        maker: "리임 / 한국",
+        season: "2026 SS",
+        fit: "어깨가 살짝 떨어지고 허리에서 조금 조이는 레이서 실루엣, 밑단 밴딩",
+        cons: "데님이라 겨울 단독 착용은 어렵고, ONE 사이즈·단일 색이라 선택지가 없음",
+        officialUrl: "https://www.ssfshop.com/RHEME/GRHW26031923500/good"
+    },
+    story: "설인아가 tvN 나의 유죄인간 10화 증거실 장면에서 입은 데님 자켓입니다. 차콜로 워싱한 데님에 레이서 자켓의 구조를 얹어, 트러커보다 어깨선이 부드럽고 밑단이 조입니다. 리임 공식몰 기준 정가 315,000원, SSF샵 할인가 283,500원입니다.",
+    point: "레이서 자켓은 트러커보다 짧고 밑단이 조여 상체가 작아 보입니다. 안에 어두운 터틀넥을 넣으면 목선이 정리되고, 하의는 일자 데님이나 슬랙스로 떨어뜨리는 편이 낫습니다. 차콜 워싱은 검정보다 부드러워 얼굴색을 덜 가립니다.",
+    verified: "리임 공식몰 상품 목록(정가 315,000원, ONE SIZE·1컬러 표기) 확인, SSF샵 상품 페이지(정가 315,000원 → 283,500원, 품번 RHWRM26SSJK05CH) 대조, 톺톺 나의 유죄인간 착장 목록과 교차 확인",
+    sources: [
+        {
+            label: "리임 공식몰 26SS 워싱 데님 레이서 자켓",
+            url: "https://rheme.co.kr/product/list.html?cate_no=115"
+        },
+        {
+            label: "SSF샵 리임 Faded Denim Racer Jacket",
+            url: "https://www.ssfshop.com/RHEME/GRHW26031923500/good"
+        },
+        {
+            label: "톺톺 나의 유죄인간 착장",
+            url: "https://toftof.kr/videos/my-guilty-man-tving"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "릴렉스드 데님 트러커 재킷 [라이트 인디고]",
+        price: 59900,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 릴렉스드 핏, 엉덩이 위 기장",
+        cons: "레이서가 아닌 트러커 구조라 밑단이 조이지 않고, 차콜이 아닌 라이트 인디고",
+        note: "59,900원. 같은 데님 자켓 계열로, 밑단 밴딩이 없는 대신 팔을 올리기 편하고 색이 밝아 겨울 코트 안에 받치기 좋습니다.",
+        query: "무신사 스탠다드 릴렉스드 데님 트러커 재킷"
+    },
+    palette: ["#3a3d42", "#202020", "#8ea3bd"]
+  },
+  {
+    id: "sohyun-lmood-mohair",
+    image: "assets/looks/sohyun-lmood-mohair.webp?v=2026112201",
+    imageJpg: "assets/looks/sohyun-lmood-mohair.jpg?v=2026112201",
+    photo: {label: "엘무드 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7033992"},
+    imageAlt: "애쉬 그레이 모헤어 스트라이프 라운드넥 가디건의 제품 컷",
+    celeb: "김소현",
+    group: "배우",
+    type: "variety",
+    show: "드라마",
+    scene: "2026.11 연애박사 8화",
+    category: "top",
+    mood: ["lovely", "casual"],
+    headline: "15만 8천 원 모헤어 가디건",
+    item: {
+        brand: "엘무드",
+        brandEn: "LMOOD",
+        name: "헤이즈 모헤어 스트라이프 가디건 애쉬 그레이",
+        nameEn: "Haze Mohair Stripe Cardigan Ash Grey",
+        sku: "헤이즈 모헤어 스트라이프 가디건 (애쉬 그레이)",
+        price: 158000,
+        salePrice: 142200,
+        saleNote: "무신사 10% 할인가",
+        material: "모헤어 혼방 (브랜드 표기)",
+        colors: "애쉬 그레이",
+        sizes: "S · M (무신사 옵션 표기)",
+        maker: "엘무드 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 떨어지는 세미 크롭, 라운드넥에 단추 여밈",
+        cons: "모헤어 특유의 털 빠짐이 있고, 가로 줄무늬가 굵기가 불규칙해 체형에 따라 부해 보일 수 있음",
+        officialUrl: "https://www.musinsa.com/products/7033992"
+    },
+    story: "김소현이 연애박사 8화에서 입은 가디건입니다. 애쉬 그레이 바탕에 네이비 가로 줄이 굵기를 달리해 들어가고, 모헤어 잔털이 표면을 덮습니다. 무신사 기준 정가 158,000원, 10% 할인이 붙어 142,200원입니다.",
+    point: "가로 줄무늬는 몸통을 넓게 보이게 하므로 아래를 좁게 가져가는 편이 낫습니다. 모헤어는 마찰에 약해 가방끈이 지나는 쪽부터 보풀이 생기니, 크로스백보다 숄더나 핸드백을 짧게 메는 편이 좋습니다.",
+    verified: "무신사 상품 페이지(정가 158,000원 → 142,200원, 10% 할인, 후기 표기) 확인, 톺톺 연애박사 착장 목록(8화 엘무드 가디건)과 교차 확인",
+    sources: [
+        {
+            label: "무신사 엘무드 헤이즈 모헤어 스트라이프 가디건",
+            url: "https://www.musinsa.com/products/7033992"
+        },
+        {
+            label: "톺톺 연애박사 착장",
+            url: "https://toftof.kr/videos/love-doctor-disneyplus"
+        },
+        {
+            label: "매거진제이 연애박사 김소현·추영우 정리",
+            url: "https://magazinejj.tistory.com/32"
+        }
+    ],
+    alt: {
+        brand: "언노운 플래닛",
+        name: "헤어리 모헤어 터치 라운드넥 크롭 가디건 챠콜",
+        price: 47800,
+        platform: "musinsa",
+        fit: "크롭 기장, 어깨는 루즈하게 떨어짐",
+        cons: "가로 줄무늬가 없고, 챠콜 단일 색이라 그레이 스트라이프의 인상과 다름",
+        note: "정가 59,800원, 무신사 20% 적용 47,800원. 모헤어 털 결로 같은 뽀글한 질감을 만들고, 크롭 기장이라 허리선이 드러납니다.",
+        query: "언노운 플래닛 헤어리 모헤어 크롭 가디건"
+    },
+    palette: ["#8d8d8b", "#2c3550", "#b9b3a8"]
+  },
+  {
+    id: "youngk-ami-cardigan",
+    image: "assets/looks/youngk-ami-cardigan.webp?v=2026112201",
+    imageJpg: "assets/looks/youngk-ami-cardigan.jpg?v=2026112201",
+    photo: {label: "아미 파리", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.wconcept.co.kr/Product/308888043"},
+    imageAlt: "아이보리 바탕에 검정 하트 로고가 들어간 아미 드 꾀흐 펠티드 메리노 울 가디건 제품 컷",
+    celeb: "영케이",
+    group: "FT아일랜드",
+    type: "variety",
+    show: "라디오스타",
+    scene: "2026.11.18 방영 · MBC 라디오스타 990회",
+    category: "top",
+    mood: ["preppy", "chic"],
+    headline: "84만 5,400원 아미 가디건",
+    item: {
+        brand: "아미",
+        brandEn: "AMI PARIS",
+        name: "AMI de Coeur Felted Merino Wool Cardigan Ivory Black",
+        nameEn: "Ami de Coeur Felted Merino Wool Cardigan",
+        sku: "UKC367-018-151",
+        price: 845400,
+        salePrice: 540870,
+        saleNote: "W컨셉 36% 할인가",
+        material: "버진 울 100% (펠팅 가공) · 포르투갈 제조",
+        colors: "아이보리/블랙",
+        sizes: "S · M · L · XL",
+        maker: "Ami Paris / 포르투갈",
+        season: "2026 FW",
+        fit: "오버사이즈, 가슴 왼쪽에 큰 하트 로고 인타르시아, 단추 다섯 개",
+        cons: "오버사이즈라 어깨가 좁으면 소매가 남고, 아이보리 울이라 목과 소매 끝이 쉽게 탁해짐",
+        officialUrl: "https://www.wconcept.co.kr/Product/308888043"
+    },
+    story: "영케이가 11월 18일 방영된 MBC 라디오스타 990회에서 입은 가디건입니다. 펠팅 가공한 메리노 울에 가슴 왼쪽 큰 하트 로고를 넣은 아미의 시그니처 제품으로, 오버사이즈 실루엣에 은색 단추가 달립니다. W컨셉 기준 정가 845,400원, 36% 할인이 붙어 540,870원입니다.",
+    point: "오버사이즈 가디건은 단추를 다 채우면 목이 답답해 보입니다. 두세 개만 잠그고 아래를 열어 두면 안쪽 셔츠나 티가 드러나 실루엣이 가벼워집니다. 아이보리 울은 목 안쪽에 흰 셔츠 칼라를 받치면 때가 덜 탑니다.",
+    verified: "W컨셉 상품 페이지(정가 845,400원 → 540,870원, 버진 울 100%·포르투갈 제조·모델번호 UKC367-018-151 표기) 확인, 톺톺 라디오스타 990회 착장 목록과 교차 확인",
+    sources: [
+        {
+            label: "W컨셉 아미 드 꾀흐 펠티드 메리노 울 가디건",
+            url: "https://www.wconcept.co.kr/Product/308888043"
+        },
+        {
+            label: "톺톺 라디오스타 착장",
+            url: "https://toftof.kr/videos/radio-star-wavve"
+        },
+        {
+            label: "매거진제이 라디오스타 990회 정리",
+            url: "https://magazinejj.tistory.com/91"
+        }
+    ],
+    alt: {
+        brand: "블론드나인",
+        name: "브러쉬드 아가일 니트 가디건",
+        price: 48900,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 세미 오버핏, 엉덩이 위 기장",
+        cons: "하트 로고가 아니라 아가일 패턴이고, 버진 울이 아닌 아크릴 혼방",
+        note: "정가 69,900원, 무신사 30% 적용 48,900원. 브러쉬드 가공으로 표면을 부드럽게 올리고, 오버핏 비율을 그대로 따라 갑니다.",
+        query: "블론드나인 브러쉬드 아가일 니트 가디건"
+    },
+    palette: ["#efe9dc", "#17181a", "#a8a29a"]
+  },
+  {
+    id: "siwan-siecle-denim-shirt",
+    image: "assets/looks/siwan-siecle-denim-shirt.webp?v=2026112201",
+    imageJpg: "assets/looks/siwan-siecle-denim-shirt.jpg?v=2026112201",
+    photo: {label: "시에클 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/4833830"},
+    imageAlt: "인디고 데님으로 만든 시에클 웨스턴 셔츠의 제품 컷",
+    celeb: "임시완",
+    group: "배우",
+    type: "variety",
+    show: "드라마",
+    scene: "2026.11 나의 유죄인간 10화 · 공원 장면",
+    category: "top",
+    mood: ["casual", "vintage"],
+    headline: "12만 9천 원 데님 셔츠",
+    item: {
+        brand: "시에클",
+        brandEn: "SIECLE",
+        name: "웨스턴 데님 셔츠 (인디고)",
+        nameEn: "Western Denim Shirt - Indigo",
+        sku: "웨스턴 데님 셔츠 (인디고)",
+        price: 129000,
+        salePrice: 119970,
+        saleNote: "무신사 7% 할인가",
+        material: "데님 (면 혼방, 브랜드 표기)",
+        colors: "인디고",
+        sizes: "S · M · L (무신사 옵션 표기)",
+        maker: "시에클 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 자연스럽게 떨어지는 레귤러 핏, 셔츠로도 아우터로도 입는 두께",
+        cons: "데님이라 겨울 단독으로는 춥고, 인디고 색이 진해 밝은 팬츠와 붙이면 이염 위험이 있음",
+        officialUrl: "https://www.musinsa.com/products/4833830"
+    },
+    story: "임시완이 나의 유죄인간 10화 공원 장면에서 입은 셔츠입니다. 인디고 데님에 웨스턴 요크와 포켓 디테일을 넣어, 셔츠로도 얇은 아우터로도 입을 수 있는 두께입니다. 무신사 기준 정가 129,000원, 7% 할인이 붙어 119,970원입니다.",
+    point: "데님 셔츠는 단추를 다 채우기보다 두세 개 열어 두는 편이 낫습니다. 목선이 열리면 데님의 무게가 줄고, 안쪽 티의 색이 드러나 얼굴 주변이 정리됩니다. 겨울에는 목이 잡히는 터틀넥 위에 겹쳐 아우터처럼 입는 방식이 실용적입니다.",
+    verified: "무신사 상품 페이지(정가 129,000원 → 119,970원, 7% 할인, 후기 표기) 확인, 톺톺 나의 유죄인간 착장 목록(10화 시에클 웨스턴 데님 셔츠)과 교차 확인",
+    sources: [
+        {
+            label: "무신사 시에클 웨스턴 데님 셔츠",
+            url: "https://www.musinsa.com/products/4833830"
+        },
+        {
+            label: "톺톺 나의 유죄인간 착장",
+            url: "https://toftof.kr/videos/my-guilty-man-tving"
+        },
+        {
+            label: "매거진제이 나의 유죄인간 10화 정리",
+            url: "https://magazinejj.tistory.com/86"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "릴렉스드 데님 셔츠 [인디고]",
+        price: 44890,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 릴렉스드 핏, 밑단이 긴 셔츠 기장",
+        cons: "웨스턴 요크와 포켓 디테일이 없고, 원단이 얇아 아우터로 입기에는 부족함",
+        note: "정가 49,900원, 무신사 10% 적용 44,890원. 같은 인디고 데님으로 색과 소재 인상을 유지하면서 두께만 얇아진 셔츠입니다.",
+        query: "무신사 스탠다드 릴렉스드 데님 셔츠"
+    },
+    palette: ["#2b3f63", "#1c1c1e", "#a08d72"]
+  },
+  {
+    id: "jaewook-sperone-suede",
+    image: "assets/looks/jaewook-sperone-suede.webp?v=2026112201",
+    imageJpg: "assets/looks/jaewook-sperone-suede.jpg?v=2026112201",
+    photo: {label: "스페로네 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/3441579"},
+    imageAlt: "베이지 스웨이드 소재 솔리드 지퍼 자켓의 제품 컷",
+    celeb: "안재욱",
+    group: "배우",
+    type: "variety",
+    show: "라디오스타",
+    scene: "2026.11 MBC 라디오스타 988회",
+    category: "outer",
+    mood: ["minimal", "casual"],
+    headline: "23만 5천 원 스웨이드 자켓",
+    item: {
+        brand: "스페로네",
+        brandEn: "SPERONE",
+        name: "솔리드 스웨이드 지퍼 자켓 (베이지)",
+        nameEn: "Solid Suede Zip Jacket - Beige",
+        sku: "spm23fwos01be",
+        price: 235000,
+        salePrice: 152750,
+        saleNote: "무신사 35% 할인가",
+        material: "스웨이드 터치 인조 소재 (브랜드 표기)",
+        colors: "베이지 · 블랙",
+        sizes: "S · M · L (무신사 옵션 표기)",
+        maker: "스페로네 / 한국",
+        season: "2023 FW (스테디셀러)",
+        fit: "어깨가 자연스럽게 떨어지는 레귤러 핏, 밑단 밴딩으로 허리를 살짝 잡음",
+        cons: "스웨이드 터치 소재라 물에 약하고, 베이지 색이 소매 끝과 목에서 쉽게 탁해짐",
+        officialUrl: "https://www.musinsa.com/products/3441579"
+    },
+    story: "안재욱이 MBC 라디오스타 988회에서 입은 자켓입니다. 베이지 스웨이드 터치 소재에 지퍼 여밈, 밑단 밴딩으로 허리를 살짝 잡는 스탠다드한 실루엣입니다. 무신사 기준 정가 235,000원, 35% 할인이 붙어 152,750원입니다.",
+    point: "베이지 스웨이드는 안쪽 옷 색에 따라 인상이 크게 바뀝니다. 흰 셔츠나 아이보리 니트를 받치면 깔끔해지고, 어두운 색을 넣으면 대비가 강해집니다. 밑단 밴딩이 있으니 하의는 슬림보다 일자나 와이드로 떨어뜨려야 위아래가 균형을 잡습니다.",
+    verified: "무신사 상품 페이지(정가 235,000원 → 152,750원, 35% 할인, 베이지·블랙 2색 표기) 확인, 톺톺 라디오스타 착장 목록(988회 스페로네 자켓)과 교차 확인",
+    sources: [
+        {
+            label: "무신사 스페로네 솔리드 스웨이드 지퍼 자켓",
+            url: "https://www.musinsa.com/products/3441579"
+        },
+        {
+            label: "톺톺 라디오스타 착장",
+            url: "https://toftof.kr/videos/radio-star-wavve"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "CP 트윌 초어 재킷 [블랙]",
+        price: 54890,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 세미 오버핏, 엉덩이 위 기장",
+        cons: "스웨이드가 아닌 트윌 원단이고 베이지가 아닌 블랙이라 질감·색이 모두 다름",
+        note: "정가 79,900원, 무신사 31% 적용 54,890원. 지퍼 여밈에 떨어지는 어깨라는 실루엣을 그대로 가져오고, 물세탁이 되는 소재라 관리가 쉽습니다.",
+        query: "무신사 스탠다드 CP 트윌 초어 재킷"
+    },
+    palette: ["#c2ab8c", "#5f5347", "#20201f"]
+  },
+  {
+    id: "defconn-belier-trucker",
+    image: "assets/looks/defconn-belier-trucker.webp?v=2026112201",
+    imageJpg: "assets/looks/defconn-belier-trucker.jpg?v=2026112201",
+    photo: {label: "벨리에 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/5483102"},
+    imageAlt: "멜란지 그레이 울 소재 트러커 자켓의 제품 컷",
+    celeb: "데프콘",
+    group: "방송인",
+    type: "variety",
+    show: "나는 SOLO",
+    scene: "2026.11.18 방영 · 나는 SOLO 280회",
+    category: "outer",
+    mood: ["casual", "minimal"],
+    headline: "35만 7천 원 울 트러커",
+    item: {
+        brand: "벨리에",
+        brandEn: "BELIER",
+        name: "시티 울 트러커 자켓 - 멜란지 그레이",
+        nameEn: "City Wool Trucker Jacket - Melange Grey",
+        sku: "시티 울 트러커 자켓 (멜란지 그레이)",
+        price: 357000,
+        salePrice: 339150,
+        saleNote: "무신사 단독 5% 할인가",
+        material: "울 혼방 (브랜드 표기) · 안감 폴리에스터",
+        colors: "멜란지 그레이",
+        sizes: "S · M · L (무신사 옵션 표기)",
+        maker: "벨리에 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 떨어지는 세미 오버핏, 엉덩이 위에서 끊기는 트러커 기장",
+        cons: "울 혼방이라 물세탁이 어렵고, 트러커 기장이 짧아 추운 날에는 아래가 시려움",
+        officialUrl: "https://www.musinsa.com/products/5483102"
+    },
+    story: "데프콘이 11월 18일 방영된 나는 SOLO 280회에서 입은 자켓입니다. 데님 트러커의 구조를 울 소재로 옮긴 제품으로, 멜란지 그레이 표면에 트러커 특유의 가슴 포켓과 밑단 벨트가 있습니다. 무신사 기준 정가 357,000원, 5% 단독 할인이 붙어 339,150원입니다.",
+    point: "트러커 기장은 엉덩이 위에서 끊기므로 아래가 시립니다. MC처럼 스튜디오에서 앉아 있는 자리에는 맞지만, 야외에서는 안쪽에 긴 니트나 셔츠를 받쳐 밑단을 드러내는 편이 낫습니다. 멜란지 그레이는 어떤 색 팬츠와도 붙기 쉽습니다.",
+    verified: "무신사 상품 페이지(정가 357,000원 → 339,150원, 5% 단독 할인, 후기 평점 5.0 표기) 확인, 톺톺 나는 SOLO 착장 목록(280회 데프콘 벨리에)과 교차 확인",
+    sources: [
+        {
+            label: "무신사 벨리에 시티 울 트러커 자켓",
+            url: "https://www.musinsa.com/products/5483102"
+        },
+        {
+            label: "톺톺 나는 SOLO 34기 착장",
+            url: "https://toftof.kr/videos/im-solo-34-netflix"
+        },
+        {
+            label: "매거진제이 나는 SOLO 280회 정리",
+            url: "https://magazinejj.tistory.com/90"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "울 블렌드 초어 재킷 [네이비]",
+        price: 90890,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 세미 오버핏, 엉덩이 위 기장",
+        cons: "트러커가 아닌 초어(작업복) 구조라 가슴 포켓과 밑단 벨트가 없고, 색이 멜란지 그레이가 아닌 네이비",
+        note: "정가 129,900원, 무신사 30% 적용 90,890원. 울 혼방에 떨어지는 어깨로 같은 계열의 인상을 만들고, 포켓이 커 실용적입니다.",
+        query: "무신사 스탠다드 울 블렌드 초어 재킷"
+    },
+    palette: ["#5c5d60", "#243044", "#a9a49a"]
+  },
+  {
+    id: "yikyung-liberclassy-knit",
+    image: "assets/looks/yikyung-liberclassy-knit.webp?v=2026112201",
+    imageJpg: "assets/looks/yikyung-liberclassy-knit.jpg?v=2026112201",
+    photo: {label: "리버클래시 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/6191059"},
+    imageAlt: "오렌지 포인트 포켓이 달린 아이보리 라운드넥 니트의 제품 컷",
+    celeb: "이이경",
+    group: "배우",
+    type: "variety",
+    show: "나는 SOLO",
+    scene: "2026.11 나는 SOLO 279회",
+    category: "top",
+    mood: ["casual", "preppy"],
+    headline: "24만 원 오렌지 포인트 니트",
+    item: {
+        brand: "리버클래시",
+        brandEn: "LIBERCLASSY",
+        name: "[26SS] LMS51723 오렌지 포인트 포켓 트리밍 라운드 니트",
+        nameEn: "Orange Point Pocket Trimming Round Knit",
+        sku: "LMS51723",
+        price: 240000,
+        salePrice: 117600,
+        saleNote: "무신사 51% 할인가",
+        material: "울·아크릴 혼방 (브랜드 표기)",
+        colors: "아이보리 (오렌지 포켓 포인트)",
+        sizes: "S · M · L (무신사 옵션 표기)",
+        maker: "리버클래시 / 한국",
+        season: "2026 SS",
+        fit: "어깨가 자연스럽게 떨어지는 레귤러 핏, 라운드넥에 포켓 트리밍",
+        cons: "SS 시즌 제품이라 두께가 얇고, 아이보리 바탕에 오렌지 포인트라 하의 색을 가림",
+        officialUrl: "https://www.musinsa.com/products/6191059"
+    },
+    story: "이이경이 나는 SOLO 279회에서 MC로 입은 니트입니다. 아이보리 바탕에 오렌지 컬러 포켓 트리밍이 붙은 라운드넥 니트로, 어깨가 자연스럽게 떨어지는 레귤러 핏입니다. 무신사 기준 정가 240,000원, 51% 할인이 붙어 117,600원입니다.",
+    point: "포인트 컬러가 한 곳에만 있으므로 나머지는 무채색으로 정리하는 편이 낫습니다. 아이보리 니트에 오렌지 포켓이 붙은 구조라, 하의는 검정이나 네이비 슬랙스가 안전합니다. 오렌지와 같은 계열의 베이지 팬츠를 붙이면 포인트가 묻힙니다.",
+    verified: "무신사 상품 페이지(정가 240,000원 → 117,600원, 51% 할인, 품번 LMS51723 표기) 확인, 톺톺 나는 SOLO 착장 목록(279회 이이경 리버클래시)과 교차 확인",
+    sources: [
+        {
+            label: "무신사 리버클래시 오렌지 포인트 포켓 트리밍 라운드 니트",
+            url: "https://www.musinsa.com/products/6191059"
+        },
+        {
+            label: "톺톺 나는 SOLO 34기 착장",
+            url: "https://toftof.kr/videos/im-solo-34-netflix"
+        }
+    ],
+    alt: {
+        brand: "빈트릴",
+        name: "반팔 케이블 카라 컴포트핏 니트 (다크 블루)",
+        price: 98000,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 컴포트핏, 반팔 기장",
+        cons: "반팔이라 겨울 단독 착용은 어렵고, 카라넥에 다크 블루라 오렌지 포인트가 없음",
+        note: "98,000원. 케이블 짜임으로 표면에 입체감을 주고, 카라넥이라 셔츠 없이도 목선이 정리됩니다.",
+        query: "빈트릴 반팔 케이블 카라 컴포트핏 니트"
+    },
+    palette: ["#efe7d6", "#d06a2c", "#2b3244"]
+  },
+  {
+    id: "jongmin-roaringrad-denim",
+    image: "assets/looks/jongmin-roaringrad-denim.webp?v=2026112201",
+    imageJpg: "assets/looks/jongmin-roaringrad-denim.jpg?v=2026112201",
+    photo: {label: "로어링라드 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/3594915"},
+    imageAlt: "디스트로이드 디테일이 들어간 로어링라드 트러커 데님 자켓 제품 컷",
+    celeb: "김종민",
+    group: "방송인",
+    type: "variety",
+    show: "1박 2일",
+    scene: "2026.11 KBS 1박 2일 350회",
+    category: "outer",
+    mood: ["vintage", "casual"],
+    headline: "28만 6천 원 데님 자켓",
+    item: {
+        brand: "로어링라드",
+        brandEn: "ROARINGRAD",
+        name: "디스트로이드 트러커 데님 자켓",
+        nameEn: "Distressed Trucker Denim Jacket",
+        sku: "디스트로이드 트러커 데님 자켓",
+        price: 286000,
+        salePrice: 286000,
+        saleNote: "정가 판매 · 2026년 4월 4일 트러커 재킷 2위",
+        material: "데님 (면 100% 표기, 브랜드 기준)",
+        colors: "딥 인디고 계열 (브랜드 표기)",
+        sizes: "S · M · L · XL",
+        maker: "로어링라드 / 한국",
+        season: "상시 판매",
+        fit: "어깨가 떨어지는 오버핏, 엉덩이 위에서 끊기는 트러커 기장, 디스트로이드 가공",
+        cons: "디스트로이드 가공이라 부분적으로 올이 풀려 있어 마찰에 약하고, 데님이라 겨울 단독은 추움",
+        officialUrl: "https://www.musinsa.com/products/3594915"
+    },
+    story: "김종민이 KBS 1박 2일 350회에서 입은 데님 자켓입니다. 곳곳을 긁어 올을 풀어낸 디스트로이드 가공이 들어간 트러커로, 어깨가 떨어지고 엉덩이 위에서 끊깁니다. 무신사 기준 286,000원이며, 2026년 4월 4일 트러커 재킷 부문 2위에 올라 있던 제품입니다.",
+    point: "디스트로이드 데님은 안쪽에 밝은 티를 받치면 가공 부위가 더 도드라집니다. 반대로 같은 색 계열을 받치면 가공이 묻힙니다. 트러커 기장이 짧으니 하의는 허리선이 높은 것을 골라 다리 시작점을 올리는 편이 낫습니다.",
+    verified: "무신사 상품 페이지(286,000원, 2026년 4월 4일 트러커 재킷 2위 표기, 후기 평점 5.0) 확인, 톺톺 1박 2일 착장 목록(350회 김종민 로어링라드)과 교차 확인",
+    sources: [
+        {
+            label: "무신사 로어링라드 디스트로이드 트러커 데님 자켓",
+            url: "https://www.musinsa.com/products/3594915"
+        },
+        {
+            label: "톺톺 1박 2일 착장",
+            url: "https://toftof.kr/videos/1night2days-4-wavve"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "린넨 라이크 미니멀 데님 트러커 재킷 [로우 블랙]",
+        price: 42290,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 세미 오버핏, 엉덩이 위 기장",
+        cons: "디스트로이드 가공이 없고, 린넨 라이크 소재라 데님 특유의 두께와 뻣뻣함이 덜함",
+        note: "정가 79,900원, 무신사 47% 적용 42,290원. 트러커 구조와 떨어지는 어깨를 그대로 가져오고, 착용감은 데님보다 가볍습니다.",
+        query: "무신사 스탠다드 린넨 라이크 미니멀 데님 트러커 재킷"
+    },
+    palette: ["#2f3f57", "#8fa3b8", "#3a3630"]
+  }
 ];
