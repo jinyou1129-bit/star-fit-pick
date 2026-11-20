@@ -9,6 +9,743 @@
    ========================================================= */
 window.SFP_LOOKS = [
   {
+    "id": "wonyoung-belier-fur",
+    "image": "assets/looks/wonyoung-belier-fur.webp?v=2026112101",
+    "imageJpg": "assets/looks/wonyoung-belier-fur.jpg?v=2026112101",
+    "photo": {
+        "label": "뉴스엔",
+        "kind": "photo",
+        "what": "2026.11.16 인천공항 출국 현장 촬영",
+        "url": "https://www.newsen.com/news_view.php?uid=202611161035313510"
+    },
+    "imageAlt": "인천공항 출국길, 아이보리 컬 퍼 자켓에 그레이 미니스커트와 니삭스, 차콜 볼캡을 쓴 장원영",
+    "celeb": "장원영",
+    "group": "IVE",
+    "type": "airport",
+    "show": "공항",
+    "scene": "2026.11.16 인천공항 출국 · 홍콩 디즈니랜드 일정",
+    "category": "outer",
+    "mood": [
+        "lovely",
+        "vintage"
+    ],
+    "headline": "33만 원 컬 퍼 자켓",
+    "item": {
+        "brand": "벨리에",
+        "brandEn": "BELIER",
+        "name": "(W) 부클 컬리 퍼 자켓 - 베이지",
+        "nameEn": "Boucle Curly Fur Jacket",
+        "sku": "WDMDJK03-BE",
+        "price": 336000,
+        "salePrice": 319200,
+        "saleNote": "무신사 단독 5% 할인가",
+        "material": "겉감 폴리에스터 100% · 배색 폴리에스터 92%/폴리우레탄 8% · 안감 폴리에스터 48%/레이온 52% (Made in Korea)",
+        "colors": "베이지 · 그레이",
+        "sizes": "01(S) 기준 어깨 53.5cm·가슴 58.5cm·총장 69cm (오버핏)",
+        "maker": "벨리에 / 한국",
+        "season": "2026 FW",
+        "fit": "엉덩이를 덮는 오버핏. 안에 두꺼운 니트를 넣어도 소매가 당기지 않음",
+        "cons": "인조 퍼 특성상 초기 털 빠짐과 정전기가 있고, 드라이클리닝만 가능",
+        "officialUrl": "https://www.musinsa.com/products/7742256"
+    },
+    "story": "장원영이 11월 16일 홍콩 디즈니랜드 일정으로 인천공항에 나올 때 입은 퍼 자켓입니다. 곱슬하게 말린 부클 퍼가 빛을 받으면 아이보리와 베이지 사이로 번지고, 앞여밈의 소뿔 토글 단추가 빈티지한 인상을 만듭니다. 무신사 무스탕·퍼 여성 부문 3위에 올라 있는 제품으로, 11월 중순 기준 정가 336,000원에 5% 할인이 붙어 319,200원입니다.",
+    "point": "퍼 자켓이 이미 부피가 커서 안쪽은 얇게, 아래는 짧게 끊는 것이 장원영식 균형입니다. 그레이 미니스커트와 아이보리 니삭스로 다리선을 살리고, 볼캡으로 얼굴 위쪽을 눌러 주면 퍼 특유의 '부잣집 딸' 무드가 캐주얼 쪽으로 내려옵니다.",
+    "verified": "무신사 상품 페이지(품번 WDMDJK03-BE, 정가 336,000원 → 319,200원, 소재·실측 표기) 확인, 뉴스엔·톱스타뉴스 출국 사진 대조",
+    "sources": [
+        {
+            "label": "뉴스엔 2026.11.16 출국 포토",
+            "url": "https://www.newsen.com/news_view.php?uid=202611161035313510"
+        },
+        {
+            "label": "톱스타뉴스 2026.11.16 출국 기사",
+            "url": "https://www.topstarnews.net/news/articleView.html?idxno=16277587"
+        },
+        {
+            "label": "무신사 벨리에 부클 컬리 퍼 자켓",
+            "url": "https://www.musinsa.com/products/7742256"
+        },
+        {
+            "label": "유찬의패션아카이브 261116 착장 정리",
+            "url": "https://youchan223.tistory.com/228"
+        }
+    ],
+    "alt": {
+        "brand": "무신사 스탠다드 우먼",
+        "name": "시어링 플리스 후디드 집업 [라이트 베이지]",
+        "price": 80910,
+        "platform": "musinsa",
+        "fit": "정핏에 가까운 후디드 집업, 소매가 짧게 떨어짐",
+        "cons": "털 결이 짧고 광택이 적어 사진 속 부클 볼륨과는 다름",
+        "note": "정가 89,900원, 무신사 10% 적용 80,910원. 퍼 대신 양털 플리스로 같은 크림 톤 볼륨을 만들고, 후드를 세워 입으면 목선이 따뜻합니다.",
+        "query": "무신사 스탠다드 우먼 시어링 플리스 후디드 집업"
+    },
+    "palette": [
+        "#e8ddcb",
+        "#9b9488",
+        "#3a3a3c"
+    ]
+  },
+  {
+    "id": "yujin-lcdc-shearling",
+    "image": "assets/looks/yujin-lcdc-shearling.webp?v=2026112101",
+    "imageJpg": "assets/looks/yujin-lcdc-shearling.jpg?v=2026112101",
+    "photo": {
+        "label": "뉴스엔",
+        "kind": "photo",
+        "what": "2026.11.19 인천공항 출국 현장 촬영",
+        "url": "https://www.newsen.com/news_view.php?uid=202611191113563510"
+    },
+    "imageAlt": "인천공항 출국길, 크림 컬러 시어링 카라 코트에 블랙 볼캡과 선글라스를 쓴 안유진",
+    "celeb": "안유진",
+    "group": "IVE",
+    "type": "airport",
+    "show": "공항",
+    "scene": "2026.11.19 인천공항 출국 · 일본 오사카 일정",
+    "category": "outer",
+    "mood": [
+        "lovely",
+        "minimal"
+    ],
+    "headline": "리버시블 시어링 46만 원",
+    "item": {
+        "brand": "엘씨디씨티엠",
+        "brandEn": "LCDC™",
+        "name": "FUR REVERSIBLE SHEARLING COAT (BEIGE)",
+        "nameEn": "Fur Reversible Shearling Coat",
+        "sku": "LCFWACLF20070BGE",
+        "price": 459000,
+        "salePrice": 413100,
+        "saleNote": "무신사 10% 할인가",
+        "material": "겉감 폴리에스터 · 안감 폴리에스터 (인조 시어링, 리버시블)",
+        "colors": "베이지 · 블랙",
+        "sizes": "원 사이즈(FREE) · 오버핏 실루엣",
+        "maker": "엘씨디씨티엠 / 한국",
+        "season": "2026 FW",
+        "fit": "어깨가 넓게 떨어지는 오버핏. 안감을 뒤집으면 퍼가 안쪽으로 들어감",
+        "cons": "정가 459,000원, 무신사 할인가도 41만 원대. 리오더 예약배송이 잦아 실물 수령이 늦음",
+        "officialUrl": "https://www.musinsa.com/products/7533576"
+    },
+    "story": "같은 날 오사카로 출국한 아이브 무리에서 안유진이 고른 코트입니다. 카라와 소매 끝에만 퍼를 덧댄 인조 시어링 코트로, 몸판은 매끈한 베이지라 퍼 자켓보다 단정합니다. 제품명 그대로 안팎을 뒤집어 입을 수 있어 퍼가 바깥으로 나오는 날과 안쪽에 두는 날의 인상이 달라집니다.",
+    "point": "퍼가 달린 목선을 살리려면 목을 덮는 니트를 피하고, 안에는 얇은 이너 하나만 두는 것이 낫습니다. 안유진처럼 검정 볼캡과 선글라스로 얼굴 위쪽을 정리하면 베이지 코트가 유난히 밝게 보이지 않습니다.",
+    "verified": "무신사 상품 페이지(품번 LCFWACLF20070BGE, 정가 459,000원 → 413,100원) 확인, 뉴스엔 출국 사진과 착장 대조, 29CM 동일 상품 리오더 표기 확인",
+    "sources": [
+        {
+            "label": "뉴스엔 2026.11.19 출국 포토",
+            "url": "https://www.newsen.com/news_view.php?uid=202611191113563510"
+        },
+        {
+            "label": "무신사 엘씨디씨티엠 시어링 코트",
+            "url": "https://www.musinsa.com/products/7533576"
+        },
+        {
+            "label": "유찬의패션아카이브 261119 착장 정리",
+            "url": "https://youchan223.tistory.com/238"
+        }
+    ],
+    "alt": {
+        "brand": "비엔엑스",
+        "name": "하이넥 시어링 양털 포켓 자켓 (BX4JK018L0)",
+        "price": 78000,
+        "platform": "musinsa",
+        "fit": "하이넥·정핏, 어깨가 각지게 잡힘",
+        "cons": "리버시블 구조가 아니고 기장이 짧은 편",
+        "note": "정가 159,000원, 무신사 51% 적용 78,000원. 퍼 카라를 세워 목을 덮는 실루엣이 비슷하고, 가격은 원본의 6분의 1 수준입니다.",
+        "query": "비엔엑스 하이넥 시어링 양털 포켓 자켓"
+    },
+    "palette": [
+        "#ead9c5",
+        "#c8b6a2",
+        "#1d1d1f"
+    ]
+  },
+  {
+    "id": "karina-mlb-curve",
+    "image": "assets/looks/karina-mlb-curve.webp?v=2026112101",
+    "imageJpg": "assets/looks/karina-mlb-curve.jpg?v=2026112101",
+    "photo": {
+        "label": "MLB 26FW 캠페인 화보",
+        "kind": "product",
+        "what": "브랜드 제공 캠페인 컷 (포토월 촬영 아님)",
+        "url": "https://www.mediapen.com/news/view/1138473"
+    },
+    "imageAlt": "설경 배경, 검정 고프코어 커브 패딩에 플러시 미야옹 비니를 쓰고 포즈를 취한 카리나",
+    "celeb": "카리나",
+    "group": "aespa",
+    "type": "daily",
+    "show": "화보",
+    "scene": "MLB 26FW 윈터 캠페인 'KARINA, THE PEAK OF WINTER' (2026.11.19 공개)",
+    "category": "outer",
+    "mood": [
+        "street",
+        "minimal"
+    ],
+    "headline": "42만 원 커브 패딩",
+    "item": {
+        "brand": "엠엘비",
+        "brandEn": "MLB",
+        "name": "고프코어 립스탑 후드 구스 커브패딩 NY (Black)",
+        "nameEn": "Gorpcore Ripstop Hooded Goose Curve Padding NY",
+        "sku": "3ADJB2466-50BKS",
+        "price": 419000,
+        "salePrice": 419000,
+        "saleNote": "정가 판매 (2026.11.20 확인)",
+        "material": "겉감 립스탑 나일론 · 충전재 RDS 인증 구스다운 90/10 (브랜드 캠페인 설명)",
+        "colors": "블랙 · NY(뉴욕양키스) 자수",
+        "sizes": "XS~XL (여성 라인)",
+        "maker": "엠엘비 / 베트남",
+        "season": "2026 FW",
+        "fit": "곡선형 퀼팅으로 어깨가 둥글게 잡히는 크롭 기장",
+        "cons": "정가 41만 9천 원에 할인 없이 판매, 립스탑 소재라 찍힘에 예민",
+        "officialUrl": "https://www.musinsa.com/products/7468643"
+    },
+    "story": "MLB가 카리나와 함께 만든 26FW 두 번째 윈터 캠페인의 메인 착장입니다. 야구공의 실밥 곡선에서 가져온 '커브 패딩'으로, 퀼팅이 직선이 아니라 곡선으로 흐르는 것이 특징입니다. 카리나는 이 패딩을 어깨 아래로 걸치고 스포츠 브라탑과 숏 팬츠를 매치해, 패딩을 아우터가 아니라 '몸을 감싸는 액세서리'처럼 썼습니다.",
+    "point": "패딩을 열고 입는 것이 이 코디의 핵심입니다. 지퍼를 끝까지 올리면 스포티한 무드가 사라지니, 안쪽은 크롭 톱으로 정리하고 팬츠는 허리선이 보이는 로우라이즈를 고르세요. 비니는 귀 모양 플러시라 얼굴선을 둥글게 잡아 줍니다.",
+    "verified": "무신사 상품 페이지(품번 3ADJB2466-50BKS, 419,000원) 확인, MLB 캠페인 보도자료(미디어펜·럭드 2026.11.19) 가격·제품명 대조",
+    "sources": [
+        {
+            "label": "미디어펜 2026.11.19 캠페인 보도",
+            "url": "https://www.mediapen.com/news/view/1138473"
+        },
+        {
+            "label": "럭드 2026.11.20 캠페인·가격 정리",
+            "url": "https://www.luck-d.com/agit/news/3825"
+        },
+        {
+            "label": "무신사 MLB 고프코어 커브패딩",
+            "url": "https://www.musinsa.com/products/7468643"
+        }
+    ],
+    "alt": {
+        "brand": "페이지시시",
+        "name": "SiiSii 레터링 와펜 포인트 숏패딩 크림",
+        "price": 49900,
+        "platform": "musinsa",
+        "fit": "크롭 기장, 어깨는 정핏",
+        "cons": "곡선 퀼팅과 NY 자수가 없고 광택이 적음",
+        "note": "정가 72,000원, 무신사 31% 적용 49,900원. 크림 컬러 크롭 패딩이라 같은 '짧은 패딩 + 긴 팬츠' 비율을 5만 원 아래로 만들 수 있습니다.",
+        "query": "페이지시시 SiiSii 숏패딩"
+    },
+    "palette": [
+        "#141416",
+        "#2c2c30",
+        "#e8e8e6"
+    ]
+  },
+  {
+    "id": "minnie-acne-blouson",
+    "image": "assets/looks/minnie-acne-blouson.webp?v=2026112101",
+    "imageJpg": "assets/looks/minnie-acne-blouson.jpg?v=2026112101",
+    "photo": {
+        "label": "뉴스엔",
+        "kind": "photo",
+        "what": "2026.11.15 인천공항 출국 현장 촬영",
+        "url": "https://www.newsen.com/news_view.php?uid=202611151107433510"
+    },
+    "imageAlt": "인천공항 출국길, 다크 브라운 가죽 블루종에 연청 데님과 카멜 숄더백을 매치한 민니",
+    "celeb": "민니",
+    "group": "(여자)아이들",
+    "type": "airport",
+    "show": "공항",
+    "scene": "2026.11.15 인천공항 출국 · 방콕 아크네 스튜디오 매장 오픈",
+    "category": "outer",
+    "mood": [
+        "vintage",
+        "street"
+    ],
+    "headline": "445만 원 가죽 블루종",
+    "item": {
+        "brand": "아크네 스튜디오",
+        "brandEn": "ACNE STUDIOS",
+        "name": "가죽 블루종 재킷 - 다크 브라운",
+        "nameEn": "Leather Blouson Jacket - Dark Brown",
+        "sku": "A70238-ADM",
+        "price": 4450000,
+        "salePrice": 4450000,
+        "saleNote": "공식몰 표기 (2026.11.20 확인)",
+        "material": "송아지 가죽 100% (브랜드 표기) · 소매·밑단 밴딩",
+        "colors": "다크 브라운",
+        "sizes": "EU 32~40 (오버사이즈 핏)",
+        "maker": "Acne Studios / 이탈리아",
+        "season": "2026 FW",
+        "fit": "드롭 숄더에 소매가 넉넉한 오버사이즈. 퍼넬넥을 세우면 목이 덮임",
+        "cons": "정가 445만 원. 가죽 특성상 습기·마찰 자국이 남기 쉬움",
+        "officialUrl": "https://www.acnestudios.com/kr/ko/acne-studios/leather-blouson/A70238-ADM.html"
+    },
+    "story": "민니가 방콕 아이콘시암의 아크네 스튜디오 매장 오픈 행사에 가기 위해 인천공항에 나타난 날의 아우터입니다. 초콜릿에 가까운 다크 브라운 가죽에 목까지 올라오는 퍼넬넥, 소매와 밑단의 셔링 밴딩이 붙어 있어 빈티지한 보머 실루엣이 납니다. 문제는 가격입니다. 아크네 공식몰 기준 4,450,000원으로, 이 룩에서 가장 비싼 조각입니다.",
+    "point": "가죽이 무거우므로 아래는 밝은 연청으로 눌러 주는 것이 정석입니다. 민니는 허벅지에 흰 크로스스티치 자수가 들어간 데님을 골라 어두운 상의와 대비를 만들었습니다. 가방을 재킷보다 한 톤 밝은 카멜로 두면 브라운 계열이 단조롭지 않게 정리됩니다.",
+    "verified": "아크네 스튜디오 공식몰 제품 페이지(가격 ₩4,450,000, 다크 브라운, 품번 A70238-ADM) 확인, 뉴스엔 출국 사진과 제품 디테일(퍼넬넥·밴딩) 대조",
+    "sources": [
+        {
+            "label": "아크네 스튜디오 공식몰 가죽 블루종",
+            "url": "https://www.acnestudios.com/kr/ko/acne-studios/leather-blouson/A70238-ADM.html"
+        },
+        {
+            "label": "뉴스엔 2026.11.15 출국 포토",
+            "url": "https://www.newsen.com/news_view.php?uid=202611151107433510"
+        },
+        {
+            "label": "K라이프저니 2026.11.15 공항 착장 기사",
+            "url": "https://klifejourney.com/article/1065602103468644"
+        }
+    ],
+    "alt": {
+        "brand": "위시드",
+        "name": "베이직 카라넥 루즈핏 레더 블루종 자켓 (WIBCJK033)",
+        "price": 55900,
+        "platform": "musinsa",
+        "fit": "루즈핏, 어깨 패드 없이 떨어짐",
+        "cons": "인조 가죽이라 광택과 주름 결이 다르고 퍼넬넥이 아님",
+        "note": "정가 149,000원, 무신사 62% 적용 55,900원. 브라운 대신 블랙이지만 카라넥과 밴딩 소매로 보머 실루엣을 5만 원대에 맞췄습니다.",
+        "query": "위시드 베이직 카라넥 루즈핏 레더 블루종"
+    },
+    "palette": [
+        "#3a2519",
+        "#7f9ab5",
+        "#b5854f"
+    ]
+  },
+  {
+    "id": "sakura-miumiu-fleece",
+    "image": "assets/looks/sakura-miumiu-fleece.webp?v=2026112101",
+    "imageJpg": "assets/looks/sakura-miumiu-fleece.jpg?v=2026112101",
+    "photo": {
+        "label": "뉴스엔",
+        "kind": "photo",
+        "what": "2026.11.11 인천공항 출국 현장 촬영",
+        "url": "https://www.newsen.com/news_view.php?uid=202611111316343510"
+    },
+    "imageAlt": "인천공항 출국길, 그레이 체크 플리스 집업 자켓에 그레이 볼캡과 마스크, 헤드폰을 한 사쿠라",
+    "celeb": "사쿠라",
+    "group": "르세라핌",
+    "type": "airport",
+    "show": "공항",
+    "scene": "2026.11.11 인천공항 출국 · 타이베이 투어",
+    "category": "outer",
+    "mood": [
+        "street",
+        "vintage"
+    ],
+    "headline": "375만 원 체크 플리스",
+    "item": {
+        "brand": "미우미우",
+        "brandEn": "MIU MIU",
+        "name": "체크 플리스 지퍼 재킷 (그레이/블랙)",
+        "nameEn": "Checked Fleece Zipper Jacket",
+        "sku": "MJL042_18ZQ_F0BD9",
+        "price": 3750000,
+        "salePrice": 3750000,
+        "saleNote": "미우미우 코리아 공식몰 표기",
+        "material": "겉감 재활용 폴리에스터 70% · 울 30% (안감 없음)",
+        "colors": "그레이/블랙 · 블루/그린 · 화이트/라이트블루",
+        "sizes": "IT 36~42 (오버사이즈 핏, 총장 70cm)",
+        "maker": "Prada SpA / 이탈리아",
+        "season": "2026 FW",
+        "fit": "어깨가 넓게 떨어지는 오버사이즈. 스탠드 칼라를 세우면 목이 덮임",
+        "cons": "정가 375만 원. 안감이 없어 바람이 통하고, 보풀이 생기면 관리가 어려움",
+        "officialUrl": "https://www.miumiu.com/kr/ko/p/x/MJL042_18ZQ_F0BD9_S_OOO"
+    },
+    "story": "르세라핌이 타이베이 투어를 위해 인천공항에 모인 날, 사쿠라가 입은 체크 플리스입니다. 미우미우가 아이코닉 플리스 자켓을 울 혼방으로 다시 만든 버전으로, 회색과 검정 체크가 크게 들어가 멀리서도 패턴이 읽힙니다. 공식몰 기준 3,750,000원으로, 공항패션 한 벌에 이 가격이 붙는 경우는 흔치 않습니다.",
+    "point": "체크가 강해서 나머지는 전부 무채색으로 지우는 편이 낫습니다. 사쿠라는 그레이 볼캡과 숏 팬츠, 검정 레그웨어로 톤을 맞추고 헤드폰까지 회색으로 통일했습니다. 플리스가 두꺼우니 가방은 몸에 붙는 스몰 사이즈를 고르세요.",
+    "verified": "미우미우 코리아 공식몰(₩3,750,000, 품번 MJL042_18ZQ_F0BD9, 울 30% 혼방, 총장 70cm) 확인, 뉴스엔 출국 사진 대조",
+    "sources": [
+        {
+            "label": "미우미우 코리아 공식몰 체크 플리스 지퍼 재킷",
+            "url": "https://www.miumiu.com/kr/ko/p/x/MJL042_18ZQ_F0BD9_S_OOO"
+        },
+        {
+            "label": "뉴스엔 2026.11.11 출국 포토",
+            "url": "https://www.newsen.com/news_view.php?uid=202611111316343510"
+        },
+        {
+            "label": "유찬의패션아카이브 261111 사쿠라 착장 정리",
+            "url": "https://youchan223.tistory.com/202"
+        }
+    ],
+    "alt": {
+        "brand": "에이지오디",
+        "name": "리버시블 헤비 플리스 보아 후드 집업 [블랙]",
+        "price": 54300,
+        "platform": "musinsa",
+        "fit": "헤비 플리스 오버핏, 소매가 길게 떨어짐",
+        "cons": "체크 패턴이 없고 겉면이 보아 털이라 결이 다름",
+        "note": "정가 77,500원, 무신사 30% 적용 54,300원. 두꺼운 보아 플리스에 후드까지 달려 있어, 체크 대신 실루엣과 보온만 가져가는 선택입니다.",
+        "query": "에이지오디 리버시블 헤비 플리스 보아 후드 집업"
+    },
+    "palette": [
+        "#5b5b5b",
+        "#1c1c1c",
+        "#cfcfcd"
+    ]
+  },
+  {
+    "id": "isol-reisemiya-mustang",
+    "image": "assets/looks/isol-reisemiya-mustang.webp?v=2026112101",
+    "imageJpg": "assets/looks/isol-reisemiya-mustang.jpg?v=2026112101",
+    "photo": {
+        "label": "뉴스엔",
+        "kind": "photo",
+        "what": "2026.11.19 인천공항 출국 현장 촬영",
+        "url": "https://www.newsen.com/news_view.php?uid=202611190831373510"
+    },
+    "imageAlt": "인천공항 출국길, 아이보리 더블 버클 무스탕에 블랙 숏팬츠와 롱부츠를 매치한 키키 이솔",
+    "celeb": "이솔",
+    "group": "KiiiKiii",
+    "type": "airport",
+    "show": "공항",
+    "scene": "2026.11.19 인천공항 출국 · 일본 오사카(MAMA) 일정",
+    "category": "outer",
+    "mood": [
+        "lovely",
+        "minimal"
+    ],
+    "headline": "25만 원 아이보리 무스탕",
+    "item": {
+        "brand": "레이즈미야",
+        "brandEn": "REISE MIYA",
+        "name": "엘리 더블 무스탕 [IVORY]",
+        "nameEn": "Ellie Double Mustang [Ivory]",
+        "sku": "RMCT6401IV",
+        "price": 259000,
+        "salePrice": 246050,
+        "saleNote": "무신사 5% 할인가",
+        "material": "겉감 인조 스웨이드 · 안감 보아 퍼 (리버시블 타입)",
+        "colors": "아이보리 · 블랙",
+        "sizes": "S · M",
+        "maker": "레이즈미야 / 한국",
+        "season": "2026 FW",
+        "fit": "더블 버클로 허리를 조절하는 하프 기장, 어깨는 루즈",
+        "cons": "아이보리 컬러라 오염에 약하고, 12월 예약배송이 걸려 있음",
+        "officialUrl": "https://www.musinsa.com/products/7533523"
+    },
+    "story": "키키가 오사카 MAMA 일정으로 출국한 날, 이솔이 입은 무스탕입니다. 목을 감싸는 퍼 카라에 앞섶을 가로지르는 더블 버클 스트랩이 붙어 있어, 같은 무스탕이라도 군복처럼 각이 잡힙니다. 아이보리 컬러라 겨울 공항 사진에서 특히 눈에 띄었고, 무신사 기준 259,000원에 5% 할인이 붙어 246,050원입니다.",
+    "point": "무스탕이 짧고 부피가 있으니 아래를 짧게 끊고 다리를 길게 만드는 것이 이솔식입니다. 검정 숏팬츠와 타이츠, 롱부츠로 이어지면 상체 볼륨과 하체 라인의 대비가 선명해집니다. 버클은 허리보다 한 칸 느슨하게 조여야 어깨가 좁아 보입니다.",
+    "verified": "무신사 상품 페이지(품번 RMCT6401IV, 정가 259,000원 → 246,050원) 확인, 뉴스엔·디스패치 출국 사진 대조",
+    "sources": [
+        {
+            "label": "뉴스엔 2026.11.19 출국 포토",
+            "url": "https://www.newsen.com/news_view.php?uid=202611190831373510"
+        },
+        {
+            "label": "디스패치 2026.11.19 키키 출국",
+            "url": "https://www.dispatch.co.kr/2351003"
+        },
+        {
+            "label": "무신사 레이즈미야 엘리 더블 무스탕",
+            "url": "https://www.musinsa.com/products/7533523"
+        },
+        {
+            "label": "유찬의패션아카이브 261119 이솔 착장 정리",
+            "url": "https://youchan223.tistory.com/241"
+        }
+    ],
+    "alt": {
+        "brand": "스파오",
+        "name": "[신세틱레더] 페이크 퍼 하프 코트 (SPJLG4VW04)",
+        "price": 79900,
+        "platform": "musinsa",
+        "fit": "하프 기장 정핏, 앞여밈은 스냅",
+        "cons": "가죽 스트랩 버클이 없고 퍼 결이 짧은 인조 퍼",
+        "note": "정가 99,900원, 무신사 20% 적용 79,900원. 크림 인조 퍼 코트로 아이보리 무스탕의 밝기와 볼륨을 8만 원 아래에서 맞춥니다.",
+        "query": "스파오 신세틱레더 페이크 퍼 하프 코트"
+    },
+    "palette": [
+        "#efe7d7",
+        "#191919",
+        "#8a7c6b"
+    ]
+  },
+  {
+    "id": "jiwoo-bittercells-coat",
+    "image": "assets/looks/jiwoo-bittercells-coat.webp?v=2026112101",
+    "imageJpg": "assets/looks/jiwoo-bittercells-coat.jpg?v=2026112101",
+    "photo": {
+        "label": "뉴스엔",
+        "kind": "photo",
+        "what": "2026.11.18 김포공항 출국 현장 촬영",
+        "url": "https://www.newsen.com/news_view.php?uid=202611180911113510"
+    },
+    "imageAlt": "김포공항 출국길, 검정 울 하이넥 하프 코트를 입고 손을 볼에 대고 있는 하츠투하츠 지우",
+    "celeb": "지우",
+    "group": "Hearts2Hearts",
+    "type": "airport",
+    "show": "공항",
+    "scene": "2026.11.18 김포공항 출국 · 2026 MAMA 오사카",
+    "category": "outer",
+    "mood": [
+        "minimal"
+    ],
+    "headline": "20만 원 하이넥 코트",
+    "item": {
+        "brand": "비터셀즈",
+        "brandEn": "BITTERCELLS",
+        "name": "러비 울 하이넥 하프 코트 - 블랙",
+        "nameEn": "Lovie Wool High Neck Half Coat",
+        "sku": "B268CT01BK0F",
+        "price": 209000,
+        "salePrice": 194370,
+        "saleNote": "무신사 7% 할인가",
+        "material": "울 혼방 (브랜드 표기) · 안감 폴리에스터",
+        "colors": "블랙 · 버터 · 차콜",
+        "sizes": "FREE (원 사이즈)",
+        "maker": "비터셀즈 / 한국",
+        "season": "2026 FW",
+        "fit": "어깨가 살짝 떨어지는 하프 기장, 하이넥을 세우면 목이 완전히 덮임",
+        "cons": "원 사이즈라 키가 작으면 소매가 길고, 검정 울은 보풀이 잘 보임",
+        "officialUrl": "https://www.musinsa.com/products/7299083"
+    },
+    "story": "하츠투하츠가 MAMA 무대를 위해 김포공항에 모인 날, 지우가 입은 코트입니다. 목까지 올라오는 하이넥과 앞섶을 따라 붙은 큰 단추가 전부인 단순한 하프 코트인데, 그래서 오히려 얼굴과 헤어가 먼저 보입니다. 무신사 기준 209,000원으로, 이 룩의 가격표는 20만 원대입니다.",
+    "point": "하이넥 코트는 목을 덮기 때문에 안에 스카프를 넣으면 답답해집니다. 지우처럼 터틀넥 대신 얇은 라운드 니트를 받치고, 단추는 끝까지 채워 목선을 세우세요. 검정 코트에는 검정 가방보다 광이 다른 소재의 백을 들면 경계가 생깁니다.",
+    "verified": "무신사 상품 페이지(품번 B268CT01BK0F, 정가 209,000원 → 194,370원) 확인, 뉴스엔 출국 사진과 하이넥·단추 디테일 대조",
+    "sources": [
+        {
+            "label": "뉴스엔 2026.11.18 출국 포토",
+            "url": "https://www.newsen.com/news_view.php?uid=202611180911113510"
+        },
+        {
+            "label": "무신사 비터셀즈 러비 울 하이넥 하프 코트",
+            "url": "https://www.musinsa.com/products/7299083"
+        },
+        {
+            "label": "유찬의패션아카이브 261118 지우 착장 정리",
+            "url": "https://youchan223.tistory.com/235"
+        }
+    ],
+    "alt": {
+        "brand": "스파오",
+        "name": "[울블렌드] 하프 코트 (SPJWG4VW02)",
+        "price": 94900,
+        "platform": "musinsa",
+        "fit": "하프 기장 정핏, 어깨선이 부드러움",
+        "cons": "하이넥이 아니고 단추가 작아 목선 강조가 약함",
+        "note": "정가 99,900원, 무신사 5% 적용 94,900원. 울 블렌드 하프 코트로 검정 대신 차콜을 고르면 같은 단정한 무드를 10만 원 아래로 유지합니다.",
+        "query": "스파오 울블렌드 하프 코트"
+    },
+    "palette": [
+        "#17171a",
+        "#3d3d42",
+        "#b9a99a"
+    ]
+  },
+  {
+    "id": "miyeon-somewherebutter-knit",
+    "image": "assets/looks/miyeon-somewherebutter-knit.webp?v=2026112101",
+    "imageJpg": "assets/looks/miyeon-somewherebutter-knit.jpg?v=2026112101",
+    "photo": {
+        "label": "미연 인스타그램",
+        "kind": "photo",
+        "what": "인스타그램 공개 사진 (보도 갈무리)",
+        "url": "https://www.thebullet-news.com/yeel-hyeinseo-somewherebutter-celeb-style/"
+    },
+    "imageAlt": "비행기 좌석에 앉아 스트라이프 니트 후드 집업의 후드를 쓰고 브이 포즈를 한 미연",
+    "celeb": "미연",
+    "group": "(여자)아이들",
+    "type": "daily",
+    "show": "일상",
+    "scene": "2026.11.13 미연 인스타그램 · 기내에서 공개",
+    "category": "top",
+    "mood": [
+        "lovely",
+        "vintage"
+    ],
+    "headline": "16만 원 니트 집업",
+    "item": {
+        "brand": "썸웨어버터",
+        "brandEn": "SOMEWHEREBUTTER",
+        "name": "Coby Stripe Knit Zip-Up Hoodie - Grey",
+        "nameEn": "Coby Stripe Knit Zip-Up Hoodie",
+        "sku": "S6FZP04GRF",
+        "price": 159000,
+        "salePrice": 143100,
+        "saleNote": "무신사 10% 할인가",
+        "material": "울 혼방 니트 (드라이클리닝 권장, Made in Korea)",
+        "colors": "그레이 · 브라운",
+        "sizes": "Free (원 사이즈)",
+        "maker": "썸웨어버터 / 한국",
+        "season": "2026 FW",
+        "fit": "어깨가 떨어지는 루즈핏, 후드를 쓰면 얼굴이 감싸짐",
+        "cons": "원 사이즈라 어깨가 좁으면 흘러내리고, 니트 특성상 보풀이 생기기 쉬움",
+        "officialUrl": "https://www.musinsa.com/products/7241754"
+    },
+    "story": "미연이 비행기 안에서 찍어 올린 사진 한 장으로 화제가 된 니트 집업입니다. 회색 바탕에 검정과 하늘색 줄이 번갈아 들어가고, 가슴에 작은 로고 자수가 놓였습니다. 후드가 목을 덮는 니트라 목도리를 대신할 수 있고, 지퍼를 열면 안에 입은 티셔츠가 그대로 드러납니다.",
+    "point": "스트라이프가 가로로 강해서 하의는 검정 조거나 데님처럼 무늬 없는 것을 골라야 합니다. 미연처럼 후드를 쓰고 지퍼를 절반만 올리면 얼굴선이 작아 보입니다. 니트 집업은 늘어나기 쉬우니 옷걸이보다 접어 보관하세요.",
+    "verified": "무신사 상품 페이지(품번 S6FZP04GRF, 정가 159,000원 → 143,100원) 확인, 호수뉴스·더불릿 보도에 실린 인스타그램 사진 대조",
+    "sources": [
+        {
+            "label": "더불릿 'Celeb in Style 11/16'",
+            "url": "https://www.thebullet-news.com/yeel-hyeinseo-somewherebutter-celeb-style/"
+        },
+        {
+            "label": "호수뉴스 2026.11.15 보도",
+            "url": "https://www.hosu-news.com/news/articleView.html?idxno=193508"
+        },
+        {
+            "label": "무신사 썸웨어버터 코비 스트라이프 니트 집업",
+            "url": "https://www.musinsa.com/products/7241754"
+        },
+        {
+            "label": "유찬의패션아카이브 261113 미연 착장 정리",
+            "url": "https://youchan223.tistory.com/217"
+        }
+    ],
+    "alt": {
+        "brand": "무신사 스탠다드 우먼",
+        "name": "리브드 슬림 니트 후디드 집업 [웜 그레이]",
+        "price": 55930,
+        "platform": "musinsa",
+        "fit": "슬림핏 리브드 니트, 몸에 붙음",
+        "cons": "스트라이프 패턴이 없고 루즈한 실루엣도 아님",
+        "note": "정가 79,900원, 무신사 30% 적용 55,930원. 같은 회색 니트 후드 집업으로, 스트라이프 대신 골지 조직과 가격을 가져가는 대안입니다.",
+        "query": "무신사 스탠다드 우먼 리브드 슬림 니트 후디드 집업"
+    },
+    "palette": [
+        "#9aa0a6",
+        "#2b2f36",
+        "#a9c6d8"
+    ]
+  },
+  {
+    "id": "sooin-yeel-hoodie",
+    "image": "assets/looks/sooin-yeel-hoodie.webp?v=2026112101",
+    "imageJpg": "assets/looks/sooin-yeel-hoodie.jpg?v=2026112101",
+    "photo": {
+        "label": "미야오 수인 인스타그램",
+        "kind": "photo",
+        "what": "인스타그램 공개 사진 (보도 갈무리)",
+        "url": "https://www.thebullet-news.com/yeel-hyeinseo-somewherebutter-celeb-style/"
+    },
+    "imageAlt": "밤거리에서 스터드 장식이 들어간 검정 후드 집업을 입고 서 있는 미야오 수인",
+    "celeb": "수인",
+    "group": "MEOVV",
+    "type": "daily",
+    "show": "일상",
+    "scene": "2026.11.15 수인 인스타그램 공개",
+    "category": "top",
+    "mood": [
+        "street",
+        "vintage"
+    ],
+    "headline": "22만 원 스터드 후디",
+    "item": {
+        "brand": "와이이이엘",
+        "brandEn": "YEEL",
+        "name": "STUDDED Y ZIP-UP HOODIE BLACK",
+        "nameEn": "Studded Y Zip-Up Hoodie Black",
+        "sku": "P0000EWT",
+        "price": 218000,
+        "salePrice": 186390,
+        "saleNote": "무신사 14.5% 할인가",
+        "material": "코튼 혼방 스웨트 (브랜드 표기)",
+        "colors": "블랙 · 화이트",
+        "sizes": "S · M · L",
+        "maker": "와이이이엘 / 한국",
+        "season": "2026 FW",
+        "fit": "어깨가 넓은 루즈핏, 소매 끝이 밴딩으로 조임",
+        "cons": "스터드 장식이 세탁기에 걸릴 수 있어 손세탁·드라이클리닝 권장",
+        "officialUrl": "https://www.musinsa.com/products/5923760"
+    },
+    "story": "수인이 인스타그램에 올린 밤거리 사진 속 후드 집업입니다. 검정 스웨트 바탕에 가슴 앞 'Y' 로고를 스터드로 박아, 조명을 받으면 글자만 반짝입니다. 후드를 세우면 얼굴 주변에 그림자가 생겨 사진이 차갑게 잡히는 것이 이 옷의 장점입니다.",
+    "point": "스터드가 이미 강한 포인트라 팬츠와 신발은 검정으로 통일하는 편이 안전합니다. 수인처럼 후드를 쓰고 지퍼를 어깨까지 올리면 목이 사라져 실루엣이 단순해집니다. 스터드가 떨어질 수 있으니 세탁망보다는 단독 세탁을 권합니다.",
+    "verified": "무신사 상품 페이지(품번 P0000EWT, 정가 218,000원 → 186,390원) 확인, 더불릿 보도 사진과 스터드 로고 디테일 대조",
+    "sources": [
+        {
+            "label": "더불릿 'Celeb in Style 11/16'",
+            "url": "https://www.thebullet-news.com/yeel-hyeinseo-somewherebutter-celeb-style/"
+        },
+        {
+            "label": "무신사 와이이이엘 스터디드 Y 집업 후디",
+            "url": "https://www.musinsa.com/products/5923760"
+        },
+        {
+            "label": "유찬의패션아카이브 261115 수인 착장 정리",
+            "url": "https://youchan223.tistory.com/226"
+        }
+    ],
+    "alt": {
+        "brand": "씨타",
+        "name": "Soft Roll-Up Cuff Knit Hood Zip-up (CTK279, 멜란지 그레이)",
+        "price": 93790,
+        "platform": "musinsa",
+        "fit": "릴랙스 핏, 소매를 롤업해 입는 구조",
+        "cons": "스터드 장식이 없고 검정 대신 멜란지 그레이",
+        "note": "정가 113,000원, 무신사 17% 적용 93,790원. 니트 소재 후드 집업이라 검정 스웨트보다 부드럽고, 같은 '후드 세우고 지퍼 올리기'가 가능합니다.",
+        "query": "씨타 Soft Roll-Up Cuff Knit Hood Zip-up"
+    },
+    "palette": [
+        "#121214",
+        "#2a2a2e",
+        "#c94b3a"
+    ]
+  },
+  {
+    "id": "anna-lhas-cardigan",
+    "image": "assets/looks/anna-lhas-cardigan.webp?v=2026112101",
+    "imageJpg": "assets/looks/anna-lhas-cardigan.jpg?v=2026112101",
+    "photo": {
+        "label": "X @joyceluqc_",
+        "kind": "photo",
+        "what": "팬사인회 현장 촬영 (X 공개 사진)",
+        "url": "https://youchan223.tistory.com/224"
+    },
+    "imageAlt": "팬사인회에서 왕관 머리띠를 들고 와인 컬러 앙고라 가디건을 입은 미야오 안나",
+    "celeb": "안나",
+    "group": "MEOVV",
+    "type": "daily",
+    "show": "팬사인회",
+    "scene": "2026.11.15 미야오 팬사인회",
+    "category": "top",
+    "mood": [
+        "lovely",
+        "vintage"
+    ],
+    "headline": "26만 원 앙고라 가디건",
+    "item": {
+        "brand": "르하스",
+        "brandEn": "L'H.A.S",
+        "name": "ANGORA VOLUME CARDIGAN2_WINE",
+        "nameEn": "Angora Volume Cardigan 2 - Wine",
+        "sku": "L'H.A.S 26FW 앙고라 라인",
+        "price": 258000,
+        "salePrice": 232200,
+        "saleNote": "29CM 10% 할인가",
+        "material": "앙고라 혼방 퍼 니트 (브랜드 표기)",
+        "colors": "와인 · 아이보리 · 블랙",
+        "sizes": "원 사이즈(FREE)",
+        "maker": "르하스 / 한국",
+        "season": "2026 FW",
+        "fit": "어깨가 크게 떨어지고 V넥이 깊게 파이는 오버사이즈",
+        "cons": "앙고라 특유의 털 빠짐이 있고, V넥이 깊어 안쪽 이너를 따로 챙겨야 함",
+        "officialUrl": "https://www.29cm.co.kr/products/3555795"
+    },
+    "story": "미야오 팬사인회에서 안나가 입은 와인 컬러 가디건입니다. 앙고라 털이 길게 올라와 빛을 받으면 테두리가 하얗게 번지고, 어깨가 크게 떨어지는 실루엣이라 몸이 작아 보이는 효과가 있습니다. 29CM 기준 정가 258,000원, 할인가 232,200원입니다.",
+    "point": "V넥이 깊게 파이므로 안에 흰 셔츠나 라운드 티를 받쳐야 합니다. 안나는 왕관 머리띠와 묶은 머리로 목선을 드러내 카디건의 털 볼륨과 대비를 만들었습니다. 앙고라는 마찰에 약하니 가방끈이 지나가는 자리를 확인하고 메세요.",
+    "verified": "29CM 상품 페이지(정가 258,000원 → 232,200원, ANGORA VOLUME CARDIGAN2_WINE) 확인, 팬사인회 사진과 색·실루엣 대조",
+    "sources": [
+        {
+            "label": "29CM 르하스 앙고라 볼륨 가디건2 와인",
+            "url": "https://www.29cm.co.kr/products/3555795"
+        },
+        {
+            "label": "유찬의패션아카이브 261115 안나 착장 정리",
+            "url": "https://youchan223.tistory.com/224"
+        }
+    ],
+    "alt": {
+        "brand": "언노운 플래닛",
+        "name": "헤어리 모헤어 터치 라운드넥 크롭 가디건 챠콜",
+        "price": 47800,
+        "platform": "musinsa",
+        "fit": "크롭 기장, 어깨는 루즈하게 떨어짐",
+        "cons": "V넥이 아닌 라운드넥이고 와인 컬러가 아님",
+        "note": "정가 59,800원, 무신사 20% 적용 47,800원. 모헤어 털 결로 앙고라의 뽀글한 질감을 살리고, 크롭 기장이라 허리선이 드러납니다.",
+        "query": "언노운 플래닛 헤어리 모헤어 크롭 가디건"
+    },
+    "palette": [
+        "#5b2330",
+        "#d8c9bd",
+        "#2a1f22"
+    ]
+  },
+  {
     id: "jiwon-aloro-velvet",
     image: "assets/looks/jiwon-aloro-velvet.webp?v=2026112101",
     imageJpg: "assets/looks/jiwon-aloro-velvet.jpg?v=2026112101",
