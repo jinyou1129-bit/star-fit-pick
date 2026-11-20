@@ -782,7 +782,7 @@ ul,ol{padding:0;list-style:none}
 .cc-table tbody th{font-weight:700;color:var(--ink);white-space:nowrap}
 .cc-table tbody td{color:var(--sub)}
 .cc-table tbody td b{color:var(--ink)}
-.cc-table tbody td small{display:block;font-size:11.5px;color:var(--muted)}
+.cc-table tbody td small,.cc-table tbody th small{display:block;font-size:11.5px;color:var(--muted);font-weight:500;margin-top:2px}
 .cc-table tfoot td{background:#fff5f6;font-weight:800;color:#c62828;border-bottom:0}
 .cc-table a{color:var(--blue-deep);font-weight:700;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
 .cmp-foot{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}

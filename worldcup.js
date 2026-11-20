@@ -196,7 +196,7 @@
       '<div class="wc-stage-head">' +
         '<div class="wc-rounds">' + roundsBar(d) + "</div>" +
         '<div class="wc-progress"><span class="wc-progress-track"><i style="width:' +
-          Math.round((done / total) * 100) + '%"></i></span><b>' + (done + 1) + " / " + total + " 경기</b></div>" +
+          Math.round((done / total) * 100) + '%"></i></span><b>' + done + " / " + total + " 경기 완료</b></div>" +
       "</div>" +
       '<p class="wc-match-label">' + roundName(d.round) + " · " + (d.idx + 1) + "/" + Math.floor(d.order.length / 2) + " 경기</p>" +
       '<div class="wc-duel">' +
@@ -270,7 +270,7 @@
     var firstRound = (ROUND_NAMES[game.size] || ROUND_NAMES[16])[0];
     var sub = opts.shared
       ? "공유받은 우승 결과 · " + esc(w.show) + " 착장"
-      : firstRound + "부터 " + (game.size - 1) + "번의 선택 끝에 뽑힌 내 취향 1위";
+      : firstRound + " " + (game.size - 1) + "경기 끝에 뽑힌 내 취향 1위";
 
     if (!opts.shared) {
       pushHistory(w.id);
@@ -366,6 +366,13 @@
     game = { size: size, seed: seed >>> 0, picks: [], finished: false };
     busy = false;
     saveStore();
+    try {
+      var u = new URL(location.href);
+      if (u.searchParams.get("win")) {
+        u.searchParams.delete("win");
+        history.replaceState(null, "", u.pathname + (u.search || "") + u.hash);
+      }
+    } catch (e) {}
     if (resumeEl) resumeEl.hidden = true;
     renderStage();
     if (!silent) {

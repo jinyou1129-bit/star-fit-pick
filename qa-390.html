@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QA 하네스</title>
+<style>
+  html,body{margin:0;background:#dfe4ea}
+  body{display:block;padding:0}
+  iframe{display:block;border:0;background:#fff;margin:0 auto}
+</style>
+</head><body>
+<iframe id="f" title="QA"></iframe>
+<script>
+  var p = new URLSearchParams(location.search);
+  var f = document.getElementById('f');
+  f.src = p.get('src') || 'index.html';
+  f.style.width = (p.get('w') || '390') + 'px';
+  f.style.height = (p.get('h') || '900') + 'px';
+</script>
+</body></html>
