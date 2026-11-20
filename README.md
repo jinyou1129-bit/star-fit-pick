@@ -22,6 +22,8 @@ style.css             전체 스타일 (Toss UI + 화이트 부티크)
 app.js                필터/검색/찜/테스트/모달 로직
 data/looks.js         ★ 착장 데이터 (룩 추가·수정은 여기서)
 data/config.js        ★ 제휴 ID·광고 슬롯·문의 채널 (한 곳에서 일괄 적용)
+data/coupang-links.js ★ 쿠팡 파트너스 추적 링크 맵 (자동 생성 · 직접 편집 금지)
+tools/build_coupang_links.py  쿠팡 링크 재생성 스크립트
 assets/looks/         착장 사진 (900×1125 JPG + WebP)
 assets/og-cover.png   OG 대표 이미지
 sitemap.xml, robots.txt
@@ -54,6 +56,19 @@ indexnow-<key>.txt    IndexNow 키 파일 (Bing·네이버·Yandex 즉시 색인
 ## 이미지 교체 시 캐시 주의
 
 같은 파일명으로 사진을 바꾸면 GitHub Pages/브라우저 캐시 때문에 예전 이미지가 보일 수 있습니다. 교체할 때는 `data/looks.js`의 `?v=` 값과 각 HTML의 `style.css?v=` 값을 함께 올려 주세요.
+
+## 쿠팡 파트너스 제휴 링크
+
+쿠팡 파트너스 추적은 `&src=` 같은 임의 파라미터가 아니라 **파트너스 API가 만든 공식 단축 링크**(`https://link.coupang.com/a/...`)로만 잡힙니다. 그래서 파트너 ID(`AF1746171`)·서브ID(`starfitpick`)를 `data/config.js`에 기록하고, 검색어별 단축 링크를 `data/coupang-links.js`에 두었습니다. `SFP_CONFIG.buildLink("coupang", 검색어)`는 이 맵에 있는 링크를 그대로 반환하고, 없으면 일반 검색 링크로 넘어갑니다.
+
+검색어가 늘거나 바뀌면(룩·가이드·퍼스널컬러 추천템 추가 시) 아래처럼 다시 생성합니다. Access/Secret Key는 쿠팡 파트너스 > 추가 기능 > 파트너스 API에서 확인하며, **저장소에 커밋하지 않습니다(환경변수로만).**
+
+```bash
+COUPANG_ACCESS_KEY=... COUPANG_SECRET_KEY=... python3 tools/build_coupang_links.py
+```
+
+- 대가성 문구: 모든 페이지 푸터와 구매 영역에 「이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.」를 표기합니다.
+- 파트너스 `[내 정보]`의 활동 웹사이트 목록에 이 사이트 URL이 등록되어 있어야 실적이 정상 집계됩니다.
 
 ## 가이드 추가하기
 
