@@ -77,7 +77,7 @@
   var closet = readCloset();
 
   /* ---------------- state ---------------- */
-  var state = { q: "", type: "", cat: "", mood: "", celeb: "", budget: false, closet: false, sort: "recent" };
+  var state = { q: "", type: "", cat: "", mood: "", celeb: "", ids: [], budget: false, closet: false, sort: "recent" };
   var lastFocus = null;
 
   function readURL() {
@@ -87,6 +87,7 @@
     state.cat = CAT_ORDER.indexOf(p.get("cat")) > -1 ? p.get("cat") : "";
     state.mood = MOOD_ORDER.indexOf(p.get("mood")) > -1 ? p.get("mood") : "";
     state.celeb = p.get("celeb") || "";
+    state.ids = (p.get("ids") || "").split(",").filter(Boolean);
     state.budget = p.get("budget") === "1";
     state.closet = p.get("closet") === "1";
     state.sort = ["recent", "save", "price-low", "price-high"].indexOf(p.get("sort")) > -1 ? p.get("sort") : "recent";
@@ -98,6 +99,7 @@
     if (state.cat) p.set("cat", state.cat);
     if (state.mood) p.set("mood", state.mood);
     if (state.celeb) p.set("celeb", state.celeb);
+    if (state.ids && state.ids.length) p.set("ids", state.ids.join(","));
     if (state.budget) p.set("budget", "1");
     if (state.closet) p.set("closet", "1");
     if (state.sort !== "recent") p.set("sort", state.sort);
@@ -148,6 +150,7 @@
     if (state.cat && look.category !== state.cat) return false;
     if (state.mood && (look.mood || []).indexOf(state.mood) === -1) return false;
     if (state.celeb && look.celeb !== state.celeb) return false;
+    if (state.ids && state.ids.length && state.ids.indexOf(look.id) === -1) return false;
     if (state.budget && look.alt.price > BUDGET_CAP) return false;
     if (state.closet && closet.indexOf(look.id) === -1) return false;
     if (state.q) {
@@ -233,6 +236,10 @@
     if (state.mood) parts.push(MOOD_LABEL[state.mood] + " 무드");
     if (state.budget) parts.push("대안템 10만 원 이하");
     if (state.closet) parts.push("내 옷장");
+    if (state.ids && state.ids.length) {
+      var at = activeTag();
+      parts.push(at ? at.label : state.ids.length + "벌 선택");
+    }
     var sum = list.reduce(function (a, l) { return a + saveAmount(l); }, 0);
     $("#filter-summary").innerHTML = list.length
       ? (parts.length ? "<b>" + parts.join(" · ") + "</b> · " : "") + list.length + "개 룩 · 대안템으로 바꾸면 최대 <b>" + won(sum) + "</b> 절약"
@@ -566,15 +573,350 @@
     $("#stat-save").textContent = avg + "%";
   }
   function initAds() {
-    if (CFG.ads && CFG.ads.adsenseClient) {
-      $("#ad-top").hidden = false;
-      $("#ad-top-body").innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="' + esc(CFG.ads.adsenseClient) +
-        '" data-ad-slot="' + esc(CFG.ads.slots.top || "") + '" data-ad-format="auto" data-full-width-responsive="true"></ins>';
-      var s = document.createElement("script");
-      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + encodeURIComponent(CFG.ads.adsenseClient);
-      s.async = true; s.crossOrigin = "anonymous";
-      document.head.appendChild(s);
+    if (!(CFG.ads && CFG.ads.adsenseClient)) return;
+    var slots = [{ id: "ad-top", body: "#ad-top-body", slot: CFG.ads.slots.top }, { id: "ad-mid", body: "#ad-mid-body", slot: CFG.ads.slots.mid }];
+    slots.forEach(function (s) {
+      var box = $("#" + s.id), body = $(s.body);
+      if (!box || !body) return;
+      box.hidden = false;
+      body.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="' + esc(CFG.ads.adsenseClient) +
+        '" data-ad-slot="' + esc(s.slot || "") + '" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+    });
+    var script = document.createElement("script");
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + encodeURIComponent(CFG.ads.adsenseClient);
+    script.async = true; script.crossOrigin = "anonymous";
+    document.head.appendChild(script);
+  }
+
+  /* ---------------- 인기 검색 태그 빠른 필터 ---------------- */
+  var IDOL_GROUPS = ["IVE", "aespa", "(여자)아이들", "르세라핌", "KiiiKiii", "Hearts2Hearts", "MEOVV", "BLACKPINK", "소녀시대"];
+  var MALE_CELEBS = ["우영", "유연석", "신승호", "양세찬", "하하", "유재석", "육성재", "송강"];
+  function idsWhere(fn) {
+    return LOOKS.filter(fn).map(function (l) { return l.id; });
+  }
+  var HOT_TAGS = [
+    { id: "airport", label: "#공항패션", patch: function () { return { type: "airport" }; } },
+    { id: "budget", label: "#10만원이하대안", patch: function () { return { budget: true }; } },
+    { id: "winter", label: "#가을겨울아우터", patch: function () { return { cat: "outer" }; } },
+    { id: "idol", label: "#여자아이돌", patch: function () { return { ids: idsWhere(function (l) { return IDOL_GROUPS.indexOf(l.group) > -1; }) }; } },
+    { id: "male", label: "#남자캐주얼", patch: function () { return { ids: idsWhere(function (l) { return MALE_CELEBS.indexOf(l.celeb) > -1; }) }; } }
+  ];
+  function findTag(id) {
+    for (var i = 0; i < HOT_TAGS.length; i++) if (HOT_TAGS[i].id === id) return HOT_TAGS[i];
+    return null;
+  }
+  function tagIsActive(t) {
+    var p = t.patch(), keys = Object.keys(p);
+    for (var i = 0; i < keys.length; i++) {
+      var k = keys[i], v = p[k];
+      if (k === "budget") { if (state.budget !== v) return false; }
+      else if (k === "ids") { if ((state.ids || []).join(",") !== v.join(",")) return false; }
+      else if ((state[k] || "") !== v) return false;
     }
+    return true;
+  }
+  function activeTag() {
+    for (var i = 0; i < HOT_TAGS.length; i++) if (tagIsActive(HOT_TAGS[i])) return HOT_TAGS[i];
+    return null;
+  }
+  function paintHotTags() {
+    $all(".hot-tag").forEach(function (b) {
+      var t = findTag(b.getAttribute("data-tag"));
+      var on = !!(t && tagIsActive(t));
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      b.classList.toggle("on", on);
+    });
+  }
+  function applyTag(id) {
+    var t = findTag(id);
+    if (!t) return;
+    var wasOn = tagIsActive(t);
+    resetFilters();
+    if (wasOn) return;
+    var patch = t.patch();
+    Object.keys(patch).forEach(function (k) { state[k] = patch[k]; });
+    syncControls(); paintChips(); paintHotTags(); renderGrid(); writeURL(); syncFilterMore();
+    var target = document.getElementById("looks");
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  function initTags() {
+    var box = $("#hot-tags");
+    if (!box) return;
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest(".hot-tag");
+      if (b) applyTag(b.getAttribute("data-tag"));
+    });
+    paintHotTags();
+  }
+
+  /* ---------------- 이번 주 에디터스 픽 ---------------- */
+  function trendScore(l) {
+    var recency = Math.max(0, 30 - LOOKS.indexOf(l));
+    var save = Math.round(saveRate(l) * 0.7);
+    var budget = l.alt.price <= BUDGET_CAP ? 10 : 0;
+    return recency + save + budget;
+  }
+  function pickList() {
+    var arr = LOOKS.slice().sort(function (a, b) { return trendScore(b) - trendScore(a); });
+    var out = [], cats = {}, celebs = {};
+    arr.forEach(function (l) {
+      if (out.length < 3 && !cats[l.category] && !celebs[l.celeb]) { out.push(l); cats[l.category] = 1; celebs[l.celeb] = 1; }
+    });
+    arr.forEach(function (l) {
+      if (out.length < 3 && !celebs[l.celeb] && out.indexOf(l) === -1) { out.push(l); celebs[l.celeb] = 1; }
+    });
+    arr.forEach(function (l) { if (out.length < 3 && out.indexOf(l) === -1) out.push(l); });
+    return out;
+  }
+  function pickWhy(l) {
+    return l.alt.brand + " " + l.alt.name + "로 바꾸면 " + won(saveAmount(l)) + " 아낍니다. " +
+      (l.alt.price <= BUDGET_CAP ? "대안가 10만 원 이하." : "대안가 " + won(l.alt.price) + ".");
+  }
+  function pickCardHTML(l, i) {
+    var href = "?look=" + encodeURIComponent(l.id);
+    var save = saveRate(l);
+    return '<article class="pick-card">' +
+      '<a class="pick-media" href="' + href + '" data-open="' + l.id + '" aria-label="' + esc(l.celeb + " " + l.headline + " 상세 보기") + '">' +
+        picture(l, i === 0) +
+        '<span class="pick-rank">0' + (i + 1) + '</span>' +
+        '<span class="pick-scene">' + esc(sceneLabel(l)) + '</span>' +
+        '<span class="pick-save">대안 ' + save + '%↓</span>' +
+      '</a>' +
+      '<div class="pick-body">' +
+        '<p class="pick-kicker">EDITOR&rsquo;S PICK · ' + esc(l.group || l.show) + '</p>' +
+        '<h3><a href="' + href + '" data-open="' + l.id + '">' + esc(l.celeb) + ' · ' + esc(l.headline) + '</a></h3>' +
+        '<p class="pick-brand">' + esc(l.item.brand) + ' ' + esc(l.item.name) + '</p>' +
+        '<div class="pick-prices"><span>정품 <b>' + won(price(l)) + '</b></span><span class="pick-alt">대안 <b>' + won(l.alt.price) + '</b></span></div>' +
+        '<p class="pick-why">' + esc(pickWhy(l)) + '</p>' +
+        '<div class="pick-actions">' +
+          '<button type="button" class="btn small" data-open="' + l.id + '">착장 상세</button>' +
+          '<a class="btn ghost small" href="' + esc(altUrlOf(l)) + '" target="_blank" rel="noopener sponsored">대안 보기</a>' +
+        '</div>' +
+      '</div>' +
+    '</article>';
+  }
+  function initPicks() {
+    var grid = $("#picks-grid");
+    if (!grid) return;
+    var list = pickList();
+    grid.innerHTML = list.map(pickCardHTML).join("");
+    var count = $("#picks-count");
+    if (count) count.textContent = "TOP " + list.length;
+    grid.addEventListener("click", function (e) {
+      var opener = e.target.closest("[data-open]");
+      if (opener) { e.preventDefault(); openModal(opener.getAttribute("data-open")); }
+    });
+  }
+
+  /* ---------------- 10초 핏 추천기 ---------------- */
+  var FIT_STORE = "sfp:fit:v1";
+  var FIT_HEIGHT = [
+    { v: "h1", t: "155~160cm", d: "작은 키", len: ["골반 위", "허벅지 중간", "무릎 아래 5cm"], cm: ["52~58cm", "68~76cm", "98~105cm"], prefer: ["short"],
+      tip: "기장을 줄이기보다 허리선을 보여 주는 편이 효과적입니다. 크롭 이너나 벨트로 비율을 잡으세요." },
+    { v: "h2", t: "160~168cm", d: "보통 키", len: ["골반", "허벅지 중간~아래", "무릎 아래 10cm"], cm: ["56~62cm", "72~80cm", "102~110cm"], prefer: ["short", "long"],
+      tip: "숏패딩은 골반, 코트는 무릎 아래 10cm에서 끝나면 가장 안정적입니다." },
+    { v: "h3", t: "168~175cm", d: "큰 키", len: ["골반~엉덩이", "무릎 위 10cm", "종아리 중간"], cm: ["60~66cm", "76~84cm", "106~114cm"], prefer: ["long"],
+      tip: "미드 다운은 무릎 위 10cm에서 끊고, 롱코트는 종아리 중간이 균형점입니다." },
+    { v: "h4", t: "175cm 이상", d: "아주 큰 키", len: ["엉덩이 중간", "무릎 위", "발목 위"], cm: ["64~70cm", "80~88cm", "110~118cm"], prefer: ["long"],
+      tip: "롱코트는 발목 위, 숏패딩은 엉덩이 중간이 비율을 살립니다. 소매가 짧으면 가장 먼저 티가 납니다." }
+  ];
+  var FIT_BODY = [
+    { v: "b1", t: "상체가 발달", d: "어깨·가슴", tag: "상체 보완",
+      tip: "넥라인이 열린 카라·브이넥, 세트인 소매가 깔끔합니다. 목이 높은 니트보다 라운드 넥이 얼굴을 살립니다.",
+      fit: function (l) { return l.category === "outer" || /카라|셔츠|집업|베스트|자켓|재킷/.test(l.item.name); } },
+    { v: "b2", t: "하체가 발달", d: "힙·허벅지", tag: "하체 보완",
+      tip: "상의는 엉덩이 중간에서 끝나게, 하의는 일자로 떨어지는 핏. 와이드 팬츠에는 짧은 상의를 맞춥니다.",
+      fit: function (l) { return /미드|롱|코트|다운/.test(l.item.name + l.headline) || l.category === "bottom"; } },
+    { v: "b3", t: "마른 편", d: "볼륨 보완", tag: "볼륨 보완",
+      tip: "헤어리 니트·퀼팅·퍼처럼 볼륨이 있는 소재. 기장은 짧게, 상의에 볼륨을 주고 하의는 일자로.",
+      fit: function (l) { return /퍼|플리스|앤고라|야크|퀼팅|무스탕|카디건|후디/.test(l.item.name); } },
+    { v: "b0", t: "해당 없음", d: "고민 없음",
+      tip: "기장만 맞추면 무난합니다. 상·하의 색을 두 가지로 줄이면 어떤 착장도 정리돼 보입니다.",
+      fit: function () { return true; } }
+  ];
+  var FIT_MOOD = [
+    { v: "minimal", t: "미니멀", d: "무채색·선", moodKey: "minimal", tip: "무채색 두 색에 실루엣으로 말하기. 포인트는 한 곳만 남깁니다." },
+    { v: "lovely", t: "러블리", d: "포근한 질감", moodKey: "lovely", tip: "포근한 질감 한 아이템과 부드러운 색. 파스텔은 한 곳에만 쓰면 성숙하게 정리됩니다." },
+    { v: "vintage", t: "빈티지", d: "체크·워싱", moodKey: "vintage", tip: "체크·워싱·야크 같은 결을 고르세요. 새것보다 몇 번 입은 질감이 잘 맞습니다." },
+    { v: "street", t: "스트리트", d: "볼륨·활동성", moodKey: "street", tip: "볼륨 있는 실루엣에 쿠셔닝 좋은 신발. 색은 두 가지 안에서만 씁니다." }
+  ];
+  var FIT_BUDGET = [
+    { v: "b10", t: "10만 원 이하", d: "대안템 기준", fit: function (l) { return l.alt.price <= BUDGET_CAP; } },
+    { v: "b30", t: "30만 원 이하", d: "정품 판매가", fit: function (l) { return price(l) <= 300000; } },
+    { v: "bany", t: "상관없음", d: "정품·대안 모두", fit: function () { return true; } }
+  ];
+  var fitPick = { height: "", body: "", mood: "", budget: "" };
+  function fitOpt(list, v) {
+    for (var i = 0; i < list.length; i++) if (list[i].v === v) return list[i];
+    return null;
+  }
+  function outerLength(l) {
+    var n = l.item.name + " " + l.headline;
+    if (/미드|롱|코트|다운/.test(n)) return "long";
+    if (/숏|크롭|퍼|플리스|무스탕|블루종|바이커|패딩|자켓|재킷|집업|카디건|후디/.test(n)) return "short";
+    return null;
+  }
+  function fitScore(l) {
+    var h = fitOpt(FIT_HEIGHT, fitPick.height), b = fitOpt(FIT_BODY, fitPick.body),
+      m = fitOpt(FIT_MOOD, fitPick.mood), bu = fitOpt(FIT_BUDGET, fitPick.budget);
+    var score = 26, hits = [];
+    if (h) {
+      var len = outerLength(l);
+      if (!len) { score += 8; }
+      else if (h.prefer.indexOf(len) > -1) { score += 20; hits.push("기장 적합"); }
+      else { score += 2; }
+    }
+    if (b && b.fit(l)) { score += 10; if (b.tag) hits.push(b.tag); }
+    if (m && (l.mood || []).indexOf(m.moodKey) > -1) { score += 22; hits.push(m.t); }
+    if (bu && bu.fit(l)) { score += 18; hits.push(bu.t); }
+    return { score: score, hits: hits };
+  }
+  function paintFit() {
+    $all("[data-fit]").forEach(function (b) {
+      var key = b.getAttribute("data-fit");
+      b.setAttribute("aria-pressed", fitPick[key] === b.getAttribute("data-val") ? "true" : "false");
+    });
+    var n = 0;
+    ["height", "body", "mood", "budget"].forEach(function (k) { if (fitPick[k]) n++; });
+    var c = $("#fit-count");
+    if (c) c.textContent = n + " / 4 선택";
+  }
+  function fitCardHTML(x, i) {
+    var l = x.l;
+    var inCloset = closet.indexOf(l.id) > -1;
+    return '<article class="fit-look">' +
+      '<button type="button" class="fit-look-media" data-open="' + l.id + '" aria-label="' + esc(l.celeb + " " + l.item.name + " 상세 보기") + '">' +
+        picture(l, i === 0) +
+        '<span class="fit-look-rank">TOP ' + (i + 1) + '</span>' +
+      '</button>' +
+      '<div class="fit-look-body">' +
+        '<h4>' + esc(l.celeb) + ' · ' + esc(l.headline) + '</h4>' +
+        '<p class="fit-look-brand">' + esc(l.item.brand) + ' ' + esc(l.item.name) + '</p>' +
+        (x.hits.length ? '<div class="fit-look-reasons">' + x.hits.map(function (h) { return "<span>" + esc(h) + "</span>"; }).join("") + '</div>' : "") +
+        '<div class="fit-look-prices"><b>정품 ' + won(price(l)) + '</b><small>대안 ' + won(l.alt.price) + ' · ' + saveRate(l) + '%↓</small></div>' +
+        '<div class="fit-look-actions">' +
+          '<button type="button" class="btn ghost small" data-open="' + l.id + '">상세</button>' +
+          '<a class="btn ghost small" href="' + esc(altUrlOf(l)) + '" target="_blank" rel="noopener sponsored">대안 보기</a>' +
+          '<button type="button" class="btn ghost small fit-heart" data-fit-heart="' + l.id + '" aria-pressed="' + inCloset + '" aria-label="' + esc(l.item.name + " 내 옷장에 담기") + '">' + (inCloset ? "♥" : "♡") + '</button>' +
+        '</div>' +
+      '</div>' +
+    '</article>';
+  }
+  function renderFit() {
+    var res = $("#fit-result");
+    if (!res) return;
+    var n = 0;
+    ["height", "body", "mood", "budget"].forEach(function (k) { if (fitPick[k]) n++; });
+    if (n < 4) {
+      res.innerHTML = '<p class="fit-empty">' + (n ? (4 - n) + "가지만 더 고르면 기장 가이드와 추천 3벌이 나옵니다." : "네 가지를 고르면 기장 가이드와 추천 3벌이 여기에 나타납니다.") + "</p>";
+      return;
+    }
+    var h = fitOpt(FIT_HEIGHT, fitPick.height), b = fitOpt(FIT_BODY, fitPick.body),
+      m = fitOpt(FIT_MOOD, fitPick.mood), bu = fitOpt(FIT_BUDGET, fitPick.budget);
+    var scored = LOOKS.map(function (l) { var s = fitScore(l); return { l: l, score: s.score, hits: s.hits }; });
+    scored.sort(function (a, c) {
+      if (c.score !== a.score) return c.score - a.score;
+      return saveRate(c.l) - saveRate(a.l);
+    });
+    var picked = [], used = {};
+    scored.forEach(function (x) { if (picked.length < 3 && !used[x.l.celeb]) { used[x.l.celeb] = 1; picked.push(x); } });
+    scored.forEach(function (x) { if (picked.length < 3 && picked.indexOf(x) === -1) picked.push(x); });
+
+    res.innerHTML =
+      '<div class="fit-out">' +
+        '<div class="fit-panel">' +
+          '<p class="fit-panel-kicker">ON-BODY LENGTH</p>' +
+          '<h3>' + esc(h.t) + ' 아우터 기장 가이드</h3>' +
+          '<ul class="fit-len">' +
+            '<li><span class="fit-len-name">숏패딩 · 크롭 재킷</span><b>' + esc(h.len[0]) + '</b><i>' + esc(h.cm[0]) + '</i></li>' +
+            '<li><span class="fit-len-name">미드 다운 · 하프 코트</span><b>' + esc(h.len[1]) + '</b><i>' + esc(h.cm[1]) + '</i></li>' +
+            '<li><span class="fit-len-name">롱코트 · 롱패딩</span><b>' + esc(h.len[2]) + '</b><i>' + esc(h.cm[2]) + '</i></li>' +
+          '</ul>' +
+          '<p class="fit-len-note">기준점은 골반뼈 · 무릎 위 10cm · 발목뼈 위 5cm입니다. 총장(cm)은 브랜드·사이즈에 따라 다르므로 실측표를 함께 보세요.</p>' +
+          '<div class="fit-tips">' +
+            '<p><b>' + esc(b.t) + '</b> ' + esc(b.tip) + '</p>' +
+            '<p><b>키</b> ' + esc(h.tip) + '</p>' +
+            '<p><b>' + esc(m.t) + ' 무드</b> ' + esc(m.tip) + '</p>' +
+          '</div>' +
+        '</div>' +
+        '<div class="fit-picks">' +
+          '<div class="fit-picks-head"><h3>' + esc(h.t) + ' · ' + esc(m.t) + ' · ' + esc(bu.t) + ' 기준 3벌</h3><p>적합도 순 · 사진 출처와 가격은 상세에서</p></div>' +
+          '<div class="fit-cards">' + picked.map(fitCardHTML).join("") + '</div>' +
+          '<div class="fit-picks-actions">' +
+            '<button type="button" class="btn small" data-fit-add="' + picked.map(function (x) { return x.l.id; }).join(",") + '">3벌 모두 옷장에 담기</button>' +
+            '<button type="button" class="btn ghost small" data-open="' + picked[0].l.id + '">1순위 상세 보기</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+  }
+  function saveFit() {
+    try { localStorage.setItem(FIT_STORE, JSON.stringify(fitPick)); } catch (e) {}
+  }
+  function readFit() {
+    try {
+      var o = JSON.parse(localStorage.getItem(FIT_STORE) || "null");
+      if (!o) return;
+      if (fitOpt(FIT_HEIGHT, o.height)) fitPick.height = o.height;
+      if (fitOpt(FIT_BODY, o.body)) fitPick.body = o.body;
+      if (fitOpt(FIT_MOOD, o.mood)) fitPick.mood = o.mood;
+      if (fitOpt(FIT_BUDGET, o.budget)) fitPick.budget = o.budget;
+    } catch (e) {}
+  }
+  function initFit() {
+    var groups = [
+      { key: "height", el: "#fit-height", list: FIT_HEIGHT },
+      { key: "body", el: "#fit-body", list: FIT_BODY },
+      { key: "mood", el: "#fit-mood", list: FIT_MOOD },
+      { key: "budget", el: "#fit-budget", list: FIT_BUDGET }
+    ];
+    var any = false;
+    groups.forEach(function (g) {
+      var el = $(g.el);
+      if (!el) return;
+      any = true;
+      el.innerHTML = g.list.map(function (o) {
+        return '<button type="button" class="fit-opt" data-fit="' + g.key + '" data-val="' + o.v + '" aria-pressed="false">' +
+          '<b>' + esc(o.t) + '</b><small>' + esc(o.d) + '</small></button>';
+      }).join("");
+      el.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-fit]");
+        if (!btn) return;
+        var key = btn.getAttribute("data-fit"), val = btn.getAttribute("data-val");
+        fitPick[key] = fitPick[key] === val ? "" : val;
+        paintFit(); renderFit(); saveFit();
+      });
+    });
+    if (!any) return;
+    var reset = $("#fit-reset");
+    if (reset) reset.addEventListener("click", function () {
+      fitPick = { height: "", body: "", mood: "", budget: "" };
+      paintFit(); renderFit(); saveFit();
+    });
+    var res = $("#fit-result");
+    if (res) res.addEventListener("click", function (e) {
+      var heart = e.target.closest("[data-fit-heart]");
+      if (heart) {
+        var added = toggleCloset(heart.getAttribute("data-fit-heart"));
+        heart.setAttribute("aria-pressed", added ? "true" : "false");
+        heart.textContent = added ? "♥" : "♡";
+        return;
+      }
+      var all = e.target.closest("[data-fit-add]");
+      if (all) {
+        var ids = all.getAttribute("data-fit-add").split(",");
+        ids.forEach(function (id) { if (closet.indexOf(id) === -1) closet.push(id); });
+        writeCloset(closet);
+        updateCloset();
+        renderFit();
+        toast(ids.length + "벌을 내 옷장에 담았습니다");
+        return;
+      }
+      var opener = e.target.closest("[data-open]");
+      if (opener) { e.preventDefault(); openModal(opener.getAttribute("data-open")); }
+    });
+    readFit();
+    paintFit();
+    renderFit();
   }
 
   /* ---------------- 코디 추천기 (예산·장면·스타일) ---------------- */
@@ -957,15 +1299,15 @@
       }
     });
     window.addEventListener("popstate", function () {
-      readURL(); syncControls(); paintChips(); renderGrid();
+      readURL(); syncControls(); paintChips(); paintHotTags(); renderGrid();
       var p = new URLSearchParams(location.search);
       if (p.get("look")) openModal(p.get("look")); else closeModal();
     });
   }
 
   function resetFilters() {
-    state = { q: "", type: "", cat: "", mood: "", celeb: "", budget: false, closet: false, sort: "recent" };
-    syncControls(); paintChips(); renderGrid(); writeURL(); syncFilterMore();
+    state = { q: "", type: "", cat: "", mood: "", celeb: "", ids: [], budget: false, closet: false, sort: "recent" };
+    syncControls(); paintChips(); renderGrid(); writeURL(); syncFilterMore(); paintHotTags();
   }
   function syncControls() {
     $("#q").value = state.q;
@@ -993,8 +1335,11 @@
     quizHTML();
     syncFilterMore();
     initRec();
+    initPicks();
+    initFit();
     updateClosetCalc();
     bindChips();
+    initTags();
     bindQuiz();
     bind();
 

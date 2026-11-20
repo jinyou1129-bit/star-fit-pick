@@ -3,10 +3,10 @@
   <channel>
     <title>스타핏픽 — 연예인 착장 사진과 브랜드·가격 좌표</title>
     <link>https://jinyou1129-bit.github.io/star-fit-pick/</link>
-    <description>공항패션·예능에 나온 연예인 착장을 실제 사진과 출처로 확인하고, 브랜드·제품명·정가·구매 좌표와 가성비 대안템을 비교합니다. 착장 포스팅 25편, 패션 가이드 14편, 검증 착장 25건, 착장 이상형 월드컵.</description>
+    <description>공항패션·예능에 나온 연예인 착장을 실제 사진과 출처로 확인하고, 브랜드·제품명·정가·구매 좌표와 가성비 대안템을 비교합니다. 착장 포스팅 25편, 패션 가이드 20편, 검증 착장 25건, 착장 이상형 월드컵.</description>
     <language>ko</language>
     <copyright>© 2026 스타핏픽</copyright>
-    <lastBuildDate>Fri, 20 Nov 2026 18:40:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 22:20:00 +0900</lastBuildDate>
     <pubDate>Fri, 20 Nov 2026 13:56:00 +0900</pubDate>
     <ttl>720</ttl>
     <generator>스타핏픽</generator>
@@ -16,6 +16,54 @@
       <title>스타핏픽</title>
       <link>https://jinyou1129-bit.github.io/star-fit-pick/</link>
     </image>
+    <item>
+      <title>체형별 겨울 코트 실루엣 선택법: 싱글·더블·래글런 비교</title>
+      <link>https://jinyou1129-bit.github.io/star-fit-pick/guide-winter-coat-silhouette.html</link>
+      <guid isPermaLink="true">https://jinyou1129-bit.github.io/star-fit-pick/guide-winter-coat-silhouette.html</guid>
+      <description>앞여밈 겹침, 라펠 폭, 어깨선, 기장 숫자로 세 실루엣을 비교했습니다. 어깨·허리·하체 체형별 선택 기준과 매장에서 확인할 7가지.</description>
+      <category>패션 가이드</category>
+      <pubDate>Fri, 20 Nov 2026 19:50:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>공항패션 빅백 vs 미니백: 수납력·무게·코디 밸런스</title>
+      <link>https://jinyou1129-bit.github.io/star-fit-pick/guide-kpop-airport-bags.html</link>
+      <guid isPermaLink="true">https://jinyou1129-bit.github.io/star-fit-pick/guide-kpop-airport-bags.html</guid>
+      <description>빅백과 미니백을 기내 규정, 리터 수납력, 실제 무게, 어깨 부담, 키별 가방 폭 비율로 비교했습니다. 1박2일·3박 이상 시나리오별 기준까지.</description>
+      <category>패션 가이드</category>
+      <pubDate>Fri, 20 Nov 2026 19:40:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>와이드·스트레이트·세미부츠컷 데님 핏별 비율 연출법</title>
+      <link>https://jinyou1129-bit.github.io/star-fit-pick/guide-denim-fit-guide.html</link>
+      <guid isPermaLink="true">https://jinyou1129-bit.github.io/star-fit-pick/guide-denim-fit-guide.html</guid>
+      <description>데님 밑위·밑단·인심 치수를 읽고 세 가지 핏을 비교했습니다. 다리 유형별 선택과 첫 세탁 수축까지.</description>
+      <category>패션 가이드</category>
+      <pubDate>Fri, 20 Nov 2026 19:30:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>울·캐시미어·알파카·아크릴 니트 혼용률 읽는 법</title>
+      <link>https://jinyou1129-bit.github.io/star-fit-pick/guide-knit-material-guide.html</link>
+      <guid isPermaLink="true">https://jinyou1129-bit.github.io/star-fit-pick/guide-knit-material-guide.html</guid>
+      <description>니트 라벨 혼용률을 해석하는 기준. 섬유 특성, 캐시미어 5% 표기의 함정, 보풀 제거와 세탁·보관 순서.</description>
+      <category>패션 가이드</category>
+      <pubDate>Fri, 20 Nov 2026 19:20:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>키 160 이하 vs 170 이상 아우터 기장·비율 공식</title>
+      <link>https://jinyou1129-bit.github.io/star-fit-pick/guide-petite-tall-styling.html</link>
+      <guid isPermaLink="true">https://jinyou1129-bit.github.io/star-fit-pick/guide-petite-tall-styling.html</guid>
+      <description>같은 100cm 아우터도 키에 따라 무릎 위와 아래로 갈립니다. 두 구간의 기장·비율·신발 굽·가방 크기를 숫자로 정리했습니다.</description>
+      <category>패션 가이드</category>
+      <pubDate>Fri, 20 Nov 2026 19:10:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>겨울 캡슐 옷장 10피스 공식: 2주 코디 돌려 입기</title>
+      <link>https://jinyou1129-bit.github.io/star-fit-pick/guide-capsule-wardrobe-10.html</link>
+      <guid isPermaLink="true">https://jinyou1129-bit.github.io/star-fit-pick/guide-capsule-wardrobe-10.html</guid>
+      <description>겨울 옷 10피스로 14일 코디를 만드는 구성표와 조합표, 색 계획, 예산 배분, 세탁 루틴까지.</description>
+      <category>패션 가이드</category>
+      <pubDate>Fri, 20 Nov 2026 19:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>착장 이상형 월드컵: 25벌 중 16벌, 15번 고르면 내 취향 1위</title>
       <link>https://jinyou1129-bit.github.io/star-fit-pick/worldcup.html</link>
