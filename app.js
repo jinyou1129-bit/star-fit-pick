@@ -406,7 +406,8 @@
           (look.alt.platform === "official" ? "공식 판매처 검색 ↗" : look.alt.platform === "coupang" ? "쿠팡에서 보기 ↗" : look.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "11번가에서 보기 ↗") + "</a>" +
         '<a class="buy-btn sub" href="' + esc(CFG.buildLink("coupang", look.alt.query)) + '" target="_blank" rel="noopener sponsored">쿠팡 검색 ↗</a>' +
         '<a class="buy-btn sub" href="' + esc(CFG.buildLink("elevenst", look.alt.query)) + '" target="_blank" rel="noopener sponsored">11번가 검색 ↗</a>' +
-      "</div>";
+      '</div>' +
+      '<p class="aff-note" style="font-size:11px;line-height:1.5;color:#8b8b8b;margin:8px 0 0">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>';
 
     $("#modal-sources").innerHTML = look.sources.map(function (s) {
       return '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener nofollow">' + esc(s.label) + " ↗</a></li>";

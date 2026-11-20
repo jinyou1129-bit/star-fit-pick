@@ -332,6 +332,7 @@
                 '<a class="buy-btn sub" href="' + esc(buildLink("coupang", w.alt.query)) + '" target="_blank" rel="noopener sponsored">쿠팡 검색 ↗</a>' +
                 '<a class="buy-btn sub" href="' + esc(buildLink("elevenst", w.alt.query)) + '" target="_blank" rel="noopener sponsored">11번가 검색 ↗</a>' +
               "</div>" +
+              '<p class="aff-note" style="font-size:11px;line-height:1.5;color:#8b8b8b;margin:8px 0 0">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>' +
             "</div>" +
             '<div class="wc-actions">' +
               '<button type="button" class="btn" data-again="1">' + (opts.shared ? "나도 월드컵 하기" : "다시 하기") + "</button>" +

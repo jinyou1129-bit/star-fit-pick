@@ -15,14 +15,17 @@ window.SFP_CONFIG = {
   },
 
   /* ---------- 1) 제휴(어필리에이트) ----------
-     값을 채우면 아래 buildLink()가 모든 구매 링크에 자동으로 붙입니다.
-     비워 두면 일반 검색 링크로 동작합니다(지금 상태).
+     쿠팡 파트너스는 추적 파라미터를 직접 붙이는 방식이 아니라
+     파트너스 API로 만든 공식 단축 링크(link.coupang.com/a/...)를 써야 실적이 잡힙니다.
+     그래서 검색어별 단축 링크를 data/coupang-links.js(window.SFP_COUPANG_LINKS)에 두고,
+     아래 buildLink()가 쿠팡일 때 그 맵을 먼저 조회합니다.
+     (맵 생성: work/starfitpick-coupang/build_all_links.py · 키는 저장소에 두지 않음)
      예)
-       coupangPartners.id = "AF1234567"  → 쿠팡 링크에 src=AF1234567&subid=...
+       coupangPartners.id = "AF1746171" → 파트너 ID(표시·기록용)
        adpick.id = "adpick_xxx"          → 애드픽 래퍼(link.adpick.co.kr) 사용
   ------------------------------------------- */
   affiliates: {
-    coupangPartners: { id: "", subId: "" },
+    coupangPartners: { id: "AF1746171", subId: "starfitpick" },
     adpick: { id: "" },
     musinsa: { utmSource: "" },
     naver: { id: "" },
@@ -48,12 +51,15 @@ window.SFP_CONFIG = {
   /* ---------- 4) 링크 빌더(제휴 파라미터 일괄 적용) ---------- */
   buildLink: function (platform, query) {
     var cfg = window.SFP_CONFIG;
-    var base = (cfg.search[platform] || cfg.search.naver)(query);
+    var q = String(query == null ? "" : query).replace(/\s+/g, " ").trim();
+    var base = (cfg.search[platform] || cfg.search.naver)(q);
     var a = cfg.affiliates;
 
-    if (platform === "coupang" && a.coupangPartners.id) {
-      base += "&src=" + encodeURIComponent(a.coupangPartners.id);
-      if (a.coupangPartners.subId) base += "&subid=" + encodeURIComponent(a.coupangPartners.subId);
+    // 쿠팡: 파트너스 API로 만든 공식 단축 링크가 있으면 그대로 반환한다(실적 추적은 이 링크로만 됨).
+    if (platform === "coupang") {
+      var map = window.SFP_COUPANG_LINKS || {};
+      var tracked = map[q] || map[String(query == null ? "" : query).trim()];
+      if (tracked) base = tracked;
     }
     if (platform === "musinsa" && a.musinsa.utmSource) {
       base += "&utm_source=" + encodeURIComponent(a.musinsa.utmSource);
