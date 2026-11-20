@@ -480,7 +480,7 @@ window.SFP_LOOKS = [
       query: "써코니 재즈 오리지널 45"
     },
     palette: ["#1a1a1a", "#6f6f6f", "#e8e4dc"]
-  }
+  },
   {
     id: "jaeseok-satur-argyle",
     image: "assets/looks/jaeseok-satur-argyle.webp?v=2026112001",
