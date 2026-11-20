@@ -26,14 +26,14 @@
   <a href="#" data-src="personal-color.html#how">how</a>
   <span id="stat"></span>
 </div>
-<div class="stage"><iframe id="f" src="personal-color.html"></iframe></div>
+<div class="stage"><iframe id="f" src="personal-color.html?cb=1"></iframe></div>
 <script>
   var f = document.getElementById("f");
   document.addEventListener("click", function (e) {
     var a = e.target.closest("a[data-src]");
     if (!a) return;
     e.preventDefault();
-    f.src = a.getAttribute("data-src");
+    var ns = a.getAttribute("data-src"); f.src = ns + (ns.indexOf("?") >= 0 ? "&" : "?") + "cb=" + Date.now();
   });
   setInterval(function () {
     try {
