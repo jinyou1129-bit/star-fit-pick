@@ -55,7 +55,8 @@
 .pc-tab{flex:1;border:0;background:transparent;border-radius:10px;padding:11px 10px;font-size:13.5px;font-weight:700;color:var(--sub);transition:.15s}
 .pc-tab[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:var(--shadow-1)}
 .pc-panel{margin-top:20px}
-.pc-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);box-shadow:var(--shadow-1);padding:24px}
+.pc-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);box-shadow:var(--shadow-1);padding:24px;max-width:880px}
+#result,#tones,#how,#faq,#lab{scroll-margin-top:86px}
 .pc-quiz-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
 .pc-step{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--blue)}
 .pc-dots{display:flex;gap:5px}
@@ -833,7 +834,10 @@
     var best = "spring", bv = -1;
     Object.keys(sc).forEach(function (k) { if (sc[k] > bv) { bv = sc[k]; best = k; } });
 
-    var confidence = skin.length >= center.length * 0.08 ? "높음" : (skin.length >= center.length * 0.03 ? "보통" : "낮음");
+    var sorted = Object.keys(pct).sort(function (x, y) { return pct[y] - pct[x]; });
+    var margin = pct[sorted[0]] - pct[sorted[1]];
+    var skinConf = skin.length >= center.length * 0.08 ? 2 : (skin.length >= center.length * 0.03 ? 1 : 0);
+    var confidence = (skinConf >= 2 && margin >= 12) ? "높음" : ((skinConf >= 1 && margin >= 6) ? "보통" : "낮음");
 
     return {
       best: best, pct: pct, lab: lab, chroma: chroma, warmIdx: warmIdx,
@@ -902,9 +906,16 @@
     var lightVal = axes && typeof axes.light === "number" ? axes.light : (key === "spring" || key === "summer" ? 0.72 : 0.28);
     var clearVal = axes && typeof axes.clear === "number" ? axes.clear : (key === "spring" || key === "winter" ? 0.68 : 0.32);
     var axisHtml = "";
-    axisHtml += '<div class="pc-axis"><span>웜</span><span class="bar b1"><i style="width:' + Math.round(warmVal * 100) + '%"></i></span><span style="text-align:right">쿨 ' + Math.round((1 - warmVal) * 100) + '%</span></div>';
-    axisHtml += '<div class="pc-axis"><span>밝음</span><span class="bar b1"><i style="width:' + Math.round(lightVal * 100) + '%"></i></span><span style="text-align:right">어두움 ' + Math.round((1 - lightVal) * 100) + '%</span></div>';
-    axisHtml += '<div class="pc-axis"><span>선명</span><span class="bar b1"><i style="width:' + Math.round(clearVal * 100) + '%"></i></span><span style="text-align:right">부드러움 ' + Math.round((1 - clearVal) * 100) + '%</span></div>';
+    function axisRowHtml(leftLabel, rightLabel, v) {
+      var lp = Math.round(Math.max(0, Math.min(1, v)) * 100);
+      var rp = 100 - lp;
+      return '<div class="pc-axis"><span>' + leftLabel + ' ' + lp + '%</span>' +
+        '<span class="bar"><i style="width:' + lp + '%"></i></span>' +
+        '<span style="text-align:right">' + rightLabel + ' ' + rp + '%</span></div>';
+    }
+    axisHtml += axisRowHtml("웜", "쿨", warmVal);
+    axisHtml += axisRowHtml("밝음", "어두움", lightVal);
+    axisHtml += axisRowHtml("선명", "부드러움", clearVal);
     if (axes && axes.pct) {
       axisHtml += '<p style="font-size:11.5px;color:rgba(255,255,255,.85);margin-top:2px">계절 점수 · 봄 ' + axes.pct.spring + '% · 여름 ' + axes.pct.summer + '% · 가을 ' + axes.pct.autumn + '% · 겨울 ' + axes.pct.winter + '%</p>';
     }
@@ -923,6 +934,7 @@
     });
     $("result-worst").innerHTML = wr;
 
+    $("result-looks").className = "pc-gallery" + (T.looks.length >= 4 ? " four" : "");
     var lookHtml = "";
     T.looks.forEach(function (L) {
       lookHtml += '<a class="pc-look" href="' + L.href + '">' +
@@ -995,7 +1007,7 @@
       g.beginPath();
       g.roundRect ? g.roundRect(x, y, sw, sw, 22) : g.rect(x, y, sw, sw);
       g.fill();
-      g.lineWidth = 2; g.strokeStyle = "rgba(17,24,28,.08)"; g.stroke();
+      g.lineWidth = 3; g.strokeStyle = "rgba(17,24,28,.18)"; g.stroke();
       g.fillStyle = "#191f28"; g.font = "700 24px Pretendard, sans-serif";
       g.fillText(c.n, x, y + sw + 40);
       g.fillStyle = "#8b95a1"; g.font = "500 19px Pretendard, sans-serif";
@@ -1012,6 +1024,7 @@
       g.fillStyle = c.h; g.beginPath();
       g.roundRect ? g.roundRect(wx, wy + 26, 54, 54, 14) : g.rect(wx, wy + 26, 54, 54);
       g.fill();
+      g.lineWidth = 3; g.strokeStyle = "rgba(17,24,28,.18)"; g.stroke();
       g.fillStyle = "#4e5968"; g.font = "600 24px Pretendard, sans-serif";
       g.fillText(c.n, wx + 70, wy + 62);
       wx += 300;
