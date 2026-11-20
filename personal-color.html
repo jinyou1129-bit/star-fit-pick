@@ -1149,6 +1149,12 @@
     quiz = { step: 0, answers: [] };
     renderQuestion();
     $("result").hidden = true;
+    try {
+      var ru = new URL(location.href);
+      ru.searchParams.delete("tone");
+      ru.hash = "lab";
+      history.replaceState(null, "", ru.toString());
+    } catch (err) {}
     $("panel-photo").hidden = true;
     $("panel-quiz").hidden = false;
     $("tab-quiz").setAttribute("aria-selected", "true");
