@@ -12,11 +12,13 @@
 index.html            메인 (히어로·필터·검색·내 옷장·무드 테스트·상세 모달·가이드 티저)
 posts.html            착장 포스팅 15편 허브 (공항패션·예능·일상 · 카테고리 필터)
 look-*.html           개별 착장 포스팅 15편 (각 1,000~1,500자 본문 + 정품/대안 비교표 + 구매 좌표 + 관련 착장·가이드)
-guides.html           패션 가이드 10편 허브 (애드센스 콘텐츠·SEO 유입용)
-guide-*.html          개별 가이드 10편 (각 1,200~1,600자 본문 + 관련 착장 + 이전/다음 글)
-about.html            사이트 소개 / 사진·가격 원칙
+guides.html           패션 가이드 20편 허브 (4개 카테고리 탭 · 애드센스 콘텐츠·SEO 유입용)
+guide-*.html          개별 가이드 20편 (각 1,200~1,600자 본문 + 관련 착장 + 이전/다음 글)
+about.html            사이트 소개 / 편집 원칙 5 · 검증 절차 · 수익 구조 공개
 contact.html          문의·정보 수정·사진 삭제 요청
-privacy.html          개인정보처리방침
+privacy.html          개인정보처리방침 (애드센스 DART 쿠키·맞춤광고 옵트아웃 포함)
+terms.html            이용약관
+ads.txt               애드센스 판매자 선언 (퍼블리셔 ID 입력 위치 주석 안내)
 404.html              404
 style.css             전체 스타일 (Toss UI + 화이트 부티크)
 app.js                필터/검색/찜/테스트/모달 로직
@@ -80,6 +82,26 @@ COUPANG_ACCESS_KEY=... COUPANG_SECRET_KEY=... python3 tools/build_coupang_links.
 
 - 메인 카드를 누르면 지금처럼 **모달**이 바로 열리고, 모달의 `자세히 소개 글로 보기 →` 버튼이 개별 포스팅으로 이어집니다.
 - 각 가이드 글의 착장 카드·본문 링크도 `index.html?look=` 대신 개별 포스팅(`look-*.html`)으로 연결되어 내부 링크가 강화됩니다.
+
+
+## 애드센스 승인 후 할 일 (2단계)
+
+1. `data/config.js` 의 `ads.adsenseClient` 에 `ca-pub-...` 와 `ads.slots.top` / `slots.mid` 슬롯 ID를 넣으면
+   `#ad-top`(그리드 위) · `#ad-mid`(에디터스 픽 아래) 광고 슬롯이 자동으로 켜집니다. 값이 비어 있으면 슬롯은 `hidden` 상태로 남습니다.
+2. 루트 `ads.txt` 의 안내 주석(STEP 2)대로 `google.com, pub-..., DIRECT, f08c47fec0942fa0` 한 줄의 주석을 풀고 ID를 채웁니다.
+   AdSense의 'ads.txt 자동 관리'를 쓰는 경우에는 이 파일을 직접 고치지 않아도 됩니다.
+   반영 확인: AdSense → 사이트 → ads.txt 상태(수 시간~2주 소요).
+
+## 쿠팡 링크가 비어 있을 때 (신규 검색어)
+
+`data/coupang-links.js` 는 파트너스 API로 생성하며, 맵에 없는 검색어는 일반 쿠팡 검색 URL로 폴백합니다(실적 미집계).
+새 검색어가 생겼을 때는 키가 있는 환경에서 아래 한 줄만 실행하면 전체(현재 83개)를 다시 채웁니다.
+
+```
+COUPANG_ACCESS_KEY=... COUPANG_SECRET_KEY=... python3 tools/build_coupang_links.py
+```
+
+현재 미매핑 3개: `리바이스 501 오리지널 스트레이트`, `무신사 스탠다드 세미부츠컷 데님 팬츠`, `무신사 스탠다드 롱패딩`.
 
 ## 검색엔진 색인 (IndexNow)
 
