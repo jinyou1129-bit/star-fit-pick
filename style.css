@@ -1203,3 +1203,5 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
   .principle-list{grid-template-columns:1fr}
   .principle-list li:last-child{grid-column:auto}
 }
+/* input의 고유 폭이 그리드 최소폭을 밀어내 360px에서 6px 넘치던 문제 */
+.hero-search input{flex:1 1 0%;width:0}
