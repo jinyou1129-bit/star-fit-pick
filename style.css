@@ -780,7 +780,13 @@ ul,ol{padding:0;list-style:none}
 .cmp-modal .modal-card{grid-template-columns:1fr;width:min(880px,100%)}
 .cmp-modal .modal-body{padding:26px 28px 24px}
 .cmp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.cc-table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
+.cc-table{width:100%;border-collapse:collapse;font-size:13px;min-width:560px}
+.cc-table thead th:nth-child(1){width:27%}
+.cc-table thead th:nth-child(2){width:20%}
+.cc-table thead th:nth-child(3){width:24%}
+.cc-table thead th:nth-child(4){width:16%}
+.cc-table thead th:nth-child(5){width:13%}
+.cc-table td b{white-space:nowrap}
 .cc-table th,.cc-table td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}
 .cc-table thead th{font-size:11px;letter-spacing:.04em;color:var(--muted);background:var(--soft-2);white-space:nowrap}
 .cc-table tbody th{font-weight:700;color:var(--ink);white-space:nowrap}
