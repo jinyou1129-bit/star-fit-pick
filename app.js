@@ -198,8 +198,10 @@
         '<span class="card-scrim" aria-hidden="true"></span>' +
         '<span class="card-badge scene">' + esc(sceneLabel(look)) + "</span>" +
         (saved > 0 ? '<span class="card-badge save">대안 ' + saved + "%↓</span>" : "") +
-        '<span class="card-credit">' + esc(photoCredit(look)) + "</span>" +
-        '<span class="card-cap"><b>' + esc(look.celeb) + "</b><i>" + esc(look.headline) + "</i></span>" +
+        '<span class="card-cap">' +
+          '<span class="card-credit">' + esc(photoCredit(look)) + "</span>" +
+          "<b>" + esc(look.celeb) + "</b><i>" + esc(look.headline) + "</i>" +
+        "</span>" +
       "</a>" +
       '<button type="button" class="heart" data-heart="' + look.id + '" aria-pressed="' + inCloset + '" aria-label="' + esc(look.celeb + " " + look.item.name + " 내 옷장에 담기") + '">' + (inCloset ? "♥" : "♡") + "</button>" +
       '<div class="card-body">' +

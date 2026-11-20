@@ -226,12 +226,12 @@ ul,ol{padding:0;list-style:none}
 .card-badge.scene{left:12px;background:rgba(255,255,255,.92);color:var(--ink)}
 .card-badge.save{left:12px;top:44px;background:var(--red);color:#fff}
 .card-credit{
-  position:absolute;left:14px;bottom:52px;font-size:10.5px;font-weight:600;color:#fff;
-  background:rgba(17,17,17,.42);padding:4px 8px;border-radius:7px;backdrop-filter:blur(6px);
-  max-width:calc(100% - 28px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  align-self:flex-start;font-size:10px;font-weight:600;color:#fff;letter-spacing:.01em;
+  background:rgba(17,17,17,.46);padding:3px 7px;border-radius:6px;backdrop-filter:blur(6px);
+  max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:2px;
 }
 .card-cap{
-  position:absolute;left:14px;right:14px;bottom:13px;display:flex;flex-direction:column;gap:2px;
+  position:absolute;left:14px;right:14px;bottom:12px;display:flex;flex-direction:column;gap:1px;
   color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.25);
 }
 .card-cap b{font-size:14px;font-weight:800;letter-spacing:-.01em}
@@ -254,7 +254,7 @@ ul,ol{padding:0;list-style:none}
 .price-block{display:flex;align-items:baseline;gap:7px;margin-top:10px}
 .price-now{font-size:16px;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
 .price-list{font-size:12.5px;color:var(--muted);text-decoration:line-through}
-.alt-line{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px;
+.alt-line{display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:wrap;margin-top:8px;
   padding-top:9px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
 .alt-label{font-weight:600}
 .alt-price{color:var(--blue-deep);font-weight:700}
