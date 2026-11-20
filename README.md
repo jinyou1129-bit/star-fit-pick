@@ -10,8 +10,10 @@
 
 ```
 index.html            메인 (히어로·필터·검색·내 옷장·무드 테스트·상세 모달·가이드 티저)
-guides.html           패션 가이드 6편 허브 (애드센스 콘텐츠·SEO 유입용)
-guide-*.html          개별 가이드 6편 (각 1,200~1,600자 본문 + 관련 착장 + 이전/다음 글)
+posts.html            착장 포스팅 15편 허브 (공항패션·예능·일상 · 카테고리 필터)
+look-*.html           개별 착장 포스팅 15편 (각 1,000~1,500자 본문 + 정품/대안 비교표 + 구매 좌표 + 관련 착장·가이드)
+guides.html           패션 가이드 10편 허브 (애드센스 콘텐츠·SEO 유입용)
+guide-*.html          개별 가이드 10편 (각 1,200~1,600자 본문 + 관련 착장 + 이전/다음 글)
 about.html            사이트 소개 / 사진·가격 원칙
 contact.html          문의·정보 수정·사진 삭제 요청
 privacy.html          개인정보처리방침
@@ -23,6 +25,7 @@ data/config.js        ★ 제휴 ID·광고 슬롯·문의 채널 (한 곳에서
 assets/looks/         착장 사진 (900×1125 JPG + WebP)
 assets/og-cover.png   OG 대표 이미지
 sitemap.xml, robots.txt
+indexnow-<key>.txt    IndexNow 키 파일 (Bing·네이버·Yandex 즉시 색인 요청용)
 ```
 
 ## 룩 추가하기
@@ -55,3 +58,20 @@ sitemap.xml, robots.txt
 ## 가이드 추가하기
 
 `.scratch/build_guides.py`(작업 환경) 또는 동일 구조의 스크립트로 `GUIDES` 배열에 항목을 추가하면 허브·개별 페이지·이전/다음 링크가 한 번에 생성됩니다. 새 글은 `sitemap.xml`에도 추가합니다.
+
+## 착장 포스팅(개별 소개 글) 추가하기
+
+`look-{id}.html`은 `data/looks.js`의 착장 id와 1:1로 대응합니다. `.scratch/build_posts.py`(작업 환경)의 `posts_content*.py`에 본문을 넣고 스크립트를 실행하면 15편 페이지와 `posts.html` 허브가 함께 생성됩니다. 새 글을 추가하면 `sitemap.xml`과 `rss.xml`에도 URL을 넣어 주세요.
+
+- 메인 카드를 누르면 지금처럼 **모달**이 바로 열리고, 모달의 `자세히 소개 글로 보기 →` 버튼이 개별 포스팅으로 이어집니다.
+- 각 가이드 글의 착장 카드·본문 링크도 `index.html?look=` 대신 개별 포스팅(`look-*.html`)으로 연결되어 내부 링크가 강화됩니다.
+
+## 검색엔진 색인 (IndexNow)
+
+루트의 `indexnow-<key>.txt` 안에 키 값이 들어 있습니다. 배포 후 아래처럼 변경 URL을 통보할 수 있습니다. (Search Console·네이버 서치어드바이저·Bing Webmaster 도구 등록은 최종 도메인 확정 후 진행)
+
+```bash
+curl -s -X POST https://api.indexnow.org/indexnow \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d '{"host":"jinyou1129-bit.github.io","key":"<KEY>","keyLocation":"https://jinyou1129-bit.github.io/star-fit-pick/indexnow-<KEY>.txt","urlList":["https://jinyou1129-bit.github.io/star-fit-pick/posts.html"]}'
+```

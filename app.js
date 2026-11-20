@@ -340,6 +340,8 @@
     $("#modal-title").textContent = look.item.name;
     $("#modal-scene").textContent = look.scene;
     $("#modal-story").textContent = look.story;
+    var mpost = $("#modal-post");
+    if (mpost) mpost.href = "look-" + look.id + ".html";
     $("#modal-point").textContent = look.point;
     $("#modal-verified").textContent = "확인: " + look.verified + " · 가격 확인일 2026.11.20";
 

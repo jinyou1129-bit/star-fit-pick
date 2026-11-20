@@ -579,3 +579,52 @@ ul,ol{padding:0;list-style:none}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
 }
+
+/* ---------------- 착장 포스팅 (look-*.html / posts.html) ---------------- */
+.post-figure{margin:0 0 28px;max-width:520px;border:1px solid var(--line);border-radius:var(--radius-l);overflow:hidden;background:var(--soft)}
+.post-figure picture{display:block}
+.post-figure img{width:100%;height:auto;display:block;aspect-ratio:4/5;object-fit:cover}
+.post-figure figcaption{padding:11px 14px;font-size:12px;color:var(--muted);background:#fff;border-top:1px solid var(--line);line-height:1.6;word-break:keep-all}
+.post-figure figcaption b{color:var(--sub);font-weight:700}
+.post-figure figcaption a{color:var(--blue-deep);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.buy-panel{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0 14px}
+.buy-col{border:1px solid var(--line);border-radius:var(--radius-m);padding:16px;background:var(--soft-2)}
+.buy-kicker{font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;margin-bottom:10px;word-break:keep-all}
+.buy-col .buy-row a{font-size:12.5px;padding:9px 12px}
+.post-note{font-size:12px;color:var(--muted);line-height:1.75;margin:6px 0 18px;word-break:keep-all}
+.post-note a{color:var(--sub);text-decoration:underline;text-underline-offset:2px}
+.post-guide{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:var(--radius-m);padding:16px 18px;background:#fff;box-shadow:var(--shadow-1);transition:.15s;margin:8px 0 4px}
+.post-guide:hover{border-color:var(--line-strong);box-shadow:var(--shadow-2)}
+.post-guide span{font-size:10.5px;font-weight:800;letter-spacing:.12em;color:var(--blue);white-space:nowrap}
+.post-guide b{font-size:14.5px;color:var(--ink);font-weight:700;line-height:1.45;word-break:keep-all}
+.post-guide em{margin-left:auto;font-style:normal;font-size:12.5px;font-weight:700;color:var(--blue-deep);white-space:nowrap}
+.spec-mini{display:grid;grid-template-columns:auto 1fr;gap:7px 10px;font-size:12.5px}
+.spec-mini dt{color:var(--muted);font-weight:600;white-space:nowrap}
+.spec-mini dd{color:var(--ink);font-weight:600;word-break:keep-all}
+.post-filter{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 10px}
+.post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:18px 0 8px}
+.post-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius-l);overflow:hidden;background:#fff;box-shadow:var(--shadow-1);transition:.18s;min-width:0}
+.post-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.post-card[hidden]{display:none}
+.post-card-media{position:relative;display:block;background:var(--soft)}
+.post-card-media img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.post-card-tag{position:absolute;left:10px;top:10px;background:rgba(255,255,255,.94);color:var(--ink);font-size:10.5px;font-weight:800;padding:4px 9px;border-radius:999px;letter-spacing:.02em}
+.post-card-body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.post-card-body .who{font-size:10.5px;font-weight:800;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}
+.post-card-body h3{font-size:14.5px;font-weight:800;line-height:1.45;color:var(--ink);letter-spacing:-.02em;word-break:keep-all}
+.post-card-body p{font-size:12px;color:var(--sub);line-height:1.6;word-break:keep-all}
+.post-card-body .pp{margin-top:auto;font-size:13.5px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.post-card-body .pp small{font-weight:600;color:var(--blue-deep);font-size:11.5px;margin-left:6px}
+.post-empty{margin:40px 0;text-align:center;color:var(--muted);font-size:14px}
+.modal-post-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:9px 14px;border:1px solid var(--line-strong);border-radius:999px;font-size:13px;font-weight:700;color:var(--blue-deep);background:#fff;transition:.15s}
+.modal-post-link:hover{border-color:var(--blue);background:var(--blue-soft)}
+@media (max-width:1080px){
+  .post-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .post-grid{grid-template-columns:1fr}
+  .buy-panel{grid-template-columns:1fr}
+  .post-figure{max-width:100%}
+  .post-guide{flex-wrap:wrap;gap:6px}
+  .post-guide em{margin-left:0}
+}
