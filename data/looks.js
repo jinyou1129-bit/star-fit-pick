@@ -483,8 +483,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jaeseok-satur-argyle",
-    image: "assets/looks/jaeseok-satur-argyle.webp?v=2026112001",
-    imageJpg: "assets/looks/jaeseok-satur-argyle.jpg?v=2026112001",
+    image: "assets/looks/jaeseok-satur-argyle.webp?v=2026112007",
+    imageJpg: "assets/looks/jaeseok-satur-argyle.jpg?v=2026112007",
     photo: {label: "SBS 틈만나면", kind: "photo", what: "66회 방송 화면", url: "https://www.youtube.com/watch?v=Ziw_H1EQFFY"},
     imageAlt: "틈만나면 66회, 네이비 아가일 니트 가디건 위에 데님 셔츠 깃을 세워 입은 유재석",
     celeb: "유재석",
@@ -531,8 +531,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "seongjae-polo-nautical",
-    image: "assets/looks/seongjae-polo-nautical.webp?v=2026112001",
-    imageJpg: "assets/looks/seongjae-polo-nautical.jpg?v=2026112001",
+    image: "assets/looks/seongjae-polo-nautical.webp?v=2026112007",
+    imageJpg: "assets/looks/seongjae-polo-nautical.jpg?v=2026112007",
     photo: {label: "SBS 틈만나면", kind: "photo", what: "66회 방송 화면", url: "https://www.youtube.com/watch?v=gYFmpjhKH5o"},
     imageAlt: "틈만나면 66회, 흰 셔츠와 네이비 타이 위에 돛·닻 자수가 들어간 네이비 빅 재킷을 입은 육성재",
     celeb: "육성재",
