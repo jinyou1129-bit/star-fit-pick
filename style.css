@@ -215,8 +215,8 @@ ul,ol{padding:0;list-style:none}
 .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .card-media:hover .card-img img{transform:scale(1.03)}
 .card-scrim{
-  position:absolute;inset:auto 0 0 0;height:52%;
-  background:linear-gradient(to top,rgba(0,0,0,.52),rgba(0,0,0,.12) 55%,rgba(0,0,0,0));
+  position:absolute;inset:auto 0 0 0;height:58%;
+  background:linear-gradient(to top,rgba(0,0,0,.68),rgba(0,0,0,.24) 52%,rgba(0,0,0,0));
   pointer-events:none;
 }
 .card-badge{
@@ -397,6 +397,18 @@ ul,ol{padding:0;list-style:none}
 .modal-story{font-size:14.5px;color:var(--sub);line-height:1.75;margin-top:14px}
 .modal-h3{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:26px 0 12px}
 .modal-compare{display:grid;gap:10px}
+.modal-compare table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13.5px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.modal-compare caption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.modal-compare th,.modal-compare td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:left;vertical-align:top;word-break:keep-all;line-height:1.5}
+.modal-compare thead th{font-size:11px;letter-spacing:.06em;color:var(--muted);background:var(--soft-2);font-weight:700;white-space:nowrap}
+.modal-compare thead th:nth-child(2){background:#eef4ff;color:var(--blue-deep);width:42%}
+.modal-compare thead th:nth-child(3){background:#f4faf6;color:#0f7a4d;width:36%}
+.modal-compare thead th:first-child{width:22%}
+.modal-compare tbody th{font-size:12px;color:var(--muted);font-weight:700;background:#fcfcfd}
+.modal-compare tbody td{color:var(--ink);font-weight:600;font-size:13px}
+.modal-compare tbody td small{display:block;font-size:11.5px;color:var(--muted);font-weight:500;margin-top:2px}
+.modal-compare tfoot td{border-bottom:0;background:#fff5f6;color:#c62828;font-weight:800;font-size:12.5px;padding:12px 10px}
+.modal-compare tfoot td:only-child{text-align:center}
 .cmp{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
 .cmp.alt{border-color:#d5e6ff;background:#f7fbff}
 .cmp b{font-size:14px;color:var(--ink);display:block}
