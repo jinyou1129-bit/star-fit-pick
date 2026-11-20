@@ -1205,3 +1205,102 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 }
 /* input의 고유 폭이 그리드 최소폭을 밀어내 360px에서 6px 넘치던 문제 */
 .hero-search input{flex:1 1 0%;width:0}
+
+/* =========================================================
+   V3 — 매거진 디테일 · 브랜드/가격대 퀵필터 · 오늘의 코디 룰렛
+        · 본문 표 첫 열 nowrap 수정 (모바일 라벨 세로 쪼개짐)
+   ========================================================= */
+
+/* ---------- 본문 표: 첫 열이 좁아 '아쉬운 점'이 세로로 쪼개지던 문제 ---------- */
+.article-table th{white-space:nowrap;width:1%;min-width:62px;word-break:keep-all}
+.page-table th{white-space:nowrap;word-break:keep-all}
+
+/* ---------- 브랜드 · 가격대 퀵필터 ---------- */
+.quick-filter{display:flex;flex-direction:column;gap:7px;margin:0 0 16px;padding:0 0 14px;border-bottom:1px dashed var(--line)}
+.qf-row{display:flex;align-items:flex-start;gap:10px}
+.qf-label{flex:0 0 44px;font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--muted);padding-top:8px}
+.qf-chip{font-size:12.5px;padding:6px 11px}
+.qf-chip[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.qf-chip[aria-pressed="true"] small{color:rgba(255,255,255,.72)}
+.qf-chip:hover{border-color:var(--blue);color:var(--blue-deep);background:var(--blue-tint)}
+.qf-chip[aria-pressed="true"]:hover{color:#fff;background:var(--blue-deep)}
+
+/* ---------- 오늘의 코디 룰렛 ---------- */
+.roulette{padding:48px 0 10px}
+.rl-card{
+  display:grid;grid-template-columns:1.02fr .98fr;gap:32px;position:relative;overflow:hidden;
+  background:radial-gradient(120% 120% at 100% 0%,#eef4ff 0%,rgba(255,255,255,0) 55%),#fff;
+  border:1px solid var(--line);border-radius:var(--radius-xl);padding:30px;box-shadow:var(--shadow-card);
+}
+.rl-copy h2{font-size:clamp(22px,2.4vw,30px);font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.rl-copy .section-sub{max-width:44ch;margin-top:8px}
+.rl-btn{
+  margin-top:18px;border:0;background:var(--ink);color:#fff;font-weight:800;font-size:15px;
+  padding:14px 22px;border-radius:14px;transition:transform .18s var(--ease),background .18s var(--ease);
+}
+.rl-btn:hover{background:var(--blue-deep);transform:translateY(-1px)}
+.rl-btn:disabled{opacity:.55;transform:none;cursor:default}
+.rl-note{margin-top:12px;font-size:11.5px;color:var(--muted);line-height:1.7;max-width:46ch}
+.rl-stage{display:flex;flex-direction:column;gap:12px;min-width:0}
+.rl-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.rl-thumb{
+  display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/5;background:var(--soft);position:relative;
+  opacity:.5;transition:opacity .15s var(--ease),transform .15s var(--ease);
+}
+.rl-thumb img{width:100%;height:100%;object-fit:cover}
+.rl-thumb.on{opacity:1;transform:translateY(-2px);box-shadow:inset 0 0 0 2px var(--blue),0 10px 20px -12px rgba(49,130,246,.55)}
+.rl-card.spinning .rl-thumb{opacity:.8}
+.rl-result{
+  border:1px solid var(--line);border-radius:16px;background:#fff;padding:16px 18px;
+  min-height:152px;display:flex;flex-direction:column;justify-content:center;transition:border-color .2s;
+}
+.rl-card.has-result .rl-result{border-color:var(--line-strong)}
+.rl-empty{font-size:13px;color:var(--muted)}
+.rl-kicker{font-size:10.5px;font-weight:800;letter-spacing:.16em;color:var(--gold)}
+.rl-result h3{font-size:17px;font-weight:800;letter-spacing:-.02em;margin-top:4px;color:var(--ink);word-break:keep-all}
+.rl-brand{font-size:12.5px;color:var(--muted);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rl-prices{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:8px;font-size:12px;color:var(--muted)}
+.rl-prices b{font-size:17px;color:var(--ink);font-weight:800;letter-spacing:-.02em}
+.rl-prices i{font-style:normal;color:var(--blue);font-weight:800}
+.rl-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+
+/* ---------- 매거진 디테일 미세 조정 ---------- */
+.hero{padding-top:56px}
+.hero-stats li{border-left:1px solid var(--line);padding-left:16px}
+.hero-stats li:first-child{border-left:0;padding-left:0}
+.section-head{border-top:1px solid var(--line);padding-top:22px}
+.picks-head{border-top:1px solid var(--line);padding-top:22px}
+.picks-all{padding-bottom:4px}
+.card-media::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(17,24,28,.06);
+}
+.card-badge.save{box-shadow:0 6px 16px -8px rgba(240,68,82,.85);letter-spacing:.02em}
+.price-now{font-size:17px}
+.alt-price{background:var(--blue-soft);padding:3px 8px;border-radius:999px;font-variant-numeric:tabular-nums}
+.chip{transition:border-color .14s var(--ease),color .14s var(--ease),background .14s var(--ease),transform .14s var(--ease)}
+.chip:hover{transform:translateY(-1px)}
+
+@media (max-width:1080px){
+  .rl-card{grid-template-columns:1fr;gap:22px;padding:24px}
+}
+@media (max-width:760px){
+  .article-table{font-size:13px}
+  .article-table th,.article-table td{padding:9px 7px}
+  .article-table th{min-width:56px;font-size:11.5px}
+  .roulette{padding:36px 0 6px}
+  .rl-card{padding:20px;border-radius:22px}
+  .rl-thumb{border-radius:9px}
+  .rl-thumbs{gap:5px}
+  .rl-result{padding:14px 15px;min-height:0}
+  .rl-actions .btn{flex:1 1 auto}
+  .qf-label{flex:0 0 38px;font-size:11.5px}
+  .qf-chip{font-size:12px;padding:6px 10px}
+}
+@media (max-width:420px){
+  .rl-result h3{font-size:15.5px}
+  .rl-prices b{font-size:16px}
+  .rl-actions .btn{flex:1 1 100%}
+}
+.chip-more{background:var(--soft);border-style:dashed;color:var(--sub)}
+.chip-more:hover{background:var(--blue-tint);border-color:var(--blue);color:var(--blue-deep)}

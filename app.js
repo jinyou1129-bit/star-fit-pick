@@ -77,7 +77,7 @@
   var closet = readCloset();
 
   /* ---------------- state ---------------- */
-  var state = { q: "", type: "", cat: "", mood: "", celeb: "", ids: [], budget: false, closet: false, sort: "recent" };
+  var state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", ids: [], budget: false, closet: false, sort: "recent" };
   var lastFocus = null;
 
   function readURL() {
@@ -87,6 +87,8 @@
     state.cat = CAT_ORDER.indexOf(p.get("cat")) > -1 ? p.get("cat") : "";
     state.mood = MOOD_ORDER.indexOf(p.get("mood")) > -1 ? p.get("mood") : "";
     state.celeb = p.get("celeb") || "";
+    state.brand = p.get("brand") || "";
+    state.band = ["u10", "10to30", "30to100", "o100"].indexOf(p.get("band")) > -1 ? p.get("band") : "";
     state.ids = (p.get("ids") || "").split(",").filter(Boolean);
     state.budget = p.get("budget") === "1";
     state.closet = p.get("closet") === "1";
@@ -99,6 +101,8 @@
     if (state.cat) p.set("cat", state.cat);
     if (state.mood) p.set("mood", state.mood);
     if (state.celeb) p.set("celeb", state.celeb);
+    if (state.brand) p.set("brand", state.brand);
+    if (state.band) p.set("band", state.band);
     if (state.ids && state.ids.length) p.set("ids", state.ids.join(","));
     if (state.budget) p.set("budget", "1");
     if (state.closet) p.set("closet", "1");
@@ -138,6 +142,25 @@
         labels[v] + '<span class="num">' + countBy(key, v) + "</span></button>";
     }).join("");
   }
+  function buildCelebChips() {
+    var el = $("#chips-celeb");
+    if (!el) return;
+    var counts = {};
+    LOOKS.forEach(function (l) { counts[l.celeb] = (counts[l.celeb] || 0) + 1; });
+    var all = celebList();
+    var main = all.filter(function (c) { return counts[c] >= 2; });
+    var rest = all.filter(function (c) { return counts[c] < 2; });
+    function chip(c) {
+      return '<button type="button" class="chip" data-key="celeb" data-value="' + esc(c) + '" aria-pressed="false">' + esc(c) + '<span class="num">' + counts[c] + "</span></button>";
+    }
+    el.innerHTML = main.map(chip).join("") +
+      (rest.length ? '<button type="button" class="chip chip-more" id="celeb-more">+' + rest.length + "명 전체 보기</button>" : "");
+    var more = $("#celeb-more");
+    if (more) more.addEventListener("click", function () {
+      el.innerHTML = all.map(chip).join("");
+      paintChips();
+    });
+  }
   function celebList() {
     var seen = {}, out = [];
     LOOKS.forEach(function (l) { if (!seen[l.celeb]) { seen[l.celeb] = 1; out.push(l.celeb); } });
@@ -150,6 +173,14 @@
     if (state.cat && look.category !== state.cat) return false;
     if (state.mood && (look.mood || []).indexOf(state.mood) === -1) return false;
     if (state.celeb && look.celeb !== state.celeb) return false;
+    if (state.brand && look.item.brand !== state.brand) return false;
+    if (state.band) {
+      var pv = price(look);
+      if (state.band === "u10" && pv > 100000) return false;
+      if (state.band === "10to30" && (pv <= 100000 || pv > 300000)) return false;
+      if (state.band === "30to100" && (pv <= 300000 || pv > 1000000)) return false;
+      if (state.band === "o100" && pv <= 1000000) return false;
+    }
     if (state.ids && state.ids.length && state.ids.indexOf(look.id) === -1) return false;
     if (state.budget && look.alt.price > BUDGET_CAP) return false;
     if (state.closet && closet.indexOf(look.id) === -1) return false;
@@ -231,6 +262,10 @@
     var parts = [];
     if (state.q) parts.push('"' + esc(state.q) + '" 검색');
     if (state.celeb) parts.push(esc(state.celeb));
+    if (state.brand) parts.push(esc(state.brand));
+    if (state.band) {
+      parts.push({ u10: "정품 10만 원 이하", "10to30": "정품 10~30만 원", "30to100": "정품 30~100만 원", o100: "정품 100만 원 이상" }[state.band]);
+    }
     if (state.type) parts.push(TYPE_LABEL[state.type]);
     if (state.cat) parts.push(CAT_LABEL[state.cat]);
     if (state.mood) parts.push(MOOD_LABEL[state.mood] + " 무드");
@@ -256,6 +291,8 @@
       else if (key === "cat") on = state.cat === val;
       else if (key === "mood") on = state.mood === val;
       else if (key === "celeb") on = state.celeb === val;
+      else if (key === "brand") on = state.brand === val;
+      else if (key === "band") on = state.band === val;
       btn.setAttribute("aria-pressed", on ? "true" : "false");
     });
   }
@@ -269,6 +306,7 @@
       var val = btn.getAttribute("data-value");
       var prop = key === "cat" ? "cat" : key;
       state[prop] = state[prop] === val ? "" : val;
+      if (prop === "brand" || prop === "band") paintQuick();
       paintChips();
       renderGrid();
       writeURL();
@@ -1228,8 +1266,8 @@
     });
     $("#closet-view").addEventListener("click", function () {
       state.closet = true; $("#closet-toggle").checked = true;
-      state.mood = ""; state.cat = ""; state.type = ""; state.celeb = "";
-      paintChips(); renderGrid(); writeURL(); openClosetPanel(false);
+      state.mood = ""; state.cat = ""; state.type = ""; state.celeb = ""; state.brand = ""; state.band = "";
+      paintChips(); paintQuick(); renderGrid(); writeURL(); openClosetPanel(false);
       document.getElementById("looks").scrollIntoView({ behavior: "smooth", block: "start" });
     });
     $("#closet-clear").addEventListener("click", function () {
@@ -1306,8 +1344,8 @@
   }
 
   function resetFilters() {
-    state = { q: "", type: "", cat: "", mood: "", celeb: "", ids: [], budget: false, closet: false, sort: "recent" };
-    syncControls(); paintChips(); renderGrid(); writeURL(); syncFilterMore(); paintHotTags();
+    state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", ids: [], budget: false, closet: false, sort: "recent" };
+    syncControls(); paintChips(); paintQuick(); renderGrid(); writeURL(); syncFilterMore(); paintHotTags();
   }
   function syncControls() {
     $("#q").value = state.q;
@@ -1317,13 +1355,100 @@
     $("#closet-toggle").checked = state.closet;
   }
 
+
+  /* ---------------- quick filter (브랜드·가격대) ---------------- */
+  function bandCount(v) {
+    return LOOKS.filter(function (l) {
+      var p = price(l);
+      if (v === "u10") return p <= 100000;
+      if (v === "10to30") return p > 100000 && p <= 300000;
+      if (v === "30to100") return p > 300000 && p <= 1000000;
+      if (v === "o100") return p > 1000000;
+      return true;
+    }).length;
+  }
+  function buildQuick() {
+    var bw = $("#qf-brand"), bandw = $("#qf-band");
+    if (!bw || !bandw) return;
+    var counts = {};
+    LOOKS.forEach(function (l) { counts[l.item.brand] = (counts[l.item.brand] || 0) + 1; });
+    var brands = Object.keys(counts).sort(function (a, b) {
+      return counts[b] - counts[a] || a.localeCompare(b, "ko");
+    });
+    var strong = brands.filter(function (b) { return counts[b] >= 2; });
+    brands = strong.length >= 6 ? strong.slice(0, 8)
+      : strong.concat(brands.filter(function (b) { return counts[b] < 2; })).slice(0, 8);
+    bw.innerHTML = brands.map(function (b) {
+      return '<button type="button" class="chip qf-chip" data-key="brand" data-value="' + esc(b) + '" aria-pressed="false">' + esc(b) + "<small>" + counts[b] + "</small></button>";
+    }).join("");
+    var bands = [["u10", "10만 원 이하"], ["10to30", "10~30만"], ["30to100", "30~100만"], ["o100", "100만 이상"]];
+    bandw.innerHTML = bands.map(function (x) {
+      return '<button type="button" class="chip qf-chip" data-key="band" data-value="' + x[0] + '" aria-pressed="false">' + x[1] + "<small>" + bandCount(x[0]) + "</small></button>";
+    }).join("");
+  }
+  function paintQuick() {
+    $all(".qf-chip").forEach(function (btn) {
+      var k = btn.getAttribute("data-key"), v = btn.getAttribute("data-value");
+      var on = (k === "brand" && state.brand === v) || (k === "band" && state.band === v);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
+  /* ---------------- 오늘의 코디 룰렛 ---------------- */
+  function initRoulette() {
+    var card = $("#rl-card"), btn = $("#rl-spin"), thumbs = $("#rl-thumbs"), out = $("#rl-result");
+    if (!card || !btn || !thumbs || !out) return;
+    function sample(n) {
+      var pool = LOOKS.slice(), pick = [];
+      while (pool.length && pick.length < n) pick.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
+      return pick;
+    }
+    function paintThumbs(list, active) {
+      thumbs.innerHTML = list.map(function (l, i) {
+        return '<a class="rl-thumb' + (i === active ? " on" : "") + '" href="look-' + l.id + '.html" tabindex="-1" aria-hidden="true">' +
+          "<picture>" + (l.image ? '<source srcset="' + esc(l.image) + '" type="image/webp">' : "") +
+          '<img src="' + esc(l.imageJpg || l.image) + '" alt="" width="180" height="225" loading="lazy" decoding="async"></picture></a>';
+      }).join("");
+    }
+    function show(l) {
+      out.innerHTML =
+        '<p class="rl-kicker">TODAY\'S PICK</p>' +
+        "<h3>" + esc(l.celeb) + " · " + esc(l.headline) + "</h3>" +
+        '<p class="rl-brand">' + esc(l.item.brand) + " " + esc(l.item.name) + "</p>" +
+        '<p class="rl-prices"><b>' + won(price(l)) + "</b><span>대안 " + won(l.alt.price) + " <i>" + saveRate(l) + "%↓</i></span></p>" +
+        '<div class="rl-actions"><a class="btn small" href="look-' + l.id + '.html">착장 포스팅 보기</a>' +
+        '<a class="btn ghost small" href="?look=' + encodeURIComponent(l.id) + '">가격·대안 비교</a></div>';
+      card.classList.add("has-result");
+    }
+    paintThumbs(sample(5), -1);
+    btn.addEventListener("click", function () {
+      if (btn.disabled) return;
+      btn.disabled = true;
+      card.classList.add("spinning");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var ticks = 0, target = 10 + Math.floor(Math.random() * 8);
+      var timer = setInterval(function () {
+        paintThumbs(sample(5), Math.floor(Math.random() * 5));
+        ticks++;
+        if (ticks >= target || reduce) {
+          clearInterval(timer);
+          var l = LOOKS[Math.floor(Math.random() * LOOKS.length)];
+          paintThumbs([l].concat(sample(4)), 0);
+          show(l);
+          card.classList.remove("spinning");
+          btn.disabled = false;
+          btn.textContent = "🎰 다시 돌리기";
+        }
+      }, reduce ? 10 : 100);
+    });
+  }
+
   /* ---------------- init ---------------- */
   function init() {
     buildChips($("#chips-type"), TYPE_ORDER, TYPE_LABEL, "type");
     buildChips($("#chips-cat"), CAT_ORDER, CAT_LABEL, "cat");
     buildChips($("#chips-mood"), MOOD_ORDER, MOOD_LABEL, "mood");
-    var celebs = celebList();
-    buildChips($("#chips-celeb"), celebs, celebs.reduce(function (o, c) { o[c] = c; return o; }, {}), "celeb");
+    buildCelebChips();
 
     readURL();
     syncControls();
@@ -1339,6 +1464,9 @@
     initFit();
     updateClosetCalc();
     bindChips();
+    buildQuick();
+    paintQuick();
+    initRoulette();
     initTags();
     bindQuiz();
     bind();

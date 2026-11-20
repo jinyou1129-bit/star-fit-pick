@@ -2374,4 +2374,868 @@ window.SFP_LOOKS = [
     },
     palette: ["#2f3f57", "#8fa3b8", "#3a3630"]
   }
+,
+  {
+    id: "jiwoo-bittercells-halcoat",
+    image: "assets/looks/jiwoo-bittercells-halcoat.webp?v=2026112301",
+    imageJpg: "assets/looks/jiwoo-bittercells-halcoat.jpg?v=2026112301",
+    photo: {label: "뉴스엔", kind: "photo", what: "2026.11.18 김포국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611180911113510"},
+    imageAlt: "김포공항 출국길, 검정 하이넥 하프 코트 차림으로 손을 들어 인사하는 하츠투하츠 지우",
+    celeb: "지우",
+    group: "Hearts2Hearts",
+    type: "airport",
+    show: "공항",
+    scene: "2026.11.18 김포국제공항 출국 · 2026 MAMA 오사카",
+    category: "outer",
+    mood: ["minimal", "vintage"],
+    headline: "19만 4,370원 하이넥 하프 코트",
+    item: {
+        brand: "비터셀즈",
+        brandEn: "BITTERCELLS",
+        name: "러비 울 하이넥 하프 코트-블랙",
+        nameEn: "Lovie Wool High Neck Half Coat-Black",
+        sku: "B268CT01BK0F",
+        price: 209000,
+        salePrice: 194370,
+        saleNote: "무신사 단독 7% 할인가",
+        material: "혼용률 미표기(제품명에 울 표기) · 안감 있음",
+        colors: "블랙 · 버터 · 차콜",
+        sizes: "FREE 단일 · 총장 65cm · 가슴단면 58cm · 소매길이 60.5cm",
+        maker: "비터셀즈 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 여유 있게 떨어지는 하프 기장. 목선을 세워 올리는 하이넥에 앞 단추 여밈, 소매에는 버클 스트랩",
+        cons: "실측 총장이 65cm라 무릎 아래 롱코트를 기대하면 짧고, 11월 30일 이내 발송 예약 상품이라 급하게 필요하면 맞지 않음",
+        officialUrl: "https://www.musinsa.com/products/7299083"
+    },
+    story: "지우가 11월 18일 오전 김포국제공항에서 2026 MAMA 참석 차 오사카로 떠날 때 입은 코트입니다. 여덟 명이 함께 이동하는 자리에서도 지우의 검정 코트가 먼저 눈에 들어온 이유는 실루엣보다 목선이었습니다. 스카프를 두르지 않았는데도 턱 아래가 비어 보이지 않게 하이넥이 목을 감싸고, 앞섶에는 큰 단추가 세로로 놓였습니다. 무신사 단독 상품으로 정가 209,000원에 7%가 붙어 194,370원입니다.",
+    point: "하이넥 코트는 세워 입으면 각이 살고, 한쪽으로 눕히면 목선이 길어 보입니다. 지우처럼 턱 아래까지 올린 뒤 첫 단추만 잠그면 얼굴이 작아 보이는 대신 답답해 보일 수 있으니, 안쪽에 얇은 터틀넥을 받치고 코트 단추는 두 개만 채우는 편이 낫습니다. 총장이 65cm로 짧기 때문에 아래에 와이드 팬츠를 입으면 다리선이 길어지고, 스커트를 입으면 코트 밑단과 스커트 끝이 만나는 지점을 확인해야 합니다.",
+    verified: "무신사 상품 페이지(품번 B268CT01BK0F, 209,000원 → 194,370원, FREE 실측 총장 65·가슴단면 58·소매 60.5cm, 2026년 11월 1주차 환절기 코트 2위, 후기 4.7점) 확인, 뉴스엔 11월 18일 김포공항 출국 촬영과 색·기장 대조, 셀럽모드 착장 정리와 교차 확인",
+    sources: [
+        {
+            label: "뉴스엔 2026.11.18 지우 출국 포토",
+            url: "https://www.newsen.com/news_view.php?uid=202611180911113510"
+        },
+        {
+            label: "무신사 비터셀즈 러비 울 하이넥 하프 코트",
+            url: "https://www.musinsa.com/products/7299083"
+        },
+        {
+            label: "셀럽모드 261118 하츠투하츠 지우 착장",
+            url: "https://blog.naver.com/celebsonminsu/224484992968"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "울 블렌드 초어 재킷 [네이비]",
+        price: 90890,
+        platform: "musinsa",
+        fit: "허리 아래로 떨어지는 하프 기장, 노치드 카라",
+        cons: "하이넥이 아니고 단추가 한 줄이며, 울 혼방 비율이 낮아 보온은 코트보다 가벼움",
+        note: "정가 129,900원에서 30% 적용된 90,890원. 목을 감싸는 형태는 아니지만 같은 하프 기장 울 아우터를 절반 가격에 맞춥니다.",
+        query: "무신사 스탠다드 울 블렌드 초어 재킷"
+    },
+    palette: ["#121212", "#2f3237", "#c9c2b4"]
+  },
+  {
+    id: "mei-hugyourself-coat",
+    image: "assets/looks/mei-hugyourself-coat.webp?v=2026112301",
+    imageJpg: "assets/looks/mei-hugyourself-coat.jpg?v=2026112301",
+    photo: {label: "뉴스엔", kind: "photo", what: "2026.11.17 인천국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611171953183510"},
+    imageAlt: "인천공항 출국길, 차콜 후드 싱글 코트에 회색 머플러를 두르고 선 리센느 메이",
+    celeb: "메이",
+    group: "RESCENE",
+    type: "airport",
+    show: "공항",
+    scene: "2026.11.17 인천국제공항 출국 · 2026 MAMA 오사카",
+    category: "outer",
+    mood: ["lovely", "minimal"],
+    headline: "27만 9천 원 후드 싱글 코트",
+    item: {
+        brand: "허그유어스킨",
+        brandEn: "HUG YOUR SKIN",
+        name: "어테쳐블 후드 싱글 코트 (차콜)",
+        nameEn: "Attachable Hooded Single Coat (Charcoal)",
+        sku: "26FWOUT03CH",
+        price: 279000,
+        salePrice: 279000,
+        saleNote: "무신사 단독 정가 판매",
+        material: "혼용률 미표기 · 후드 탈부착형",
+        colors: "차콜",
+        sizes: "단일 사이즈 · 어깨가 떨어지는 오버핏",
+        maker: "허그유어스킨 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 넓게 떨어지고 허벅지 중간까지 오는 롱 실루엣. 후드를 떼면 라운드 카라로 바뀜",
+        cons: "단일 사이즈라 키가 작으면 소매가 길게 남고, 할인 없이 279,000원 정가로만 판매",
+        officialUrl: "https://www.musinsa.com/products/7058444"
+    },
+    story: "메이가 11월 17일 오후 인천공항에서 오사카로 떠날 때 입은 코트입니다. 리센느 다섯 명 중에서도 메이의 차콜 코트는 목 뒤에 붙은 퍼 트리밍 후드 때문에 멀리서도 구분됐습니다. 이 제품의 핵심은 이름 그대로 '어테쳐블', 즉 후드를 떼고 붙일 수 있다는 점입니다. 후드를 붙이면 후리스처럼 편해지고, 떼면 카라가 남아 단정한 싱글 코트가 됩니다.",
+    point: "메이는 코트 위에 회색 머플러를 짧게 둘렀습니다. 후드가 이미 목 뒤를 덮고 있어서 스카프를 길게 늘어뜨리면 목 주변이 뭉칩니다. 후드 코트에는 목에 한 번 감아 고정하는 짧은 머플러, 코트를 벗었을 때 입을 민소매나 얇은 니트가 맞습니다. 코트 색이 차콜이므로 가방은 검정으로 두고, 신발은 부츠보다 스니커즈가 이 코트의 캐주얼한 성격과 맞습니다.",
+    verified: "무신사 상품 페이지(품번 26FWOUT03CH, 279,000원, 후드 탈부착 표기, 무신사 단독) 확인, 뉴스엔 11월 17일 인천공항 출국 촬영과 후드·색상 대조, 셀럽모드 착장 정리와 교차 확인",
+    sources: [
+        {
+            label: "뉴스엔 2026.11.17 리센느 메이 출국 포토",
+            url: "https://www.newsen.com/news_view.php?uid=202611171953183510"
+        },
+        {
+            label: "무신사 허그유어스킨 어테쳐블 후드 싱글 코트",
+            url: "https://www.musinsa.com/products/7058444"
+        },
+        {
+            label: "셀럽모드 261117 리센느 메이 착장",
+            url: "https://blog.naver.com/celebsonminsu/224484606710"
+        }
+    ],
+    alt: {
+        brand: "스파오",
+        name: "[신세틱레더] 페이크 퍼 하프 코트 (SPJLG4VW04)",
+        price: 79900,
+        platform: "musinsa",
+        fit: "허리 아래로 떨어지는 하프 기장, 퍼 트리밍 탈부착",
+        cons: "후드가 아니라 퍼 칼라이고, 롱코트보다 기장이 10cm 이상 짧음",
+        note: "정가 99,900원에서 20% 적용된 79,900원. 퍼 트리밍을 떼면 카라 코트로 변하는 구조가 같습니다.",
+        query: "스파오 신세틱레더 페이크 퍼 하프 코트"
+    },
+    palette: ["#33363b", "#8d8f93", "#e8e5df"]
+  },
+  {
+    id: "annie-northface-comor",
+    image: "assets/looks/annie-northface-comor.webp?v=2026112301",
+    imageJpg: "assets/looks/annie-northface-comor.jpg?v=2026112301",
+    photo: {label: "노스페이스 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7289149"},
+    imageAlt: "다크 베이지 컬러 코모 플리스 자켓을 입은 남성 모델의 노스페이스 공식 제품 컷",
+    celeb: "애니",
+    group: "ALLDAY PROJECT",
+    type: "daily",
+    show: "일상",
+    scene: "2026.11 SNS 공개 컷 · 올데이 프로젝트 애니",
+    category: "outer",
+    mood: ["street", "minimal"],
+    headline: "19만 8천 원 남성 라인 플리스",
+    item: {
+        brand: "노스페이스",
+        brandEn: "THE NORTH FACE",
+        name: "NJ4FS56L 코모 플리스 자켓 DARK BEIGE",
+        nameEn: "COMOR FLEECE JACKET",
+        sku: "NJ4FS56L",
+        price: 198000,
+        salePrice: 198000,
+        saleNote: "정가 판매 (무신사 기준)",
+        material: "플리스(폴리에스터) · 브랜드 표기 기준",
+        colors: "다크 베이지",
+        sizes: "085(XS) · 090(S) · 095(M) · 100(L) · 105(XL) · 110(XXL)",
+        maker: "노스페이스 / 미국",
+        season: "2026 FW",
+        fit: "남성 라인. 어깨와 품이 넉넉하고 밑단 스토퍼로 조임 조절",
+        cons: "남성 라인이라 여성이 입으면 품이 크게 남고, 다크 베이지 단일 컬러",
+        officialUrl: "https://www.musinsa.com/products/7289149"
+    },
+    story: "애니가 입은 것으로 알려진 노스페이스 코모 플리스입니다. 올데이 프로젝트의 멤버 중에서도 애니는 스트리트 브랜드보다 아웃도어 플리스를 자주 입는 쪽인데, 이번에는 다크 베이지 컬러에 청바지를 맞춰 '비싸 보이지 않는 비싼 옷'의 전형을 만들었습니다. 무신사 기준 198,000원, 후기 평점 4.4점입니다.",
+    point: "플리스는 털이 살아 있는 소재라 아래에 무엇을 입느냐가 절반입니다. 애니처럼 연청 데님을 맞추면 플리스의 베이지와 데님의 인디고가 서로를 눌러 주어 캐주얼하게 정리됩니다. 검정 팬츠를 입으면 등산복처럼 보이기 쉬우니, 플리스에는 밝은 데님이나 카고 팬츠가 안전합니다. 여성이 남성 라인을 입을 때는 한 사이즈 줄이고, 밑단 스토퍼를 조여 허리선을 만들어야 부해 보이지 않습니다.",
+    verified: "무신사 상품 페이지(품번 NJ4FS56L, 198,000원, 남성 085~110 사이즈, 후기 4.4점) 확인, 셀럽모드 착장 정리로 애니 착용 브랜드·컬러 확인 (실착 사진은 확보하지 못해 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "무신사 노스페이스 코모 플리스 자켓",
+            url: "https://www.musinsa.com/products/7289149"
+        },
+        {
+            label: "셀럽모드 올데이프로젝트 애니 플리스 착장",
+            url: "https://blog.naver.com/celebsonminsu/224482071713"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드 우먼",
+        name: "시어링 플리스 후디드 집업 [라이트 베이지]",
+        price: 80910,
+        platform: "musinsa",
+        fit: "여성 라인, 허리 위 기장의 크롭한 후디드 집업",
+        cons: "보아(시어링) 조직이라 노스페이스 플리스보다 털이 길고 두껍게 보임",
+        note: "정가 89,900원에서 10% 적용된 80,910원. 여성 라인이라 남성 라인을 줄여 입는 번거로움이 없습니다.",
+        query: "무신사 스탠다드 우먼 시어링 플리스 후디드 집업"
+    },
+    palette: ["#c8b79c", "#5d6a7a", "#2b2b2b"]
+  },
+  {
+    id: "miyeon-somewherebutter-zip",
+    image: "assets/looks/miyeon-somewherebutter-zip.webp?v=2026112301",
+    imageJpg: "assets/looks/miyeon-somewherebutter-zip.jpg?v=2026112301",
+    photo: {label: "썸웨어버터 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7241754"},
+    imageAlt: "회색 스트라이프 코비 니트 집업 후디를 입은 여성 모델의 썸웨어버터 공식 제품 컷",
+    celeb: "미연",
+    group: "(여자)아이들",
+    type: "daily",
+    show: "일상",
+    scene: "2026.11.13 해외 일정 이동 · 기내에서 공개된 착장",
+    category: "outer",
+    mood: ["lovely", "vintage"],
+    headline: "14만 3,100원 스트라이프 니트 집업",
+    item: {
+        brand: "썸웨어버터",
+        brandEn: "SOMEWHEREBUTTER",
+        name: "Coby Stripe Knit Zip-Up Hoodie - Grey",
+        nameEn: "Coby Stripe Knit Zip-Up Hoodie",
+        sku: "S6FZP04GRF",
+        price: 159000,
+        salePrice: 143100,
+        saleNote: "무신사 단독 10% 할인가",
+        material: "니트 조직(혼용률 페이지 미표기)",
+        colors: "그레이",
+        sizes: "Free 단일",
+        maker: "썸웨어버터 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 떨어지는 루즈핏, 허리 위에서 끊기는 크롭 기장, 후드에 지퍼 여밈",
+        cons: "Free 단일 사이즈이고, 12월 7일 이내 발송 예약 상품이라 당장 입기 어려움",
+        officialUrl: "https://www.musinsa.com/products/7241754"
+    },
+    story: "미연이 해외 일정으로 이동하는 기내에서 입은 니트 집업입니다. 좌석에 앉아 있는 사진이라 전체 실루엣은 보이지 않지만, 스트라이프 간격이 촘촘하고 후드에 지퍼가 달린 구조가 분명하게 읽힙니다. 니트인데 집업이라 여행용 겉옷으로 쓰기 좋은 종류입니다. 무신사 단독 상품으로 159,000원에서 10%가 빠져 143,100원입니다.",
+    point: "니트 집업은 두께 때문에 어깨가 부해 보이기 쉽습니다. 이 제품은 크롭 기장이라 아래에 하이웨이스트 팬츠를 받치면 허리선이 올라가 전체가 짧고 가벼워집니다. 미연처럼 스트라이프가 있는 옷을 입으면 안쪽은 무지 티셔츠로 두고, 가방과 신발을 검정으로 통일하는 것이 가장 안전합니다. 스트라이프와 다른 패턴을 겹치면 기내 사진처럼 좁은 공간에서 유난해 보입니다.",
+    verified: "무신사 상품 페이지(품번 S6FZP04GRF, 159,000원 → 143,100원, Free 단일, 12월 7일 이내 발송) 확인, 셀럽모드 착장 정리로 미연 착용 브랜드·컬러 확인 (실착 사진은 기내 컷이라 사용하지 않고 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "무신사 썸웨어버터 코비 스트라이프 니트 집업",
+            url: "https://www.musinsa.com/products/7241754"
+        },
+        {
+            label: "셀럽모드 아이들 미연 스트라이프 니트 집업",
+            url: "https://blog.naver.com/celebsonminsu/224482017539"
+        }
+    ],
+    alt: {
+        brand: "알리스",
+        name: "클라우드 터치 라운드 크롭 가디건 (멜란지그레이)",
+        price: 60000,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 크롭 기장, 라운드넥 단추 여밈",
+        cons: "지퍼와 후드가 없어 집업처럼 걸치는 느낌이 덜하고, 스트라이프 패턴이 없음",
+        note: "49,900~60,000원대에 판매되는 부드러운 촉감의 크롭 가디건. 회색 톤과 크롭 기장을 같은 방식으로 맞춥니다.",
+        query: "알리스 클라우드 터치 라운드 크롭 가디건"
+    },
+    palette: ["#9a9a98", "#e5e2dc", "#1f1f1f"]
+  },
+  {
+    id: "jungwon-fila-airflow",
+    image: "assets/looks/jungwon-fila-airflow.webp?v=2026112301",
+    imageJpg: "assets/looks/jungwon-fila-airflow.jpg?v=2026112301",
+    photo: {label: "휠라 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7510136"},
+    imageAlt: "그레이 실버 컬러 에어플로우 다운 패딩을 입은 여성 모델의 휠라 공식 제품 컷",
+    celeb: "차정원",
+    group: "배우",
+    type: "daily",
+    show: "일상",
+    scene: "2026.11.17 휠라 에어플로우 다운 공개 컷",
+    category: "outer",
+    mood: ["street", "lovely"],
+    headline: "27만 9천 원 경량 다운",
+    item: {
+        brand: "휠라",
+        brandEn: "FILA",
+        name: "에어플로우 다운 (FS264DJ01F014094)",
+        nameEn: "Airflow Down",
+        sku: "1100FS264DJ01F014094",
+        price: 279000,
+        salePrice: 279000,
+        saleNote: "정가 판매 (무신사 기준)",
+        material: "경량 다운 패딩 (혼용률 페이지 미표기)",
+        colors: "GRAY/SILVER",
+        sizes: "WXS(W80) · WS(W85) · WM(W90) · WL(W95) · WXL(W100)",
+        maker: "휠라 / 한국",
+        season: "2026 FW",
+        fit: "몸 곡선을 따라 이어지는 퀼팅 라인의 슬림한 여성 핏, 힙을 덮는 기장",
+        cons: "여성 라인 단일 컬러이고, 실버 광택이 있어 사진과 실물의 색감 차이가 큼",
+        officialUrl: "https://www.musinsa.com/products/7510136"
+    },
+    story: "휠라 에어플로우 다운은 차정원과 최윤지가 나란히 입으면서 화제가 된 제품입니다. 차정원은 연보라 후드를 안에 받쳐 산뜻하게, 최윤지는 레드 비니와 체크 포인트로 다르게 소화했습니다. 같은 패딩인데 안쪽 색과 모자만 바꿔 분위기가 완전히 달라진다는 걸 보여준 사례입니다. 가격은 279,000원입니다.",
+    point: "이 패딩의 퀼팅은 가로가 아니라 몸의 곡선을 따라 흐릅니다. 그래서 안에 두꺼운 옷을 넣으면 퀼팅 선이 틀어지고, 얇게 입을수록 실루엣이 예쁘게 남습니다. 차정원처럼 연보라 후드를 받치면 회색 실버 패딩의 차가운 광택이 부드러워집니다. 아래에 청바지를 입을 때는 발목이 보이는 기장으로 잘라야 패딩의 부피와 균형이 맞습니다.",
+    verified: "무신사 상품 페이지(품번 1100FS264DJ01F014094, 279,000원, 여성 WXS~WXL, GRAY/SILVER) 확인, 셀럽모드 착장 정리로 차정원·최윤지 착용 확인 (실착 사진은 확보하지 못해 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "무신사 휠라 에어플로우 다운",
+            url: "https://www.musinsa.com/products/7510136"
+        },
+        {
+            label: "셀럽모드 차정원·최윤지 휠라 패딩 착장",
+            url: "https://blog.naver.com/celebsonminsu/224483668479"
+        }
+    ],
+    alt: {
+        brand: "유니클로",
+        name: "울트라라이트 다운 재킷",
+        price: 79900,
+        platform: "official",
+        fit: "가벼운 경량 다운, 허리 아래 기장",
+        cons: "퀼팅이 가로로 들어가 휠라보다 실루엣이 단순하고, 실버 광택이 없음",
+        note: "같은 경량 다운 카테고리에서 가장 널리 비교되는 제품. 무게와 보온의 균형이 좋고 가격이 3분의 1 수준입니다.",
+        query: "유니클로 울트라라이트 다운 재킷"
+    },
+    palette: ["#b8bcc2", "#c9bfe0", "#3c3f45"]
+  },
+  {
+    id: "chaeryeong-lememe-cutout",
+    image: "assets/looks/chaeryeong-lememe-cutout.webp?v=2026112301",
+    imageJpg: "assets/looks/chaeryeong-lememe-cutout.jpg?v=2026112301",
+    photo: {label: "르메메 공식", kind: "product", what: "브랜드 공식 제품 컷 · 초콜릿 컬러 (실착 사진 아님)", url: "https://www.musinsa.com/products/7128950"},
+    imageAlt: "어깨 아래를 비스듬히 파낸 컷아웃 리브 니트를 입은 여성 모델의 르메메 공식 제품 컷",
+    celeb: "채령",
+    group: "ITZY",
+    type: "variety",
+    show: "라디오",
+    scene: "2026.11.19 라디오 스케줄 출근 · 컷아웃 차콜 니트",
+    category: "top",
+    mood: ["minimal", "street"],
+    headline: "17만 8천 원 컷아웃 니트",
+    item: {
+        brand: "르메메",
+        brandEn: "LEMEME",
+        name: "Elise Cutout Knit Top_2colors",
+        nameEn: "Elise Cutout Knit Top",
+        sku: "BFQKNAF130",
+        price: 178000,
+        salePrice: 178000,
+        saleNote: "정가 판매 (무신사 기준)",
+        material: "리브 니트 조직 (혼용률 페이지 미표기)",
+        colors: "Chocolate · Charcoal",
+        sizes: "F 단일",
+        maker: "르메메 / 한국",
+        season: "2026 FW",
+        fit: "몸에 붙는 리브 니트, 왼쪽 가슴 위에서 어깨로 이어지는 사선 컷아웃",
+        cons: "컷아웃 안쪽으로 속옷 끈이 보이기 쉽고, F 단일 사이즈라 어깨가 넓으면 컷아웃 위치가 밀림",
+        officialUrl: "https://www.musinsa.com/products/7128950"
+    },
+    story: "채령이 라디오 스케줄 출근길에 입은 차콜 컷아웃 니트입니다. 목선은 둥글게 막혀 있는데 가슴 위쪽에서 어깨로 이어지는 선이 비스듬히 파여 있어, 정면에서는 단정하고 옆으로 돌아설 때 인상이 달라집니다. 르메메 엘리스 컷아웃 니트 탑, 무신사 기준 178,000원입니다.",
+    point: "컷아웃 니트는 안쪽이 문제입니다. 컷아웃 라인과 속옷 끈이 겹치면 옷이 싸 보이므로, 끈이 없는 브라나 탑을 받쳐야 합니다. 채령은 검정 하의를 골라 상체의 컷아웃만 시선을 받게 했습니다. 아래에 프린트나 밝은 색을 두면 컷아웃과 경쟁하니 무채색 팬츠가 안전합니다. 목이 짧다면 컷아웃이 목선을 길어 보이게 하는 효과도 있습니다.",
+    verified: "무신사 상품 페이지(품번 BFQKNAF130, 178,000원, Chocolate·Charcoal 2컬러, F 사이즈) 확인, 셀럽모드 라디오 착장 정리로 채령 착용 확인 (실착 사진은 확보하지 못해 제품 컷으로 대체, 이미지는 초콜릿 컬러)",
+    sources: [
+        {
+            label: "무신사 르메메 엘리스 컷아웃 니트 탑",
+            url: "https://www.musinsa.com/products/7128950"
+        },
+        {
+            label: "셀럽모드 채령 라디오 컷아웃 니트 착장",
+            url: "https://blog.naver.com/celebsonminsu/224483512791"
+        }
+    ],
+    alt: {
+        brand: "빈트릴",
+        name: "반팔 케이블 카라 컴포트핏 니트 (다크 블루)",
+        price: 98000,
+        platform: "musinsa",
+        fit: "어깨가 자연스럽게 떨어지는 컴포트핏, 카라 넥",
+        cons: "컷아웃이 없고 반팔이라 겨울 단독 착용은 어려움",
+        note: "98,000원. 컷아웃 대신 카라로 얼굴 주변을 정리하는 방식. 안에 긴팔 티를 받치면 겨울에도 입을 수 있습니다.",
+        query: "빈트릴 반팔 케이블 카라 컴포트핏 니트"
+    },
+    palette: ["#2c2622", "#8d8175", "#111111"]
+  },
+  {
+    id: "joy-flareup-layered",
+    image: "assets/looks/joy-flareup-layered.webp?v=2026112301",
+    imageJpg: "assets/looks/joy-flareup-layered.jpg?v=2026112301",
+    photo: {label: "플레어업 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7219308"},
+    imageAlt: "겹겹이 레이어드된 긴소매 티셔츠를 입은 여성 모델의 플레어업 공식 제품 컷",
+    celeb: "조이",
+    group: "Red Velvet",
+    type: "variety",
+    show: "TV 동물농장",
+    scene: "2026.11.18 TV 동물농장 방송 착장 · 블랙 레이어드",
+    category: "top",
+    mood: ["minimal", "vintage"],
+    headline: "8만 100원 레이어드 롱슬리브",
+    item: {
+        brand: "플레어업",
+        brandEn: "FLAREUP",
+        name: "Layered Sculpted Long Sleeve (FL-196_Black)",
+        nameEn: "Layered Sculpted Long Sleeve",
+        sku: "FU26F1WLS09BK",
+        price: 89000,
+        salePrice: 80100,
+        saleNote: "무신사 단독 10% 할인가",
+        material: "혼용률 미표기 · 레이어드 구조의 긴소매 티셔츠",
+        colors: "BLACK",
+        sizes: "1 · 2",
+        maker: "플레어업 / 한국",
+        season: "2026 FW",
+        fit: "몸에 붙는 스컬프티드 핏, 어깨와 소매에 겹쳐진 레이어드 라인",
+        cons: "블랙 단일 컬러이고, 레이어드 라인이 두꺼워 아우터 안에 넣으면 겨드랑이가 뭉침",
+        officialUrl: "https://www.musinsa.com/products/7219308"
+    },
+    story: "조이가 TV 동물농장에 나올 때 입은 블랙 롱슬리브입니다. 목선은 둥글게 막혀 있고, 어깨에서 소매로 이어지는 선이 한 겹 더 겹쳐진 것처럼 보입니다. 실제로는 한 장인데 레이어드를 한 것처럼 보이게 짠 구조입니다. 티셔츠 한 장으로 레이어드 효과를 내는 방식은 아우터를 벗었을 때 가장 유용합니다.",
+    point: "레이어드 티는 목선이 좁을수록 목이 길어 보입니다. 조이처럼 목걸이를 두르지 않고 귀걸이로만 포인트를 준 이유이기도 합니다. 겨울에는 니트 베스트나 셔츠를 위에 겹치면 레이어드 라인이 가려지므로, 이 옷은 단독 또는 아우터 안쪽으로만 입는 편이 좋습니다. 아래는 청바지나 와이드 슬랙스, 검정이면 충분합니다.",
+    verified: "무신사 상품 페이지(품번 FU26F1WLS09BK, 89,000원 → 80,100원, BLACK 단일, 사이즈 1·2, 무신사 단독) 확인, 셀럽모드 TV 동물농장 착장 정리로 조이 착용 확인 (실착 사진은 방송 화면이라 사용하지 않고 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "무신사 플레어업 레이어드 스컬프티드 롱슬리브",
+            url: "https://www.musinsa.com/products/7219308"
+        },
+        {
+            label: "셀럽모드 레드벨벳 조이 동물농장 착장",
+            url: "https://blog.naver.com/celebsonminsu/224482150262"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "릴렉스드 섀도우 스트라이프 포플린 셔츠 [스카이블루/스트라이프]",
+        price: 27890,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 릴렉스드 핏, 셔츠 카라",
+        cons: "레이어드 티가 아니라 셔츠라 목선이 다르고, 스트라이프 패턴이 들어감",
+        note: "27,890원. 레이어드 대신 셔츠 한 장으로 겹쳐 입은 느낌을 내는 방식. 겨울에는 니트 안에 받쳐 입습니다.",
+        query: "무신사 스탠다드 릴렉스드 섀도우 스트라이프 포플린 셔츠"
+    },
+    palette: ["#0f0f10", "#4a4a4d", "#d7d3cb"]
+  },
+  {
+    id: "taeyeon-kirsh-duffle",
+    image: "assets/looks/taeyeon-kirsh-duffle.webp?v=2026112301",
+    imageJpg: "assets/looks/taeyeon-kirsh-duffle.jpg?v=2026112301",
+    photo: {label: "키르시 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7460057"},
+    imageAlt: "라이트 베이지 후드 하프 더플 코트를 입은 여성 모델의 키르시 공식 제품 컷",
+    celeb: "태연",
+    group: "소녀시대",
+    type: "variety",
+    show: "놀라운 토요일",
+    scene: "2026.11.18 놀라운토요일 442회 착장 · 떡볶이 코트",
+    category: "outer",
+    mood: ["lovely", "vintage"],
+    headline: "28만 4,050원 후드 더플 코트",
+    item: {
+        brand: "키르시",
+        brandEn: "KIRSH",
+        name: "후드 하프 더플 코트 [라이트 베이지]",
+        nameEn: "HOODED HALF DUFFLE COAT [LIGHT BEIGE]",
+        sku: "J6422KCT02IVA",
+        price: 299000,
+        salePrice: 284050,
+        saleNote: "5% 할인가",
+        material: "혼용률 미표기 · 후드 일체형 하프 코트",
+        colors: "라이트 베이지",
+        sizes: "S · M",
+        maker: "키르시 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 떨어지고 허리 아래로 오는 하프 기장, 후드와 더플 토글 여밈",
+        cons: "라이트 베이지 단일 컬러라 때가 잘 타고, 후드가 일체형이라 목 주변에 부피가 생김",
+        officialUrl: "https://www.musinsa.com/products/7460057"
+    },
+    story: "태연이 놀라운토요일 442회에 입고 나온 라이트 베이지 더플 코트입니다. 예능 세트처럼 조명이 강한 곳에서 베이지 코트는 얼굴을 하얗게 날려 보이게 하기 쉬운데, 이 코트는 후드의 그림자와 토글 단추가 경계를 만들어 줍니다. '떡볶이 코트'라는 별칭이 붙은 이유도 여기에 있습니다. 무신사 기준 299,000원에서 5%가 빠져 284,050원입니다.",
+    point: "더플 코트는 토글이 세로로 늘어서서 상체가 길어 보입니다. 태연처럼 후드를 세우지 않고 눕혀 입으면 목 주변이 정리되고, 토글은 두 개만 잠가 아래를 열어 두는 편이 낫습니다. 라이트 베이지는 안쪽에 흰 티나 회색 니트를 받치면 깔끔하고, 검정을 받치면 대비가 강해집니다. 아래에 청바지를 입을 때는 일자보다 부츠컷이 코트 기장과 잘 맞습니다.",
+    verified: "무신사 상품 페이지(품번 J6422KCT02IVA, 299,000원 → 284,050원, S·M, 라이트 베이지) 확인, 셀럽모드 놀라운토요일 442회 착장 정리로 태연 착용 확인 (실착 사진은 방송 화면이라 사용하지 않고 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "무신사 키르시 후드 하프 더플 코트",
+            url: "https://www.musinsa.com/products/7460057"
+        },
+        {
+            label: "셀럽모드 태연 놀라운토요일 442회 착장",
+            url: "https://blog.naver.com/celebsonminsu/224482115852"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "트위드 미니멀 재킷 [블랙]",
+        price: 69890,
+        platform: "musinsa",
+        fit: "허리선에서 끊기는 크롭 기장, 라운드넥",
+        cons: "더플 코트가 아니라 재킷이고, 후드와 토글이 없음",
+        note: "69,890원. 베이지 코트 대신 검정 재킷으로 같은 '단정한 겉옷' 역할을 맡기는 선택. 가격 차가 20만 원 이상입니다.",
+        query: "무신사 스탠다드 트위드 미니멀 재킷"
+    },
+    palette: ["#ddd2bf", "#8a7a63", "#2a2a2a"]
+  },
+  {
+    id: "jimin-aakam-toggle",
+    image: "assets/looks/jimin-aakam-toggle.webp?v=2026112301",
+    imageJpg: "assets/looks/jimin-aakam-toggle.jpg?v=2026112301",
+    photo: {label: "아캄 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7503167"},
+    imageAlt: "그레이 컬러 토글 헤비 울 자켓을 입은 모델의 아캄 공식 제품 컷",
+    celeb: "방지민",
+    group: "IZNA",
+    type: "daily",
+    show: "뮤직뱅크",
+    scene: "2026.11.13 뮤직뱅크 출근길 · 그레이 토글 코트",
+    category: "outer",
+    mood: ["vintage", "minimal"],
+    headline: "26만 100원 토글 울 자켓",
+    item: {
+        brand: "아캄",
+        brandEn: "AAKAM",
+        name: "Toggle Heavy Wool Jacket (Gray)",
+        nameEn: "Toggle Heavy Wool Jacket",
+        sku: "AK26OT51GY",
+        price: 289000,
+        salePrice: 260100,
+        saleNote: "무신사 단독 10% 할인가",
+        material: "울 혼방 헤비 아우터 (혼용률 페이지 미표기)",
+        colors: "Gray",
+        sizes: "1 · 2 (남녀공용)",
+        maker: "아캄 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 떨어지는 박시핏, 허리 아래 기장, 토글 단추 여밈",
+        cons: "남녀공용이라 1 사이즈도 품이 넓고, 두꺼운 울이라 겨울 실내에서는 덥다",
+        officialUrl: "https://www.musinsa.com/products/7503167"
+    },
+    story: "방지민이 뮤직뱅크 출근길에 입은 회색 토글 자켓입니다. 아이돌 출근길은 보통 가볍게 입는데, 방지민은 두꺼운 울 자켓을 걸치고 나왔습니다. 토글 단추가 세로로 늘어선 클래식한 구조에 박시한 어깨를 붙여, 요즘 핏으로 다시 만든 옷입니다. 아캄의 토글 헤비 울 자켓, 무신사 단독으로 289,000원에서 10%가 빠져 260,100원입니다.",
+    point: "토글 자켓은 단추가 많아 답답해 보이기 쉽습니다. 방지민처럼 위 두 개만 잠그고 아래를 열면 다리선이 드러나 전체가 가벼워집니다. 박시핏이므로 안쪽은 얇은 니트나 티셔츠가 맞고, 두꺼운 후드를 넣으면 어깨가 뭉칩니다. 아래는 일자 청바지나 와이드 슬랙스, 신발은 첼시 부츠나 스니커즈가 무난합니다.",
+    verified: "무신사 상품 페이지(품번 AK26OT51GY, 289,000원 → 260,100원, Gray, 사이즈 1·2, 남녀공용, 무신사 단독) 확인, 셀럽모드 뮤직뱅크 출근길 착장 정리로 방지민 착용 확인 (실착 사진은 확보하지 못해 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "무신사 아캄 토글 헤비 울 자켓",
+            url: "https://www.musinsa.com/products/7503167"
+        },
+        {
+            label: "셀럽모드 이즈나 방지민 뮤직뱅크 출근길",
+            url: "https://blog.naver.com/celebsonminsu/224481896660"
+        }
+    ],
+    alt: {
+        brand: "비엔엑스",
+        name: "하이넥 시어링 양털 포켓 자켓 (BX4JK018L0)",
+        price: 78000,
+        platform: "musinsa",
+        fit: "하이넥에 어깨가 떨어지는 루즈핏, 힙을 덮는 기장",
+        cons: "토글 단추가 없고, 시어링 소재라 울 자켓보다 표면이 거칠고 부피가 큼",
+        note: "78,000원. 같은 회색 계열의 두꺼운 겨울 아우터를 4분의 1 가격에 맞춥니다. 시어링이라 털 빠짐은 감수해야 합니다.",
+        query: "비엔엑스 하이넥 시어링 양털 포켓 자켓"
+    },
+    palette: ["#8c8c8a", "#2f2f31", "#d9d4c8"]
+  },
+  {
+    id: "soyoung-ck-matpuffer",
+    image: "assets/looks/soyoung-ck-matpuffer.webp?v=2026112301",
+    imageJpg: "assets/looks/soyoung-ck-matpuffer.jpg?v=2026112301",
+    photo: {label: "캘빈클라인 진 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7192451"},
+    imageAlt: "그레이 매트 샤인 다운 푸퍼 자켓을 입은 여성 모델의 캘빈클라인 진 공식 제품 컷",
+    celeb: "전소영",
+    group: "배우",
+    type: "daily",
+    show: "일상",
+    scene: "2026.11.16 공개된 일상 컷 · 연보라 다운 푸퍼",
+    category: "outer",
+    mood: ["minimal", "lovely"],
+    headline: "34만 3,200원 매트 다운",
+    item: {
+        brand: "캘빈클라인 진",
+        brandEn: "CALVIN KLEIN JEANS",
+        name: "여성 매트 샤인 다운 푸퍼 자켓 47H591G PTF",
+        nameEn: "Womens Mat Shine Down Puffer Jacket",
+        sku: "47H591GPTF",
+        price: 429000,
+        salePrice: 343200,
+        saleNote: "20% 할인가",
+        material: "매트 샤인 다운 푸퍼 (혼용률 페이지 미표기)",
+        colors: "그레이",
+        sizes: "XXS · XS · S · M",
+        maker: "캘빈클라인 진 / 미국",
+        season: "2026 FW",
+        fit: "어깨가 자연스럽게 떨어지는 스탠다드 핏, 힙을 덮는 기장",
+        cons: "그레이 단일 컬러에 사이즈가 M까지라 큰 체형은 선택지가 좁음",
+        officialUrl: "https://www.musinsa.com/products/7192451"
+    },
+    story: "배우 전소영이 회색 이너와 함께 입은 연보라빛 다운 푸퍼입니다. 매트하게 죽인 표면에 빛이 스치면 연보라로 보이고, 그늘에서는 회색으로 보입니다. 캘빈클라인 진의 여성 매트 샤인 다운 푸퍼, 정가 429,000원에서 20%가 빠져 343,200원입니다. 30만 원대 패딩 중에서 브랜드와 표면 처리의 균형이 좋은 편입니다.",
+    point: "매트 소재 패딩은 광택이 적어 부피가 작아 보입니다. 전소영처럼 안쪽을 회색으로 통일하면 패딩의 연보라 기운이 살아나고, 검정을 받치면 대비가 강해집니다. 아래에 청바지를 입을 때는 발목이 보이는 기장이 좋고, 부츠를 신을 때는 패딩 밑단과 부츠 목 사이에 간격을 두어야 다리가 짧아 보이지 않습니다.",
+    verified: "무신사 상품 페이지(품번 47H591GPTF, 429,000원 → 343,200원, 그레이, XXS~M) 확인, 셀럽모드 착장 정리로 전소영 착용 확인 (실착 사진은 확보하지 못해 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "무신사 캘빈클라인 진 매트 샤인 다운 푸퍼",
+            url: "https://www.musinsa.com/products/7192451"
+        },
+        {
+            label: "셀럽모드 전소영 캘빈클라인 다운 착장",
+            url: "https://blog.naver.com/celebsonminsu/224479253331"
+        }
+    ],
+    alt: {
+        brand: "유니클로",
+        name: "울트라라이트 다운 재킷",
+        price: 79900,
+        platform: "official",
+        fit: "가벼운 경량 다운, 허리 아래 기장",
+        cons: "매트 샤인 표면이 아니고 충전량이 적어 한겨울 단독 착용은 어려움",
+        note: "79,900원. 30만 원대 패딩의 4분의 1 가격. 초겨울이나 실내외 이동이 많은 날에 적합합니다.",
+        query: "유니클로 울트라라이트 다운 재킷"
+    },
+    palette: ["#b9b3c6", "#8f8b95", "#2a2a2c"]
+  },
+  {
+    id: "wonyoung-nanajacq-knit",
+    image: "assets/looks/wonyoung-nanajacq-knit.webp?v=2026112301",
+    imageJpg: "assets/looks/wonyoung-nanajacq-knit.jpg?v=2026112301",
+    photo: {label: "나나 재클린 공식", kind: "product", what: "브랜드 공식 룩북 컷 (실착 사진 아님)", url: "https://nanajacqueline.com/en-kr/products/claudette-contrast-collar-rib-knit-black-top"},
+    imageAlt: "흰 카라가 대비되는 검정 리브 니트와 플리츠 스커트를 입은 모델의 나나 재클린 공식 룩북 컷",
+    celeb: "장원영",
+    group: "IVE",
+    type: "daily",
+    show: "팝업스토어",
+    scene: "2026.11.16 성수 닥터엘시아 팝업 방문 · 프레피룩",
+    category: "top",
+    mood: ["vintage", "lovely"],
+    headline: "37만 6천 원 컬러 배색 리브 니트",
+    item: {
+        brand: "나나 재클린",
+        brandEn: "NANA JACQUELINE",
+        name: "Claudette Contrast Collar Rib Knit Black Top",
+        nameEn: "Claudette Contrast Collar Rib Knit Top",
+        sku: "Claudette Contrast Collar Rib Knit (Black)",
+        price: 376000,
+        salePrice: 376000,
+        saleNote: "공식몰 정가 (KRW 기준)",
+        material: "리브 니트 조직 · 카라·커프스 대비 배색",
+        colors: "Black",
+        sizes: "S · M · L",
+        maker: "나나 재클린 / 미국",
+        season: "2026 FW",
+        fit: "몸에 붙는 리브 니트에 넓은 스퀘어 넥, 흰 셔츠 카라와 커프스가 붙은 구조",
+        cons: "셔츠 카라가 니트에 붙어 있어 세탁 시 카라 모양이 흐트러지기 쉽고, 37만 원대의 가격",
+        officialUrl: "https://nanajacqueline.com/en-kr/products/claudette-contrast-collar-rib-knit-black-top"
+    },
+    story: "장원영이 11월 16일 성수동 닥터엘시아 팝업에 나올 때 입은 검정 리브 니트입니다. 흰 셔츠를 안에 입은 것처럼 보이지만 실제로는 카라와 커프스가 니트에 붙어 있는 구조입니다. 리브 조직이 몸을 따라 붙고, 넓게 파인 스퀘어 넥 안쪽으로 흰 카라가 올라와 얼굴 주변을 밝힙니다. 나나 재클린 공식몰 기준 376,000원입니다.",
+    point: "프레피룩은 목과 손목의 흰색이 핵심입니다. 이 니트는 그 두 곳이 이미 붙어 있어서 다른 액세서리가 필요 없습니다. 장원영처럼 체크 플리츠 스커트를 입으면 학생처럼 보이기 쉬우니, 스커트 기장을 무릎 위로 올리고 부츠를 검정으로 맞춰 성인 쪽으로 당기는 편이 낫습니다. 리브 니트가 몸에 붙으므로 안쪽은 얇은 탑 하나로 끝내야 합니다.",
+    verified: "나나 재클린 공식몰 상품 페이지(Claudette Contrast Collar Rib Knit, ₩376,000, Black, S·M·L) 확인, 셀럽모드 닥터엘시아 팝업 착장 정리로 장원영 착용 확인 (실착 사진은 확보하지 못해 공식 룩북 컷으로 대체)",
+    sources: [
+        {
+            label: "나나 재클린 Claudette Contrast Collar Rib Knit",
+            url: "https://nanajacqueline.com/en-kr/products/claudette-contrast-collar-rib-knit-black-top"
+        },
+        {
+            label: "셀럽모드 장원영 닥터엘시아 팝업 프레피룩",
+            url: "https://blog.naver.com/celebsonminsu/224479198889"
+        }
+    ],
+    alt: {
+        brand: "빈트릴",
+        name: "반팔 케이블 카라 컴포트핏 니트 (다크 블루)",
+        price: 98000,
+        platform: "musinsa",
+        fit: "어깨가 자연스럽게 떨어지는 컴포트핏, 카라 넥",
+        cons: "셔츠 카라가 붙은 구조가 아니고 반팔이라 겨울에는 이너가 필요",
+        note: "98,000원. 카라로 얼굴 주변을 정리하는 효과는 같고, 가격은 4분의 1입니다. 긴팔 티를 받치면 겨울에도 입을 수 있습니다.",
+        query: "빈트릴 반팔 케이블 카라 컴포트핏 니트"
+    },
+    palette: ["#101010", "#f2efe9", "#8a8a8a"]
+  },
+  {
+    id: "jiwon-lowtide-knit",
+    image: "assets/looks/jiwon-lowtide-knit.webp?v=2026112301",
+    imageJpg: "assets/looks/jiwon-lowtide-knit.jpg?v=2026112301",
+    photo: {label: "로우타이드 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7144681"},
+    imageAlt: "살몬 컬러 오프숄더 리브 니트를 입은 여성 모델의 로우타이드 공식 제품 컷",
+    celeb: "김지원",
+    group: "배우",
+    type: "daily",
+    show: "팬미팅",
+    scene: "2026.11.13 일본 요코하마 팬미팅 · 살몬 오프숄더 니트",
+    category: "top",
+    mood: ["lovely", "minimal"],
+    headline: "13만 8천 원 오프숄더 니트",
+    item: {
+        brand: "로우타이드",
+        brandEn: "LOW TIDE",
+        name: "RELAXED OFF-SHOULDER KNIT [SALMON]",
+        nameEn: "RELAXED OFF-SHOULDER KNIT",
+        sku: "LW2678PO002MSA",
+        price: 138000,
+        salePrice: 138000,
+        saleNote: "정가 판매 (무신사 기준)",
+        material: "니트 조직 (혼용률 페이지 미표기)",
+        colors: "Salmon",
+        sizes: "OS (원사이즈)",
+        maker: "로우타이드 / 한국",
+        season: "2026 FW",
+        fit: "어깨가 여유 있게 떨어지는 릴랙스드 핏, 한쪽 어깨가 드러나는 오프숄더 넥",
+        cons: "원사이즈라 어깨가 좁으면 오프숄더가 흘러내리고, 살몬 컬러는 피부 톤을 탄다",
+        officialUrl: "https://www.musinsa.com/products/7144681"
+    },
+    story: "김지원이 일본 요코하마 팬미팅에서 입은 살몬 컬러 니트입니다. 은은한 살구빛이 얼굴을 화사하게 밝히고, 한쪽 어깨가 자연스럽게 드러나는 오프숄더 구조가 여성스러운 분위기를 만듭니다. 로우타이드의 릴랙스드 오프숄더 니트, 무신사 기준 138,000원입니다. 원사이즈(OS)로 나옵니다.",
+    point: "오프숄더는 어깨를 많이 드러낼수록 부담스러워집니다. 김지원처럼 한쪽만 살짝 흘려 입으면 목선이 길어 보이고, 팬미팅처럼 사진을 많이 찍는 자리에서도 안정적입니다. 살몬 컬러는 피부가 노란 편이면 얼굴이 붉게 보일 수 있으니, 그럴 때는 안쪽에 흰 탑을 받치거나 목걸이를 은색으로 두는 편이 낫습니다.",
+    verified: "무신사 상품 페이지(품번 LW2678PO002MSA, 138,000원, Salmon, OS 원사이즈) 확인, 셀럽모드 요코하마 팬미팅 착장 정리로 김지원 착용 확인 (실착 사진은 확보하지 못해 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "무신사 로우타이드 릴랙스드 오프숄더 니트",
+            url: "https://www.musinsa.com/products/7144681"
+        },
+        {
+            label: "셀럽모드 김지원 요코하마 팬미팅 니트",
+            url: "https://blog.naver.com/celebsonminsu/224481295318"
+        }
+    ],
+    alt: {
+        brand: "언노운 플래닛",
+        name: "헤어리 모헤어 터치 라운드넥 크롭 가디건 챠콜",
+        price: 47800,
+        platform: "musinsa",
+        fit: "어깨가 떨어지는 크롭 기장, 라운드넥",
+        cons: "오프숄더 구조가 아니고, 모헤어 특유의 보풀이 생기기 쉬움",
+        note: "47,800원. 어깨를 드러내지 않으면서 니트의 부드러운 분위기를 살리는 선택. 가격은 3분의 1입니다.",
+        query: "언노운 플래닛 헤어리 모헤어 크롭 가디건"
+    },
+    palette: ["#e2a898", "#c98d7d", "#f4efe8"]
+  },
+  {
+    id: "koso-young-peuterey-togo",
+    image: "assets/looks/koso-young-peuterey-togo.webp?v=2026112301",
+    imageJpg: "assets/looks/koso-young-peuterey-togo.jpg?v=2026112301",
+    photo: {label: "페트레이 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2111/"},
+    imageAlt: "와인 컬러 26 토고 다운 패딩을 입은 모델의 페트레이 공식 제품 컷",
+    celeb: "고소영",
+    group: "배우",
+    type: "daily",
+    show: "일상",
+    scene: "2026.11 초 유튜브 촬영 · 청담 패딩",
+    category: "outer",
+    mood: ["minimal", "vintage"],
+    headline: "126만 4천 원 토고 다운",
+    item: {
+        brand: "페트레이",
+        brandEn: "PEUTEREY",
+        name: "26 TOGO 토고",
+        nameEn: "26 TOGO",
+        sku: "26 TOGO (와인 · 38~44)",
+        price: 1580000,
+        salePrice: 1264000,
+        saleNote: "공식몰 20% 할인가",
+        material: "겉감 폴리아미드 100% · 안감 폴리아미드 100% · 충전재 덕다운 80%·덕깃털 20%",
+        colors: "와인 · 블랙 · 카키",
+        sizes: "38 · 40 · 42 · 44",
+        maker: "페트레이 / 이탈리아 · 중국 생산",
+        season: "2026 FW",
+        fit: "글로시한 표면에 퀼팅을 넣은 크롭 실루엣, 목을 감싸는 하이 스탠드 카라",
+        cons: "공식몰 기준 품절 옵션이 있고, 126만 원대라 대안과의 가격 차가 100만 원 이상",
+        officialUrl: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2111/"
+    },
+    story: "고소영이 유튜브 촬영에서 입은 와인색 패딩입니다. 청바지에 패딩 하나만 걸쳤는데도 50대라는 나이가 믿기지 않을 만큼 정돈돼 보였습니다. 페트레이의 2026 FW 26 TOGO, 소비자가 1,580,000원에 공식몰 판매가 1,264,000원입니다. 100만 원대 패딩이 왜 비싼지 설명이 되는 제품이라, 가격보다 소재와 실루엣을 먼저 보게 됩니다.",
+    point: "글로시한 패딩은 빛을 받으면 부피가 커 보입니다. 고소영은 하이 스탠드 카라를 세우지 않고 자연스럽게 눕혀 목선을 드러냈습니다. 이렇게 눕히면 얼굴 주변이 밝아지고 패딩의 부피가 줄어 보입니다. 아래에 연청 데님을 맞추면 와인색이 무거워지지 않고, 검정 팬츠를 입으면 밤에 입는 옷처럼 보입니다.",
+    verified: "페트레이 공식몰 상품 페이지(26 TOGO, 소비자가 1,580,000원·판매가 1,264,000원, 겉감 폴리아미드 100%·충전재 덕다운 80%·덕깃털 20%, 원산지 중국) 확인, 셀럽모드 착장 정리로 고소영 착용 확인 (실착 사진은 확보하지 못해 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "페트레이 공식몰 26 TOGO 토고",
+            url: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2111/"
+        },
+        {
+            label: "셀럽모드 고소영 페트레이 패딩 정보",
+            url: "https://blog.naver.com/celebsonminsu/224468752754"
+        }
+    ],
+    alt: {
+        brand: "유니클로",
+        name: "울트라라이트 다운 재킷",
+        price: 79900,
+        platform: "official",
+        fit: "가벼운 경량 다운, 허리 아래 기장",
+        cons: "글로시한 표면과 크롭 실루엣, 덕다운 80% 충전은 재현되지 않음",
+        note: "79,900원. 100만 원대 패딩과 같은 '가볍고 따뜻한 다운'이라는 기능만 놓고 보면 가격 차가 15배입니다. 브랜드와 소재를 포기하는 대신 얻는 선택지입니다.",
+        query: "유니클로 울트라라이트 다운 재킷"
+    },
+    palette: ["#6e1f2b", "#4a3f3a", "#5b6b7d"]
+  },
+  {
+    id: "v-noice-aviator",
+    image: "assets/looks/v-noice-aviator.webp?v=2026112301",
+    imageJpg: "assets/looks/v-noice-aviator.jpg?v=2026112301",
+    photo: {label: "노이스 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://noice.co.kr/product/twill-pigment-aviator-jacket-dark-brown/2031/"},
+    imageAlt: "다크 브라운 트윌 피그먼트 에비에이터 자켓을 입은 남성 모델의 노이스 공식 제품 컷",
+    celeb: "뷔",
+    group: "BTS",
+    type: "airport",
+    show: "공항",
+    scene: "2026.9.30 인천국제공항 출국 · 다크 브라운 셋업",
+    category: "outer",
+    mood: ["vintage", "street"],
+    headline: "30만 5,150원 에비에이터",
+    item: {
+        brand: "노이스",
+        brandEn: "NOICE",
+        name: "TWILL PIGMENT AVIATOR JACKET - DARK BROWN",
+        nameEn: "Twill Pigment Aviator Jacket",
+        sku: "NBFFMAJP29DW",
+        price: 359000,
+        salePrice: 305150,
+        saleNote: "브랜드 공식몰 15% 할인가",
+        material: "코튼 100% (가먼트 바이오워싱)",
+        colors: "Dark Brown",
+        sizes: "S · M · L · XL · 어깨 59.5~64cm · 가슴단면 63~70.5cm · 총장 60.5~65cm",
+        maker: "노이스 / 중국 생산",
+        season: "2026 FW",
+        fit: "허리선에서 끊기는 크롭 기장, 어깨가 넓게 떨어지는 박시핏, 하이넥 카라",
+        cons: "코튼 100%라 바람을 막지 못하고, 워싱 공정 특성상 색이 제품마다 조금씩 다름",
+        officialUrl: "https://noice.co.kr/product/twill-pigment-aviator-jacket-dark-brown/2031/"
+    },
+    story: "뷔가 인천공항에서 입은 다크 브라운 에비에이터 자켓입니다. 상의와 팬츠를 같은 브랜드, 같은 원단, 같은 컬러로 맞춘 셋업이라 멀리서 보면 한 덩어리로 길게 떨어집니다. 노이스의 트윌 피그먼트 에비에이터, 359,000원에 공식몰 15% 할인이 붙어 305,150원입니다. 코튼 100%를 가먼트 바이오워싱으로 처리해 빛에 따라 톤이 달라지는 것이 특징입니다.",
+    point: "피그먼트 워싱 소재는 주름진 곳이 짙고 튀어나온 곳이 바랜 것처럼 보입니다. 이 질감을 살리려면 안쪽을 단순하게 두어야 합니다. 뷔처럼 흰 티셔츠를 받치고 지퍼를 가슴 아래까지만 올리면 카라가 자연스럽게 벌어져 편안해 보입니다. 크롭 기장이므로 아래에 와이드 팬츠를 맞추면 다리선이 길어집니다.",
+    verified: "노이스 공식몰 상품 페이지(품번 NBFFMAJP29DW, 359,000원 → 305,150원, 코튼 100%, S~XL 실측 어깨 59.5~64cm·총장 60.5~65cm) 확인, 셀럽모드·패션 블로그의 뷔 착장 정리와 교차 확인 (실착 사진은 확보하지 못해 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "노이스 공식몰 트윌 피그먼트 에비에이터 자켓",
+            url: "https://noice.co.kr/product/twill-pigment-aviator-jacket-dark-brown/2031/"
+        },
+        {
+            label: "셀럽모드 BTS 뷔 공항패션 착장",
+            url: "https://m.blog.naver.com/dudghaos/224426893605"
+        }
+    ],
+    alt: {
+        brand: "무신사 스탠다드",
+        name: "CP 트윌 초어 재킷 [블랙]",
+        price: 54890,
+        platform: "musinsa",
+        fit: "허리 아래로 떨어지는 스탠다드 핏, 스탠드 카라",
+        cons: "피그먼트 워싱이 없고, 노이스보다 기장이 길어 셋업처럼 짧게 떨어지지 않음",
+        note: "60,900원 정가에서 10% 적용된 54,890원. 같은 코튼 트윌 소재의 에비에이터형 재킷을 5분의 1 가격에 맞춥니다.",
+        query: "무신사 스탠다드 CP 트윌 초어 재킷"
+    },
+    palette: ["#4a3527", "#2a211b", "#e9e5de"]
+  },
+  {
+    id: "wooseok-system-hoodknit",
+    image: "assets/looks/wooseok-system-hoodknit.webp?v=2026112301",
+    imageJpg: "assets/looks/wooseok-system-hoodknit.jpg?v=2026112301",
+    photo: {label: "시스템옴므 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://m.thehandsome.com/ko/PM/productDetail/SY2GAKTO342W?itmNo=001"},
+    imageAlt: "베이지 램스 울 후디드 니트 탑을 입은 남성 모델의 시스템옴므 공식 제품 컷",
+    celeb: "변우석",
+    group: "배우",
+    type: "airport",
+    show: "공항",
+    scene: "2026.9.17 인천국제공항 출국 · 싱가포르 팬미팅",
+    category: "top",
+    mood: ["minimal", "street"],
+    headline: "39만 5천 원 후디드 니트",
+    item: {
+        brand: "시스템옴므",
+        brandEn: "SYSTEM HOMME",
+        name: "램스 울 블렌드 후디드 니트 탑",
+        nameEn: "Lamb Wool Blend Hooded Knit Top",
+        sku: "SY2GAKTO342W",
+        price: 395000,
+        salePrice: 395000,
+        saleNote: "정가 판매 (더한섬닷컴 기준)",
+        material: "램스 울·캐시미어 혼방",
+        colors: "BEIGE · DARK BROWN",
+        sizes: "90 · 95 · 100 · 105 (모델 172cm·55 사이즈, 90 착용)",
+        maker: "시스템옴므(한섬) / 한국",
+        season: "2026 FW",
+        fit: "여유 있는 루즈핏, 모크넥에 후드를 더한 구조, 앞면 버튼 클로징",
+        cons: "가격이 39만 5천 원이고, 램스 울·캐시미어 혼방이라 관리가 까다로움",
+        officialUrl: "https://m.thehandsome.com/ko/PM/productDetail/SY2GAKTO342W?itmNo=001"
+    },
+    story: "변우석이 싱가포르 팬미팅 일정으로 인천공항에 나올 때 입은 그레이 후디드 니트입니다. 후드티처럼 보이지만 지퍼도 끈도 없고, 목 앞쪽 버튼 세 개로 여미는 구조입니다. 시스템옴므의 램스 울 블렌드 후디드 니트 탑, 395,000원입니다. 니트인데 후드가 붙어 있어 공항처럼 편해야 하는 자리와 격식 사이를 잡은 옷입니다.",
+    point: "헨리넥형 버튼 여밈은 목을 길게 보이게 합니다. 변우석은 단추를 두 개만 풀어 안에 받친 흰 티셔츠를 살짝 보이게 했고, 그 흰색이 얼굴 주변을 밝혀 줍니다. 여유 있는 루즈핏이므로 아래에 와이드 카고 팬츠나 스트레이트 데님을 맞추고, 소매는 손목까지 내려 입는 편이 니트의 무게감과 맞습니다.",
+    verified: "더한섬닷컴 상품 페이지(품번 SY2GAKTO342W, 395,000원, 램스 울·캐시미어 혼방, 모크넥·후드·버튼 클로징·래글런 슬리브 표기) 확인, 셀럽모드 공항 착장 정리로 변우석 착용 확인 (실착 사진은 확보하지 못해 제품 컷으로 대체)",
+    sources: [
+        {
+            label: "더한섬닷컴 시스템옴므 램스 울 블렌드 후디드 니트 탑",
+            url: "https://m.thehandsome.com/ko/PM/productDetail/SY2GAKTO342W?itmNo=001"
+        },
+        {
+            label: "셀럽모드 변우석 공항패션 착장",
+            url: "https://m.blog.naver.com/dudghaos/224415217889"
+        }
+    ],
+    alt: {
+        brand: "더니트컴퍼니",
+        name: "텍스처드 스트라이프 폴로 니트 (브라운)",
+        price: 109000,
+        platform: "musinsa",
+        fit: "어깨가 자연스럽게 떨어지는 루즈핏, 폴로 카라",
+        cons: "후드가 없고 스트라이프 패턴이 들어가며, 울 혼방 비율이 시스템옴므보다 낮음",
+        note: "109,000원. 후드 대신 폴로 카라로 목 주변을 정리하는 방식. 가격은 4분의 1 이하입니다.",
+        query: "더니트컴퍼니 텍스처드 스트라이프 폴로 니트"
+    },
+    palette: ["#b9b2a4", "#7b746a", "#2c2c2e"]
+  }
 ];
