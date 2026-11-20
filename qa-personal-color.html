@@ -33,7 +33,7 @@
     var a = e.target.closest("a[data-src]");
     if (!a) return;
     e.preventDefault();
-    var ns = a.getAttribute("data-src"); f.src = ns + (ns.indexOf("?") >= 0 ? "&" : "?") + "cb=" + Date.now();
+    var ns = a.getAttribute("data-src"); var h = ns.indexOf("#"); var base = h >= 0 ? ns.slice(0, h) : ns; var frag = h >= 0 ? ns.slice(h) : ""; f.src = base + (base.indexOf("?") >= 0 ? "&" : "?") + "cb=" + Date.now() + frag;
   });
   setInterval(function () {
     try {
