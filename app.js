@@ -106,14 +106,13 @@
     history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
   }
 
-  /* ---------------- gradient art ---------------- */
-  function artStyle(look) {
-    var c = look.palette || ["#222", "#555", "#ddd"];
-    return "background:" +
-      "radial-gradient(120% 90% at 12% 8%, " + c[2] + "55 0%, transparent 58%)," +
-      "radial-gradient(90% 80% at 88% 20%, " + c[1] + "88 0%, transparent 62%)," +
-      "linear-gradient(150deg," + c[0] + " 0%," + c[1] + " 62%," + c[0] + " 100%)";
+  /* ---------------- photo credit helpers ---------------- */
+  function photoCredit(look) {
+    var ph = look.photo || {};
+    if (!ph.label) return "";
+    return (ph.kind === "product" ? "제품 이미지 · " : "사진 · ") + ph.label;
   }
+  function artStyle() { return "background:#f4f6f8"; }
   var GLYPH = {
     outer: '<svg viewBox="0 0 120 120" aria-hidden="true"><path d="M42 20 L24 34 L16 86 L40 92 L44 60 L44 100 L76 100 L76 60 L80 92 L104 86 L96 34 L78 20"/><path d="M42 20 Q60 40 78 20"/><path d="M60 32 L60 100"/></svg>',
     top: '<svg viewBox="0 0 120 120" aria-hidden="true"><path d="M40 24 L20 40 L32 58 L44 50 L44 100 L76 100 L76 50 L88 58 L100 40 L80 24"/><path d="M48 24 Q60 38 72 24"/></svg>',
@@ -192,11 +191,14 @@
     var sale = look.item.salePrice && look.item.salePrice < look.item.price;
     var moodNames = (look.mood || []).map(function (m) { return MOOD_LABEL[m]; }).join(" · ");
     var href = "?look=" + encodeURIComponent(look.id);
+    var ph = look.photo || {};
     return '<article class="card" data-id="' + look.id + '" data-cat="' + look.category + '">' +
       '<a class="card-media" href="' + href + '" aria-label="' + esc(look.celeb + " " + look.headline + " 상세 보기") + '">' +
-        '<span class="card-img" style="' + artStyle(look) + '">' + picture(look, index < 3) + "</span>" +
+        '<span class="card-img">' + picture(look, index < 4) + "</span>" +
+        '<span class="card-scrim" aria-hidden="true"></span>' +
         '<span class="card-badge scene">' + esc(sceneLabel(look)) + "</span>" +
         (saved > 0 ? '<span class="card-badge save">대안 ' + saved + "%↓</span>" : "") +
+        '<span class="card-credit">' + esc(photoCredit(look)) + "</span>" +
         '<span class="card-cap"><b>' + esc(look.celeb) + "</b><i>" + esc(look.headline) + "</i></span>" +
       "</a>" +
       '<button type="button" class="heart" data-heart="' + look.id + '" aria-pressed="' + inCloset + '" aria-label="' + esc(look.celeb + " " + look.item.name + " 내 옷장에 담기") + '">' + (inCloset ? "♥" : "♡") + "</button>" +
@@ -324,11 +326,13 @@
     modal.hidden = false;
     document.body.classList.add("modal-open");
 
-    $("#modal-art").setAttribute("style", artStyle(look));
+    var ph = look.photo || {};
+    $("#modal-art").setAttribute("style", artStyle());
     $("#modal-art").innerHTML = picture(look, true) +
       '<span class="modal-art-shade" aria-hidden="true"></span>' +
       '<span class="modal-art-label" id="modal-art-label"></span>' +
-      '<span class="modal-art-note">STYLE ILLUSTRATION</span>';
+      '<span class="modal-art-note">' + esc(photoCredit(look) + (ph.what ? " · " + ph.what : "")) + "</span>" +
+      (ph.url ? '<a class="modal-art-src" href="' + esc(ph.url) + '" target="_blank" rel="noopener nofollow">사진 출처 열기 ↗</a>' : "");
     $("#modal-art-label").textContent = look.celeb + " · " + look.headline;
     $("#modal-eyebrow").textContent = look.show + " · " + look.group;
     $("#modal-title").textContent = look.item.name;
