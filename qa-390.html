@@ -16,8 +16,14 @@
 <iframe id="m" title="mobile" src="./?v=3"></iframe>
 </div></div>
 <script>
-  var p = new URLSearchParams(location.search).get("src");
-  if (p) document.getElementById("m").src = p;
+  var q = new URLSearchParams(location.search);
+  var p = q.get("src");
+  var sel = q.get("sel");
+  var f = document.getElementById("m");
+  if (p) f.src = p;
+  if (sel) f.onload = function () {
+    try { var el = f.contentDocument.querySelector(sel); if (el) el.scrollIntoView({block: "start"}); } catch (e) {}
+  };
 </script>
 </body>
 </html>
