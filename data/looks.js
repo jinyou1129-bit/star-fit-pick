@@ -1491,7 +1491,7 @@ window.SFP_LOOKS = [
     show: "공항",
     scene: "2026.11.19 김포국제공항 출국 · 2026 MAMA 오사카",
     category: "outer",
-    mood: ["minimal", "chic"],
+    mood: ["minimal", "street"],
     headline: "26만 8천 원 레더 보머",
     item: {
         brand: "프리베일",
@@ -1552,7 +1552,7 @@ window.SFP_LOOKS = [
     show: "공항",
     scene: "2026.11.18 인천국제공항 출국 · 미국 일정",
     category: "outer",
-    mood: ["lovely", "casual"],
+    mood: ["lovely", "street"],
     headline: "25만 8천 원 퍼 코트",
     item: {
         brand: "그로브",
@@ -1613,7 +1613,7 @@ window.SFP_LOOKS = [
     show: "공항",
     scene: "2026.11.19 인천공항 출국 · 2026 MAMA 오사카",
     category: "outer",
-    mood: ["vintage", "casual"],
+    mood: ["vintage", "street"],
     headline: "26만 3천 원 크롭 퍼",
     item: {
         brand: "노매뉴얼",
@@ -1735,7 +1735,7 @@ window.SFP_LOOKS = [
     show: "일상",
     scene: "2026.11.19 백지헌 인스타그램 공개",
     category: "top",
-    mood: ["preppy", "casual"],
+    mood: ["lovely", "vintage"],
     headline: "13만 8천 원 스트라이프 셔츠",
     item: {
         brand: "그로브",
@@ -1792,7 +1792,7 @@ window.SFP_LOOKS = [
     show: "유튜브",
     scene: "2026.11 하이슬기 '슬기의 무계획 in 망원동' 편",
     category: "outer",
-    mood: ["chic", "minimal"],
+    mood: ["minimal", "street"],
     headline: "83만 5천 원 램스킨 점퍼",
     item: {
         brand: "아비에무아",
@@ -1849,7 +1849,7 @@ window.SFP_LOOKS = [
     show: "살롱드립",
     scene: "2026.11.17 공개 · TEO 살롱드립 EP.164",
     category: "outer",
-    mood: ["chic", "minimal"],
+    mood: ["minimal", "vintage"],
     headline: "30만 9천 원 트위드",
     item: {
         brand: "토니웩",
@@ -1910,7 +1910,7 @@ window.SFP_LOOKS = [
     show: "드라마",
     scene: "2026.11 나의 유죄인간 10화 · 증거실 장면",
     category: "outer",
-    mood: ["chic", "casual"],
+    mood: ["vintage", "street"],
     headline: "31만 5천 원 데님 레이서",
     item: {
         brand: "리임",
@@ -1971,7 +1971,7 @@ window.SFP_LOOKS = [
     show: "드라마",
     scene: "2026.11 연애박사 8화",
     category: "top",
-    mood: ["lovely", "casual"],
+    mood: ["lovely", "vintage"],
     headline: "15만 8천 원 모헤어 가디건",
     item: {
         brand: "엘무드",
@@ -2032,7 +2032,7 @@ window.SFP_LOOKS = [
     show: "라디오스타",
     scene: "2026.11.18 방영 · MBC 라디오스타 990회",
     category: "top",
-    mood: ["preppy", "chic"],
+    mood: ["lovely", "minimal"],
     headline: "84만 5,400원 아미 가디건",
     item: {
         brand: "아미",
@@ -2093,7 +2093,7 @@ window.SFP_LOOKS = [
     show: "드라마",
     scene: "2026.11 나의 유죄인간 10화 · 공원 장면",
     category: "top",
-    mood: ["casual", "vintage"],
+    mood: ["vintage", "street"],
     headline: "12만 9천 원 데님 셔츠",
     item: {
         brand: "시에클",
@@ -2154,7 +2154,7 @@ window.SFP_LOOKS = [
     show: "라디오스타",
     scene: "2026.11 MBC 라디오스타 988회",
     category: "outer",
-    mood: ["minimal", "casual"],
+    mood: ["minimal", "street"],
     headline: "23만 5천 원 스웨이드 자켓",
     item: {
         brand: "스페로네",
@@ -2211,7 +2211,7 @@ window.SFP_LOOKS = [
     show: "나는 SOLO",
     scene: "2026.11.18 방영 · 나는 SOLO 280회",
     category: "outer",
-    mood: ["casual", "minimal"],
+    mood: ["minimal", "street"],
     headline: "35만 7천 원 울 트러커",
     item: {
         brand: "벨리에",
@@ -2272,7 +2272,7 @@ window.SFP_LOOKS = [
     show: "나는 SOLO",
     scene: "2026.11 나는 SOLO 279회",
     category: "top",
-    mood: ["casual", "preppy"],
+    mood: ["lovely", "minimal"],
     headline: "24만 원 오렌지 포인트 니트",
     item: {
         brand: "리버클래시",
@@ -2329,7 +2329,7 @@ window.SFP_LOOKS = [
     show: "1박 2일",
     scene: "2026.11 KBS 1박 2일 350회",
     category: "outer",
-    mood: ["vintage", "casual"],
+    mood: ["vintage", "street"],
     headline: "28만 6천 원 데님 자켓",
     item: {
         brand: "로어링라드",
