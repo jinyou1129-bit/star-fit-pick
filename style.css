@@ -489,7 +489,7 @@ ul,ol{padding:0;list-style:none}
 .look-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 20px}
 .look-strip a{display:block;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.15s}
 .look-strip a:hover{box-shadow:var(--shadow-1);border-color:var(--line-strong)}
-.look-strip img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.look-strip img{aspect-ratio:4/5;object-fit:cover;width:100%;height:auto}
 .look-strip b{display:block;padding:10px 12px 2px;font-size:13px;color:var(--ink)}
 .look-strip small{display:block;padding:0 12px 12px;font-size:11.5px;color:var(--muted)}
 .guide-nav{display:flex;justify-content:space-between;gap:12px;margin:40px 0 0;padding-top:22px;border-top:1px solid var(--line)}
@@ -628,3 +628,5 @@ ul,ol{padding:0;list-style:none}
   .post-guide{flex-wrap:wrap;gap:6px}
   .post-guide em{margin-left:0}
 }
+/* 이미지 높이 속성(900×1125)이 CSS aspect-ratio를 덮어쓰지 않도록 */
+.post-figure img,.post-card-media img,.look-strip img{height:auto}
