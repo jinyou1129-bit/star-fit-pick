@@ -395,9 +395,11 @@
     $("#modal-art").setAttribute("style", artStyle());
     $("#modal-art").innerHTML = picture(look, true) +
       '<span class="modal-art-shade" aria-hidden="true"></span>' +
+      '<div class="modal-art-meta">' +
       '<span class="modal-art-label" id="modal-art-label"></span>' +
       '<span class="modal-art-note">' + esc("스타핏픽 전속 AI 모델 " + (look.model || "") + " 착용 연출 컷" + (ph.label ? " · 원본 착장 확인: " + ph.label + (ph.what ? " " + ph.what : "") : "")) + "</span>" +
-      (ph.url ? '<a class="modal-art-src" href="' + esc(ph.url) + '" target="_blank" rel="noopener nofollow">원본 착장 출처 열기 ↗</a>' : "");
+      (ph.url ? '<a class="modal-art-src" href="' + esc(ph.url) + '" target="_blank" rel="noopener nofollow">원본 착장 출처 열기 ↗</a>' : "") +
+      '</div>';
     $("#modal-art-label").textContent = look.celeb + " · " + look.headline;
     $("#modal-eyebrow").textContent = look.show + " · " + look.group;
     $("#modal-title").textContent = look.item.name;

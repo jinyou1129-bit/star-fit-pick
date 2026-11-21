@@ -391,10 +391,12 @@ ul,ol{padding:0;list-style:none}
 #modal .modal-card{aspect-ratio:5 / 3;max-height:88vh;grid-template-rows:minmax(0,1fr)}
 .modal-art{position:relative;background:var(--soft);min-height:0;aspect-ratio:3 / 4;overflow:hidden}
 .modal-art img{width:100%;height:100%;object-fit:contain;object-position:center center}
-.modal-art-shade{position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(to top,rgba(0,0,0,.6),transparent)}
-.modal-art-label{position:absolute;left:20px;bottom:56px;color:#fff;font-size:15px;font-weight:800;letter-spacing:-.01em;text-shadow:0 1px 8px rgba(0,0,0,.35)}
-.modal-art-note{position:absolute;left:20px;bottom:34px;color:rgba(255,255,255,.85);font-size:11.5px;font-weight:600}
-.modal-art-src{position:absolute;left:20px;bottom:14px;color:#fff;font-size:11.5px;font-weight:700;text-decoration:underline;text-underline-offset:2px;opacity:.9}
+.modal-art-shade{position:absolute;inset:auto 0 0 0;height:48%;background:linear-gradient(to top,rgba(0,0,0,.62),rgba(0,0,0,.18) 55%,transparent)}
+.modal-art-meta{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:16px 20px 16px;pointer-events:none}
+.modal-art-meta a{pointer-events:auto}
+.modal-art-label{color:#fff;font-size:15px;font-weight:800;letter-spacing:-.01em;line-height:1.35;text-shadow:0 1px 8px rgba(0,0,0,.45);word-break:keep-all}
+.modal-art-note{color:rgba(255,255,255,.88);font-size:11.5px;font-weight:600;line-height:1.45;text-shadow:0 1px 6px rgba(0,0,0,.45);word-break:keep-all}
+.modal-art-src{color:#fff;font-size:11.5px;font-weight:700;text-decoration:underline;text-underline-offset:2px;opacity:.92;text-shadow:0 1px 6px rgba(0,0,0,.45)}
 .modal-body{padding:32px 34px 28px;overflow:auto}
 .modal-close{position:absolute;right:16px;top:16px;background:#fff;box-shadow:var(--shadow-1);z-index:3}
 .modal-eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
@@ -542,17 +544,20 @@ ul,ol{padding:0;list-style:none}
   .brand{margin-right:auto}
   .how-list{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:repeat(2,1fr);gap:16px}
+  .read-next-grid{grid-template-columns:1fr 1fr}
+}
+/* 상세 팝업은 760px 이하에서만 바닥 시트로 전환 (761~860 태블릿 세로는 2단 유지) */
+@media (max-width:760px){
   .modal{grid-template-columns:1fr;padding:0;align-items:end}
   .modal-card{grid-template-columns:1fr;border-radius:22px 22px 0 0;max-height:94vh;width:100%}
-  /* 상세 팝업: 모바일에서도 3:4 세로 비율 그대로 — 납작하게 눌러 자르지 않음 */
+  /* 모바일에서도 3:4 세로 비율 그대로 — 납작하게 눌러 자르지 않음 */
   #modal .modal-card{aspect-ratio:auto;height:94vh;height:94dvh;max-height:none;grid-template-rows:auto minmax(0,1fr)}
   #modal .modal-art{min-height:0;max-height:none;aspect-ratio:3 / 4}
   .modal-body{padding:22px 20px 28px}
-  .read-next-grid{grid-template-columns:1fr 1fr}
 }
 /* 화면이 짧은 폰: 3:4 높이를 그대로 두면 본문이 거의 안 보이므로 사진 영역만 줄이고
    사진은 contain으로 담아 비율을 유지한다(늘리거나 자르지 않음). */
-@media (max-width:860px) and (max-height:730px){
+@media (max-width:760px) and (max-height:730px){
   #modal .modal-art{aspect-ratio:auto;height:46vh}
 }
 @media (max-width:760px){
