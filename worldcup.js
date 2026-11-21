@@ -328,7 +328,7 @@
               '<div class="alt-price-row"><b>' + won(w.alt.price) + "</b><span>정품 " + won(cur) + " 대비 " + rate + "% 저렴</span></div>" +
               '<div class="buy-row">' +
                 '<a class="buy-btn" href="' + esc(buildLink(w.alt.platform === "official" ? "naver" : w.alt.platform, w.alt.query)) + '" target="_blank" rel="noopener sponsored">' +
-                  (w.alt.platform === "coupang" ? "쿠팡에서 보기 ↗" : w.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "공식 판매처에서 보기 ↗") + "</a>" +
+                  (w.alt.platform === "coupang" ? "비슷한 스타일 쿠팡에서 보기 ↗" : w.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "공식 판매처에서 보기 ↗") + "</a>" +
                 '<a class="buy-btn sub" href="' + esc(buildLink("coupang", w.alt.query)) + '" target="_blank" rel="noopener sponsored">쿠팡 검색 ↗</a>' +
                 '<a class="buy-btn sub" href="' + esc(buildLink("elevenst", w.alt.query)) + '" target="_blank" rel="noopener sponsored">11번가 검색 ↗</a>' +
               "</div>" +

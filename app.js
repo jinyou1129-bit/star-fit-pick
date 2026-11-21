@@ -122,7 +122,7 @@
     return null;
   }
   function photoCredit(look) {
-    if (look && look.model) return "AI 모델 " + look.model + " 착용 컷";
+    if (look && look.model) return "가상인물 · AI 모델 " + look.model + " 착용 컷";
     var ph = look.photo || {};
     if (!ph.label) return "";
     return (ph.kind === "product" ? "제품 이미지 · " : "사진 · ") + ph.label;
@@ -397,7 +397,7 @@
       '<span class="modal-art-shade" aria-hidden="true"></span>' +
       '<div class="modal-art-meta">' +
       '<span class="modal-art-label" id="modal-art-label"></span>' +
-      '<span class="modal-art-note">' + esc("스타핏픽 전속 AI 모델 " + (look.model || "") + " 착용 연출 컷" + (ph.label ? " · 원본 착장 확인: " + ph.label + (ph.what ? " " + ph.what : "") : "")) + "</span>" +
+      '<span class="modal-art-note">' + esc("가상인물 · 스타핏픽 전속 AI 모델 " + (look.model || "") + " 착용 연출 컷" + (ph.label ? " · 원본 착장 확인: " + ph.label + (ph.what ? " " + ph.what : "") : "")) + "</span>" +
       (ph.url ? '<a class="modal-art-src" href="' + esc(ph.url) + '" target="_blank" rel="noopener nofollow">원본 착장 출처 열기 ↗</a>' : "") +
       '</div>';
     $("#modal-art-label").textContent = look.celeb + " · " + look.headline;
@@ -471,11 +471,11 @@
       '<div class="alt-price-row"><b>' + won(look.alt.price) + "</b><span>정품 " + won(cur) + " 대비 " + rate + "% 저렴 · 확인일 2026.11.20</span></div>" +
       '<div class="buy-row">' +
         '<a class="buy-btn" href="' + esc(CFG.buildLink(look.alt.platform === "official" ? "naver" : look.alt.platform, look.alt.query)) + '" target="_blank" rel="noopener sponsored">' +
-          (look.alt.platform === "official" ? "공식 판매처 검색 ↗" : look.alt.platform === "coupang" ? "쿠팡에서 보기 ↗" : look.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "11번가에서 보기 ↗") + "</a>" +
+          (look.alt.platform === "official" ? "공식 판매처 검색 ↗" : look.alt.platform === "coupang" ? "비슷한 스타일 쿠팡에서 보기 ↗" : look.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "11번가에서 보기 ↗") + "</a>" +
         '<a class="buy-btn sub" href="' + esc(CFG.buildLink("coupang", look.alt.query)) + '" target="_blank" rel="noopener sponsored">쿠팡 검색 ↗</a>' +
         '<a class="buy-btn sub" href="' + esc(CFG.buildLink("elevenst", look.alt.query)) + '" target="_blank" rel="noopener sponsored">11번가 검색 ↗</a>' +
       '</div>' +
-      '<p class="aff-note" style="font-size:11px;line-height:1.5;color:#8b8b8b;margin:8px 0 0">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>';
+      '<p class="aff-note" style="font-size:11px;line-height:1.5;color:#8b8b8b;margin:8px 0 0">가상인물 포함 · 이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>';
 
     $("#modal-sources").innerHTML = look.sources.map(function (s) {
       return '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener nofollow">' + esc(s.label) + " ↗</a></li>";
