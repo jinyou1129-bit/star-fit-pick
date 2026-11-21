@@ -318,7 +318,7 @@
             '<h3 class="wc-h">정품 구매 좌표</h3>' +
             '<div class="buy-row">' +
               '<a class="buy-btn" href="' + esc(w.item.officialUrl) + '" target="_blank" rel="noopener sponsored">공식몰 상품 페이지 ↗</a>' +
-              '<a class="buy-btn sub" href="' + esc(buildLink("naver", qOfficial)) + '" target="_blank" rel="noopener sponsored">네이버 쇼핑 ↗</a>' +
+              '<a class="buy-btn sub" href="' + esc(buildLink("naver", qOfficial)) + '" target="_blank" rel="noopener sponsored">' + (CFG.naverPick && CFG.naverPick(qOfficial) ? "네이버 쇼핑커넥트 ↗" : "네이버 쇼핑 ↗") + '</a>' +
               '<a class="buy-btn sub" href="' + esc(buildLink("musinsa", qOfficial)) + '" target="_blank" rel="noopener sponsored">무신사 ↗</a>' +
             "</div>" +
             '<h3 class="wc-h">가성비 대안 (10만 원 이하)</h3>' +
@@ -327,12 +327,13 @@
               '<p class="alt-meta">' + esc(w.alt.note) + "</p>" +
               '<div class="alt-price-row"><b>' + won(w.alt.price) + "</b><span>정품 " + won(cur) + " 대비 " + rate + "% 저렴</span></div>" +
               '<div class="buy-row">' +
+                (w.alt.platform !== "official" && CFG.naverPick && CFG.naverPick(w.alt.query) ? '<a class="buy-btn sub" href="' + esc(buildLink("naver", w.alt.query)) + '" target="_blank" rel="noopener sponsored" title="' + esc(CFG.naverPick(w.alt.query).p || "네이버 쇼핑커넥트 상품") + '">네이버 쇼핑커넥트 ↗</a>' : "") +
                 '<a class="buy-btn" href="' + esc(buildLink(w.alt.platform === "official" ? "naver" : w.alt.platform, w.alt.query)) + '" target="_blank" rel="noopener sponsored">' +
-                  (w.alt.platform === "coupang" ? "비슷한 스타일 쿠팡에서 보기 ↗" : w.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "공식 판매처에서 보기 ↗") + "</a>" +
+                  (w.alt.platform === "coupang" ? "비슷한 스타일 쿠팡에서 보기 ↗" : w.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : (CFG.naverPick && CFG.naverPick(w.alt.query) ? "네이버 쇼핑커넥트 ↗" : "공식 판매처에서 보기 ↗")) + "</a>" +
                 '<a class="buy-btn sub" href="' + esc(buildLink("coupang", w.alt.query)) + '" target="_blank" rel="noopener sponsored">쿠팡 검색 ↗</a>' +
                 '<a class="buy-btn sub" href="' + esc(buildLink("elevenst", w.alt.query)) + '" target="_blank" rel="noopener sponsored">11번가 검색 ↗</a>' +
               "</div>" +
-              '<p class="aff-note" style="font-size:11px;line-height:1.5;color:#8b8b8b;margin:8px 0 0">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>' +
+              '<p class="aff-note" style="font-size:11px;line-height:1.5;color:#8b8b8b;margin:8px 0 0">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. 네이버 쇼핑커넥트 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다. 네이버 쇼핑커넥트 버튼은 같은 무드의 네이버 판매 상품으로 연결됩니다.</p>' +
             "</div>" +
             '<div class="wc-actions">' +
               '<button type="button" class="btn" data-again="1">' + (opts.shared ? "나도 월드컵 하기" : "다시 하기") + "</button>" +

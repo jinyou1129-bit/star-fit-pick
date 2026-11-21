@@ -49,11 +49,36 @@ window.SFP_CONFIG = {
   },
 
   /* ---------- 4) 링크 빌더(제휴 파라미터 일괄 적용) ---------- */
+  // 네이버 쇼핑커넥트(브랜드커넥트)에서 실제로 발급받은 고유 링크(naver.me/...)를 찾는다.
+  // 검색 URL 파라미터로는 실적이 잡히지 않으므로, 발급 링크가 있는 검색어만 제휴 링크로 바꾼다.
+  naverPick: function (query) {
+    var raw = String(query == null ? "" : query);
+    var q = raw.replace(/\s+/g, " ").trim();
+    var map = window.SFP_NAVER_LINKS || {};
+    if (map[q]) return map[q];
+    if (map[raw]) return map[raw];
+    var norm = q.toLowerCase().replace(/[^0-9a-z가-힣]/g, "");
+    var byNorm = window.SFP_NAVER_BY_NORM || {};
+    if (byNorm[norm]) {
+      for (var k in map) {
+        if (map[k].u === byNorm[norm]) return map[k];
+      }
+      return { u: byNorm[norm] };
+    }
+    return null;
+  },
+
   buildLink: function (platform, query) {
     var cfg = window.SFP_CONFIG;
     var q = String(query == null ? "" : query).replace(/\s+/g, " ").trim();
     var base = (cfg.search[platform] || cfg.search.naver)(q);
     var a = cfg.affiliates;
+
+    // 네이버: 발급받은 쇼핑커넥트 링크가 있으면 그 링크를 그대로 쓴다(실적은 이 링크로만 잡힘).
+    if (platform === "naver") {
+      var pick = cfg.naverPick(q);
+      if (pick && pick.u) return pick.u;
+    }
 
     // 쿠팡: 파트너스 API로 만든 공식 단축 링크가 있으면 그대로 반환한다(실적 추적은 이 링크로만 됨).
     if (platform === "coupang") {

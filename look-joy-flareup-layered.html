@@ -101,7 +101,7 @@
 <p>레이어드 티보다 셔츠가 편하다면 무신사 스탠다드 릴렉스드 스트라이프 셔츠(27,890원)를 니트 안에 받치는 방법이 있습니다. 겹쳐 입는 느낌은 비슷하고 가격은 3분의 1입니다. 다만 셔츠 카라가 목에 닿기 때문에, 목선이 깔끔한 옷을 원한다면 플레어업 쪽이 맞습니다.</p>
 
       <h2 id="buy">바로 구매 좌표</h2>
-      <p class="post-note">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+      <p class="post-note">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. 네이버 쇼핑커넥트 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다. 네이버 쇼핑커넥트 버튼은 같은 무드의 네이버 판매 상품으로 연결됩니다.</p>
       <div class="buy-panel">
         <div class="buy-col">
           <p class="buy-kicker">정품 · 플레어업 · 80,100원</p>
@@ -187,11 +187,12 @@
   <div class="wrap foot-bottom">
     <p>© 2026 스타핏픽. 본 사이트는 브랜드·방송사와 제휴 관계가 없는 독립 큐레이션 사이트이며, 제품 정보의 최종 판단과 구매는 이용자에게 있습니다.</p>
     <p class="foot-legal">공정거래위원회가 고시한 「추천·보증 등에 관한 표시·광고 심사지침」에 따라, 이 사이트의 일부 링크는 경제적 대가를 받는 제휴 링크임을 명시합니다.</p>
-    <p class="foot-legal coupang-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p class="foot-legal coupang-disclosure">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. 네이버 쇼핑커넥트 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다. 네이버 쇼핑커넥트 버튼은 같은 무드의 네이버 판매 상품으로 연결됩니다.</p>
   </div>
 </footer>
 <script src="data/coupang-links.js?v=2026112201"></script>
-<script src="data/config.js?v=2026112201"></script>
+<script src="data/naver-links.js?v=2026112201"></script>
+<script src="data/config.js?v=2026112221"></script>
 <script>
 (function () {
   var o = {"brand": "플레어업", "name": "Layered Sculpted Long Sleeve (FL-196_Black)", "officialUrl": "https://www.musinsa.com/products/7219308", "alt": {"brand": "무신사 스탠다드", "name": "릴렉스드 섀도우 스트라이프 포플린 셔츠 [스카이블루/스트라이프]", "platform": "musinsa", "query": "무신사 스탠다드 릴렉스드 섀도우 스트라이프 포플린 셔츠"}};
@@ -204,7 +205,7 @@
   var altLabel = o.alt.platform === 'coupang' ? '비슷한 스타일 쿠팡에서 보기 ↗' : o.alt.platform === 'musinsa' ? '무신사에서 보기 ↗' : o.alt.platform === 'elevenst' ? '11번가에서 보기 ↗' : '공식 판매처 검색 ↗';
   document.getElementById('buy-official').innerHTML =
     a(o.officialUrl, '제품·판매 페이지 ↗') +
-    a(cfg.buildLink('naver', q), '네이버 쇼핑 검색 ↗', 'sub') +
+    a(cfg.buildLink('naver', q), (cfg.naverPick && cfg.naverPick(q)) ? '네이버 쇼핑커넥트 ↗' : '네이버 쇼핑 검색 ↗', 'sub') +
     a(cfg.buildLink('musinsa', q), '무신사 검색 ↗', 'sub') +
     a(cfg.buildLink('coupang', q), '쿠팡 검색 ↗', 'sub');
   document.getElementById('buy-alt').innerHTML =
