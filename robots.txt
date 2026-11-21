@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jinyou1129-bit.github.io/star-fit-pick/sitemap.xml
+Sitemap: https://starfitpick.netlify.app/sitemap.xml

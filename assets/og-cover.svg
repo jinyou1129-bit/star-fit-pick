@@ -22,7 +22,7 @@
   <text x="80" y="392" fill="#e6c688" font-family="Georgia, 'Times New Roman', serif" font-size="52">정가까지 확인한 착장 좌표</text>
   <text x="80" y="490" fill="#c9bcab" font-family="Georgia, serif" font-size="28">공항패션 · 예능 착장 · 가성비 대안템 비교</text>
   <rect x="80" y="530" width="220" height="2" fill="#a8302a"/>
-  <text x="80" y="580" fill="#a99c8c" font-family="Georgia, serif" font-size="22">jinyou1129-bit.github.io/star-fit-pick</text>
+  <text x="80" y="580" fill="#a99c8c" font-family="Georgia, serif" font-size="22">starfitpick.netlify.app</text>
   <g fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.4" transform="translate(905,300)">
     <path d="M-25-110 L-70-80 L-88 60 L-30 76 L-18-6 L-18 150 L62 150 L62-6 L74 76 L132 60 L114-80 L69-110"/>
     <path d="M-25-110 Q22-56 69-110"/>

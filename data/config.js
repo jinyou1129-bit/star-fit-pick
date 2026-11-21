@@ -8,7 +8,7 @@ window.SFP_CONFIG = {
   site: {
     name: "스타핏픽",
     tagline: "연예인·예능 패션 좌표",
-    url: "https://jinyou1129-bit.github.io/star-fit-pick/",
+    url: "https://starfitpick.netlify.app/",
     // 문의는 개인 메일 주소 대신 저장소 이슈로 받습니다(개인정보 노출 최소화).
     contactUrl: "https://github.com/jinyou1129-bit/star-fit-pick/issues/new",
     updated: "2026-11-20"

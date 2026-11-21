@@ -1,8 +1,8 @@
 # 스타핏픽 (Star Fit Pick)
 
-연예인·예능·공항 착장을 **실제 사진 + 출처**와 함께 정리하고, 정품 가격과 가성비 대안을 비교하는 큐레이션 사이트. 정적 사이트(GitHub Pages)로 배포됩니다.
+연예인·예능·공항 착장을 **실제 사진 + 출처**와 함께 정리하고, 정품 가격과 가성비 대안을 비교하는 큐레이션 사이트. 정적 사이트이며 **Netlify(https://starfitpick.netlify.app/)로 배포**됩니다. 저장소 main에 푸시하면 GitHub Actions가 Netlify로 자동 배포합니다.
 
-- 라이브: https://jinyou1129-bit.github.io/star-fit-pick/
+- 라이브: https://starfitpick.netlify.app/
 - 디자인: Toss UI 톤(화이트·연그레이 베이스, 둥근 카드, 1px 보더, 포인트 블루 `#3182F6`)
 - 사진 원칙: 공항·행사 현장 촬영, 방송 화면, 본인 인스타그램, 브랜드 공식 룩북 등 **확인된 공개 이미지**만 사용하고 카드·상세마다 출처를 표기합니다. 방송 화면을 확보하지 못한 착장은 브랜드 제품 컷으로 대체하고 `제품 이미지`로 표기합니다.
 
@@ -103,12 +103,23 @@ COUPANG_ACCESS_KEY=... COUPANG_SECRET_KEY=... python3 tools/build_coupang_links.
 
 현재 미매핑 3개: `리바이스 501 오리지널 스트레이트`, `무신사 스탠다드 세미부츠컷 데님 팬츠`, `무신사 스탠다드 롱패딩`.
 
+## 배포 (Netlify)
+
+- 운영 주소: **https://starfitpick.netlify.app/** (GitHub Pages `jinyou1129-bit.github.io/star-fit-pick` 는 병행 운영하며 canonical은 Netlify를 가리킵니다)
+- 배포 방법(수동): `NETLIFY_AUTH_TOKEN=... ./tools/deploy_netlify.sh`
+  - 토큰은 Netlify → User settings → Applications → Personal access tokens 에서 발급합니다. 저장소에는 절대 커밋하지 않습니다.
+- 사이트 ID: `1999c7f0-f1a3-4eab-9d81-b1c0dcf04f15` (`--site` 인자/`NETLIFY_SITE_ID` 환경변수)
+- main에 푸시할 때 자동 배포하려면 (둘 중 하나)
+  1. Netlify 대시보드에서 **Import from Git** 으로 이 저장소를 연결 (GitHub OAuth 승인 1회 필요)
+  2. GitHub 저장소 → Settings → Secrets and variables → Actions 에 `NETLIFY_AUTH_TOKEN`, `NETLIFY_SITE_ID` 를 추가하고 Netlify CLI 배포 워크플로 사용
+- `netlify.toml` 에 캐시·보안 헤더와 `/index.html → /` 301 리다이렉트가 들어 있습니다.
+
 ## 검색엔진 색인 (IndexNow)
 
-루트의 `indexnow-<key>.txt` 안에 키 값이 들어 있습니다. 배포 후 아래처럼 변경 URL을 통보할 수 있습니다. (Search Console·네이버 서치어드바이저·Bing Webmaster 도구 등록은 최종 도메인 확정 후 진행)
+루트의 `indexnow-<key>.txt` 안에 키 값이 들어 있습니다. 배포 후 아래처럼 변경 URL을 통보할 수 있습니다. (Search Console·네이버 서치어드바이저 등록 완료 — 아래 "검색엔진 등록" 참고)
 
 ```bash
 curl -s -X POST https://api.indexnow.org/indexnow \
   -H "Content-Type: application/json; charset=utf-8" \
-  -d '{"host":"jinyou1129-bit.github.io","key":"<KEY>","keyLocation":"https://jinyou1129-bit.github.io/star-fit-pick/indexnow-<KEY>.txt","urlList":["https://jinyou1129-bit.github.io/star-fit-pick/posts.html"]}'
+  -d '{"host":"starfitpick.netlify.app","key":"<KEY>","keyLocation":"https://starfitpick.netlify.app/indexnow-<KEY>.txt","urlList":["https://starfitpick.netlify.app/posts.html"]}'
 ```
