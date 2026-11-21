@@ -3412,5 +3412,311 @@ window.SFP_LOOKS = [
         query: "더니트컴퍼니 텍스처드 스트라이프 폴로 니트"
     },
     palette: ["#b9b2a4", "#7b746a", "#2c2c2e"]
+  },
+  {
+    id: "mark-nct-nordic-fleece",
+    image: "assets/looks/mark-nct-nordic-fleece.webp?v=2026112104",
+    imageJpg: "assets/looks/mark-nct-nordic-fleece.jpg?v=2026112104",
+    model: "백시온",
+    modelId: "baek-sion",
+    photo: {
+      label: "에스콰이어 코리아 · 게티이미지코리아",
+      kind: "article",
+      what: "2026.11.09 인천국제공항 출국 보도 사진(게티이미지 제공)",
+      url: "https://www.esquirekorea.co.kr/article/1912868"
+    },
+    imageAlt: "스타핏픽 전속 AI 모델 백시온이 리(LEE) 패턴 플리스 집업 자켓과 베이지 와이드 팬츠, 아이보리 스니커즈, 캔버스 토트백을 착용한 연출 컷",
+    celeb: "마크",
+    group: "NCT",
+    type: "airport",
+    show: "공항",
+    scene: "2026.11.09 인천국제공항 출국",
+    category: "outer",
+    mood: [
+      "street",
+      "minimal"
+    ],
+    headline: "패턴 플리스 + 베이지 팬츠 풀코디",
+    item: {
+      brand: "리(LEE)",
+      brandEn: "LEE",
+      name: "패턴 플리스 집업 자켓 스트라이프",
+      nameEn: "Pattern Fleece Zip-Up Jacket Stripe",
+      sku: "LE2503JK12SR",
+      price: 129000,
+      salePrice: 116100,
+      saleNote: "무신사 10% 할인가 (2026-11-21 확인)",
+      material: "하이파일 플리스(폴리에스터) · 스탠드 칼라 하프집",
+      colors: "블루·네이비·크림·오커 배색 스트라이프",
+      sizes: "S · M · L · XL (무신사 표기)",
+      maker: "리(LEE) / 베트남",
+      season: "2026 FW",
+      fit: "어깨가 여유 있는 세미오버 핏, 목을 세우는 스탠드 칼라, 밑단·소매 밴딩, 앞부분 짧은 지퍼",
+      cons: "11만 원대라 부담이 있고, 패턴이 강해 하의 색을 가려 입어야 함",
+      officialUrl: "https://www.musinsa.com/products/5553539"
+    },
+    story: "엔시티 마크가 11월 9일 인천공항으로 출국하며 입은 겨울 공항룩입니다. 먼저 눈에 들어오는 건 푸른색 계열의 패턴이 들어간 플리스 집업입니다. 플리스는 무늬 하나로 상체가 채워지기 때문에, 아래는 베이지 와이드 팬츠처럼 색을 빼고 실루엣만 넓힌 조합이 자연스럽습니다. 손에 든 브라운 가죽 토트백이 캐주얼한 옷차림에 무게를 더했습니다. 이 사이트에서는 같은 구성(패턴 플리스·베이지 와이드 팬츠·아이보리 스니커즈·토트백)을 실제 판매 중인 상품으로 맞추고, 다섯 개를 다 합친 총액과 더 싼 대안까지 함께 계산했습니다.",
+    point: "패턴이 강한 아우터를 입을 때는 하의를 베이지나 무채색으로 비우는 것이 기본입니다. 집업은 목까지 다 잠그면 답답해 보이므로 두어 개만 열어 흰 티셔츠를 드러내고, 소매는 손목까지 내려 입으면 플리스의 부피가 정리됩니다. 신발은 아이보리 스니커즈처럼 밝은 색이면 팬츠와 이어져 다리가 길어 보이고, 가방은 어두운 카키·브라운으로 잡아 위아래 색을 묶어 줍니다.",
+    verified: "에스콰이어 코리아 2026.11.09 기사 「지드래곤부터 코르티스까지! 남자 아이돌의 겨울 공항 패션 6」에서 마크의 패턴 플리스 집업·베이지 와이드 팬츠·브라운 레더 토트백 착장 확인(사진 출처 게티이미지코리아). 상품명·가격·품번은 무신사 판매 페이지에서 2026.11.21 확인했고, 실착 사진을 직접 확보하지 못해 AI 모델 연출 컷으로 대체했습니다.",
+    sources: [
+      {
+        label: "에스콰이어 코리아 — 남자 아이돌의 겨울 공항 패션 6 (마크)",
+        url: "https://www.esquirekorea.co.kr/article/1912868"
+      },
+      {
+        label: "무신사 리(LEE) 패턴 플리스 집업 자켓 스트라이프",
+        url: "https://www.musinsa.com/products/5553539"
+      },
+      {
+        label: "무신사 스탠다드 코튼 딥 턱 와이드 밴딩 팬츠 [베이지]",
+        url: "https://www.musinsa.com/products/3758185"
+      },
+      {
+        label: "무신사 스탠다드 소프트 레더 독일군 스니커즈 [아이보리]",
+        url: "https://www.musinsa.com/products/7146980"
+      },
+      {
+        label: "무신사 스탠다드 캔버스 라운디드 토트 백 [카키 브라운]",
+        url: "https://www.musinsa.com/products/5175152"
+      }
+    ],
+    alt: {
+      brand: "유젠(EUGGEN)",
+      name: "EUG 노르딕 자카드 후드 집업_차콜",
+      price: 59900,
+      platform: "musinsa",
+      fit: "후드를 더한 셔츠형 집업, 어깨가 떨어지는 루즈핏",
+      cons: "색이 차콜 계열이고 자카드 편직이라 리(LEE)의 하이파일 플리스보다 보온감과 표면 기모가 얇음",
+      note: "59,900원. 노르딕 패턴과 집업 구조는 같은 계열이지만 색이 차콜이고 두께가 얇아, 한겨울보다는 간절기·실내 위주로 맞는 대안입니다.",
+      query: "유젠 EUG 노르딕 자카드 후드 집업"
+    },
+    ootd: [
+      {
+        role: "아우터",
+        brand: "리(LEE)",
+        name: "패턴 플리스 집업 자켓 스트라이프",
+        sku: "LE2503JK12SR",
+        price: 129000,
+        salePrice: 116100,
+        colors: "블루·네이비·크림 스트라이프",
+        note: "이 룩의 중심. 하이파일 플리스에 노르딕풍 스트라이프, 스탠드 칼라 하프집.",
+        officialUrl: "https://www.musinsa.com/products/5553539",
+        query: "리 LEE 패턴 플리스 집업 자켓 스트라이프"
+      },
+      {
+        role: "상의",
+        brand: "무신사 스탠다드",
+        name: "릴렉스 핏 크루 넥 티셔츠 2팩",
+        sku: "MMATS6Z07",
+        price: 31800,
+        salePrice: 30190,
+        colors: "화이트 · 블랙 등",
+        note: "집업 안에 받치는 흰 티. 2팩이라 한 장은 여분.",
+        officialUrl: "https://www.musinsa.com/products/2034137",
+        query: "무신사 스탠다드 릴렉스 핏 크루 넥 티셔츠 2팩"
+      },
+      {
+        role: "하의",
+        brand: "무신사 스탠다드",
+        name: "코튼 딥 턱 와이드 밴딩 팬츠 [베이지]",
+        sku: "MMDPC3Z11-BE",
+        price: 29890,
+        salePrice: 29890,
+        colors: "베이지",
+        note: "허리 밴딩에 깊은 턱을 넣어 통이 넓게 떨어지는 코튼 팬츠. 이 룩에서 가장 싼 아이템.",
+        officialUrl: "https://www.musinsa.com/products/3758185",
+        query: "무신사 스탠다드 코튼 딥 턱 와이드 밴딩 팬츠 베이지"
+      },
+      {
+        role: "신발",
+        brand: "무신사 스탠다드",
+        name: "소프트 레더 독일군 스니커즈 [아이보리]",
+        sku: "MEGFS0A07-IV",
+        price: 89900,
+        salePrice: 62890,
+        colors: "아이보리 (블랙·브라운 별도)",
+        note: "독일군 트레이너 계열의 낮은 로우탑. 팬츠와 톤을 맞추면 다리가 길어 보임.",
+        officialUrl: "https://www.musinsa.com/products/7146980",
+        query: "무신사 스탠다드 소프트 레더 독일군 스니커즈 아이보리"
+      },
+      {
+        role: "가방",
+        brand: "무신사 스탠다드",
+        name: "캔버스 라운디드 토트 백 [카키 브라운]",
+        sku: "MEEBG8B52-KB",
+        price: 39900,
+        salePrice: 27890,
+        colors: "카키 브라운",
+        note: "가죽 토트 대신 캔버스. 색은 브라운 계열로 맞췄고 무게는 훨씬 가벼움.",
+        officialUrl: "https://www.musinsa.com/products/5175152",
+        query: "무신사 스탠다드 캔버스 라운디드 토트 백 카키 브라운"
+      }
+    ],
+    palette: [
+      "#2f4a6d",
+      "#d9c8a8",
+      "#6f6a5c"
+    ]
+  },
+  {
+    id: "chaewon-fur-coat",
+    image: "assets/looks/chaewon-fur-coat.webp?v=2026112104",
+    imageJpg: "assets/looks/chaewon-fur-coat.jpg?v=2026112104",
+    model: "엘라 린드그렌",
+    modelId: "ella-lindgren",
+    photo: {
+      label: "김채원 인스타그램 · 톱스타뉴스",
+      kind: "sns",
+      what: "2026.11.10 김채원 인스타그램 게시물(톱스타뉴스 보도로 확인)",
+      url: "https://www.topstarnews.net/news/articleView.html?idxno=16272812"
+    },
+    imageAlt: "스타핏픽 전속 AI 모델 엘라 린드그렌이 갈색 샤기 페이크 퍼 재킷과 크림 니트, 블랙 와이드 슬랙스, 첼시부츠, 숄더백, 아이보리 비니를 착용한 연출 컷",
+    celeb: "김채원",
+    group: "르세라핌",
+    type: "airport",
+    show: "공항",
+    scene: "2026.11.10 김채원 인스타그램 공항룩",
+    category: "outer",
+    mood: [
+      "lovely",
+      "minimal"
+    ],
+    headline: "갈색 퍼 코트 + 흰 니트 비니",
+    item: {
+      brand: "무신사 스탠다드 우먼",
+      brandEn: "MUSINSA STANDARD WOMAN",
+      name: "우먼즈 샤기 페이크 퍼 재킷 [브라운]",
+      nameEn: "Women's Shaggy Faux Fur Jacket [Brown]",
+      sku: "MWDJJ9Z04-BR",
+      price: 139900,
+      salePrice: 97930,
+      saleNote: "무신사 30% 할인가 (2026-11-21 확인)",
+      material: "페이크 퍼(폴리에스터) · 안감 있음",
+      colors: "브라운",
+      sizes: "XS · S · M · L (무신사 표기)",
+      maker: "무신사 스탠다드 / 중국",
+      season: "2026 FW",
+      fit: "힙 위에서 끊기는 숏 기장, 라운드 넥 칼라리스, 앞 단추 여밈, 털이 길게 일어서는 샤기 타입",
+      cons: "털이 길어 관리가 필요하고, 볼륨 때문에 하의를 일자로 잡아야 함",
+      officialUrl: "https://www.musinsa.com/products/4209457"
+    },
+    story: "르세라핌 김채원이 11월 10일 인스타그램에 올린 겨울 공항룩입니다. 갈색 퍼 코트에 흰색 니트 비니, 검정 가방을 들고 실내 이동 동선에서 찍은 사진입니다. 퍼 코트는 볼륨이 커서 그대로 두면 상체만 무거워 보이므로, 아래는 일자로 떨어지는 블랙 와이드 슬랙스로 세로선을 만들고 발은 첼시부츠로 받치는 구성이 안정적입니다. 크림 니트로 턱 아래를 밝히고, 비니로 머리끝까지 겨울 톤을 맞춘 것이 이 룩의 핵심입니다. 김채원이 실제로 착용한 것은 퍼 코트·니트 비니·검정 가방 세 가지이고, 나머지 세 아이템은 같은 무드로 맞춘 구성입니다.",
+    point: "퍼 코트는 힙 위에서 끊기는 짧은 기장이어야 다리가 길어 보입니다. 목선이 둥근 코트 안에는 두꺼운 크루넥 니트를 넣되, 니트를 슬랙스 안에 넣어 허리선을 살립니다. 슬랙스도 부츠도 검정으로 이어 발끝까지 같은 색을 쓰면 퍼의 부피가 상체에만 머뭅니다. 비니는 아이보리처럼 밝은 색으로 얼굴을 감싸면 갈색 코트가 어두워 보이지 않습니다.",
+    verified: "톱스타뉴스 2026.11.10 보도 「르세라핌 김채원, 퍼 코트 공항룩」에서 김채원의 갈색 퍼 코트·흰색 니트 비니·검정 가방 착용 확인(사진 출처 김채원 인스타그램). 나머지 크림 니트·블랙 와이드 슬랙스·첼시부츠는 같은 무드로 맞춘 구성이며 김채원의 실제 착용 여부는 확인하지 못했습니다. 상품명·가격·품번은 무신사 판매 페이지에서 2026.11.21 확인.",
+    sources: [
+      {
+        label: "톱스타뉴스 — 르세라핌 김채원, 퍼 코트 공항룩",
+        url: "https://www.topstarnews.net/news/articleView.html?idxno=16272812"
+      },
+      {
+        label: "무신사 스탠다드 우먼 샤기 페이크 퍼 재킷 [브라운]",
+        url: "https://www.musinsa.com/products/4209457"
+      },
+      {
+        label: "무신사 스탠다드 우먼 퍼지 크루 넥 니트 [크림]",
+        url: "https://www.musinsa.com/products/2100508"
+      },
+      {
+        label: "무신사 스탠다드 우먼 플루이드 로 웨이스트 와이드 슬랙스 [블랙]",
+        url: "https://www.musinsa.com/products/5858718"
+      },
+      {
+        label: "무신사 스탠다드 신세틱 레더 슬라우치 숄더 백 [블랙]",
+        url: "https://www.musinsa.com/products/5175146"
+      },
+      {
+        label: "무신사 스탠다드 우먼 플러피 스트링 니트 비니 [아이보리]",
+        url: "https://www.musinsa.com/products/6731649"
+      }
+    ],
+    alt: {
+      brand: "미쏘(MIXXO)",
+      name: "스탠카라 페이크퍼 숏자켓_MIWJLG111G",
+      price: 89900,
+      platform: "musinsa",
+      fit: "스탠드 칼라에 힙 위로 떨어지는 숏 기장",
+      cons: "칼라가 서 있어 목을 감싸고, 털의 길이가 샤기 타입보다 짧아 무신사 스탠다드 쪽이 더 풍성함",
+      note: "89,900원. 스탠드 칼라라 목이 따뜻하고, 같은 브라운 계열 페이크퍼 숏자켓으로 8,030원 아낄 수 있습니다.",
+      query: "미쏘 스탠카라 페이크퍼 숏자켓"
+    },
+    ootd: [
+      {
+        role: "아우터",
+        brand: "무신사 스탠다드 우먼",
+        name: "우먼즈 샤기 페이크 퍼 재킷 [브라운]",
+        sku: "MWDJJ9Z04-BR",
+        price: 139900,
+        salePrice: 97930,
+        colors: "브라운",
+        note: "이 룩의 중심. 털이 길게 일어서는 샤기 페이크퍼, 힙 위 숏 기장.",
+        officialUrl: "https://www.musinsa.com/products/4209457",
+        query: "무신사 스탠다드 우먼 샤기 페이크 퍼 재킷 브라운"
+      },
+      {
+        role: "상의",
+        brand: "무신사 스탠다드 우먼",
+        name: "우먼즈 퍼지 크루 넥 니트 [크림]",
+        sku: "MWAWL9Z06-CR",
+        price: 49900,
+        salePrice: 49900,
+        colors: "크림",
+        note: "보송한 표면의 크루넥 니트. 퍼 코트 안에서 얼굴 아래를 밝혀 줌.",
+        officialUrl: "https://www.musinsa.com/products/2100508",
+        query: "무신사 스탠다드 우먼 퍼지 크루 넥 니트 크림"
+      },
+      {
+        role: "하의",
+        brand: "무신사 스탠다드 우먼",
+        name: "우먼즈 플루이드 로 웨이스트 와이드 슬랙스 [블랙]",
+        sku: "MWFPL6A02-BK",
+        price: 49900,
+        salePrice: 44910,
+        colors: "블랙",
+        note: "허리가 낮게 앉는 와이드 슬랙스. 흐르는 소재로 세로선을 만듦.",
+        officialUrl: "https://www.musinsa.com/products/5858718",
+        query: "무신사 스탠다드 우먼 플루이드 로 웨이스트 와이드 슬랙스 블랙"
+      },
+      {
+        role: "신발",
+        brand: "슈피트",
+        name: "블랙 스퀘어토 앵클 베이직 첼시부츠 SFT-305",
+        sku: "SFT-305",
+        price: 69800,
+        salePrice: 69800,
+        colors: "블랙",
+        note: "각진 앞코의 첼시부츠. 슬랙스 끝을 덮어 발끝까지 검정으로 이어 줌.",
+        officialUrl: "https://www.musinsa.com/products/4479363",
+        query: "슈피트 블랙 스퀘어토 앵클 첼시부츠 SFT-305"
+      },
+      {
+        role: "가방",
+        brand: "무신사 스탠다드",
+        name: "신세틱 레더 슬라우치 숄더 백 [블랙]",
+        sku: "MEEBG8A63-BK",
+        price: 79900,
+        salePrice: 55890,
+        colors: "블랙",
+        note: "가죽이 흐물흐물하게 떨어지는 숄더백. 퍼 코트의 부피와 대비됨.",
+        officialUrl: "https://www.musinsa.com/products/5175146",
+        query: "무신사 스탠다드 신세틱 레더 슬라우치 숄더 백 블랙"
+      },
+      {
+        role: "모자",
+        brand: "무신사 스탠다드 우먼",
+        name: "우먼즈 플러피 스트링 니트 비니 [아이보리]",
+        sku: "MEFCPAB01-IV",
+        price: 25900,
+        salePrice: 25900,
+        colors: "아이보리",
+        note: "보송한 니트 비니, 끈 두 개가 내려옴. 김채원이 쓴 흰 비니와 같은 톤.",
+        officialUrl: "https://www.musinsa.com/products/6731649",
+        query: "무신사 스탠다드 우먼 플러피 스트링 니트 비니 아이보리"
+      }
+    ],
+    palette: [
+      "#8a5a3b",
+      "#f2ece2",
+      "#1c1c1e"
+    ]
   }
 ];
