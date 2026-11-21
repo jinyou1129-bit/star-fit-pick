@@ -10,6 +10,9 @@
    "for": "LOOK 57 미쏘 스탠카라 페이크퍼 숏자켓",
    "keys": [
     "미쏘 스탠카라 페이크퍼 숏자켓"
+   ],
+   "looks": [
+    "chaewon-fur-coat"
    ]
   },
   {
@@ -21,6 +24,11 @@
    "for": "LOOK 02·27·49 비엔엑스 하이넥 시어링 양털 포켓 자켓",
    "keys": [
     "비엔엑스 하이넥 시어링 양털 포켓 자켓"
+   ],
+   "looks": [
+    "yujin-lcdc-shearling",
+    "sooin-grove-dove-fur",
+    "jimin-aakam-toggle"
    ]
   },
   {
@@ -32,6 +40,11 @@
    "for": "LOOK 06·28·42 스파오 신세틱레더 페이크 퍼 하프 코트",
    "keys": [
     "스파오 신세틱레더 페이크 퍼 하프 코트"
+   ],
+   "looks": [
+    "isol-reisemiya-mustang",
+    "kiya-nomanual-crop-fur",
+    "mei-hugyourself-coat"
    ]
   },
   {
@@ -43,6 +56,11 @@
    "for": "LOOK 01·29·43 무신사 스탠다드 우먼 시어링 플리스 후디드 집업",
    "keys": [
     "무신사 스탠다드 우먼 시어링 플리스 후디드 집업"
+   ],
+   "looks": [
+    "wonyoung-belier-fur",
+    "youngseo-tomboy-fur",
+    "annie-northface-comor"
    ]
   },
   {
@@ -54,6 +72,9 @@
    "for": "LOOK 03 페이지시시 SiiSii 숏패딩 크림",
    "keys": [
     "페이지시시 SiiSii 숏패딩"
+   ],
+   "looks": [
+    "karina-mlb-curve"
    ]
   },
   {
@@ -65,7 +86,8 @@
    "for": "LOOK 50 캘빈클라인 진 아이템(브랜드 동일 푸퍼)",
    "keys": [
     "캘빈클라인 진 여성 매트 샤인 다운 푸퍼 자켓 47H591G PTF"
-   ]
+   ],
+   "looks": []
   },
   {
    "url": "https://naver.me/xoGT7HOW",
@@ -76,6 +98,12 @@
    "for": "LOOK 11·45·50·53 경량 다운 점퍼",
    "keys": [
     "유니클로 울트라라이트 다운 재킷"
+   ],
+   "looks": [
+    "jiwon-aloro-velvet",
+    "jungwon-fila-airflow",
+    "soyoung-ck-matpuffer",
+    "koso-young-peuterey-togo"
    ]
   },
   {
@@ -87,6 +115,10 @@
    "for": "LOOK 04·26 위시드 베이직 카라넥 루즈핏 레더 블루종",
    "keys": [
     "위시드 베이직 카라넥 루즈핏 레더 블루종"
+   ],
+   "looks": [
+    "minnie-acne-blouson",
+    "nayeon-prevail-bomber"
    ]
   },
   {
@@ -98,7 +130,8 @@
    "for": "LOOK 26 프리베일 PVIL Benny Leather Bomber (아이템)",
    "keys": [
     "프리베일 PVIL Benny Leather Bomber"
-   ]
+   ],
+   "looks": []
   },
   {
    "url": "https://naver.me/GfrefC8A",
@@ -109,6 +142,9 @@
    "for": "LOOK 31 무신사 스탠다드 크레이프 하이넥 블루종 재킷",
    "keys": [
     "무신사 스탠다드 크레이프 하이넥 블루종 재킷"
+   ],
+   "looks": [
+    "seulgi-aviemuah-lambskin"
    ]
   },
   {
@@ -120,6 +156,11 @@
    "for": "LOOK 10·34·52 언노운 플래닛 헤어리 모헤어 크롭 가디건",
    "keys": [
     "언노운 플래닛 헤어리 모헤어 크롭 가디건"
+   ],
+   "looks": [
+    "anna-lhas-cardigan",
+    "sohyun-lmood-mohair",
+    "jiwon-lowtide-knit"
    ]
   },
   {
@@ -131,6 +172,10 @@
    "for": "LOOK 21·35 블론드나인 브러쉬드 아가일 니트 가디건",
    "keys": [
     "블론드나인 브러쉬드 아가일 니트 가디건"
+   ],
+   "looks": [
+    "jaeseok-satur-argyle",
+    "youngk-ami-cardigan"
    ]
   },
   {
@@ -142,6 +187,10 @@
    "for": "LOOK 18·44 알리스 클라우드 터치 라운드 크롭 가디건",
    "keys": [
     "알리스 클라우드 터치 라운드 크롭 가디건"
+   ],
+   "looks": [
+    "yeeun-mahagrid-zip",
+    "miyeon-somewherebutter-zip"
    ]
   },
   {
@@ -153,6 +202,9 @@
    "for": "LOOK 08 무신사 스탠다드 우먼 리브드 슬림 니트 후디드 집업",
    "keys": [
     "무신사 스탠다드 우먼 리브드 슬림 니트 후디드 집업"
+   ],
+   "looks": [
+    "miyeon-somewherebutter-knit"
    ]
   },
   {
@@ -164,6 +216,10 @@
    "for": "LOOK 15·55 더니트컴퍼니 텍스처드 스트라이프 폴로 니트",
    "keys": [
     "더니트컴퍼니 텍스처드 스트라이프 폴로 니트"
+   ],
+   "looks": [
+    "yoonseok-kume-knit",
+    "wooseok-system-hoodknit"
    ]
   },
   {
@@ -175,6 +231,12 @@
    "for": "LOOK 17·39·46·51 빈트릴 반팔 케이블 카라 컴포트핏 니트",
    "keys": [
     "빈트릴 반팔 케이블 카라 컴포트핏 니트"
+   ],
+   "looks": [
+    "doyeon-atelier-yak",
+    "yikyung-liberclassy-knit",
+    "chaeryeong-lememe-cutout",
+    "wonyoung-nanajacq-knit"
    ]
   },
   {
@@ -186,6 +248,9 @@
    "for": "LOOK 23 무신사 스탠다드 코튼 케이블 브이 넥 니트 베스트",
    "keys": [
     "무신사 스탠다드 코튼 케이블 브이 넥 니트 베스트"
+   ],
+   "looks": [
+    "yuri-marni-vest"
    ]
   },
   {
@@ -197,6 +262,9 @@
    "for": "LOOK 09 씨타 Soft Roll-Up Cuff Knit Hood Zip-up",
    "keys": [
     "씨타 Soft Roll-Up Cuff Knit Hood Zip-up"
+   ],
+   "looks": [
+    "sooin-yeel-hoodie"
    ]
   },
   {
@@ -208,6 +276,9 @@
    "for": "LOOK 05 에이지오디 리버시블 헤비 플리스 보아 후드 집업",
    "keys": [
     "에이지오디 리버시블 헤비 플리스 보아 후드 집업"
+   ],
+   "looks": [
+    "sakura-miumiu-fleece"
    ]
   },
   {
@@ -219,6 +290,9 @@
    "for": "LOOK 56 유젠 EUG 노르딕 자카드 후드 집업",
    "keys": [
     "유젠 EUG 노르딕 자카드 후드 집업"
+   ],
+   "looks": [
+    "mark-nct-nordic-fleece"
    ]
   },
   {
@@ -230,7 +304,8 @@
    "for": "LOOK 43 노스페이스 NJ4FS56L 코모 플리스 (아이템)",
    "keys": [
     "노스페이스 NJ4FS56L 코모 플리스 자켓 DARK BEIGE"
-   ]
+   ],
+   "looks": []
   },
   {
    "url": "https://naver.me/5p0Ka0PA",
@@ -241,6 +316,9 @@
    "for": "LOOK 07 스파오 울블렌드 하프 코트",
    "keys": [
     "스파오 울블렌드 하프 코트"
+   ],
+   "looks": [
+    "jiwoo-bittercells-coat"
    ]
   },
   {
@@ -252,7 +330,8 @@
    "for": "LOOK 42 허그유어스킨 어테쳐블 후드 싱글 코트 (아이템)",
    "keys": [
     "허그유어스킨 어테쳐블 후드 싱글 코트 (차콜)"
-   ]
+   ],
+   "looks": []
   },
   {
    "url": "https://naver.me/GprMQyUd",
@@ -263,6 +342,9 @@
    "for": "LOOK 12 무신사 스탠다드 나일론 에센셜 백팩",
    "keys": [
     "무신사 스탠다드 나일론 에센셜 백팩"
+   ],
+   "looks": [
+    "jiwon-teramo-backpack"
    ]
   },
   {
@@ -274,6 +356,9 @@
    "for": "LOOK 24 무신사 스탠다드 워시드 캔버스 더플 백",
    "keys": [
     "무신사 스탠다드 워시드 캔버스 더플 백"
+   ],
+   "looks": [
+    "songkang-loewe-duffle"
    ]
   }
  ]

@@ -191,7 +191,7 @@
   </div>
 </footer>
 <script src="data/coupang-links.js?v=2026112201"></script>
-<script src="data/naver-links.js?v=2026112201"></script>
+<script src="data/naver-links.js?v=2026112222"></script>
 <script src="data/config.js?v=2026112221"></script>
 <script>
 (function () {
@@ -202,13 +202,14 @@
   }
   var q = o.brand + ' ' + o.name;
   var aq = o.alt.query;
-  var altLabel = o.alt.platform === 'coupang' ? '비슷한 스타일 쿠팡에서 보기 ↗' : o.alt.platform === 'musinsa' ? '무신사에서 보기 ↗' : o.alt.platform === 'elevenst' ? '11번가에서 보기 ↗' : '공식 판매처 검색 ↗';
+  var altLabel = (cfg.naverPick && cfg.naverPick(aq)) && o.alt.platform === 'official' ? '네이버 쇼핑커넥트 ↗' : o.alt.platform === 'coupang' ? '비슷한 스타일 쿠팡에서 보기 ↗' : o.alt.platform === 'musinsa' ? '무신사에서 보기 ↗' : o.alt.platform === 'elevenst' ? '11번가에서 보기 ↗' : '공식 판매처 검색 ↗';
   document.getElementById('buy-official').innerHTML =
     a(o.officialUrl, '제품·판매 페이지 ↗') +
     a(cfg.buildLink('naver', q), (cfg.naverPick && cfg.naverPick(q)) ? '네이버 쇼핑커넥트 ↗' : '네이버 쇼핑 검색 ↗', 'sub') +
     a(cfg.buildLink('musinsa', q), '무신사 검색 ↗', 'sub') +
     a(cfg.buildLink('coupang', q), '쿠팡 검색 ↗', 'sub');
   document.getElementById('buy-alt').innerHTML =
+    ((o.alt.platform !== 'official' && cfg.naverPick && cfg.naverPick(aq)) ? a(cfg.naverPick(aq).u, '네이버 쇼핑커넥트 ↗', 'sub') : '') +
     a(cfg.buildLink(o.alt.platform === 'official' ? 'naver' : o.alt.platform, aq), altLabel) +
     a(cfg.buildLink('coupang', aq), '쿠팡 검색 ↗', 'sub') +
     a(cfg.buildLink('elevenst', aq), '11번가 검색 ↗', 'sub');

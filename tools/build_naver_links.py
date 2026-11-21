@@ -80,8 +80,30 @@ def main() -> int:
         )
     )
     lines.append("};")
+    by_look = {}
+    for e in links:
+        for lid in e.get("looks", []):
+            by_look[lid] = {
+                "u": e["url"],
+                "p": e.get("product", ""),
+                "pr": int(e.get("price") or 0),
+            }
+    lines.append("window.SFP_NAVER_BY_LOOK = {")
+    lines.append(
+        ",\n".join(
+            '  %s: {"u": %s, "p": %s, "pr": %d}'
+            % (
+                json.dumps(k),
+                json.dumps(v["u"]),
+                json.dumps(v["p"], ensure_ascii=False),
+                v["pr"],
+            )
+            for k, v in by_look.items()
+        )
+    )
+    lines.append("};")
     OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"{OUT.name}: {len(by_key)} keys / {len(links)} links")
+    print(f"{OUT.name}: {len(by_key)} keys / {len(links)} links / {len(by_look)} looks")
     return 0
 
 
