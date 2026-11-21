@@ -1304,3 +1304,37 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 }
 .chip-more{background:var(--soft);border-style:dashed;color:var(--sub)}
 .chip-more:hover{background:var(--blue-tint);border-color:var(--blue);color:var(--blue-deep)}
+
+/* ---------------- exclusive AI models ---------------- */
+.models{padding:44px 0 8px}
+.models-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:22px}
+.models-head h2{font-size:clamp(23px,2.6vw,33px);font-weight:800;letter-spacing:-.035em;color:var(--ink)}
+.model-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.model-grid li{min-width:0}
+.model-card{
+  width:100%;display:flex;flex-direction:column;text-align:left;padding:0;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.model-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-1);border-color:var(--line-strong)}
+.model-card picture{display:block;aspect-ratio:2/3;background:var(--soft);overflow:hidden}
+.model-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.model-card:hover img{transform:scale(1.04)}
+.mc-body{display:flex;flex-direction:column;gap:3px;padding:12px 12px 14px}
+.mc-body b{font-size:14.5px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.mc-body i{font-style:normal;font-size:9.5px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+.mc-body small{font-size:11.5px;color:var(--sub)}
+.mc-body em{font-style:normal;font-size:11px;color:var(--muted);line-height:1.45;word-break:keep-all}
+.mc-count{margin-top:6px;font-size:11px;font-weight:800;color:var(--blue-deep);background:var(--blue-soft);padding:4px 8px;border-radius:999px;align-self:flex-start}
+.model-card.is-on{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue-soft)}
+.models-note{margin-top:14px;font-size:11.5px;color:var(--muted);line-height:1.7}
+@media (max-width:1080px){
+  .model-grid{grid-template-columns:repeat(3,1fr);gap:12px}
+}
+@media (max-width:760px){
+  .models{padding:32px 0 4px}
+  .models-head{flex-direction:column;align-items:flex-start;gap:12px}
+  .model-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .mc-body{padding:10px 10px 12px}
+  .mc-body b{font-size:13.5px}
+}

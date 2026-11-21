@@ -7,6 +7,7 @@
 
   var CFG = window.SFP_CONFIG;
   var LOOKS = window.SFP_LOOKS || [];
+  var MODELS = window.SFP_MODELS || [];
 
   /* ---------------- labels ---------------- */
   var TYPE_LABEL = { airport: "공항", variety: "예능", daily: "일상" };
@@ -77,7 +78,7 @@
   var closet = readCloset();
 
   /* ---------------- state ---------------- */
-  var state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", ids: [], budget: false, closet: false, sort: "recent" };
+  var state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], budget: false, closet: false, sort: "recent" };
   var lastFocus = null;
 
   function readURL() {
@@ -87,6 +88,7 @@
     state.cat = CAT_ORDER.indexOf(p.get("cat")) > -1 ? p.get("cat") : "";
     state.mood = MOOD_ORDER.indexOf(p.get("mood")) > -1 ? p.get("mood") : "";
     state.celeb = p.get("celeb") || "";
+    state.model = MODELS.some(function (m) { return m.id === p.get("model"); }) ? p.get("model") : "";
     state.brand = p.get("brand") || "";
     state.band = ["u10", "10to30", "30to100", "o100"].indexOf(p.get("band")) > -1 ? p.get("band") : "";
     state.ids = (p.get("ids") || "").split(",").filter(Boolean);
@@ -101,6 +103,7 @@
     if (state.cat) p.set("cat", state.cat);
     if (state.mood) p.set("mood", state.mood);
     if (state.celeb) p.set("celeb", state.celeb);
+    if (state.model) p.set("model", state.model);
     if (state.brand) p.set("brand", state.brand);
     if (state.band) p.set("band", state.band);
     if (state.ids && state.ids.length) p.set("ids", state.ids.join(","));
@@ -113,7 +116,13 @@
   }
 
   /* ---------------- photo credit helpers ---------------- */
+  function modelOf(look) {
+    if (!look || !look.modelId) return null;
+    for (var i = 0; i < MODELS.length; i++) if (MODELS[i].id === look.modelId) return MODELS[i];
+    return null;
+  }
   function photoCredit(look) {
+    if (look && look.model) return "AI 모델 " + look.model + " 착용 컷";
     var ph = look.photo || {};
     if (!ph.label) return "";
     return (ph.kind === "product" ? "제품 이미지 · " : "사진 · ") + ph.label;
@@ -173,6 +182,7 @@
     if (state.cat && look.category !== state.cat) return false;
     if (state.mood && (look.mood || []).indexOf(state.mood) === -1) return false;
     if (state.celeb && look.celeb !== state.celeb) return false;
+    if (state.model && look.modelId !== state.model) return false;
     if (state.brand && look.item.brand !== state.brand) return false;
     if (state.band) {
       var pv = price(look);
@@ -190,7 +200,7 @@
         look.item.brand, look.item.brandEn, look.item.name, look.item.nameEn, look.item.sku,
         look.alt.brand, look.alt.name,
         (look.mood || []).map(function (m) { return MOOD_LABEL[m]; }).join(" "),
-        CAT_LABEL[look.category], TYPE_LABEL[look.type]
+        CAT_LABEL[look.category], TYPE_LABEL[look.type], look.model || ""
       ].join(" ").toLowerCase();
       var terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
       for (var i = 0; i < terms.length; i++) if (hay.indexOf(terms[i]) === -1) return false;
@@ -262,6 +272,10 @@
     var parts = [];
     if (state.q) parts.push('"' + esc(state.q) + '" 검색');
     if (state.celeb) parts.push(esc(state.celeb));
+    if (state.model) {
+      var mm = MODELS.filter(function (m) { return m.id === state.model; })[0];
+      parts.push("AI 모델 " + esc(mm ? mm.name : state.model));
+    }
     if (state.brand) parts.push(esc(state.brand));
     if (state.band) {
       parts.push({ u10: "정품 10만 원 이하", "10to30": "정품 10~30만 원", "30to100": "정품 30~100만 원", o100: "정품 100만 원 이상" }[state.band]);
@@ -291,6 +305,7 @@
       else if (key === "cat") on = state.cat === val;
       else if (key === "mood") on = state.mood === val;
       else if (key === "celeb") on = state.celeb === val;
+      else if (key === "model") on = state.model === val;
       else if (key === "brand") on = state.brand === val;
       else if (key === "band") on = state.band === val;
       btn.setAttribute("aria-pressed", on ? "true" : "false");
@@ -310,6 +325,7 @@
       paintChips();
       renderGrid();
       writeURL();
+      highlightModelCards();
     });
   }
 
@@ -380,8 +396,8 @@
     $("#modal-art").innerHTML = picture(look, true) +
       '<span class="modal-art-shade" aria-hidden="true"></span>' +
       '<span class="modal-art-label" id="modal-art-label"></span>' +
-      '<span class="modal-art-note">' + esc(photoCredit(look) + (ph.what ? " · " + ph.what : "")) + "</span>" +
-      (ph.url ? '<a class="modal-art-src" href="' + esc(ph.url) + '" target="_blank" rel="noopener nofollow">사진 출처 열기 ↗</a>' : "");
+      '<span class="modal-art-note">' + esc("스타핏픽 전속 AI 모델 " + (look.model || "") + " 착용 연출 컷" + (ph.label ? " · 원본 착장 확인: " + ph.label + (ph.what ? " " + ph.what : "") : "")) + "</span>" +
+      (ph.url ? '<a class="modal-art-src" href="' + esc(ph.url) + '" target="_blank" rel="noopener nofollow">원본 착장 출처 열기 ↗</a>' : "");
     $("#modal-art-label").textContent = look.celeb + " · " + look.headline;
     $("#modal-eyebrow").textContent = look.show + " · " + look.group;
     $("#modal-title").textContent = look.item.name;
@@ -1337,14 +1353,14 @@
       }
     });
     window.addEventListener("popstate", function () {
-      readURL(); syncControls(); paintChips(); paintHotTags(); renderGrid();
+      readURL(); syncControls(); paintChips(); paintHotTags(); renderGrid(); highlightModelCards();
       var p = new URLSearchParams(location.search);
       if (p.get("look")) openModal(p.get("look")); else closeModal();
     });
   }
 
   function resetFilters() {
-    state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", ids: [], budget: false, closet: false, sort: "recent" };
+    state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], budget: false, closet: false, sort: "recent" };
     syncControls(); paintChips(); paintQuick(); renderGrid(); writeURL(); syncFilterMore(); paintHotTags();
   }
   function syncControls() {
@@ -1443,17 +1459,57 @@
     });
   }
 
+  /* ---------------- exclusive models ---------------- */
+  function modelCount(id) {
+    return LOOKS.filter(function (l) { return l.modelId === id; }).length;
+  }
+  function initModels() {
+    var chips = $("#chips-model");
+    if (chips && MODELS.length) {
+      chips.innerHTML = MODELS.map(function (m) {
+        return '<button type="button" class="chip" data-key="model" data-value="' + m.id + '" aria-pressed="false">' +
+          esc(m.name) + '<span class="num">' + modelCount(m.id) + "</span></button>";
+      }).join("");
+    }
+    var grid = $("#model-grid");
+    if (!grid) return;
+    var cards = grid.querySelectorAll("[data-model]");
+    Array.prototype.forEach.call(cards, function (card) {
+      card.addEventListener("click", function () {
+        var id = card.getAttribute("data-model");
+        state.model = state.model === id ? "" : id;
+        paintChips();
+        renderGrid();
+        writeURL();
+        var target = document.getElementById("looks");
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+    highlightModelCards();
+  }
+  function highlightModelCards() {
+    var grid = $("#model-grid");
+    if (!grid) return;
+    Array.prototype.forEach.call(grid.querySelectorAll("[data-model]"), function (card) {
+      var on = card.getAttribute("data-model") === state.model;
+      card.setAttribute("aria-pressed", on ? "true" : "false");
+      card.classList.toggle("is-on", on);
+    });
+  }
+
   /* ---------------- init ---------------- */
   function init() {
     buildChips($("#chips-type"), TYPE_ORDER, TYPE_LABEL, "type");
     buildChips($("#chips-cat"), CAT_ORDER, CAT_LABEL, "cat");
     buildChips($("#chips-mood"), MOOD_ORDER, MOOD_LABEL, "mood");
     buildCelebChips();
+    initModels();
 
     readURL();
     syncControls();
     paintChips();
     renderGrid();
+    highlightModelCards();
     initStats();
     initAds();
     updateCloset();
