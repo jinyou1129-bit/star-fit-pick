@@ -3069,9 +3069,9 @@ window.SFP_LOOKS = [
   },
   {
     id: "koso-young-peuterey-togo",
-    image: "assets/looks/koso-young-peuterey-togo.webp?v=2026112301",
-    imageJpg: "assets/looks/koso-young-peuterey-togo.jpg?v=2026112301",
-    photo: {label: "페트레이 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2111/"},
+    image: "assets/looks/koso-young-peuterey-togo.webp?v=2026112302",
+    imageJpg: "assets/looks/koso-young-peuterey-togo.jpg?v=2026112302",
+    photo: {label: "페트레이 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2089/"},
     imageAlt: "와인 컬러 26 토고 다운 패딩을 입은 모델의 페트레이 공식 제품 컷",
     celeb: "고소영",
     group: "배우",
@@ -3097,7 +3097,7 @@ window.SFP_LOOKS = [
         season: "2026 FW",
         fit: "글로시한 표면에 퀼팅을 넣은 크롭 실루엣, 목을 감싸는 하이 스탠드 카라",
         cons: "공식몰 기준 품절 옵션이 있고, 126만 원대라 대안과의 가격 차가 100만 원 이상",
-        officialUrl: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2111/"
+        officialUrl: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2089/"
     },
     story: "고소영이 유튜브 촬영에서 입은 와인색 패딩입니다. 청바지에 패딩 하나만 걸쳤는데도 50대라는 나이가 믿기지 않을 만큼 정돈돼 보였습니다. 페트레이의 2026 FW 26 TOGO, 소비자가 1,580,000원에 공식몰 판매가 1,264,000원입니다. 100만 원대 패딩이 왜 비싼지 설명이 되는 제품이라, 가격보다 소재와 실루엣을 먼저 보게 됩니다.",
     point: "글로시한 패딩은 빛을 받으면 부피가 커 보입니다. 고소영은 하이 스탠드 카라를 세우지 않고 자연스럽게 눕혀 목선을 드러냈습니다. 이렇게 눕히면 얼굴 주변이 밝아지고 패딩의 부피가 줄어 보입니다. 아래에 연청 데님을 맞추면 와인색이 무거워지지 않고, 검정 팬츠를 입으면 밤에 입는 옷처럼 보입니다.",
@@ -3105,7 +3105,7 @@ window.SFP_LOOKS = [
     sources: [
         {
             label: "페트레이 공식몰 26 TOGO 토고",
-            url: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2111/"
+            url: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2089/"
         },
         {
             label: "셀럽모드 고소영 페트레이 패딩 정보",
