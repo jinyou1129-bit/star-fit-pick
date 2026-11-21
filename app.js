@@ -401,6 +401,11 @@
       (ph.url ? '<a class="modal-art-src" href="' + esc(ph.url) + '" target="_blank" rel="noopener nofollow">원본 착장 출처 열기 ↗</a>' : "") +
       '</div>';
     $("#modal-art-label").textContent = look.celeb + " · " + look.headline;
+    // 다른 착장으로 넘어올 때 본문/시트 스크롤을 맨 위로
+    var mbody = document.querySelector("#modal .modal-body");
+    if (mbody) mbody.scrollTop = 0;
+    var mcard = document.querySelector("#modal .modal-card");
+    if (mcard) mcard.scrollTop = 0;
     $("#modal-eyebrow").textContent = look.show + " · " + look.group;
     $("#modal-title").textContent = look.item.name;
     $("#modal-scene").textContent = look.scene;
