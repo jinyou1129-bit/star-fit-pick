@@ -219,6 +219,7 @@
   var q = o.brand + ' ' + o.name;
   var aq = o.alt.query;
   var altLabel = "공식 판매처 검색 ↗";
+  if (cfg.naverPick && cfg.naverPick(aq)) altLabel = '네이버 쇼핑커넥트 ↗';
   document.getElementById('buy-official').innerHTML =
     a(o.officialUrl, '제품·판매 페이지 ↗') +
     a(cfg.buildLink('naver', q), (cfg.naverPick && cfg.naverPick(q)) ? '네이버 쇼핑커넥트 ↗' : '네이버 쇼핑 검색 ↗', 'sub') +
