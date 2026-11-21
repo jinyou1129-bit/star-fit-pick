@@ -555,10 +555,12 @@ ul,ol{padding:0;list-style:none}
   #modal .modal-art{min-height:0;max-height:none;aspect-ratio:3 / 4}
   .modal-body{padding:22px 20px 28px}
 }
-/* 화면이 짧은 폰: 3:4 높이를 그대로 두면 본문이 거의 안 보이므로 사진 영역만 줄이고
-   사진은 contain으로 담아 비율을 유지한다(늘리거나 자르지 않음). */
+/* 화면이 짧은 폰: 3:4 사진 높이를 그대로 두면 본문이 거의 안 보이므로,
+   시트 전체를 스크롤하고 사진은 폭 100%의 3:4 그대로 둔다(늘리거나 자르지 않음). */
 @media (max-width:760px) and (max-height:730px){
-  #modal .modal-art{aspect-ratio:auto;height:46vh}
+  #modal .modal-card{aspect-ratio:auto;height:94vh;height:94dvh;max-height:none;display:block;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  #modal .modal-art{aspect-ratio:3 / 4;width:100%;height:auto;max-height:none}
+  #modal .modal-body{height:auto;overflow:visible}
 }
 @media (max-width:760px){
   .wrap{padding:0 18px}
