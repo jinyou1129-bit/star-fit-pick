@@ -17,8 +17,8 @@ window.SFP_MODELS = [
     ageGroup: "20대 초반",
     height: 170,
     mood: "청순 글래머 · K-POP 비주얼",
-    image: "assets/models/seo-arin.jpg?v=2026112102",
-    imageWebp: "assets/models/seo-arin.webp?v=2026112102"
+    image: "assets/models/seo-arin.jpg?v=2026112103",
+    imageWebp: "assets/models/seo-arin.webp?v=2026112103"
   },
   {
     id: "yun-sera",
@@ -27,8 +27,8 @@ window.SFP_MODELS = [
     ageGroup: "20대 후반~30대 초반",
     height: 169,
     mood: "우아 글래머 · 여신 웨이브",
-    image: "assets/models/yun-sera.jpg?v=2026112102",
-    imageWebp: "assets/models/yun-sera.webp?v=2026112102"
+    image: "assets/models/yun-sera.jpg?v=2026112103",
+    imageWebp: "assets/models/yun-sera.webp?v=2026112103"
   },
   {
     id: "ella-lindgren",
@@ -37,8 +37,8 @@ window.SFP_MODELS = [
     ageGroup: "20대",
     height: 174,
     mood: "엘프 여신 · 톱스타 비주얼",
-    image: "assets/models/ella-lindgren.jpg?v=2026112102",
-    imageWebp: "assets/models/ella-lindgren.webp?v=2026112102"
+    image: "assets/models/ella-lindgren.jpg?v=2026112103",
+    imageWebp: "assets/models/ella-lindgren.webp?v=2026112103"
   },
   {
     id: "baek-sion",
@@ -47,8 +47,8 @@ window.SFP_MODELS = [
     ageGroup: "20대",
     height: 182,
     mood: "트렌디 캐주얼 · 린 애슬레틱",
-    image: "assets/models/baek-sion.jpg?v=2026112102",
-    imageWebp: "assets/models/baek-sion.webp?v=2026112102"
+    image: "assets/models/baek-sion.jpg?v=2026112103",
+    imageWebp: "assets/models/baek-sion.webp?v=2026112103"
   },
   {
     id: "cha-ujin",
@@ -57,8 +57,8 @@ window.SFP_MODELS = [
     ageGroup: "30대",
     height: 183,
     mood: "댄디 시티 · 신뢰감 있는 비주얼",
-    image: "assets/models/cha-ujin.jpg?v=2026112102",
-    imageWebp: "assets/models/cha-ujin.webp?v=2026112102"
+    image: "assets/models/cha-ujin.jpg?v=2026112103",
+    imageWebp: "assets/models/cha-ujin.webp?v=2026112103"
   },
   {
     id: "luke-askell",
@@ -67,16 +67,16 @@ window.SFP_MODELS = [
     ageGroup: "20대",
     height: 186,
     mood: "엘프 프린스 · 톱배우 비주얼",
-    image: "assets/models/luke-askell.jpg?v=2026112102",
-    imageWebp: "assets/models/luke-askell.webp?v=2026112102"
+    image: "assets/models/luke-askell.jpg?v=2026112103",
+    imageWebp: "assets/models/luke-askell.webp?v=2026112103"
   }
 ];
 
 window.SFP_LOOKS = [
   {
     "id": "wonyoung-belier-fur",
-    "image": "assets/looks/wonyoung-belier-fur.webp?v=2026112102",
-    "imageJpg": "assets/looks/wonyoung-belier-fur.jpg?v=2026112102",
+    "image": "assets/looks/wonyoung-belier-fur.webp?v=2026112103",
+    "imageJpg": "assets/looks/wonyoung-belier-fur.jpg?v=2026112103",
     "model": "서아린",
     "modelId": "seo-arin",
     "photo": {
@@ -154,8 +154,8 @@ window.SFP_LOOKS = [
   },
   {
     "id": "yujin-lcdc-shearling",
-    "image": "assets/looks/yujin-lcdc-shearling.webp?v=2026112102",
-    "imageJpg": "assets/looks/yujin-lcdc-shearling.jpg?v=2026112102",
+    "image": "assets/looks/yujin-lcdc-shearling.webp?v=2026112103",
+    "imageJpg": "assets/looks/yujin-lcdc-shearling.jpg?v=2026112103",
     "model": "윤세라",
     "modelId": "yun-sera",
     "photo": {
@@ -229,8 +229,8 @@ window.SFP_LOOKS = [
   },
   {
     "id": "karina-mlb-curve",
-    "image": "assets/looks/karina-mlb-curve.webp?v=2026112102",
-    "imageJpg": "assets/looks/karina-mlb-curve.jpg?v=2026112102",
+    "image": "assets/looks/karina-mlb-curve.webp?v=2026112103",
+    "imageJpg": "assets/looks/karina-mlb-curve.jpg?v=2026112103",
     "model": "서아린",
     "modelId": "seo-arin",
     "photo": {
@@ -304,8 +304,8 @@ window.SFP_LOOKS = [
   },
   {
     "id": "minnie-acne-blouson",
-    "image": "assets/looks/minnie-acne-blouson.webp?v=2026112102",
-    "imageJpg": "assets/looks/minnie-acne-blouson.jpg?v=2026112102",
+    "image": "assets/looks/minnie-acne-blouson.webp?v=2026112103",
+    "imageJpg": "assets/looks/minnie-acne-blouson.jpg?v=2026112103",
     "model": "엘라",
     "modelId": "ella-lindgren",
     "photo": {
@@ -379,8 +379,8 @@ window.SFP_LOOKS = [
   },
   {
     "id": "sakura-miumiu-fleece",
-    "image": "assets/looks/sakura-miumiu-fleece.webp?v=2026112102",
-    "imageJpg": "assets/looks/sakura-miumiu-fleece.jpg?v=2026112102",
+    "image": "assets/looks/sakura-miumiu-fleece.webp?v=2026112103",
+    "imageJpg": "assets/looks/sakura-miumiu-fleece.jpg?v=2026112103",
     "model": "엘라",
     "modelId": "ella-lindgren",
     "photo": {
@@ -454,8 +454,8 @@ window.SFP_LOOKS = [
   },
   {
     "id": "isol-reisemiya-mustang",
-    "image": "assets/looks/isol-reisemiya-mustang.webp?v=2026112102",
-    "imageJpg": "assets/looks/isol-reisemiya-mustang.jpg?v=2026112102",
+    "image": "assets/looks/isol-reisemiya-mustang.webp?v=2026112103",
+    "imageJpg": "assets/looks/isol-reisemiya-mustang.jpg?v=2026112103",
     "model": "엘라",
     "modelId": "ella-lindgren",
     "photo": {
@@ -533,8 +533,8 @@ window.SFP_LOOKS = [
   },
   {
     "id": "jiwoo-bittercells-coat",
-    "image": "assets/looks/jiwoo-bittercells-coat.webp?v=2026112102",
-    "imageJpg": "assets/looks/jiwoo-bittercells-coat.jpg?v=2026112102",
+    "image": "assets/looks/jiwoo-bittercells-coat.webp?v=2026112103",
+    "imageJpg": "assets/looks/jiwoo-bittercells-coat.jpg?v=2026112103",
     "model": "윤세라",
     "modelId": "yun-sera",
     "photo": {
@@ -607,8 +607,8 @@ window.SFP_LOOKS = [
   },
   {
     "id": "miyeon-somewherebutter-knit",
-    "image": "assets/looks/miyeon-somewherebutter-knit.webp?v=2026112102",
-    "imageJpg": "assets/looks/miyeon-somewherebutter-knit.jpg?v=2026112102",
+    "image": "assets/looks/miyeon-somewherebutter-knit.webp?v=2026112103",
+    "imageJpg": "assets/looks/miyeon-somewherebutter-knit.jpg?v=2026112103",
     "model": "서아린",
     "modelId": "seo-arin",
     "photo": {
@@ -686,8 +686,8 @@ window.SFP_LOOKS = [
   },
   {
     "id": "sooin-yeel-hoodie",
-    "image": "assets/looks/sooin-yeel-hoodie.webp?v=2026112102",
-    "imageJpg": "assets/looks/sooin-yeel-hoodie.jpg?v=2026112102",
+    "image": "assets/looks/sooin-yeel-hoodie.webp?v=2026112103",
+    "imageJpg": "assets/looks/sooin-yeel-hoodie.jpg?v=2026112103",
     "model": "엘라",
     "modelId": "ella-lindgren",
     "photo": {
@@ -761,8 +761,8 @@ window.SFP_LOOKS = [
   },
   {
     "id": "anna-lhas-cardigan",
-    "image": "assets/looks/anna-lhas-cardigan.webp?v=2026112102",
-    "imageJpg": "assets/looks/anna-lhas-cardigan.jpg?v=2026112102",
+    "image": "assets/looks/anna-lhas-cardigan.webp?v=2026112103",
+    "imageJpg": "assets/looks/anna-lhas-cardigan.jpg?v=2026112103",
     "model": "서아린",
     "modelId": "seo-arin",
     "photo": {
@@ -832,8 +832,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jiwon-aloro-velvet",
-    image: "assets/looks/jiwon-aloro-velvet.webp?v=2026112102",
-    imageJpg: "assets/looks/jiwon-aloro-velvet.jpg?v=2026112102",
+    image: "assets/looks/jiwon-aloro-velvet.webp?v=2026112103",
+    imageJpg: "assets/looks/jiwon-aloro-velvet.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "PAP 매거진", kind: "photo", what: "공항 출국 현장 촬영", url: "https://www.pap-magazine.com/article/kim-ji-won-duvetica-airport-fashion-japan-fan-meeting"},
@@ -882,8 +882,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jiwon-teramo-backpack",
-    image: "assets/looks/jiwon-teramo-backpack.webp?v=2026112102",
-    imageJpg: "assets/looks/jiwon-teramo-backpack.jpg?v=2026112102",
+    image: "assets/looks/jiwon-teramo-backpack.webp?v=2026112103",
+    imageJpg: "assets/looks/jiwon-teramo-backpack.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "PAP 매거진", kind: "photo", what: "공항 출국 현장 촬영", url: "https://www.pap-magazine.com/article/kim-ji-won-duvetica-airport-fashion-japan-fan-meeting"},
@@ -931,8 +931,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jennie-subu-dot",
-    image: "assets/looks/jennie-subu-dot.webp?v=2026112102",
-    imageJpg: "assets/looks/jennie-subu-dot.jpg?v=2026112102",
+    image: "assets/looks/jennie-subu-dot.webp?v=2026112103",
+    imageJpg: "assets/looks/jennie-subu-dot.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "제니 인스타그램", kind: "photo", what: "인스타그램 공개 사진", url: "https://www.instagram.com/jennierubyjane/"},
@@ -981,8 +981,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "wooyoung-tomboy-check",
-    image: "assets/looks/wooyoung-tomboy-check.webp?v=2026112102",
-    imageJpg: "assets/looks/wooyoung-tomboy-check.jpg?v=2026112102",
+    image: "assets/looks/wooyoung-tomboy-check.webp?v=2026112103",
+    imageJpg: "assets/looks/wooyoung-tomboy-check.jpg?v=2026112103",
     model: "백시온",
     modelId: "baek-sion",
     photo: {label: "디스패치", kind: "photo", what: "공항 출국 현장 촬영", url: "https://www.dispatch.co.kr/2342671"},
@@ -1031,8 +1031,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "yoonseok-kume-knit",
-    image: "assets/looks/yoonseok-kume-knit.webp?v=2026112102",
-    imageJpg: "assets/looks/yoonseok-kume-knit.jpg?v=2026112102",
+    image: "assets/looks/yoonseok-kume-knit.webp?v=2026112103",
+    imageJpg: "assets/looks/yoonseok-kume-knit.jpg?v=2026112103",
     model: "차우진",
     modelId: "cha-ujin",
     photo: {label: "SBS 틈만나면", kind: "photo", what: "64회 방송 화면", url: "https://programs.sbs.co.kr/enter/teum/vod/82255/22000639190"},
@@ -1079,8 +1079,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "seungho-diesel-biker",
-    image: "assets/looks/seungho-diesel-biker.webp?v=2026112102",
-    imageJpg: "assets/looks/seungho-diesel-biker.jpg?v=2026112102",
+    image: "assets/looks/seungho-diesel-biker.webp?v=2026112103",
+    imageJpg: "assets/looks/seungho-diesel-biker.jpg?v=2026112103",
     model: "루크",
     modelId: "luke-askell",
     photo: {label: "SBS 틈만나면", kind: "photo", what: "62회 방송 화면", url: "https://programs.sbs.co.kr/enter/teum/clip/82063/OC482566177"},
@@ -1128,8 +1128,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "doyeon-atelier-yak",
-    image: "assets/looks/doyeon-atelier-yak.webp?v=2026112102",
-    imageJpg: "assets/looks/doyeon-atelier-yak.jpg?v=2026112102",
+    image: "assets/looks/doyeon-atelier-yak.webp?v=2026112103",
+    imageJpg: "assets/looks/doyeon-atelier-yak.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "아틀리에 나인 룩북", kind: "product", what: "브랜드 공식 룩북", url: "https://nain.co.kr/"},
@@ -1178,8 +1178,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "yeeun-mahagrid-zip",
-    image: "assets/looks/yeeun-mahagrid-zip.webp?v=2026112102",
-    imageJpg: "assets/looks/yeeun-mahagrid-zip.jpg?v=2026112102",
+    image: "assets/looks/yeeun-mahagrid-zip.webp?v=2026112103",
+    imageJpg: "assets/looks/yeeun-mahagrid-zip.jpg?v=2026112103",
     model: "엘라",
     modelId: "ella-lindgren",
     photo: {label: "SBS 런닝맨", kind: "photo", what: "825회 방송 화면", url: "https://programs.sbs.co.kr/enter/runningman"},
@@ -1228,8 +1228,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "sechan-wakei-pants",
-    image: "assets/looks/sechan-wakei-pants.webp?v=2026112102",
-    imageJpg: "assets/looks/sechan-wakei-pants.jpg?v=2026112102",
+    image: "assets/looks/sechan-wakei-pants.webp?v=2026112103",
+    imageJpg: "assets/looks/sechan-wakei-pants.jpg?v=2026112103",
     model: "차우진",
     modelId: "cha-ujin",
     photo: {label: "와이케이 공식", kind: "product", what: "브랜드 제품 컷", url: "https://www.musinsa.com/search/musinsa/integration?q=%EC%99%80%EC%9D%B4%EC%BC%80%EC%9D%B4%20%EC%8A%A4%EC%BF%BC%ED%8A%B8%ED%8C%AC%EC%B8%A0"},
@@ -1276,8 +1276,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "haha-adidas-hyperboost",
-    image: "assets/looks/haha-adidas-hyperboost.webp?v=2026112102",
-    imageJpg: "assets/looks/haha-adidas-hyperboost.jpg?v=2026112102",
+    image: "assets/looks/haha-adidas-hyperboost.webp?v=2026112103",
+    imageJpg: "assets/looks/haha-adidas-hyperboost.jpg?v=2026112103",
     model: "차우진",
     modelId: "cha-ujin",
     photo: {label: "아디다스 공식", kind: "product", what: "브랜드 제품 컷", url: "https://www.adidas.co.kr/%ED%95%98%EC%9D%B4%ED%8D%BC%EB%B6%80%EC%8A%A4%ED%8A%B8-ephr-lt/KZ8509.html"},
@@ -1325,8 +1325,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jaeseok-satur-argyle",
-    image: "assets/looks/jaeseok-satur-argyle.webp?v=2026112102",
-    imageJpg: "assets/looks/jaeseok-satur-argyle.jpg?v=2026112102",
+    image: "assets/looks/jaeseok-satur-argyle.webp?v=2026112103",
+    imageJpg: "assets/looks/jaeseok-satur-argyle.jpg?v=2026112103",
     model: "차우진",
     modelId: "cha-ujin",
     photo: {label: "SBS 틈만나면", kind: "photo", what: "66회 방송 화면", url: "https://www.youtube.com/watch?v=Ziw_H1EQFFY"},
@@ -1379,8 +1379,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "seongjae-polo-nautical",
-    image: "assets/looks/seongjae-polo-nautical.webp?v=2026112102",
-    imageJpg: "assets/looks/seongjae-polo-nautical.jpg?v=2026112102",
+    image: "assets/looks/seongjae-polo-nautical.webp?v=2026112103",
+    imageJpg: "assets/looks/seongjae-polo-nautical.jpg?v=2026112103",
     model: "백시온",
     modelId: "baek-sion",
     photo: {label: "SBS 틈만나면", kind: "photo", what: "66회 방송 화면", url: "https://www.youtube.com/watch?v=gYFmpjhKH5o"},
@@ -1433,8 +1433,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "yuri-marni-vest",
-    image: "assets/looks/yuri-marni-vest.webp?v=2026112102",
-    imageJpg: "assets/looks/yuri-marni-vest.jpg?v=2026112102",
+    image: "assets/looks/yuri-marni-vest.webp?v=2026112103",
+    imageJpg: "assets/looks/yuri-marni-vest.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "MBC 나 혼자 산다", kind: "photo", what: "671회 방송 화면", url: "https://www.youtube.com/watch?v=ieNwLHCSak8"},
@@ -1487,8 +1487,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "songkang-loewe-duffle",
-    image: "assets/looks/songkang-loewe-duffle.webp?v=2026112102",
-    imageJpg: "assets/looks/songkang-loewe-duffle.jpg?v=2026112102",
+    image: "assets/looks/songkang-loewe-duffle.webp?v=2026112103",
+    imageJpg: "assets/looks/songkang-loewe-duffle.jpg?v=2026112103",
     model: "루크",
     modelId: "luke-askell",
     photo: {label: "일간스포츠", kind: "photo", what: "김포공항 출국 현장 촬영", url: "https://isplus.com/article/view/isp202611110144"},
@@ -1541,8 +1541,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "yihyun-rel-lyra",
-    image: "assets/looks/yihyun-rel-lyra.webp?v=2026112102",
-    imageJpg: "assets/looks/yihyun-rel-lyra.jpg?v=2026112102",
+    image: "assets/looks/yihyun-rel-lyra.webp?v=2026112103",
+    imageJpg: "assets/looks/yihyun-rel-lyra.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "리엘 공식 룩북", kind: "product", what: "브랜드 공식 룩북 컷 (조이현 실착 사진 아님)", url: "https://re-l.co.kr/product/lyra-lace-mini-dress-ivory/4632/category/467/display/1/"},
@@ -1596,8 +1596,8 @@ window.SFP_LOOKS = [
 ,
   {
     id: "nayeon-prevail-bomber",
-    image: "assets/looks/nayeon-prevail-bomber.webp?v=2026112102",
-    imageJpg: "assets/looks/nayeon-prevail-bomber.jpg?v=2026112102",
+    image: "assets/looks/nayeon-prevail-bomber.webp?v=2026112103",
+    imageJpg: "assets/looks/nayeon-prevail-bomber.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "뉴스엔", kind: "photo", what: "2026.11.19 김포국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611190648425510"},
@@ -1659,8 +1659,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "sooin-grove-dove-fur",
-    image: "assets/looks/sooin-grove-dove-fur.webp?v=2026112102",
-    imageJpg: "assets/looks/sooin-grove-dove-fur.jpg?v=2026112102",
+    image: "assets/looks/sooin-grove-dove-fur.webp?v=2026112103",
+    imageJpg: "assets/looks/sooin-grove-dove-fur.jpg?v=2026112103",
     model: "엘라",
     modelId: "ella-lindgren",
     photo: {label: "뉴스엔", kind: "photo", what: "2026.11.18 인천국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611181608485510"},
@@ -1722,8 +1722,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "kiya-nomanual-crop-fur",
-    image: "assets/looks/kiya-nomanual-crop-fur.webp?v=2026112102",
-    imageJpg: "assets/looks/kiya-nomanual-crop-fur.jpg?v=2026112102",
+    image: "assets/looks/kiya-nomanual-crop-fur.webp?v=2026112103",
+    imageJpg: "assets/looks/kiya-nomanual-crop-fur.jpg?v=2026112103",
     model: "엘라",
     modelId: "ella-lindgren",
     photo: {label: "뉴스엔", kind: "photo", what: "2026.11.19 인천국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611190804053510"},
@@ -1785,8 +1785,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "youngseo-tomboy-fur",
-    image: "assets/looks/youngseo-tomboy-fur.webp?v=2026112102",
-    imageJpg: "assets/looks/youngseo-tomboy-fur.jpg?v=2026112102",
+    image: "assets/looks/youngseo-tomboy-fur.webp?v=2026112103",
+    imageJpg: "assets/looks/youngseo-tomboy-fur.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "뉴스엔", kind: "photo", what: "2026.11.18 김포국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611181758583510"},
@@ -1848,8 +1848,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jiheon-grove-stripe",
-    image: "assets/looks/jiheon-grove-stripe.webp?v=2026112102",
-    imageJpg: "assets/looks/jiheon-grove-stripe.jpg?v=2026112102",
+    image: "assets/looks/jiheon-grove-stripe.webp?v=2026112103",
+    imageJpg: "assets/looks/jiheon-grove-stripe.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "백지헌 인스타그램", kind: "photo", what: "2026.11.19 공개 사진 (유찬의패션아카이브 경유 확인)", url: "https://youchan223.tistory.com/243"},
@@ -1907,8 +1907,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "seulgi-aviemuah-lambskin",
-    image: "assets/looks/seulgi-aviemuah-lambskin.webp?v=2026112102",
-    imageJpg: "assets/looks/seulgi-aviemuah-lambskin.jpg?v=2026112102",
+    image: "assets/looks/seulgi-aviemuah-lambskin.webp?v=2026112103",
+    imageJpg: "assets/looks/seulgi-aviemuah-lambskin.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "아비에무아 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://aviemuah.com/product/%EB%9E%A8%EC%8A%A4%ED%82%A8-%EB%9E%A9-%EC%A0%90%ED%8D%BC/2797/category/273/display/1/"},
@@ -1966,8 +1966,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "nara-tonywack-tweed",
-    image: "assets/looks/nara-tonywack-tweed.webp?v=2026112102",
-    imageJpg: "assets/looks/nara-tonywack-tweed.jpg?v=2026112102",
+    image: "assets/looks/nara-tonywack-tweed.webp?v=2026112103",
+    imageJpg: "assets/looks/nara-tonywack-tweed.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "토니웩 공식", kind: "product", what: "브랜드 공식 룩북 컷 (실착 사진 아님)", url: "https://tonywack.tv/products/w-wool-tweed-jacket_-black"},
@@ -2029,8 +2029,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "inah-rheme-denim-racer",
-    image: "assets/looks/inah-rheme-denim-racer.webp?v=2026112102",
-    imageJpg: "assets/looks/inah-rheme-denim-racer.jpg?v=2026112102",
+    image: "assets/looks/inah-rheme-denim-racer.webp?v=2026112103",
+    imageJpg: "assets/looks/inah-rheme-denim-racer.jpg?v=2026112103",
     model: "엘라",
     modelId: "ella-lindgren",
     photo: {label: "리임 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://rheme.co.kr/product/list.html?cate_no=115"},
@@ -2092,8 +2092,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "sohyun-lmood-mohair",
-    image: "assets/looks/sohyun-lmood-mohair.webp?v=2026112102",
-    imageJpg: "assets/looks/sohyun-lmood-mohair.jpg?v=2026112102",
+    image: "assets/looks/sohyun-lmood-mohair.webp?v=2026112103",
+    imageJpg: "assets/looks/sohyun-lmood-mohair.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "엘무드 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7033992"},
@@ -2155,8 +2155,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "youngk-ami-cardigan",
-    image: "assets/looks/youngk-ami-cardigan.webp?v=2026112102",
-    imageJpg: "assets/looks/youngk-ami-cardigan.jpg?v=2026112102",
+    image: "assets/looks/youngk-ami-cardigan.webp?v=2026112103",
+    imageJpg: "assets/looks/youngk-ami-cardigan.jpg?v=2026112103",
     model: "백시온",
     modelId: "baek-sion",
     photo: {label: "아미 파리", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.wconcept.co.kr/Product/308888043"},
@@ -2218,8 +2218,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "siwan-siecle-denim-shirt",
-    image: "assets/looks/siwan-siecle-denim-shirt.webp?v=2026112102",
-    imageJpg: "assets/looks/siwan-siecle-denim-shirt.jpg?v=2026112102",
+    image: "assets/looks/siwan-siecle-denim-shirt.webp?v=2026112103",
+    imageJpg: "assets/looks/siwan-siecle-denim-shirt.jpg?v=2026112103",
     model: "루크",
     modelId: "luke-askell",
     photo: {label: "시에클 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/4833830"},
@@ -2281,8 +2281,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jaewook-sperone-suede",
-    image: "assets/looks/jaewook-sperone-suede.webp?v=2026112102",
-    imageJpg: "assets/looks/jaewook-sperone-suede.jpg?v=2026112102",
+    image: "assets/looks/jaewook-sperone-suede.webp?v=2026112103",
+    imageJpg: "assets/looks/jaewook-sperone-suede.jpg?v=2026112103",
     model: "차우진",
     modelId: "cha-ujin",
     photo: {label: "스페로네 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/3441579"},
@@ -2340,8 +2340,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "defconn-belier-trucker",
-    image: "assets/looks/defconn-belier-trucker.webp?v=2026112102",
-    imageJpg: "assets/looks/defconn-belier-trucker.jpg?v=2026112102",
+    image: "assets/looks/defconn-belier-trucker.webp?v=2026112103",
+    imageJpg: "assets/looks/defconn-belier-trucker.jpg?v=2026112103",
     model: "백시온",
     modelId: "baek-sion",
     photo: {label: "벨리에 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/5483102"},
@@ -2403,8 +2403,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "yikyung-liberclassy-knit",
-    image: "assets/looks/yikyung-liberclassy-knit.webp?v=2026112102",
-    imageJpg: "assets/looks/yikyung-liberclassy-knit.jpg?v=2026112102",
+    image: "assets/looks/yikyung-liberclassy-knit.webp?v=2026112103",
+    imageJpg: "assets/looks/yikyung-liberclassy-knit.jpg?v=2026112103",
     model: "백시온",
     modelId: "baek-sion",
     photo: {label: "리버클래시 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/6191059"},
@@ -2462,8 +2462,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jongmin-roaringrad-denim",
-    image: "assets/looks/jongmin-roaringrad-denim.webp?v=2026112102",
-    imageJpg: "assets/looks/jongmin-roaringrad-denim.jpg?v=2026112102",
+    image: "assets/looks/jongmin-roaringrad-denim.webp?v=2026112103",
+    imageJpg: "assets/looks/jongmin-roaringrad-denim.jpg?v=2026112103",
     model: "루크",
     modelId: "luke-askell",
     photo: {label: "로어링라드 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/3594915"},
@@ -2522,8 +2522,8 @@ window.SFP_LOOKS = [
 ,
   {
     id: "jiwoo-bittercells-halcoat",
-    image: "assets/looks/jiwoo-bittercells-halcoat.webp?v=2026112102",
-    imageJpg: "assets/looks/jiwoo-bittercells-halcoat.jpg?v=2026112102",
+    image: "assets/looks/jiwoo-bittercells-halcoat.webp?v=2026112103",
+    imageJpg: "assets/looks/jiwoo-bittercells-halcoat.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "뉴스엔", kind: "photo", what: "2026.11.18 김포국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611180911113510"},
@@ -2585,8 +2585,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "mei-hugyourself-coat",
-    image: "assets/looks/mei-hugyourself-coat.webp?v=2026112102",
-    imageJpg: "assets/looks/mei-hugyourself-coat.jpg?v=2026112102",
+    image: "assets/looks/mei-hugyourself-coat.webp?v=2026112103",
+    imageJpg: "assets/looks/mei-hugyourself-coat.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "뉴스엔", kind: "photo", what: "2026.11.17 인천국제공항 출국 현장 촬영", url: "https://www.newsen.com/news_view.php?uid=202611171953183510"},
@@ -2648,8 +2648,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "annie-northface-comor",
-    image: "assets/looks/annie-northface-comor.webp?v=2026112102",
-    imageJpg: "assets/looks/annie-northface-comor.jpg?v=2026112102",
+    image: "assets/looks/annie-northface-comor.webp?v=2026112103",
+    imageJpg: "assets/looks/annie-northface-comor.jpg?v=2026112103",
     model: "엘라",
     modelId: "ella-lindgren",
     photo: {label: "노스페이스 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7289149"},
@@ -2707,8 +2707,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "miyeon-somewherebutter-zip",
-    image: "assets/looks/miyeon-somewherebutter-zip.webp?v=2026112102",
-    imageJpg: "assets/looks/miyeon-somewherebutter-zip.jpg?v=2026112102",
+    image: "assets/looks/miyeon-somewherebutter-zip.webp?v=2026112103",
+    imageJpg: "assets/looks/miyeon-somewherebutter-zip.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "썸웨어버터 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7241754"},
@@ -2766,8 +2766,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jungwon-fila-airflow",
-    image: "assets/looks/jungwon-fila-airflow.webp?v=2026112102",
-    imageJpg: "assets/looks/jungwon-fila-airflow.jpg?v=2026112102",
+    image: "assets/looks/jungwon-fila-airflow.webp?v=2026112103",
+    imageJpg: "assets/looks/jungwon-fila-airflow.jpg?v=2026112103",
     model: "엘라",
     modelId: "ella-lindgren",
     photo: {label: "휠라 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7510136"},
@@ -2825,8 +2825,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "chaeryeong-lememe-cutout",
-    image: "assets/looks/chaeryeong-lememe-cutout.webp?v=2026112102",
-    imageJpg: "assets/looks/chaeryeong-lememe-cutout.jpg?v=2026112102",
+    image: "assets/looks/chaeryeong-lememe-cutout.webp?v=2026112103",
+    imageJpg: "assets/looks/chaeryeong-lememe-cutout.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "르메메 공식", kind: "product", what: "브랜드 공식 제품 컷 · 초콜릿 컬러 (실착 사진 아님)", url: "https://www.musinsa.com/products/7128950"},
@@ -2884,8 +2884,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "joy-flareup-layered",
-    image: "assets/looks/joy-flareup-layered.webp?v=2026112102",
-    imageJpg: "assets/looks/joy-flareup-layered.jpg?v=2026112102",
+    image: "assets/looks/joy-flareup-layered.webp?v=2026112103",
+    imageJpg: "assets/looks/joy-flareup-layered.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "플레어업 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7219308"},
@@ -2943,8 +2943,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "taeyeon-kirsh-duffle",
-    image: "assets/looks/taeyeon-kirsh-duffle.webp?v=2026112102",
-    imageJpg: "assets/looks/taeyeon-kirsh-duffle.jpg?v=2026112102",
+    image: "assets/looks/taeyeon-kirsh-duffle.webp?v=2026112103",
+    imageJpg: "assets/looks/taeyeon-kirsh-duffle.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "키르시 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7460057"},
@@ -3002,8 +3002,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jimin-aakam-toggle",
-    image: "assets/looks/jimin-aakam-toggle.webp?v=2026112102",
-    imageJpg: "assets/looks/jimin-aakam-toggle.jpg?v=2026112102",
+    image: "assets/looks/jimin-aakam-toggle.webp?v=2026112103",
+    imageJpg: "assets/looks/jimin-aakam-toggle.jpg?v=2026112103",
     model: "엘라",
     modelId: "ella-lindgren",
     photo: {label: "아캄 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7503167"},
@@ -3061,8 +3061,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "soyoung-ck-matpuffer",
-    image: "assets/looks/soyoung-ck-matpuffer.webp?v=2026112102",
-    imageJpg: "assets/looks/soyoung-ck-matpuffer.jpg?v=2026112102",
+    image: "assets/looks/soyoung-ck-matpuffer.webp?v=2026112103",
+    imageJpg: "assets/looks/soyoung-ck-matpuffer.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "캘빈클라인 진 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7192451"},
@@ -3120,8 +3120,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "wonyoung-nanajacq-knit",
-    image: "assets/looks/wonyoung-nanajacq-knit.webp?v=2026112102",
-    imageJpg: "assets/looks/wonyoung-nanajacq-knit.jpg?v=2026112102",
+    image: "assets/looks/wonyoung-nanajacq-knit.webp?v=2026112103",
+    imageJpg: "assets/looks/wonyoung-nanajacq-knit.jpg?v=2026112103",
     model: "서아린",
     modelId: "seo-arin",
     photo: {label: "나나 재클린 공식", kind: "product", what: "브랜드 공식 룩북 컷 (실착 사진 아님)", url: "https://nanajacqueline.com/en-kr/products/claudette-contrast-collar-rib-knit-black-top"},
@@ -3179,8 +3179,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "jiwon-lowtide-knit",
-    image: "assets/looks/jiwon-lowtide-knit.webp?v=2026112102",
-    imageJpg: "assets/looks/jiwon-lowtide-knit.jpg?v=2026112102",
+    image: "assets/looks/jiwon-lowtide-knit.webp?v=2026112103",
+    imageJpg: "assets/looks/jiwon-lowtide-knit.jpg?v=2026112103",
     model: "윤세라",
     modelId: "yun-sera",
     photo: {label: "로우타이드 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://www.musinsa.com/products/7144681"},
@@ -3238,8 +3238,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "koso-young-peuterey-togo",
-    image: "assets/looks/koso-young-peuterey-togo.webp?v=2026112102",
-    imageJpg: "assets/looks/koso-young-peuterey-togo.jpg?v=2026112102",
+    image: "assets/looks/koso-young-peuterey-togo.webp?v=2026112103",
+    imageJpg: "assets/looks/koso-young-peuterey-togo.jpg?v=2026112103",
     model: "엘라",
     modelId: "ella-lindgren",
     photo: {label: "페트레이 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://peuterey.co.kr/product/26-togo-%ED%86%A0%EA%B3%A0/2089/"},
@@ -3297,8 +3297,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "v-noice-aviator",
-    image: "assets/looks/v-noice-aviator.webp?v=2026112102",
-    imageJpg: "assets/looks/v-noice-aviator.jpg?v=2026112102",
+    image: "assets/looks/v-noice-aviator.webp?v=2026112103",
+    imageJpg: "assets/looks/v-noice-aviator.jpg?v=2026112103",
     model: "루크",
     modelId: "luke-askell",
     photo: {label: "노이스 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://noice.co.kr/product/twill-pigment-aviator-jacket-dark-brown/2031/"},
@@ -3356,8 +3356,8 @@ window.SFP_LOOKS = [
   },
   {
     id: "wooseok-system-hoodknit",
-    image: "assets/looks/wooseok-system-hoodknit.webp?v=2026112102",
-    imageJpg: "assets/looks/wooseok-system-hoodknit.jpg?v=2026112102",
+    image: "assets/looks/wooseok-system-hoodknit.webp?v=2026112103",
+    imageJpg: "assets/looks/wooseok-system-hoodknit.jpg?v=2026112103",
     model: "차우진",
     modelId: "cha-ujin",
     photo: {label: "시스템옴므 공식", kind: "product", what: "브랜드 공식 제품 컷 (실착 사진 아님)", url: "https://m.thehandsome.com/ko/PM/productDetail/SY2GAKTO342W?itmNo=001"},

@@ -944,7 +944,7 @@
     var lookHtml = "";
     T.looks.forEach(function (L) {
       lookHtml += '<a class="pc-look" href="' + L.href + '">' +
-        '<span class="ph"><img src="' + L.img + '?v=2026112102" alt="' + esc(L.alt) + '" width="900" height="1200" loading="lazy" decoding="async"></span>' +
+        '<span class="ph"><img src="' + L.img + '?v=2026112103" alt="' + esc(L.alt) + '" width="900" height="1200" loading="lazy" decoding="async"></span>' +
         '<span class="tx"><b>' + esc(L.celeb) + ' · ' + esc(L.title) + '</b>' +
         '<p>' + esc(L.why) + '</p>' +
         '<span class="pc-credit">' + esc(L.credit) + '</span></span></a>';
@@ -1064,7 +1064,7 @@
       var T = TONES[k];
       var strip = T.best.map(function (c) { return '<i style="background:' + c.h + '"></i>'; }).join("");
       html += '<button class="pc-tone" type="button" data-tone="' + k + '">' +
-        '<span class="ph"><img src="' + T.hero.img + '?v=2026112102" alt="' + esc(T.hero.alt) + '" width="900" height="675" loading="lazy" decoding="async"></span>' +
+        '<span class="ph"><img src="' + T.hero.img + '?v=2026112103" alt="' + esc(T.hero.alt) + '" width="900" height="675" loading="lazy" decoding="async"></span>' +
         '<span class="tx"><b>' + T.name + '</b><small>' + esc(T.short) + '</small>' +
         '<span class="strip">' + strip + '</span></span></button>';
     });
