@@ -26,7 +26,21 @@ window.SFP_NAVER_LINKS = {
   "스파오 울블렌드 하프 코트": {"u": "https://naver.me/5p0Ka0PA", "p": "[N배송][울블렌드] 스파오 벨티드 발마칸 코트 SPJWG4VW01", "s": "스파오 스토어", "pr": 109000, "f": 5},
   "허그유어스킨 어테쳐블 후드 싱글 코트 (차콜)": {"u": "https://naver.me/GXFBGFPq", "p": "에글린 여성 겨울 핸드메이드 후드 루즈핏 하프 코트", "s": "루어스룸", "pr": 99900, "f": 5},
   "무신사 스탠다드 나일론 에센셜 백팩": {"u": "https://naver.me/GprMQyUd", "p": "[브랜든] 세이프 백팩 도난방지 가방", "s": "Branden", "pr": 85000, "f": 5},
-  "무신사 스탠다드 워시드 캔버스 더플 백": {"u": "https://naver.me/GlR6K9NV", "p": "[리햅] 러쉬 방수 나일론 빅사이즈 숄더백 보부상 여행 가방 쇼퍼", "s": "리햅", "pr": 29800, "f": 5}
+  "무신사 스탠다드 워시드 캔버스 더플 백": {"u": "https://naver.me/GlR6K9NV", "p": "[리햅] 러쉬 방수 나일론 빅사이즈 숄더백 보부상 여행 가방 쇼퍼", "s": "리햅", "pr": 29800, "f": 5},
+  "방한 패딩 슬리퍼": {"u": "https://naver.me/Gjyj24ty", "p": "PWX 푸퍼 패딩 방한 겨울 슬리퍼", "s": "프로월드컵", "pr": 18900, "f": 18},
+  "제너럴아이디어 워시드 더블 포켓 셔츠": {"u": "https://naver.me/5t7a8gIU", "p": "플라트 소프트 피치기모 포켓 오버핏 배색 체크 셔츠 남방", "s": "리즈데이즈", "pr": 17500, "f": 5},
+  "프리터 Traveller Bomber Jacket": {"u": "https://naver.me/Gi0SWiL7", "p": "[신세틱레더] 스파오 레더 바이커 재킷 SPJLG49M72", "s": "스파오 스토어", "pr": 69900, "f": 5},
+  "유니클로 스웨트와이드팬츠": {"u": "https://naver.me/F05CRpXX", "p": "유니클로 스웨트 와이드 팬츠 (다리길이70~73cm) 보통기장 26FW 세미와이드 트레이닝", "s": "도쿄아씨마켓", "pr": 31800, "f": 5},
+  "써코니 재즈 오리지널 45": {"u": "https://naver.me/xbKMIckp", "p": "아디다스 하이퍼부스트 엣지 남녀공용 런닝화 마라톤화 쿠션화 레이싱화 블랙 블루 그린 레드", "s": "지셀렉도쿄", "pr": 229800, "f": 5},
+  "아디다스 하이퍼부스트 EPHR LT (코어 블랙)": {"u": "https://naver.me/xbKMIckp", "p": "아디다스 하이퍼부스트 엣지 남녀공용 런닝화 마라톤화 쿠션화 레이싱화 블랙 블루 그린 레드", "s": "지셀렉도쿄", "pr": 229800, "f": 5},
+  "무신사 스탠다드 CP 트윌 초어 재킷": {"u": "https://naver.me/Fx2vD55n", "p": "남자 초어자켓 셔켓 워크웨어 순면 개버딘 트윌 루즈핏", "s": "다마데우스", "pr": 45900, "f": 5},
+  "무신사 스탠다드 울 블렌드 초어 재킷": {"u": "https://naver.me/GvWI4rkV", "p": "봄 가을 초어자켓 오버핏 남자트위드자켓 블랙 핀체크", "s": "다마데우스", "pr": 89500, "f": 5},
+  "무신사 스탠다드 트위드 미니멀 재킷": {"u": "https://naver.me/GhwTYvNI", "p": "[제로스트릿] 슬릿 트위드 자켓 SLIT TWEED JACKET / BLACK", "s": "제로스트릿", "pr": 94000, "f": 5},
+  "플레이스튜디오 빈티지 레이스 더블 레이어드 미니 원피스": {"u": "https://naver.me/5t7a8sc5", "p": "레이스 나시 흰색 셔링 하얀색 여름 풍성한 브이넥 프릴 봄 빈티지 뷔스티에원피스", "s": "오렌지오션 글로벌 3", "pr": 48800, "f": 5},
+  "무신사 스탠다드 릴렉스드 섀도우 스트라이프 포플린 셔츠": {"u": "https://naver.me/Fc6O7ULK", "p": "[파인코튼] 스파오 여성 스트라이프 오버핏 셔츠 SPYSG23G02", "s": "스파오 스토어", "pr": 39900, "f": 5},
+  "무신사 스탠다드 릴렉스드 데님 트러커 재킷": {"u": "https://naver.me/5XcAYkfS", "p": "유니클로 데님 트러커 재킷 청자켓 26FW", "s": "도쿄아씨마켓", "pr": 43800, "f": 5},
+  "무신사 스탠다드 린넨 라이크 미니멀 데님 트러커 재킷": {"u": "https://naver.me/xtN2KFDf", "p": "남자흑청자켓 오버핏 데님 연청 트러커재킷", "s": "초코클래식", "pr": 45800, "f": 5},
+  "무신사 스탠다드 릴렉스드 데님 셔츠": {"u": "https://naver.me/G3vCsazQ", "p": "스파오 웨스턴 데님 셔츠 SPYJG49CY1", "s": "스파오 스토어", "pr": 29900, "f": 5}
 };
 window.SFP_NAVER_BY_NORM = {
   "미쏘스탠카라페이크퍼숏자켓": "https://naver.me/FdqMUGnc",
@@ -53,7 +67,21 @@ window.SFP_NAVER_BY_NORM = {
   "스파오울블렌드하프코트": "https://naver.me/5p0Ka0PA",
   "허그유어스킨어테쳐블후드싱글코트차콜": "https://naver.me/GXFBGFPq",
   "무신사스탠다드나일론에센셜백팩": "https://naver.me/GprMQyUd",
-  "무신사스탠다드워시드캔버스더플백": "https://naver.me/GlR6K9NV"
+  "무신사스탠다드워시드캔버스더플백": "https://naver.me/GlR6K9NV",
+  "방한패딩슬리퍼": "https://naver.me/Gjyj24ty",
+  "제너럴아이디어워시드더블포켓셔츠": "https://naver.me/5t7a8gIU",
+  "프리터travellerbomberjacket": "https://naver.me/Gi0SWiL7",
+  "유니클로스웨트와이드팬츠": "https://naver.me/F05CRpXX",
+  "써코니재즈오리지널45": "https://naver.me/xbKMIckp",
+  "아디다스하이퍼부스트ephrlt코어블랙": "https://naver.me/xbKMIckp",
+  "무신사스탠다드cp트윌초어재킷": "https://naver.me/Fx2vD55n",
+  "무신사스탠다드울블렌드초어재킷": "https://naver.me/GvWI4rkV",
+  "무신사스탠다드트위드미니멀재킷": "https://naver.me/GhwTYvNI",
+  "플레이스튜디오빈티지레이스더블레이어드미니원피스": "https://naver.me/5t7a8sc5",
+  "무신사스탠다드릴렉스드섀도우스트라이프포플린셔츠": "https://naver.me/Fc6O7ULK",
+  "무신사스탠다드릴렉스드데님트러커재킷": "https://naver.me/5XcAYkfS",
+  "무신사스탠다드린넨라이크미니멀데님트러커재킷": "https://naver.me/xtN2KFDf",
+  "무신사스탠다드릴렉스드데님셔츠": "https://naver.me/G3vCsazQ"
 };
 window.SFP_NAVER_BY_LOOK = {
   "chaewon-fur-coat": {"u": "https://naver.me/FdqMUGnc", "p": "[성해은 PICK][N배송] 로엠 하이넥 숏 퍼자켓 RMJLG4VN11", "pr": 143100},
@@ -94,5 +122,23 @@ window.SFP_NAVER_BY_LOOK = {
   "mark-nct-nordic-fleece": {"u": "https://naver.me/xoGT7QVW", "p": "네파 여성 노르딕패턴 크루와펜 후리스 플리스 자켓", "pr": 79000},
   "jiwoo-bittercells-coat": {"u": "https://naver.me/5p0Ka0PA", "p": "[N배송][울블렌드] 스파오 벨티드 발마칸 코트 SPJWG4VW01", "pr": 109000},
   "jiwon-teramo-backpack": {"u": "https://naver.me/GprMQyUd", "p": "[브랜든] 세이프 백팩 도난방지 가방", "pr": 85000},
-  "songkang-loewe-duffle": {"u": "https://naver.me/GlR6K9NV", "p": "[리햅] 러쉬 방수 나일론 빅사이즈 숄더백 보부상 여행 가방 쇼퍼", "pr": 29800}
+  "songkang-loewe-duffle": {"u": "https://naver.me/GlR6K9NV", "p": "[리햅] 러쉬 방수 나일론 빅사이즈 숄더백 보부상 여행 가방 쇼퍼", "pr": 29800},
+  "jennie-subu-dot": {"u": "https://naver.me/Gjyj24ty", "p": "PWX 푸퍼 패딩 방한 겨울 슬리퍼", "pr": 18900},
+  "wooyoung-tomboy-check": {"u": "https://naver.me/5t7a8gIU", "p": "플라트 소프트 피치기모 포켓 오버핏 배색 체크 셔츠 남방", "pr": 17500},
+  "seungho-diesel-biker": {"u": "https://naver.me/Gi0SWiL7", "p": "[신세틱레더] 스파오 레더 바이커 재킷 SPJLG49M72", "pr": 69900},
+  "sechan-wakei-pants": {"u": "https://naver.me/F05CRpXX", "p": "유니클로 스웨트 와이드 팬츠 (다리길이70~73cm) 보통기장 26FW 세미와이드 트레이닝", "pr": 31800},
+  "haha-adidas-hyperboost": {"u": "https://naver.me/xbKMIckp", "p": "아디다스 하이퍼부스트 엣지 남녀공용 런닝화 마라톤화 쿠션화 레이싱화 블랙 블루 그린 레드", "pr": 229800},
+  "seongjae-polo-nautical": {"u": "https://naver.me/Fx2vD55n", "p": "남자 초어자켓 셔켓 워크웨어 순면 개버딘 트윌 루즈핏", "pr": 45900},
+  "jaewook-sperone-suede": {"u": "https://naver.me/Fx2vD55n", "p": "남자 초어자켓 셔켓 워크웨어 순면 개버딘 트윌 루즈핏", "pr": 45900},
+  "v-noice-aviator": {"u": "https://naver.me/Fx2vD55n", "p": "남자 초어자켓 셔켓 워크웨어 순면 개버딘 트윌 루즈핏", "pr": 45900},
+  "defconn-belier-trucker": {"u": "https://naver.me/GvWI4rkV", "p": "봄 가을 초어자켓 오버핏 남자트위드자켓 블랙 핀체크", "pr": 89500},
+  "jiwoo-bittercells-halcoat": {"u": "https://naver.me/GvWI4rkV", "p": "봄 가을 초어자켓 오버핏 남자트위드자켓 블랙 핀체크", "pr": 89500},
+  "nara-tonywack-tweed": {"u": "https://naver.me/GhwTYvNI", "p": "[제로스트릿] 슬릿 트위드 자켓 SLIT TWEED JACKET / BLACK", "pr": 94000},
+  "taeyeon-kirsh-duffle": {"u": "https://naver.me/GhwTYvNI", "p": "[제로스트릿] 슬릿 트위드 자켓 SLIT TWEED JACKET / BLACK", "pr": 94000},
+  "yihyun-rel-lyra": {"u": "https://naver.me/5t7a8sc5", "p": "레이스 나시 흰색 셔링 하얀색 여름 풍성한 브이넥 프릴 봄 빈티지 뷔스티에원피스", "pr": 48800},
+  "jiheon-grove-stripe": {"u": "https://naver.me/Fc6O7ULK", "p": "[파인코튼] 스파오 여성 스트라이프 오버핏 셔츠 SPYSG23G02", "pr": 39900},
+  "joy-flareup-layered": {"u": "https://naver.me/Fc6O7ULK", "p": "[파인코튼] 스파오 여성 스트라이프 오버핏 셔츠 SPYSG23G02", "pr": 39900},
+  "inah-rheme-denim-racer": {"u": "https://naver.me/5XcAYkfS", "p": "유니클로 데님 트러커 재킷 청자켓 26FW", "pr": 43800},
+  "jongmin-roaringrad-denim": {"u": "https://naver.me/xtN2KFDf", "p": "남자흑청자켓 오버핏 데님 연청 트러커재킷", "pr": 45800},
+  "siwan-siecle-denim-shirt": {"u": "https://naver.me/G3vCsazQ", "p": "스파오 웨스턴 데님 셔츠 SPYJG49CY1", "pr": 29900}
 };
