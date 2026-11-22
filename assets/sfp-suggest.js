@@ -41,6 +41,22 @@
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
       });
     }
+    /* 검색어와 일치하는 부분을 굵게 표시 (프로그램·상황 키워드 매칭을 눈으로 확인) */
+    function mark(text) {
+      var raw = String(text == null ? "" : text);
+      var q = (input.value || "").trim();
+      if (!q) return esc(raw);
+      var low = raw.toLowerCase(), ql = q.toLowerCase();
+      var at = low.indexOf(ql);
+      if (at === -1) return esc(raw);
+      var out = "", i = 0;
+      while (at > -1) {
+        out += esc(raw.slice(i, at)) + "<mark>" + esc(raw.slice(at, at + ql.length)) + "</mark>";
+        i = at + ql.length;
+        at = low.indexOf(ql, i);
+      }
+      return out + esc(raw.slice(i));
+    }
     function close() {
       if (list.hidden) return;
       list.hidden = true;
@@ -58,7 +74,7 @@
           return '<button type="button" class="sfp-sg-item' + (i === active ? " on" : "") + '" role="option"' +
             ' id="' + listId + "-o" + i + '" aria-selected="' + (i === active) + '"' +
             ' data-i="' + i + '">' +
-            '<span class="sg-label">' + esc(it.label) + "</span>" +
+            '<span class="sg-label">' + mark(it.label) + "</span>" +
             (it.meta ? '<span class="sg-meta">' + esc(it.meta) + "</span>" : "") +
             (it.type ? '<span class="sg-type">' + esc(it.type) + "</span>" : "") +
             "</button>";

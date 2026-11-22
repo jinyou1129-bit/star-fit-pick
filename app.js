@@ -17,6 +17,19 @@
   var CAT_ORDER = ["outer", "top", "bottom", "dress", "shoes", "acc"];
   var MOOD_ORDER = ["minimal", "lovely", "vintage", "street"];
   var BUDGET_CAP = 100000;
+  var MEDIA_ORDER = ["드라마·영화", "예능·음악", "공항·출국", "화보·일상"];
+  var LINE_LABEL = {
+    worn: { badge: "✓ 실착 라인", title: "원본 사진·방송 화면과 제품을 대조해 착용을 확인한 아이템" },
+    match: { badge: "✓ 브랜드 매칭", title: "브랜드·품번·판매가를 판매처에서 확인한 실제 판매 제품(원본과 동일 제품 여부는 별도 표기)" },
+    alt: { badge: "≈ 무드 대안", title: "같은 무드로 고른 다른 브랜드 제품 — 동일 제품이 아닙니다" }
+  };
+  var BB_LABEL = { u10: "예산 대안 10만 원 이하", u5: "예산 대안 5만 원 이하" };
+  var LINE_LEGEND = '표기 기준 — ✓ 실착 라인: 원본 사진·방송 화면과 대조해 착용을 확인한 아이템 · ✓ 브랜드 매칭: 브랜드·품번·매장 가격을 판매처에서 확인한 실제 판매 제품(원본과 동일 제품인지는 착장 설명에 표기) · ≈ 무드 대안: 같은 무드로 고른 다른 브랜드 제품으로 동일 제품이 아닙니다.';
+  function lineOf(look) { return look && look.line === "worn" ? "worn" : "match"; }
+  function lineBadge(kind) {
+    var m = LINE_LABEL[kind] || LINE_LABEL.match;
+    return '<span class="line-badge ' + kind + '" title="' + esc(m.title) + '">' + m.badge + "</span>";
+  }
 
   var MOOD_RESULT = {
     minimal: {
@@ -79,7 +92,7 @@
   var closet = readCloset();
 
   /* ---------------- state ---------------- */
-  var state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], budget: false, closet: false, discount: false, sort: "recent" };
+  var state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], media: "", bb: "", budget: false, closet: false, discount: false, sort: "recent" };
   var lastFocus = null;
 
   function readURL() {
@@ -93,6 +106,8 @@
     state.brand = p.get("brand") || "";
     state.band = ["u10", "10to30", "30to100", "o100"].indexOf(p.get("band")) > -1 ? p.get("band") : "";
     state.ids = (p.get("ids") || "").split(",").filter(Boolean);
+    state.media = MEDIA_ORDER.indexOf(p.get("media")) > -1 ? p.get("media") : "";
+    state.bb = ["u5", "u10"].indexOf(p.get("bb")) > -1 ? p.get("bb") : "";
     state.budget = p.get("budget") === "1";
     state.closet = p.get("closet") === "1";
     state.discount = p.get("discount") === "80";
@@ -109,6 +124,8 @@
     if (state.brand) p.set("brand", state.brand);
     if (state.band) p.set("band", state.band);
     if (state.ids && state.ids.length) p.set("ids", state.ids.join(","));
+    if (state.media) p.set("media", state.media);
+    if (state.bb) p.set("bb", state.bb);
     if (state.budget) p.set("budget", "1");
     if (state.closet) p.set("closet", "1");
     if (state.discount) p.set("discount", "80");
@@ -273,6 +290,36 @@
     LOOKS.forEach(function (l) {
       out.push({ label: l.item.name, meta: l.item.brand + " · " + won(price(l)), type: "아이템", value: l.item.name, act: "q", key: (l.item.name + " " + (l.item.nameEn || "") + " " + (l.item.brandEn || "") + " " + l.headline + " " + (l.show || "") + " " + CAT_LABEL[l.category] + " " + (l.mood || []).map(function (m) { return MOOD_LABEL[m]; }).join(" ")).toLowerCase() });
     });
+    // 프로그램(방송·작품·공항·행사) 모아보기 — 이름을 지어내지 않고 data의 program 값만 쓴다
+    var progs = {};
+    LOOKS.forEach(function (l) {
+      if (!l.program) return;
+      if (!progs[l.program]) progs[l.program] = { n: 0, media: l.mediaType || "", celebs: {} };
+      progs[l.program].n++;
+      progs[l.program].celebs[l.celeb] = 1;
+    });
+    function programKey(p) {
+      var extra = "";
+      if (p.indexOf("공항") > -1) extra = " " + p.replace(/국제공항/g, "공항") + " 공항패션 출국";
+      return (p + extra + " " + Object.keys(progs[p].celebs || {}).join(" ")).toLowerCase();
+    }
+    Object.keys(progs).forEach(function (p) {
+      var g = progs[p];
+      out.push({
+        label: p, meta: g.n + "벌 · " + g.media, type: "프로그램", value: p, act: "q", weight: g.n,
+        key: programKey(p) + " " + g.media
+      });
+    });
+    var MEDIA_ALIAS = {
+      "드라마·영화": "드라마 영화 작품 방송",
+      "예능·음악": "예능 음악 방송 프로그램",
+      "공항·출국": "공항 출국 공항패션",
+      "화보·일상": "화보 일상 인스타 SNS 캠페인"
+    };
+    MEDIA_ORDER.forEach(function (m) {
+      var n = LOOKS.filter(function (l) { return l.mediaType === m; }).length;
+      out.push({ label: m, meta: n + "벌 · 미디어 유형", type: "상황", value: m, act: "media", weight: n, key: (m + " " + (MEDIA_ALIAS[m] || "")).toLowerCase() });
+    });
     SUGGEST_POOL = out;
     return out;
   }
@@ -311,6 +358,7 @@
   function applySuggest(item, fromHero) {
     if (item.act === "celeb") { state.celeb = item.value; state.q = ""; }
     else if (item.act === "brand") { state.brand = item.value; state.q = ""; }
+    else if (item.act === "media") { state.media = item.value; state.q = ""; }
     else { state.q = item.value; state.celeb = ""; state.brand = ""; }
     syncControls(); paintChips(); paintQuick(); renderGrid(); writeURL(); syncFilterMore();
     if (fromHero) {
@@ -355,12 +403,16 @@
       if (state.band === "o100" && pv <= 1000000) return false;
     }
     if (state.ids && state.ids.length && state.ids.indexOf(look.id) === -1) return false;
+    if (state.media && look.mediaType !== state.media) return false;
+    if (state.bb === "u10" && look.alt.price > 100000) return false;
+    if (state.bb === "u5" && look.alt.price > 50000) return false;
     if (state.budget && look.alt.price > BUDGET_CAP) return false;
     if (state.discount && saveRate(look) < 80) return false;
     if (state.closet && closet.indexOf(look.id) === -1) return false;
     if (state.q) {
       var hay = [
         look.celeb, look.group, look.show, look.scene, look.headline,
+        look.mediaType || "", look.program || "",
         look.item.brand, look.item.brandEn, look.item.name, look.item.nameEn, look.item.sku,
         look.alt.brand, look.alt.name,
         (look.mood || []).map(function (m) { return MOOD_LABEL[m]; }).join(" "),
@@ -444,8 +496,10 @@
     if (state.band) {
       parts.push({ u10: "정품 10만 원 이하", "10to30": "정품 10~30만 원", "30to100": "정품 30~100만 원", o100: "정품 100만 원 이상" }[state.band]);
     }
+    if (state.media) parts.push(state.media);
     if (state.type) parts.push(TYPE_LABEL[state.type]);
     if (state.cat) parts.push(CAT_LABEL[state.cat]);
+    if (state.bb) parts.push(BB_LABEL[state.bb]);
     if (state.mood) parts.push(MOOD_LABEL[state.mood] + " 무드");
     if (state.budget) parts.push("대안템 10만 원 이하");
     if (state.discount) parts.push("80%↑ 초특가 대안");
@@ -473,6 +527,8 @@
       else if (key === "model") on = state.model === val;
       else if (key === "brand") on = state.brand === val;
       else if (key === "band") on = state.band === val;
+      else if (key === "bb") on = state.bb === val;
+      else if (key === "media") on = state.media === val;
       btn.setAttribute("aria-pressed", on ? "true" : "false");
     });
   }
@@ -572,7 +628,7 @@
     if (mbody) mbody.scrollTop = 0;
     var mcard = document.querySelector("#modal .modal-card");
     if (mcard) mcard.scrollTop = 0;
-    $("#modal-eyebrow").textContent = look.show + " · " + look.group;
+    $("#modal-eyebrow").innerHTML = esc((look.program || look.show) + " · " + look.group) + " " + lineBadge(lineOf(look));
     $("#modal-title").textContent = look.item.name;
     $("#modal-scene").textContent = look.scene;
     $("#modal-story").textContent = look.story;
@@ -589,7 +645,7 @@
     $("#modal-compare").innerHTML =
       '<table class="cmp">' +
         '<caption class="sr-only">정품과 가성비 대안템 비교</caption>' +
-        '<thead><tr><th scope="col">구분</th><th scope="col">정품</th><th scope="col">가성비 대안</th></tr></thead>' +
+        '<thead><tr><th scope="col">구분</th><th scope="col">정품 ' + lineBadge(lineOf(look)) + '</th><th scope="col">가성비 대안 ' + lineBadge("alt") + '</th></tr></thead>' +
         '<tbody>' +
           '<tr><th scope="row">가격</th>' +
             '<td><b>' + won(cur) + "</b>" + saleRow + "</td>" +
@@ -608,7 +664,8 @@
             '<td class="is-alt">' + esc(look.alt.cons || "—") + "</td></tr>" +
         '</tbody>' +
         '<tfoot><tr><td colspan="3"><div class="save-row"><span>대안템 선택 시</span> <b>' + won(saved) + ' 절약</b> <em>정품 대비 ' + rate + '%↓</em></div></td></tr></tfoot>' +
-      "</table>";
+      "</table>" +
+      '<p class="line-legend">' + LINE_LEGEND + '</p>';
 
     var specs = [
       ["브랜드", look.item.brand + " (" + look.item.brandEn + ")"],
@@ -638,7 +695,7 @@
       '<a class="buy-btn chip" href="' + esc(CFG.buildLink("musinsa", look.item.brand + " " + look.item.name)) + '" target="_blank" rel="noopener sponsored">무신사 검색 ↗</a>';
 
     $("#modal-alt").innerHTML =
-      '<p class="alt-name">' + esc(look.alt.brand) + " · " + esc(look.alt.name) + "</p>" +
+      '<p class="alt-name">' + lineBadge("alt") + " " + esc(look.alt.brand) + " · " + esc(look.alt.name) + "</p>" +
       '<p class="alt-meta">' + esc(look.alt.note) + "</p>" +
       '<div class="alt-price-row"><b>' + won(look.alt.price) + "</b><span>정품 " + won(cur) + " 대비 " + rate + "% 저렴 · 확인일 2026.11.20</span></div>" +
       '<div class="buy-row">' +
@@ -1542,7 +1599,7 @@
   }
 
   function resetFilters() {
-    state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], budget: false, closet: false, discount: false, sort: "recent" };
+    state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], media: "", bb: "", budget: false, closet: false, discount: false, sort: "recent" };
     syncControls(); paintChips(); paintQuick(); paintHeat(); renderGrid(); writeURL(); syncFilterMore(); paintHotTags();
   }
   function syncControls() {
@@ -1590,6 +1647,31 @@
       var on = (k === "brand" && state.brand === v) || (k === "band" && state.band === v);
       btn.setAttribute("aria-pressed", on ? "true" : "false");
     });
+  }
+
+  /* ---------------- 예산 · 품목 원클릭 필터 ---------------- */
+  function bbCount(v) {
+    return LOOKS.filter(function (l) {
+      if (v === "u5") return l.alt.price <= 50000;
+      if (v === "u10") return l.alt.price <= 100000;
+      return true;
+    }).length;
+  }
+  function buildBudget() {
+    var bw = $("#bf-budget"), iw = $("#bf-item");
+    if (bw) {
+      var bb = [["", "전체 가격"], ["u10", "10만원 이하"], ["u5", "5만원 이하"]];
+      bw.innerHTML = bb.map(function (x) {
+        return '<button type="button" class="chip bf-chip" data-key="bb" data-value="' + x[0] + '" aria-pressed="false">' + x[1] + "<small>" + bbCount(x[0]) + "</small></button>";
+      }).join("");
+    }
+    if (iw) {
+      var items = [["", "전체"], ["outer", "아우터"], ["top", "상의·니트"], ["bottom", "하의"], ["acc", "가방·잡화"], ["shoes", "슈즈"], ["dress", "원피스"]];
+      iw.innerHTML = items.map(function (x) {
+        var n = x[0] ? LOOKS.filter(function (l) { return l.category === x[0]; }).length : LOOKS.length;
+        return '<button type="button" class="chip bf-chip" data-key="cat" data-value="' + x[0] + '" aria-pressed="false">' + x[1] + "<small>" + n + "</small></button>";
+      }).join("");
+    }
   }
 
   /* ---------------- 오늘의 코디 룰렛 ---------------- */
@@ -1703,6 +1785,8 @@
     updateClosetCalc();
     bindChips();
     buildQuick();
+    buildBudget();
+    paintChips();
     paintQuick();
     paintHeat();
     bindHeat();

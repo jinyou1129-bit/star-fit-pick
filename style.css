@@ -1710,3 +1710,169 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 }
 
 .wc-cta + .wc-winner-brand{margin-top:14px}
+
+/* =========================================================
+   2026-11-23 — V7: 드라마·예능·공항 허브 / 신뢰도 라벨 / 예산·품목 필터
+   ========================================================= */
+
+/* ---------- 공통: 선택된 필터 칩에 확실한 시각 상태 ---------- */
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip[aria-pressed="true"] small{color:rgba(255,255,255,.62)}
+.chip[aria-pressed="true"]:hover{color:#fff}
+
+/* ---------- 신뢰도 라벨 (실착 / 브랜드 매칭 / 무드 대안) ---------- */
+.line-badge{
+  display:inline-flex;align-items:center;gap:3px;vertical-align:middle;
+  font-size:10.5px;font-weight:800;line-height:1.3;letter-spacing:-.01em;
+  padding:3px 8px;border-radius:999px;border:1px solid transparent;white-space:nowrap;
+}
+.line-badge.worn{background:#e8f3ff;color:#1b64da;border-color:#cfe4ff}
+.line-badge.match{background:#edf8ef;color:#14793f;border-color:#d3ebd9}
+.line-badge.alt{background:#fff5e9;color:#a35a00;border-color:#ffe3c2}
+.line-legend{
+  margin:10px 0 0;font-size:11px;line-height:1.65;color:var(--muted);
+  background:var(--soft-2);border:1px dashed var(--line-strong);border-radius:10px;padding:8px 10px;
+}
+.article-body .line-legend{margin:12px 0 0}
+.look-buy-legend{margin:14px 0 0}
+
+/* 착장 상세: 구매 좌표 제목에 붙는 라벨 */
+.buy-kicker .line-badge{margin-right:6px}
+
+/* 미니 카드(착용 아이템 좌표) 라벨 */
+.its-role .line-badge{margin-left:4px;font-size:9.5px;padding:2px 6px}
+.its-card .its-role{display:flex;align-items:center;gap:3px;flex-wrap:wrap}
+
+/* ---------- index: 예산·품목 원클릭 필터 ---------- */
+.budget-filter{
+  margin:0 0 16px;padding:14px;border:1px solid var(--line);border-radius:var(--radius-m);
+  background:linear-gradient(100deg,#f7f9fb 0%,#fff 70%);
+}
+.bf-row{display:flex;align-items:flex-start;gap:10px}
+.bf-row + .bf-row{margin-top:8px}
+.bf-label{
+  flex:0 0 38px;font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--blue);
+  padding-top:8px;
+}
+.bf-chip{font-size:12.5px;padding:6px 11px}
+.bf-chip small{font-size:11px}
+.bf-hint{margin:9px 0 0;font-size:11.5px;color:var(--muted)}
+.bf-hint b{color:var(--sub);font-weight:700}
+
+/* ---------- index: 허브 배너 ---------- */
+.tv-banner{
+  border-color:#e6e9ee;background:linear-gradient(100deg,#f4f6f8 0%,#ffffff 65%);
+}
+.tv-banner .wc-banner-cta{background:var(--ink)}
+.tv-banner:hover .wc-banner-cta{background:#000}
+
+/* ---------- tv.html : 드라마·예능·공항 허브 ---------- */
+.tv-hero{padding:54px 0 6px;background:
+  radial-gradient(110% 80% at 12% -10%, #eef4ff 0%, rgba(255,255,255,0) 62%),
+  linear-gradient(#fff,#fff);}
+.tv-hero h1{font-size:clamp(27px,3.4vw,44px);line-height:1.22;letter-spacing:-.035em;font-weight:800;color:var(--ink);margin-top:10px}
+.tv-hero h1 em{font-style:normal;color:var(--blue)}
+.tv-hero .hero-lead{margin-top:16px;font-size:15.5px;color:var(--sub);max-width:62ch;line-height:1.72}
+.tv-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0 0;list-style:none;padding:0}
+.tv-stats li{border:1px solid var(--line);border-radius:var(--radius-m);background:#fff;padding:14px 16px}
+.tv-stats b{display:block;font-size:22px;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.tv-stats span{font-size:12px;color:var(--muted);font-weight:600}
+.tv-hub{padding:34px 0 10px}
+.tv-tabs{display:flex;flex-wrap:wrap;gap:8px;padding:0 0 4px}
+.tv-tab{
+  border:1px solid var(--line);background:#fff;color:var(--sub);font-size:13.5px;font-weight:700;
+  padding:9px 14px;border-radius:999px;transition:.15s ease;white-space:nowrap;
+}
+.tv-tab small{margin-left:4px;font-size:11.5px;color:var(--muted);font-weight:700}
+.tv-tab:hover{border-color:var(--line-strong);color:var(--ink);transform:translateY(-1px)}
+.tv-tab[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tv-tab[aria-pressed="true"] small{color:rgba(255,255,255,.62)}
+.tv-search{margin-top:14px;display:flex;gap:8px;max-width:520px;background:#fff;border:1px solid var(--line-strong);border-radius:999px;padding:6px 6px 6px 18px}
+.tv-search input{flex:1;min-width:0;border:0;outline:0;font-size:14.5px;background:transparent;color:var(--ink)}
+.tv-search button{border:0;background:var(--soft);color:var(--sub);font-size:12.5px;font-weight:800;border-radius:999px;padding:9px 14px}
+.tv-search button:hover{background:var(--soft-2);color:var(--ink)}
+.tv-panel{margin-top:34px}
+.tv-panel-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px}
+.tv-panel h2{font-size:clamp(19px,2vw,24px);font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.tv-panel .tv-sub{margin-top:5px;font-size:13px;color:var(--muted)}
+.tv-prog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tv-prog{
+  display:flex;align-items:center;gap:10px;text-align:left;width:100%;
+  border:1px solid var(--line);border-radius:var(--radius-m);background:#fff;padding:8px;
+  transition:.15s ease;min-width:0;
+}
+.tv-prog:hover{border-color:var(--line-strong);transform:translateY(-1px);box-shadow:var(--shadow-1)}
+.tv-prog[aria-pressed="true"]{border-color:var(--blue);background:var(--blue-soft);box-shadow:inset 0 0 0 1px var(--blue)}
+.tv-prog img{width:46px;height:58px;object-fit:cover;border-radius:9px;flex:0 0 auto;background:var(--soft)}
+.tv-prog-txt{min-width:0;display:flex;flex-direction:column;gap:1px}
+.tv-prog-txt b{font-size:13px;font-weight:800;color:var(--ink);letter-spacing:-.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tv-prog-txt span{font-size:11px;color:var(--muted);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tv-celebs{display:flex;flex-wrap:wrap;gap:7px}
+.tv-celeb{
+  border:1px solid var(--line);background:#fff;color:var(--sub);font-size:13px;font-weight:700;
+  padding:7px 12px;border-radius:999px;transition:.15s ease;
+}
+.tv-celeb small{margin-left:4px;font-size:11px;color:var(--muted)}
+.tv-celeb:hover{border-color:var(--line-strong);color:var(--ink);transform:translateY(-1px)}
+.tv-celeb[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.tv-celeb[aria-pressed="true"] small{color:rgba(255,255,255,.72)}
+.tv-active{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px;font-size:13px;color:var(--sub)}
+.tv-active b{color:var(--ink)}
+.tv-active button{
+  border:1px solid var(--line-strong);background:#fff;color:var(--muted);
+  font-size:11.5px;font-weight:800;border-radius:999px;padding:5px 10px;
+}
+.tv-active button:hover{color:var(--ink);border-color:var(--ink)}
+.tv-grid{grid-template-columns:repeat(4,1fr);margin-top:0}
+.tv-card{display:flex;flex-direction:column;min-width:0}
+.tv-card-media{position:relative;display:block;border-radius:var(--radius-l);overflow:hidden;background:var(--soft);box-shadow:var(--shadow-1);transition:transform .2s ease,box-shadow .2s ease}
+.tv-card-media:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.tv-card-media picture{display:block;aspect-ratio:4/5}
+.tv-card-media img{width:100%;height:100%;object-fit:cover}
+.tv-media-tag{
+  position:absolute;left:10px;top:10px;font-size:10.5px;font-weight:800;letter-spacing:-.01em;
+  background:rgba(255,255,255,.94);color:var(--ink);padding:5px 9px;border-radius:999px;backdrop-filter:blur(6px);
+}
+.tv-card-body{padding:10px 2px 0;display:flex;flex-direction:column;gap:3px;min-width:0}
+.tv-card-kicker{font-size:11px;font-weight:800;color:var(--blue-deep);letter-spacing:-.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tv-card h3{font-size:14.5px;font-weight:800;letter-spacing:-.03em;color:var(--ink);line-height:1.35;word-break:keep-all}
+.tv-card h3 a:hover{color:var(--blue-deep)}
+.tv-card-price{font-size:12.5px;color:var(--sub);font-weight:700}
+.tv-card-price span{color:var(--muted);font-weight:600;margin-left:4px}
+.tv-card-foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:4px}
+.tv-card-foot a{font-size:11.5px;font-weight:800;color:var(--blue-deep)}
+.tv-card-foot a:hover{text-decoration:underline;text-underline-offset:2px}
+.tv-empty{margin:22px 0;padding:18px;border:1px dashed var(--line-strong);border-radius:var(--radius-m);color:var(--muted);font-size:13.5px}
+.tv-how{margin-top:44px;padding:26px;border:1px solid var(--line);border-radius:var(--radius-l);background:var(--soft-2)}
+.tv-how h2{font-size:18px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.tv-how p{margin-top:8px;font-size:13.5px;color:var(--sub);line-height:1.75}
+.tv-how p b{color:var(--ink)}
+.tv-how .tv-how-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tv-how .tv-how-links a{
+  font-size:12.5px;font-weight:800;color:var(--blue-deep);border:1px solid #cfe4ff;background:#fff;
+  padding:8px 12px;border-radius:999px;
+}
+.tv-how .tv-how-links a:hover{background:var(--blue-soft)}
+.tv-noscript h2{font-size:18px;margin-top:26px}
+.tv-noscript ul{margin-top:10px;display:grid;gap:4px;font-size:13.5px;color:var(--sub)}
+.tv-noscript li{line-height:1.6}
+
+@media (max-width:1080px){
+  .tv-prog-grid{grid-template-columns:repeat(3,1fr)}
+  .tv-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:860px){
+  .tv-stats{grid-template-columns:repeat(2,1fr)}
+  .tv-prog-grid{grid-template-columns:repeat(2,1fr)}
+  .tv-grid{grid-template-columns:repeat(2,1fr)}
+  .tv-panel{margin-top:26px}
+  .tv-how{padding:20px}
+}
+@media (max-width:520px){
+  .tv-hero{padding:34px 0 4px}
+  .tv-hero h1{font-size:25px}
+  .tv-prog img{width:42px;height:53px}
+  .tv-card h3{font-size:13.5px}
+  .bf-label{flex-basis:34px;font-size:11.5px;padding-top:7px}
+  .bf-chip{font-size:12px;padding:5px 9px}
+}

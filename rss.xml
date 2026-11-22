@@ -6,7 +6,7 @@
     <description>드라마·예능·공항에서 화제가 된 착장을 스타핏픽 전속 AI 모델 6인이 착용한 연출 컷으로 소개하고, 원본 착장 출처·브랜드·제품명·정가·구매 좌표와 가성비 대안템을 비교합니다. 착장 포스팅 59편, 패션 가이드 20편, 검증 착장 59건, 착장 이상형 월드컵.</description>
     <language>ko</language>
     <copyright>© 2026 스타핏픽</copyright>
-    <lastBuildDate>Sun, 22 Nov 2026 10:30:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 07:00:00 +0900</lastBuildDate>
     <pubDate>Fri, 20 Nov 2026 13:56:00 +0900</pubDate>
     <ttl>720</ttl>
     <generator>스타핏픽</generator>
@@ -16,6 +16,14 @@
       <title>스타핏픽</title>
       <link>https://starfitpick.netlify.app/</link>
     </image>
+    <item>
+      <title>드라마·예능·공항 허브 — 방송·프로그램별 착장 59벌</title>
+      <link>https://starfitpick.netlify.app/tv.html</link>
+      <guid isPermaLink="true">https://starfitpick.netlify.app/tv.html</guid>
+      <description>런닝맨·틈만나면·나는 SOLO·라디오스타·나 혼자 산다와 드라마 3편, 인천·김포공항 출국까지. 착장 59벌을 드라마·영화 3벌, 예능·음악 21벌, 공항·출국 20벌, 화보·일상 15벌로 나눠 프로그램 32개·셀럽 53명으로 모아 봅니다. 실착 라인·브랜드 매칭·무드 대안 표기와 예산 필터 포함.</description>
+      <category>허브</category>
+      <pubDate>Mon, 23 Nov 2026 07:00:00 +0900</pubDate>
+    </item>
     <item>
       <title>기은세 14만 3,910원 브라운 무스탕</title>
       <link>https://starfitpick.netlify.app/look-eunse-shearling-balaclava.html</link>

@@ -33,6 +33,16 @@
   function buyAnchor() {
     return $("#buy") ? "#buy" : ($("#buy-ootd") ? "#buy-ootd" : "#more");
   }
+  /* ---------- 신뢰도 라벨 (실착 / 브랜드 매칭 / 무드 대안) ---------- */
+  function lineOf(l) { return l && l.line === "worn" ? "worn" : "match"; }
+  function lineBadge(kind) {
+    var m = kind === "worn"
+      ? { b: "✓ 실착 라인", t: "원본 사진·방송 화면과 제품을 대조해 착용을 확인한 아이템" }
+      : kind === "alt"
+        ? { b: "≈ 무드 대안", t: "같은 무드로 고른 다른 브랜드 제품 — 동일 제품이 아닙니다" }
+        : { b: "✓ 브랜드 매칭", t: "브랜드·품번·판매가를 판매처에서 확인한 실제 판매 제품(실착 사진 미확보 포함)" };
+    return '<span class="line-badge ' + kind + '" title="' + esc(m.t) + '">' + m.b + "</span>";
+  }
   function moreAnchor() {
     return $("#more") ? "#more" : "#guide";
   }
@@ -264,18 +274,19 @@
         brand: o.brand || look.item.brand || "",
         name: o.name || "",
         price: o.price || o.salePrice || "",
-        tag: ""
+        tag: "",
+        line: "match"
       });
     });
     if (look.alt && look.alt.price) {
       var opAll = (look.item && (look.item.salePrice || look.item.price)) || 0;
-      cards.push({ num: cards.length + 1, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, save: opAll > look.alt.price ? opAll - look.alt.price : 0 });
+      cards.push({ num: cards.length + 1, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, line: "alt", save: opAll > look.alt.price ? opAll - look.alt.price : 0 });
     }
   } else if (look.item) {
-    cards.push({ num: 1, role: "정품", brand: look.item.brand || "", name: (look.item.name || ""), price: (look.item.salePrice || look.item.price || ""), tag: "" });
+    cards.push({ num: 1, role: "정품", brand: look.item.brand || "", name: (look.item.name || ""), price: (look.item.salePrice || look.item.price || ""), tag: "", line: lineOf(look) });
     if (look.alt && look.alt.price) {
       var opOne = (look.item.salePrice || look.item.price) || 0;
-      cards.push({ num: 2, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, save: opOne > look.alt.price ? opOne - look.alt.price : 0 });
+      cards.push({ num: 2, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, line: "alt", save: opOne > look.alt.price ? opOne - look.alt.price : 0 });
     }
   }
 
@@ -292,7 +303,7 @@
       cards.map(function (c) {
         return '<a class="its-card' + (c.isAlt ? " is-alt" : "") + '" href="' + buyAnchor() + '">' +
           '<span class="its-num" aria-hidden="true">' + c.num + "</span>" +
-          '<span class="its-role">' + esc(c.role) + (c.tag ? " · " + esc(c.tag) : "") + "</span>" +
+          '<span class="its-role">' + esc(c.role) + (c.tag ? " · " + esc(c.tag) : "") + lineBadge(c.line) + "</span>" +
           '<span class="its-brand">' + esc(c.brand) + "</span>" +
           '<span class="its-name">' + esc(c.name) + "</span>" +
           '<span class="its-price">' + (c.price ? esc(won(c.price)) : "가격 좌표 확인") + "</span>" +
@@ -340,7 +351,24 @@
   bindShare($(".share-btn", actions));
   syncClosetUI(false);
 
-  /* ---------- 4) 👀 방금 본 착장 + ← 이전 / 다음 착장 → ---------- */
+  /* ---------- 구매 좌표의 정품/대안 제목에도 라벨 (JS로 그리는 풀코디 패널 포함) ---------- */
+  function decorateKickers() {
+    $$(".buy-kicker").forEach(function (el) {
+      if (el.querySelector(".line-badge")) return;
+      var t = (el.textContent || "").trim();
+      if (/^같은 무드/.test(t)) return;
+      var kind = null;
+      if (/^정품\s*·/.test(t)) kind = lineOf(look);
+      else if (/^대안\s*·/.test(t)) kind = "alt";
+      else if (el.closest("#buy-ootd")) kind = "match";
+      if (!kind) return;
+      el.insertAdjacentHTML("afterbegin", lineBadge(kind) + " ");
+    });
+  }
+  decorateKickers();
+  setTimeout(decorateKickers, 60);
+
+  /* ---------- 방금 본 착장 + ← 이전 / 다음 착장 → ---------- */
   var guideHead = $("#guide");
   var recentSec = recentSection();
   if (recentSec) {
