@@ -82,6 +82,7 @@
     }
 
     input.addEventListener("focus", function () { open(input.value.trim()); });
+    input.addEventListener("click", function () { if (list.hidden) open(input.value.trim()); });
     input.addEventListener("input", function () { open(input.value.trim()); });
     input.addEventListener("keydown", function (e) {
       if (list.hidden && (e.key === "ArrowDown" || e.key === "ArrowUp")) { open(input.value.trim()); return; }
