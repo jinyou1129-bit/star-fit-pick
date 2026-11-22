@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="preload" as="image" href="assets/looks/taeyeon-kirsh-duffle.webp?v=2026112103" type="image/webp">
-<link rel="stylesheet" href="style.css?v=2026112302">
+<link rel="stylesheet" href="style.css?v=2026112303">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://starfitpick.netlify.app/look-taeyeon-kirsh-duffle.html#article","headline":"태연 놀라운토요일 더플 코트, 키르시 299,000원 → 284,050원","description":"소녀시대 태연이 놀라운토요일 442회에서 입은 키르시 후드 하프 더플 코트 라이트 베이지. 299,000원에서 5% 할인된 284,050원, S·M 사이즈와 6만 원대 코트 대안까지 정리했습니다.","image":["https://starfitpick.netlify.app/assets/looks/taeyeon-kirsh-duffle.jpg?v=2026112103"],"datePublished":"2026-11-21","dateModified":"2026-11-21","inLanguage":"ko-KR","author":{"@type":"Organization","name":"스타핏픽","url":"https://starfitpick.netlify.app/"},"publisher":{"@type":"Organization","name":"스타핏픽","url":"https://starfitpick.netlify.app/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://starfitpick.netlify.app/look-taeyeon-kirsh-duffle.html"},"articleSection":"착장 포스팅","keywords":"태연 키르시, 연예인 착장 가격, 놀라운 토요일, 가성비 대안","about":[{"@type":"Product","name":"후드 하프 더플 코트 [라이트 베이지]","brand":{"@type":"Brand","name":"키르시"},"offers":{"@type":"Offer","price":"284050","priceCurrency":"KRW","availability":"https://schema.org/InStock"}},{"@type":"Product","name":"트위드 미니멀 재킷 [블랙]","brand":{"@type":"Brand","name":"무신사 스탠다드"},"offers":{"@type":"Offer","price":"69890","priceCurrency":"KRW","availability":"https://schema.org/InStock"}}],"isPartOf":{"@type":"CollectionPage","@id":"https://starfitpick.netlify.app/posts.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"스타핏픽","item":"https://starfitpick.netlify.app/"},{"@type":"ListItem","position":2,"name":"착장 포스팅","item":"https://starfitpick.netlify.app/posts.html"},{"@type":"ListItem","position":3,"name":"태연 놀라운토요일 더플 코트, 키르시 299,000원 → 284,050원","item":"https://starfitpick.netlify.app/look-taeyeon-kirsh-duffle.html"}]}]}</script>
 </head>
 <body>
@@ -265,7 +265,7 @@
     image: "assets/models/seo-arin.jpg?v=2026112103",
     imageWebp: "assets/models/seo-arin.webp?v=2026112103"
   }};</script>
-<script src="assets/look-enhance.js?v=2026112302"></script>
+<script src="assets/look-enhance.js?v=2026112303"></script>
 <script>
 (function () {
   var o = {"brand": "키르시", "name": "후드 하프 더플 코트 [라이트 베이지]", "officialUrl": "https://www.musinsa.com/products/7460057", "alt": {"brand": "무신사 스탠다드", "name": "트위드 미니멀 재킷 [블랙]", "platform": "musinsa", "query": "무신사 스탠다드 트위드 미니멀 재킷"}};
@@ -290,6 +290,21 @@
     ((o.alt.platform === 'coupang' || (nvA && o.alt.platform === 'official')) ? '' :
       a(cfg.buildLink(o.alt.platform === 'official' ? 'naver' : o.alt.platform, aq), altLabel, 'mid')) +
     a(cfg.buildLink('elevenst', aq), '11번가 검색 ↗', 'chip');
+
+  /* 같은 무드 네이버 쇼핑커넥트 상품(발급 링크) — 룩 단위 CTA */
+  function sfpLookId() {
+    var d = window.SFP_LOOK_DATA;
+    if (d && d.look && d.look.id) return d.look.id;
+    return location.pathname.split('/').pop().replace(/^look-/, '').replace(/\.html$/, '');
+  }
+  var nvLook = (window.SFP_NAVER_BY_LOOK || {})[sfpLookId()];
+  var nvPanel = document.querySelector('#buy-official') ? document.querySelector('#buy-official').closest('.buy-panel') : null;
+  if (nvLook && nvLook.u && nvPanel && !nvPanel.querySelector('a[href="' + nvLook.u + '"]')) {
+    var escp = function (t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+    nvPanel.insertAdjacentHTML('beforeend',
+      '<div class="buy-col buy-col-feature"><p class="buy-kicker">같은 무드 네이버 판매 상품 · ' + escp(nvLook.p) + '</p>' +
+      '<a class="buy-btn cta cta-naver wide" href="' + escp(nvLook.u) + '" target="_blank" rel="noopener sponsored">네이버 쇼핑커넥트에서 이 무드 보기 ↗</a></div>');
+  }
 })();
 </script>
 </body>

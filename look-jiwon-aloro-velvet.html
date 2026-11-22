@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="preload" as="image" href="assets/looks/jiwon-aloro-velvet.webp?v=2026112103" type="image/webp">
-<link rel="stylesheet" href="style.css?v=2026112302">
+<link rel="stylesheet" href="style.css?v=2026112303">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://starfitpick.netlify.app/look-jiwon-aloro-velvet.html#article","headline":"김지원 공항패션 듀베티카 알로로 벨벳 패딩 가격·핏·10만 원 이하 대안템 정리","description":"김지원이 인천공항에서 입은 듀베티카 알로로 벨벳 미드 다운. 정가 145만 원·할인가 130만 5천 원, 거위솜털 90% 소재와 벨트 실루엣, 아쉬운 점, 7만 원대 경량 다운 대안까지 정리했습니다.","image":["https://starfitpick.netlify.app/assets/looks/jiwon-aloro-velvet.jpg"],"datePublished":"2026-11-20","dateModified":"2026-11-20","inLanguage":"ko-KR","author":{"@type":"Organization","name":"스타핏픽","url":"https://starfitpick.netlify.app/"},"publisher":{"@type":"Organization","name":"스타핏픽","url":"https://starfitpick.netlify.app/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://starfitpick.netlify.app/look-jiwon-aloro-velvet.html"},"articleSection":"착장 포스팅","keywords":"김지원 듀베티카 알로로 벨벳 (BLACK), 듀베티카 벨벳 광택 미드 다운, 연예인 착장 가격, 공항패션, 예능 사복, 가성비 대안","about":[{"@type":"Product","name":"듀베티카 알로로 벨벳 (BLACK)","brand":{"@type":"Brand","name":"듀베티카"},"sku":"VDDJ37366-BKL","offers":{"@type":"Offer","price":"1305000","priceCurrency":"KRW","availability":"https://schema.org/InStock","url":"https://www.duvetica.co.kr/product-detail/VDDJ37366-BKL"}},{"@type":"Product","name":"유니클로 울트라라이트 다운 재킷","brand":{"@type":"Brand","name":"유니클로"},"offers":{"@type":"Offer","price":"79900","priceCurrency":"KRW","availability":"https://schema.org/InStock"}}],"isPartOf":{"@type":"CollectionPage","@id":"https://starfitpick.netlify.app/posts.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"스타핏픽","item":"https://starfitpick.netlify.app/"},{"@type":"ListItem","position":2,"name":"착장 포스팅","item":"https://starfitpick.netlify.app/posts.html"},{"@type":"ListItem","position":3,"name":"김지원 공항패션 듀베티카 알로로 벨벳 패딩 가격·핏·10만 원 이하 대안템 정리","item":"https://starfitpick.netlify.app/look-jiwon-aloro-velvet.html"}]}]}
 </script>
@@ -272,7 +272,7 @@
     image: "assets/models/yun-sera.jpg?v=2026112103",
     imageWebp: "assets/models/yun-sera.webp?v=2026112103"
   }};</script>
-<script src="assets/look-enhance.js?v=2026112302"></script>
+<script src="assets/look-enhance.js?v=2026112303"></script>
 <script>
 (function () {
   var o = {"brand": "듀베티카", "name": "알로로 벨벳 (BLACK)", "officialUrl": "https://www.duvetica.co.kr/product-detail/VDDJ37366-BKL", "alt": {"brand": "유니클로", "name": "울트라라이트 다운 재킷", "platform": "official", "query": "유니클로 울트라라이트 다운 재킷"}};
@@ -298,6 +298,21 @@
     ((o.alt.platform === 'coupang' || (nvA && o.alt.platform === 'official')) ? '' :
       a(cfg.buildLink(o.alt.platform === 'official' ? 'naver' : o.alt.platform, aq), altLabel, 'mid')) +
     a(cfg.buildLink('elevenst', aq), '11번가 검색 ↗', 'chip');
+
+  /* 같은 무드 네이버 쇼핑커넥트 상품(발급 링크) — 룩 단위 CTA */
+  function sfpLookId() {
+    var d = window.SFP_LOOK_DATA;
+    if (d && d.look && d.look.id) return d.look.id;
+    return location.pathname.split('/').pop().replace(/^look-/, '').replace(/\.html$/, '');
+  }
+  var nvLook = (window.SFP_NAVER_BY_LOOK || {})[sfpLookId()];
+  var nvPanel = document.querySelector('#buy-official') ? document.querySelector('#buy-official').closest('.buy-panel') : null;
+  if (nvLook && nvLook.u && nvPanel && !nvPanel.querySelector('a[href="' + nvLook.u + '"]')) {
+    var escp = function (t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+    nvPanel.insertAdjacentHTML('beforeend',
+      '<div class="buy-col buy-col-feature"><p class="buy-kicker">같은 무드 네이버 판매 상품 · ' + escp(nvLook.p) + '</p>' +
+      '<a class="buy-btn cta cta-naver wide" href="' + escp(nvLook.u) + '" target="_blank" rel="noopener sponsored">네이버 쇼핑커넥트에서 이 무드 보기 ↗</a></div>');
+  }
 })();
 </script>
 </body>
