@@ -2,6 +2,7 @@
 """스타핏픽 기술적 SEO 전수 점검 (읽기 전용)
 
   - title / meta description / og:title / og:description / canonical 누락·중복
+  - og:image 절대 URL·실제 파일 존재·최소 용량 검증 (59편 룩 대표 이미지 전수)
   - look-*.html 의 Article · BreadcrumbList JSON-LD 존재
   - 히어로 이미지 fetchpriority=high, 그 외 loading=lazy + decoding=async
   - sitemap.xml · rss.xml URL 수와 실제 페이지 존재 여부
@@ -36,6 +37,7 @@ def main():
     P = pages()
     works = collections.defaultdict(list)
     titles, descs, canons = collections.Counter(), collections.Counter(), collections.Counter()
+    og_checked = set()
 
     for name, s in P:
         def one(pat):
@@ -54,6 +56,37 @@ def main():
         if t: titles[t[0]] += 1
         if d: descs[d[0]] += 1
         if c: canons[c[0]] += 1
+
+        # ---- og:image 검증 (절대 URL · 실제 파일 · 최소 용량 · twitter:image 일치) ----
+        oi = one(r'<meta\s+property="og:image"\s+content="(.*?)"')
+        if len(oi) != 1:
+            works["og:image 개수"].append((name, len(oi)))
+        elif not oi[0].strip():
+            works["og:image 빈 값"].append(name)
+        else:
+            og_url = oi[0].strip()
+            if not og_url.startswith(SITE):
+                works["og:image 절대 URL 아님"].append((name, og_url[:100]))
+            else:
+                rel = og_url[len(SITE):].split("?")[0]
+                path = os.path.join(ROOT, rel)
+                if not os.path.exists(path):
+                    works["og:image 파일 없음"].append((name, rel))
+                elif os.path.getsize(path) < 5000:
+                    works["og:image 파일 너무 작음"].append((name, rel, os.path.getsize(path)))
+                og_checked.add(rel)
+            if not one(r'<meta\s+property="og:image:width"'):
+                works["og:image:width 없음"].append(name)
+            if not one(r'<meta\s+property="og:image:height"'):
+                works["og:image:height 없음"].append(name)
+            ti = one(r'<meta\s+name="twitter:image"\s+content="(.*?)"')
+            if len(ti) == 1 and ti[0].strip() and ti[0].strip() != og_url:
+                works["twitter:image ≠ og:image"].append((name, ti[0][-60:]))
+            # 룩 상세: og:image 가 페이지 히어로 이미지와 같은 파일인지
+            if name.startswith("look-"):
+                hero = one(r'<link\s+rel="preload"\s+as="image"\s+href="([^"]+)"')
+                if hero and os.path.splitext(og_url.split("?")[0])[0] != os.path.splitext(SITE + hero[0].split("?")[0].lstrip("./"))[0]:
+                    works["og:image ≠ 히어로 이미지"].append((name, og_url.split("/")[-1], hero[0]))
 
         if name.startswith("look-"):
             if '"@type": "Article"' not in s and '"@type":"Article"' not in s: works["Article 없음"].append(name)
@@ -107,7 +140,7 @@ def main():
     if broken:
         works["깨진 내부 링크"] = sorted(broken)[:20]
 
-    print("페이지:", len(P), "· sitemap URL:", len(locs), "· rss item:", rss.count("<item>"))
+    print("페이지:", len(P), "· sitemap URL:", len(locs), "· rss item:", rss.count("<item>"), "· og:image 고유 파일:", len(og_checked))
     if not works:
         print("✅ 문제 없음")
     for k, v in works.items():

@@ -23,6 +23,13 @@
   function won(n) {
     try { return Number(n).toLocaleString("ko-KR") + "원"; } catch (e) { return String(n); }
   }
+  function saveLabel(n) {
+    if (n >= 10000) {
+      var man = Math.round(n / 1000) / 10;
+      return (man % 1 === 0 ? String(man) : man.toFixed(1)) + "만원";
+    }
+    return won(n);
+  }
   function buyAnchor() {
     return $("#buy") ? "#buy" : ($("#buy-ootd") ? "#buy-ootd" : "#more");
   }
@@ -43,6 +50,73 @@
     try { localStorage.setItem(CLOSET_KEY, JSON.stringify(arr)); } catch (e) {}
   }
   function inCloset() { return readCloset().indexOf(look.id) > -1; }
+
+  /* ---------- 방금 본 착장 (sfp:recent:v1 공용 저장소) ---------- */
+  var RECENT_KEY = "sfp:recent:v1";
+  function readRecent() {
+    try {
+      var raw = localStorage.getItem(RECENT_KEY);
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr.filter(function (x) { return x && x.id; }) : [];
+    } catch (e) { return []; }
+  }
+  function writeRecent(arr) {
+    try { localStorage.setItem(RECENT_KEY, JSON.stringify(arr)); } catch (e) {}
+  }
+  function recordRecent() {
+    var arr = readRecent().filter(function (x) { return x.id !== look.id; });
+    arr.unshift({
+      id: look.id,
+      c: look.celeb || "",
+      h: look.headline || "",
+      i: look.imageJpg || look.image || "",
+      w: look.image || "",
+      t: Date.now()
+    });
+    writeRecent(arr.slice(0, 6));
+  }
+  function recentSection() {
+    var others = readRecent().filter(function (x) { return x.id !== look.id; });
+    if (!others.length) return null;
+    var sec = document.createElement("section");
+    sec.className = "recent-sec";
+    sec.setAttribute("aria-labelledby", "recent-title");
+    sec.innerHTML =
+      '<div class="recent-head"><h3 id="recent-title">👀 방금 본 착장</h3>' +
+      '<a class="recent-clear" href="index.html?closet=1">내 옷장 보기</a></div>' +
+      '<div class="recent-strip">' +
+      others.slice(0, 6).map(function (x) {
+        return '<a class="recent-card" href="look-' + encodeURIComponent(x.id) + '.html">' +
+          '<picture>' + (x.w ? '<source srcset="' + esc(x.w) + '" type="image/webp">' : "") +
+          '<img src="' + esc(x.i || x.w) + '" alt="' + esc((x.c || "") + " " + (x.h || "") + " 착장") + '" width="180" height="225" loading="lazy" decoding="async"></picture>' +
+          '<b>' + esc(x.c) + '</b><small>' + esc(x.h) + "</small></a>";
+      }).join("") +
+      "</div>";
+    return sec;
+  }
+
+  /* ---------- 이전 / 다음 착장 (기존 글 순서 내비게이션 활용) ---------- */
+  function stepNav() {
+    var prev = $(".guide-nav a.prev"), next = $(".guide-nav a.next");
+    if (!prev && !next) return null;
+    function side(a, cls, label) {
+      if (!a) return "";
+      var txt = (a.textContent || "").replace(/→|←/g, "").replace(/이전 착장 글|다음 착장 글|이전 착장|다음 착장/g, "").trim();
+      var parts = txt.split(" · ");
+      var head = parts[0] || txt;
+      var rest = parts.slice(1).join(" · ");
+      return '<a class="' + cls + '" href="' + esc(a.getAttribute("href")) + '">' +
+        '<span>' + esc(label) + '</span><b>' + esc(head) + '</b>' +
+        (rest ? '<small>' + esc(rest) + '</small>' : "") + "</a>";
+    }
+    var nav = document.createElement("nav");
+    nav.className = "look-stepnav";
+    nav.setAttribute("aria-label", "이전·다음 착장");
+    nav.innerHTML = side(prev, "prev", "← 이전 착장") + side(next, "next", "다음 착장 →");
+    return nav;
+  }
+
+  recordRecent();
 
   /* ---------- 토스트 공용 ---------- */
   function showToast(msg) {
@@ -194,12 +268,14 @@
       });
     });
     if (look.alt && look.alt.price) {
-      cards.push({ num: cards.length + 1, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴" });
+      var opAll = (look.item && (look.item.salePrice || look.item.price)) || 0;
+      cards.push({ num: cards.length + 1, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, save: opAll > look.alt.price ? opAll - look.alt.price : 0 });
     }
   } else if (look.item) {
     cards.push({ num: 1, role: "정품", brand: look.item.brand || "", name: (look.item.name || ""), price: (look.item.salePrice || look.item.price || ""), tag: "" });
     if (look.alt && look.alt.price) {
-      cards.push({ num: 2, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴" });
+      var opOne = (look.item.salePrice || look.item.price) || 0;
+      cards.push({ num: 2, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, save: opOne > look.alt.price ? opOne - look.alt.price : 0 });
     }
   }
 
@@ -214,12 +290,13 @@
       '<p class="its-hint">카드를 누르면 아래 구매 버튼으로 이동합니다</p></div>' +
       '<div class="its-scroll">' +
       cards.map(function (c) {
-        return '<a class="its-card" href="' + buyAnchor() + '">' +
+        return '<a class="its-card' + (c.isAlt ? " is-alt" : "") + '" href="' + buyAnchor() + '">' +
           '<span class="its-num" aria-hidden="true">' + c.num + "</span>" +
           '<span class="its-role">' + esc(c.role) + (c.tag ? " · " + esc(c.tag) : "") + "</span>" +
           '<span class="its-brand">' + esc(c.brand) + "</span>" +
           '<span class="its-name">' + esc(c.name) + "</span>" +
           '<span class="its-price">' + (c.price ? esc(won(c.price)) : "가격 좌표 확인") + "</span>" +
+          (c.save ? '<span class="its-save">' + esc(saveLabel(c.save)) + " 아낌</span>" : "") +
           '<span class="its-go">구매 버튼 보기 ↓</span>' +
           "</a>";
       }).join("") +
@@ -262,6 +339,19 @@
   bindSave($(".save-btn", actions));
   bindShare($(".share-btn", actions));
   syncClosetUI(false);
+
+  /* ---------- 4) 👀 방금 본 착장 + ← 이전 / 다음 착장 → ---------- */
+  var guideHead = $("#guide");
+  var recentSec = recentSection();
+  if (recentSec) {
+    if (guideHead && guideHead.parentNode) guideHead.parentNode.insertBefore(recentSec, guideHead);
+    else if (body) body.appendChild(recentSec);
+  }
+  var step = stepNav();
+  if (step) {
+    if (guideHead && guideHead.parentNode) guideHead.parentNode.insertBefore(step, guideHead);
+    else if (body) body.appendChild(step);
+  }
 
   /* ---------- 3) 모바일 하단 고정 바 (최저가 · 코디) ---------- */
   var alt = look.alt || null;

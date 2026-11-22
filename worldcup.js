@@ -296,6 +296,7 @@
           '<figure class="wc-winner-art">' + picture(w, true) +
             "<figcaption>👑 우승 · " + esc(w.show) + " · " + esc(w.headline) + "</figcaption></figure>" +
           '<div class="wc-winner-body">' +
+            '<a class="wc-cta" href="' + esc(hrefLook(w)) + '#buy"><span><b>🛍 우승 착장 구매 좌표 바로 보기</b><em>정품가 · 가성비 대안 · 판매처까지 한 화면에서</em></span><span class="dl">→</span></a>' +
             '<p class="wc-winner-brand">' + esc(w.item.brand) + " <span>" + esc(w.item.name) + "</span></p>" +
             '<div class="wc-price-row"><b>' + won(cur) + "</b>" + saleRow + "</div>" +
             '<h3 class="wc-h">정품 vs 10만 원 이하 대안</h3>' +

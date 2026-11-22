@@ -65,6 +65,7 @@
 
   /* ---------------- storage ---------------- */
   var STORE = { closet: "sfp:closet:v1", mood: "sfp:mood:v1" };
+  var RECENT_KEY = "sfp:recent:v1";
   function readCloset() {
     try {
       var raw = localStorage.getItem(STORE.closet);
@@ -78,7 +79,7 @@
   var closet = readCloset();
 
   /* ---------------- state ---------------- */
-  var state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], budget: false, closet: false, sort: "recent" };
+  var state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], budget: false, closet: false, discount: false, sort: "recent" };
   var lastFocus = null;
 
   function readURL() {
@@ -94,6 +95,7 @@
     state.ids = (p.get("ids") || "").split(",").filter(Boolean);
     state.budget = p.get("budget") === "1";
     state.closet = p.get("closet") === "1";
+    state.discount = p.get("discount") === "80";
     state.sort = ["recent", "save", "price-low", "price-high"].indexOf(p.get("sort")) > -1 ? p.get("sort") : "recent";
   }
   function writeURL(extra) {
@@ -109,6 +111,7 @@
     if (state.ids && state.ids.length) p.set("ids", state.ids.join(","));
     if (state.budget) p.set("budget", "1");
     if (state.closet) p.set("closet", "1");
+    if (state.discount) p.set("discount", "80");
     if (state.sort !== "recent") p.set("sort", state.sort);
     if (extra && extra.look) p.set("look", extra.look);
     var qs = p.toString();
@@ -176,6 +179,166 @@
     return out;
   }
 
+  /* ---------------- 80%↑ 초특가 필터 ---------------- */
+  function heatCount() {
+    return LOOKS.filter(function (l) { return saveRate(l) >= 80; }).length;
+  }
+  function paintHeat() {
+    var btn = $("#heat-filter");
+    if (!btn) return;
+    btn.setAttribute("aria-pressed", state.discount ? "true" : "false");
+    var n = $("#heat-count");
+    if (n) n.textContent = heatCount();
+  }
+  function bindHeat() {
+    var btn = $("#heat-filter");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      state.discount = !state.discount;
+      paintHeat();
+      renderGrid();
+      writeURL();
+      if (state.discount) {
+        var t = $("#look-grid");
+        if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  }
+
+  /* ---------------- 방금 본 착장 (localStorage sfp:recent:v1) ---------------- */
+  function readRecent() {
+    try {
+      var raw = localStorage.getItem(RECENT_KEY);
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr.filter(function (x) { return x && x.id && findLook(x.id); }) : [];
+    } catch (e) { return []; }
+  }
+  function writeRecent(arr) {
+    try { localStorage.setItem(RECENT_KEY, JSON.stringify(arr)); } catch (e) {}
+  }
+  function recordRecent(look) {
+    if (!look || !look.id) return;
+    var arr = readRecent().filter(function (x) { return x.id !== look.id; });
+    arr.unshift({
+      id: look.id,
+      c: look.celeb || "",
+      h: look.headline || "",
+      i: look.imageJpg || look.image || "",
+      w: look.image || "",
+      t: Date.now()
+    });
+    writeRecent(arr.slice(0, 6));
+    renderRecent();
+  }
+  function renderRecent() {
+    var sec = $("#recent-sec"), strip = $("#recent-strip");
+    if (!sec || !strip) return;
+    var list = readRecent();
+    if (list.length < 2) { sec.hidden = true; strip.innerHTML = ""; return; }
+    strip.innerHTML = list.map(function (x) {
+      var l = findLook(x.id);
+      var img = l.imageJpg || l.image;
+      return '<a class="recent-card" href="look-' + l.id + '.html">' +
+        '<picture>' + (l.image ? '<source srcset="' + esc(l.image) + '" type="image/webp">' : "") +
+        '<img src="' + esc(img) + '" alt="' + esc(l.celeb + " " + l.headline) + '" width="180" height="225" loading="lazy" decoding="async"></picture>' +
+        '<b>' + esc(l.celeb) + '</b><small>' + esc(l.headline) + "</small></a>";
+    }).join("");
+    sec.hidden = false;
+  }
+  function bindRecent() {
+    var clear = $("#recent-clear");
+    if (!clear) return;
+    clear.addEventListener("click", function () {
+      writeRecent([]);
+      renderRecent();
+      toast("방금 본 착장 기록을 지웠습니다");
+    });
+  }
+
+  /* ---------------- 검색 즉시 추천 (연관 검색 드롭다운) ---------------- */
+  var SUGGEST_POOL = null;
+  function suggestPool() {
+    if (SUGGEST_POOL) return SUGGEST_POOL;
+    var celebs = {}, brands = {}, out = [];
+    LOOKS.forEach(function (l) {
+      celebs[l.celeb] = (celebs[l.celeb] || 0) + 1;
+      brands[l.item.brand] = (brands[l.item.brand] || 0) + 1;
+    });
+    LOOKS.forEach(function (l) {
+      out.push({ label: l.celeb, meta: (l.group || l.show) + " · " + celebs[l.celeb] + "벌", type: "셀럽", value: l.celeb, act: "celeb", key: (l.celeb + " " + (l.group || "")).toLowerCase() });
+    });
+    Object.keys(brands).forEach(function (b) {
+      out.push({ label: b, meta: brands[b] + "벌의 정품 브랜드", type: "브랜드", value: b, act: "brand", weight: brands[b], key: b.toLowerCase() });
+    });
+    LOOKS.forEach(function (l) {
+      out.push({ label: l.item.name, meta: l.item.brand + " · " + won(price(l)), type: "아이템", value: l.item.name, act: "q", key: (l.item.name + " " + (l.item.nameEn || "") + " " + (l.item.brandEn || "") + " " + l.headline + " " + (l.show || "") + " " + CAT_LABEL[l.category] + " " + (l.mood || []).map(function (m) { return MOOD_LABEL[m]; }).join(" ")).toLowerCase() });
+    });
+    SUGGEST_POOL = out;
+    return out;
+  }
+  function popularSuggest() {
+    var pool = suggestPool();
+    var picks = ["장원영", "김지원", "카리나"], seen = {}, out = [];
+    pool.forEach(function (x) {
+      if (x.act === "celeb" && picks.indexOf(x.label) > -1 && !seen[x.label]) { seen[x.label] = 1; out.push(x); }
+    });
+    var brands = pool.filter(function (x) { return x.act === "brand"; })
+      .sort(function (a, b) { return b.weight - a.weight; });
+    return out.concat(brands.slice(0, 3)).slice(0, 6);
+  }
+  function findSuggest(q) {
+    var pool = suggestPool();
+    var key = q.toLowerCase();
+    if (!key) return popularSuggest();
+    var scored = [];
+    pool.forEach(function (x) {
+      var i = x.key.indexOf(key);
+      if (i === -1) return;
+      var score = i === 0 || x.label.toLowerCase().indexOf(key) === 0 ? 0 : i;
+      if (x.act === "celeb") score -= 0.5;
+      scored.push({ x: x, s: score });
+    });
+    scored.sort(function (a, b) { return a.s - b.s; });
+    var seen = {}, out = [];
+    scored.forEach(function (r) {
+      var k = r.x.type + r.x.label;
+      if (seen[k]) return;
+      seen[k] = 1;
+      out.push(r.x);
+    });
+    return out.slice(0, 6);
+  }
+  function applySuggest(item, fromHero) {
+    if (item.act === "celeb") { state.celeb = item.value; state.q = ""; }
+    else if (item.act === "brand") { state.brand = item.value; state.q = ""; }
+    else { state.q = item.value; state.celeb = ""; state.brand = ""; }
+    syncControls(); paintChips(); paintQuick(); renderGrid(); writeURL(); syncFilterMore();
+    if (fromHero) {
+      var t = document.getElementById("looks");
+      if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+  function initSuggest() {
+    if (!window.SFPSuggest) return;
+    var q = $("#q"), qh = $("#q-hero");
+    if (q) {
+      window.SFPSuggest.attach(q, {
+        items: findSuggest,
+        heading: "연관 검색 · 바로 필터",
+        label: "연관 검색 후보",
+        onPick: function (item) { q.blur(); applySuggest(item, false); }
+      });
+    }
+    if (qh) {
+      window.SFPSuggest.attach(qh, {
+        items: findSuggest,
+        heading: "연관 검색 · 바로 필터",
+        label: "연관 검색 후보",
+        onPick: function (item) { qh.blur(); applySuggest(item, true); }
+      });
+    }
+  }
+
   /* ---------------- filtering ---------------- */
   function matches(look) {
     if (state.type && look.type !== state.type) return false;
@@ -193,6 +356,7 @@
     }
     if (state.ids && state.ids.length && state.ids.indexOf(look.id) === -1) return false;
     if (state.budget && look.alt.price > BUDGET_CAP) return false;
+    if (state.discount && saveRate(look) < 80) return false;
     if (state.closet && closet.indexOf(look.id) === -1) return false;
     if (state.q) {
       var hay = [
@@ -284,6 +448,7 @@
     if (state.cat) parts.push(CAT_LABEL[state.cat]);
     if (state.mood) parts.push(MOOD_LABEL[state.mood] + " 무드");
     if (state.budget) parts.push("대안템 10만 원 이하");
+    if (state.discount) parts.push("80%↑ 초특가 대안");
     if (state.closet) parts.push("내 옷장");
     if (state.ids && state.ids.length) {
       var at = activeTag();
@@ -386,6 +551,7 @@
   function openModal(id) {
     var look = findLook(id);
     if (!look) return;
+    recordRecent(look);
     lastFocus = document.activeElement;
     var modal = $("#modal");
     modal.hidden = false;
@@ -1376,8 +1542,8 @@
   }
 
   function resetFilters() {
-    state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], budget: false, closet: false, sort: "recent" };
-    syncControls(); paintChips(); paintQuick(); renderGrid(); writeURL(); syncFilterMore(); paintHotTags();
+    state = { q: "", type: "", cat: "", mood: "", celeb: "", brand: "", band: "", model: "", ids: [], budget: false, closet: false, discount: false, sort: "recent" };
+    syncControls(); paintChips(); paintQuick(); paintHeat(); renderGrid(); writeURL(); syncFilterMore(); paintHotTags();
   }
   function syncControls() {
     $("#q").value = state.q;
@@ -1538,6 +1704,11 @@
     bindChips();
     buildQuick();
     paintQuick();
+    paintHeat();
+    bindHeat();
+    bindRecent();
+    renderRecent();
+    initSuggest();
     initRoulette();
     initTags();
     bindQuiz();
