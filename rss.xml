@@ -3,10 +3,10 @@
   <channel>
     <title>스타핏픽 — 화제 착장 전속 AI 모델 룩북과 브랜드·가격 좌표</title>
     <link>https://starfitpick.netlify.app/</link>
-    <description>드라마·예능·공항에서 화제가 된 착장을 스타핏픽 전속 AI 모델 6인이 착용한 연출 컷으로 소개하고, 원본 착장 출처·브랜드·제품명·정가·구매 좌표와 가성비 대안템을 비교합니다. 착장 포스팅 57편, 패션 가이드 20편, 검증 착장 57건, 착장 이상형 월드컵.</description>
+    <description>드라마·예능·공항에서 화제가 된 착장을 스타핏픽 전속 AI 모델 6인이 착용한 연출 컷으로 소개하고, 원본 착장 출처·브랜드·제품명·정가·구매 좌표와 가성비 대안템을 비교합니다. 착장 포스팅 59편, 패션 가이드 20편, 검증 착장 59건, 착장 이상형 월드컵.</description>
     <language>ko</language>
     <copyright>© 2026 스타핏픽</copyright>
-    <lastBuildDate>Sat, 21 Nov 2026 23:20:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 10:30:00 +0900</lastBuildDate>
     <pubDate>Fri, 20 Nov 2026 13:56:00 +0900</pubDate>
     <ttl>720</ttl>
     <generator>스타핏픽</generator>
@@ -16,6 +16,22 @@
       <title>스타핏픽</title>
       <link>https://starfitpick.netlify.app/</link>
     </image>
+    <item>
+      <title>기은세 14만 3,910원 브라운 무스탕</title>
+      <link>https://starfitpick.netlify.app/look-eunse-shearling-balaclava.html</link>
+      <guid isPermaLink="true">https://starfitpick.netlify.app/look-eunse-shearling-balaclava.html</guid>
+      <description>배우 기은세 인스타그램 브라운 리버시블 무스탕 룩을 실제 판매 상품 6개로 맞춘 풀코디. 시어링 재킷 143,910원부터 브라운 아가일 니트·속기모 데님·레드 바라클라바·퍼 숄더백·스웨이드 스니커즈까지 총액 397,660원.</description>
+      <category>착장 포스팅</category>
+      <pubDate>Sun, 22 Nov 2026 10:20:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>마틴 12만 9,900원 레더 재킷</title>
+      <link>https://starfitpick.netlify.app/look-martin-cortis-leather.html</link>
+      <guid isPermaLink="true">https://starfitpick.netlify.app/look-martin-cortis-leather.html</guid>
+      <description>코르티스 마틴 MAMA 출국 블랙 가죽점퍼 룩을 실제 판매 상품 5개로 맞춘 풀코디. 신세틱 레더 싱글 재킷 129,900원부터 헤비웨이트 티·라이트 인디고 와이드 데님·레더 스니커즈·미니 크로스백까지 총액 292,980원.</description>
+      <category>착장 포스팅</category>
+      <pubDate>Sun, 22 Nov 2026 10:10:00 +0900</pubDate>
+    </item>
     <item>
       <title>김채원 9만 7,930원 퍼 코트</title>
       <link>https://starfitpick.netlify.app/look-chaewon-fur-coat.html</link>
@@ -569,7 +585,7 @@
       <pubDate>Fri, 20 Nov 2026 07:12:00 +0900</pubDate>
     </item>
     <item>
-      <title>착장 포스팅 57편: 공항패션·예능 사복 셀럽 착장 리뷰 모음</title>
+      <title>착장 포스팅 59편: 공항패션·예능 사복 셀럽 착장 리뷰 모음</title>
       <link>https://starfitpick.netlify.app/posts.html</link>
       <guid isPermaLink="true">https://starfitpick.netlify.app/posts.html</guid>
       <description>공항패션·예능 사복·일상 착장 40편을 사진과 출처, 정품 가격, 아쉬운 점, 10만 원 이하 대안템까지 한 편씩 길게 정리했습니다.</description>
