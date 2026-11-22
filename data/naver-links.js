@@ -40,7 +40,25 @@ window.SFP_NAVER_LINKS = {
   "무신사 스탠다드 릴렉스드 섀도우 스트라이프 포플린 셔츠": {"u": "https://naver.me/Fc6O7ULK", "p": "[파인코튼] 스파오 여성 스트라이프 오버핏 셔츠 SPYSG23G02", "s": "스파오 스토어", "pr": 39900, "f": 5},
   "무신사 스탠다드 릴렉스드 데님 트러커 재킷": {"u": "https://naver.me/5XcAYkfS", "p": "유니클로 데님 트러커 재킷 청자켓 26FW", "s": "도쿄아씨마켓", "pr": 43800, "f": 5},
   "무신사 스탠다드 린넨 라이크 미니멀 데님 트러커 재킷": {"u": "https://naver.me/xtN2KFDf", "p": "남자흑청자켓 오버핏 데님 연청 트러커재킷", "s": "초코클래식", "pr": 45800, "f": 5},
-  "무신사 스탠다드 릴렉스드 데님 셔츠": {"u": "https://naver.me/G3vCsazQ", "p": "스파오 웨스턴 데님 셔츠 SPYJG49CY1", "s": "스파오 스토어", "pr": 29900, "f": 5}
+  "무신사 스탠다드 릴렉스드 데님 셔츠": {"u": "https://naver.me/G3vCsazQ", "p": "스파오 웨스턴 데님 셔츠 SPYJG49CY1", "s": "스파오 스토어", "pr": 29900, "f": 5},
+  "무신사 스탠다드 신세틱 레더 싱글 재킷 블랙": {"u": "https://naver.me/Fhu92okB", "p": "남자가죽자켓 레더블루종 싱글라이더자켓", "s": "루플릭", "pr": 69800, "f": 16},
+  "무신사 스탠다드 신세틱 레더 오버사이즈 크롭 필드 재킷 [블랙]": {"u": "https://naver.me/Fhu92okB", "p": "남자가죽자켓 레더블루종 싱글라이더자켓", "s": "루플릭", "pr": 69800, "f": 16},
+  "무신사 스탠다드 헤비웨이트 릴렉스드 크루 넥 티셔츠 블랙": {"u": "https://naver.me/G1plURsH", "p": "샤카웨어 7.5oz 맥스 헤비웨이트 반팔티 BLACK", "s": "올아이원트", "pr": 9870, "f": 5},
+  "무신사 스탠다드 커먼 브러쉬 와이드 데님 팬츠 라이트 인디고": {"u": "https://naver.me/GCJZYbTA", "p": "[제로스트릿] 스카이 핀턱 데님 팬츠 LIGHT INDIGO", "s": "제로스트릿", "pr": 66000, "f": 5},
+  "무신사 스탠다드 레더 코트 스니커즈 블랙": {"u": "https://naver.me/xIFTvobu", "p": "[국내매장판] 나이키 코트 로얄 클래식 가죽 스니커즈 블랙화이트", "s": "BrandShip", "pr": 48900, "f": 6},
+  "무신사 스탠다드 신세틱 레더 스퀘어 미니 크로스 백 블랙": {"u": "https://naver.me/GlR6XqAW", "p": "지니몰 스퀘어 레더 미니 크로스백 6color", "s": "지니나라", "pr": 8800, "f": 18},
+  "무신사 스탠다드 우먼 리버서블 신세틱 스웨이드 시어링 재킷 브라운": {"u": "https://naver.me/FORU3AvH", "p": "여성 천연양모100 무스탕 스웨이드 자켓 리버시블 숏 브라운 양털 코트", "s": "퍼플터틀22", "pr": 109000, "f": 5},
+  "무신사 스탠다드 우먼 우먼즈 리버서블 신세틱 스웨이드 시어링 재킷 [브라운]": {"u": "https://naver.me/FORU3AvH", "p": "여성 천연양모100 무스탕 스웨이드 자켓 리버시블 숏 브라운 양털 코트", "s": "퍼플터틀22", "pr": 109000, "f": 5},
+  "플레이스 스튜디오 리버서블 스웨이드 오버핏 양털 롱 무스탕 자켓 [브라운]": {"u": "https://naver.me/xPYAxgU5", "p": "무스탕 여성 양면 리버시블 코트 겨울 양털 자켓 브라운", "s": "RISTYLE", "pr": 79750, "f": 5},
+  "엑스컨테이너 헤어리 아가일 브이넥 니트 브라운": {"u": "https://naver.me/FiP3l6fb", "p": "보카시 아가일 루즈핏 브이넥니트 브라운 차콜", "s": "p.peridot", "pr": 24900, "f": 8},
+  "엑스컨테이너 헤어리 아가일 브이넥 니트 (BROWN)": {"u": "https://naver.me/FiP3l6fb", "p": "보카시 아가일 루즈핏 브이넥니트 브라운 차콜", "s": "p.peridot", "pr": 24900, "f": 8},
+  "무신사 스탠다드 우먼 속기모 스트레이트 데님 팬츠 미디엄 인디고": {"u": "https://naver.me/FM9LVUtn", "p": "로엠 기모 스트레이트 데님 팬츠 RMTJG4VR13", "s": "roem", "pr": 62910, "f": 5},
+  "무신사 스탠다드 우먼 우먼즈 속기모 스트레이트 데님 팬츠 [미디엄 인디고]": {"u": "https://naver.me/FM9LVUtn", "p": "로엠 기모 스트레이트 데님 팬츠 RMTJG4VR13", "s": "roem", "pr": 62910, "f": 5},
+  "더그린랩 머플러 바라클라바 레드": {"u": "https://naver.me/GgUJM6bA", "p": "여성 울 니트 바라클라바 방한 배색 단추 후드 넥워머", "s": "블루보넷bluebonnet", "pr": 12500, "f": 23},
+  "노컨텐츠 페이크 퍼 숄더 백 베이지": {"u": "https://naver.me/Gmp5owoE", "p": "지니몰 숄더백 페이크퍼 패턴 에스닉 가방", "s": "지니나라", "pr": 21100, "f": 18},
+  "노컨텐츠 149. 페이크 퍼 숄더 백 _ 베이지": {"u": "https://naver.me/Gmp5owoE", "p": "지니몰 숄더백 페이크퍼 패턴 에스닉 가방", "s": "지니나라", "pr": 21100, "f": 18},
+  "오찌 로마리 스웨이드 레이스업 스니커즈 브라운": {"u": "https://naver.me/xPYAxElj", "p": "아디다스 오리지널 토바코 스니커즈 스웨이드 데저트 브라운 JP9651", "s": "슈바이민", "pr": 97000, "f": 5},
+  "오찌 로마리 스웨이드 레이스업 스니커즈 브라운 OZSQGA143N": {"u": "https://naver.me/xPYAxElj", "p": "아디다스 오리지널 토바코 스니커즈 스웨이드 데저트 브라운 JP9651", "s": "슈바이민", "pr": 97000, "f": 5}
 };
 window.SFP_NAVER_BY_NORM = {
   "미쏘스탠카라페이크퍼숏자켓": "https://naver.me/FdqMUGnc",
@@ -81,7 +99,25 @@ window.SFP_NAVER_BY_NORM = {
   "무신사스탠다드릴렉스드섀도우스트라이프포플린셔츠": "https://naver.me/Fc6O7ULK",
   "무신사스탠다드릴렉스드데님트러커재킷": "https://naver.me/5XcAYkfS",
   "무신사스탠다드린넨라이크미니멀데님트러커재킷": "https://naver.me/xtN2KFDf",
-  "무신사스탠다드릴렉스드데님셔츠": "https://naver.me/G3vCsazQ"
+  "무신사스탠다드릴렉스드데님셔츠": "https://naver.me/G3vCsazQ",
+  "무신사스탠다드신세틱레더싱글재킷블랙": "https://naver.me/Fhu92okB",
+  "무신사스탠다드신세틱레더오버사이즈크롭필드재킷블랙": "https://naver.me/Fhu92okB",
+  "무신사스탠다드헤비웨이트릴렉스드크루넥티셔츠블랙": "https://naver.me/G1plURsH",
+  "무신사스탠다드커먼브러쉬와이드데님팬츠라이트인디고": "https://naver.me/GCJZYbTA",
+  "무신사스탠다드레더코트스니커즈블랙": "https://naver.me/xIFTvobu",
+  "무신사스탠다드신세틱레더스퀘어미니크로스백블랙": "https://naver.me/GlR6XqAW",
+  "무신사스탠다드우먼리버서블신세틱스웨이드시어링재킷브라운": "https://naver.me/FORU3AvH",
+  "무신사스탠다드우먼우먼즈리버서블신세틱스웨이드시어링재킷브라운": "https://naver.me/FORU3AvH",
+  "플레이스스튜디오리버서블스웨이드오버핏양털롱무스탕자켓브라운": "https://naver.me/xPYAxgU5",
+  "엑스컨테이너헤어리아가일브이넥니트브라운": "https://naver.me/FiP3l6fb",
+  "엑스컨테이너헤어리아가일브이넥니트brown": "https://naver.me/FiP3l6fb",
+  "무신사스탠다드우먼속기모스트레이트데님팬츠미디엄인디고": "https://naver.me/FM9LVUtn",
+  "무신사스탠다드우먼우먼즈속기모스트레이트데님팬츠미디엄인디고": "https://naver.me/FM9LVUtn",
+  "더그린랩머플러바라클라바레드": "https://naver.me/GgUJM6bA",
+  "노컨텐츠페이크퍼숄더백베이지": "https://naver.me/Gmp5owoE",
+  "노컨텐츠149페이크퍼숄더백베이지": "https://naver.me/Gmp5owoE",
+  "오찌로마리스웨이드레이스업스니커즈브라운": "https://naver.me/xPYAxElj",
+  "오찌로마리스웨이드레이스업스니커즈브라운ozsqga143n": "https://naver.me/xPYAxElj"
 };
 window.SFP_NAVER_BY_LOOK = {
   "chaewon-fur-coat": {"u": "https://naver.me/FdqMUGnc", "p": "[성해은 PICK][N배송] 로엠 하이넥 숏 퍼자켓 RMJLG4VN11", "pr": 143100},
@@ -140,5 +176,7 @@ window.SFP_NAVER_BY_LOOK = {
   "joy-flareup-layered": {"u": "https://naver.me/Fc6O7ULK", "p": "[파인코튼] 스파오 여성 스트라이프 오버핏 셔츠 SPYSG23G02", "pr": 39900},
   "inah-rheme-denim-racer": {"u": "https://naver.me/5XcAYkfS", "p": "유니클로 데님 트러커 재킷 청자켓 26FW", "pr": 43800},
   "jongmin-roaringrad-denim": {"u": "https://naver.me/xtN2KFDf", "p": "남자흑청자켓 오버핏 데님 연청 트러커재킷", "pr": 45800},
-  "siwan-siecle-denim-shirt": {"u": "https://naver.me/G3vCsazQ", "p": "스파오 웨스턴 데님 셔츠 SPYJG49CY1", "pr": 29900}
+  "siwan-siecle-denim-shirt": {"u": "https://naver.me/G3vCsazQ", "p": "스파오 웨스턴 데님 셔츠 SPYJG49CY1", "pr": 29900},
+  "martin-cortis-leather": {"u": "https://naver.me/Fhu92okB", "p": "남자가죽자켓 레더블루종 싱글라이더자켓", "pr": 69800},
+  "eunse-shearling-balaclava": {"u": "https://naver.me/FORU3AvH", "p": "여성 천연양모100 무스탕 스웨이드 자켓 리버시블 숏 브라운 양털 코트", "pr": 109000}
 };
