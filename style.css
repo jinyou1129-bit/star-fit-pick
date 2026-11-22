@@ -1438,7 +1438,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 /* ---------- ① 구매 좌표 버튼 위계 ----------
    · 수익 버튼(네이버 쇼핑커넥트 · 쿠팡) = 큰 Primary CTA
    · 공식 상품 페이지 = 중간(Mid) · 단순 검색(무신사·11번가·네이버 검색) = 작은 칩 */
-.buy-row{align-items:flex-start}
+.buy-row{align-items:stretch}
 .buy-row a.cta,.buy-col .buy-row a.cta,.buy-cta a.cta{
   flex:1 1 calc(50% - 4px);min-width:0;
   display:inline-flex;align-items:center;justify-content:center;gap:5px;
