@@ -43,6 +43,72 @@
     try { localStorage.setItem(CLOSET_KEY, JSON.stringify(arr)); } catch (e) {}
   }
   function inCloset() { return readCloset().indexOf(look.id) > -1; }
+
+  /* ---------- 토스트 공용 ---------- */
+  function showToast(msg) {
+    var toast = $(".look-actions-toast");
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { toast.classList.remove("show"); }, 2600);
+  }
+
+  /* ---------- 링크 복사 · 공유 (바이럴) ---------- */
+  function shareTitle() {
+    var who = look.celeb ? look.celeb + " " : "";
+    return who + (look.headline || "화제 착장") + " · 스타핏픽";
+  }
+  function shareUrl() {
+    return location.origin + location.pathname;
+  }
+  function copyLink(url) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(url);
+    return new Promise(function (resolve, reject) {
+      try {
+        var ta = document.createElement("textarea");
+        ta.value = url;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.top = "-1000px";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, url.length);
+        var ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        if (ok) resolve(); else reject(new Error("copy failed"));
+      } catch (e) { reject(e); }
+    });
+  }
+  function nativeShareOk() {
+    if (!navigator.share) return false;
+    try {
+      return window.matchMedia("(pointer: coarse)").matches || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    } catch (e) { return false; }
+  }
+  function onShare(btn) {
+    var url = shareUrl();
+    if (nativeShareOk()) {
+      navigator.share({ title: shareTitle(), text: shareTitle(), url: url }).then(function () {
+        showToast("공유 시트로 보냈어요");
+      }).catch(function () { /* 사용자가 닫은 경우 포함 — 조용히 무시 */ });
+      return;
+    }
+    copyLink(url).then(function () {
+      showToast("링크가 복사됐어요!");
+    }).catch(function () {
+      showToast("복사가 안 됐어요. 주소창 링크를 복사해 주세요.");
+    });
+  }
+  function bindShare(btn) {
+    if (!btn) return;
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      onShare(btn);
+    });
+  }
+
   function syncClosetUI(justAdded) {
     var on = inCloset();
     var n = readCloset().length;
@@ -56,16 +122,8 @@
     });
     $$("#closet-count").forEach(function (el) { el.textContent = n; });
     $$(".look-actions-closet b").forEach(function (el) { el.textContent = n; });
-    var toast = $(".look-actions-toast");
-    if (toast) {
-      if (justAdded) {
-        toast.textContent = on ? "내 옷장 " + n + "개에 담았어요" : "내 옷장에서 뺐어요";
-        toast.classList.add("show");
-        clearTimeout(toast._t);
-        toast._t = setTimeout(function () { toast.classList.remove("show"); }, 2600);
-      } else {
-        toast.classList.remove("show");
-      }
+    if (justAdded) {
+      showToast(on ? "내 옷장 " + n + "개에 담았어요" : "내 옷장에서 뺐어요");
     }
   }
   function toggleCloset() {
@@ -193,11 +251,16 @@
     '<button class="save-btn" type="button" aria-pressed="false">' +
       '<span class="save-ico" aria-hidden="true">♡</span><span class="save-label">내 옷장에 저장</span>' +
     "</button>" +
+    '<button class="share-btn" type="button" aria-label="이 착장 링크 복사 또는 공유">' +
+      '<span class="share-ico" aria-hidden="true">🔗</span><span class="share-label">' +
+      (nativeShareOk() ? "공유" : "링크 복사") + "</span>" +
+    "</button>" +
     '<a class="look-actions-closet" href="index.html?closet=1">내 옷장 <b>0</b>개</a>' +
     '<span class="look-actions-toast" role="status" aria-live="polite"></span>';
   if (anchorEl) anchorEl.insertAdjacentElement("afterend", actions);
   else if (meta) meta.insertAdjacentElement("afterend", actions);
   bindSave($(".save-btn", actions));
+  bindShare($(".share-btn", actions));
   syncClosetUI(false);
 
   /* ---------- 3) 모바일 하단 고정 바 (최저가 · 코디) ---------- */

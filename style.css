@@ -1518,6 +1518,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .save-btn[aria-pressed="true"]{background:#fff0f4;border-color:#f3b7c8;color:#c02b55}
 .save-btn[aria-pressed="true"] .save-ico{color:#e0436f}
 .save-btn:active{transform:scale(.97)}
+.share-btn{
+  display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-strong);background:#fff;
+  color:var(--ink);font-size:13.5px;font-weight:800;padding:10px 16px;border-radius:999px;
+  transition:.15s ease;cursor:pointer;line-height:1;
+}
+.share-btn:hover{border-color:var(--ink);background:var(--soft)}
+.share-btn .share-ico{font-size:13px;line-height:1;opacity:.8}
+.share-btn:active{transform:scale(.97)}
 .look-actions-closet{
   display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--sub);
   padding:8px 12px;border-radius:999px;background:var(--soft-2);border:1px solid var(--line);
@@ -1533,6 +1541,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 @media (max-width:760px){
   .look-actions{margin:12px 0 8px;gap:6px}
   .save-btn{padding:9px 14px;font-size:13px}
+  .share-btn{padding:9px 14px;font-size:13px}
+  .site-footer{padding-bottom:96px}
 }
 
 /* ---------- ④ 관련 코디 4편 · 이어보기 ---------- */
