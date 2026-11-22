@@ -1578,3 +1578,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
   }
   body.has-sbb{padding-bottom:132px}
 }
+
+/* 하단 바 하트: 저장 전 중립, 저장 후 핑크 */
+.sbb-btn.save{color:var(--sub)}
+.sbb-btn.save .save-ico{color:var(--sub)}
+.sbb-btn.save[aria-pressed="true"]{border-color:#f3b7c8;background:#fff0f4}
+.sbb-btn.save[aria-pressed="true"] .save-ico{color:#e0436f}
