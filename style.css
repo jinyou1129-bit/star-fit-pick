@@ -59,7 +59,7 @@ ul,ol{padding:0;list-style:none}
 
 /* ---------------- header ---------------- */
 .site-header{
-  position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);
+  position:sticky;top:0;z-index:60;background:rgba(255,255,255,.97);
   border-bottom:1px solid var(--line);backdrop-filter:saturate(160%) blur(12px);
 }
 .nav-row{display:flex;align-items:center;gap:24px;height:64px}
@@ -534,13 +534,14 @@ ul,ol{padding:0;list-style:none}
   .guide-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:860px){
-  .nav-row{flex-wrap:wrap;height:auto;padding-top:10px;gap:10px}
+  .nav-row{flex-wrap:wrap;height:auto;padding-top:8px;gap:8px}
+  /* 모바일 상단 메뉴: 가로 스크롤로 오른쪽이 잘리지 않도록 두 줄 안에서 모두 보이게 정돈 */
   .site-nav{
-    display:flex;order:3;width:100%;gap:6px;overflow-x:auto;padding:0 0 10px;
-    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+    display:flex;flex-wrap:wrap;order:3;width:100%;gap:6px;padding:0 0 8px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;overflow:visible;
   }
   .site-nav::-webkit-scrollbar{display:none}
-  .site-nav a{background:var(--soft);padding:7px 12px;border-radius:999px;font-size:13px;white-space:nowrap}
+  .site-nav a{background:var(--soft);padding:6px 10px;border-radius:999px;font-size:12.5px;white-space:nowrap}
   .brand{margin-right:auto}
   .how-list{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:repeat(2,1fr);gap:16px}
@@ -1428,3 +1429,141 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
   .post-card-media img{transition:transform .35s ease}
 }
 .look-strip a{will-change:transform}
+
+/* =========================================================
+   V4 (2026-11-22) — ① 제휴 CTA 시각 위계 ② 모바일 첫 화면 압축
+   ③ 내 옷장 원클릭 저장 ④ 관련 코디 4편 · 이어보기
+   ========================================================= */
+
+/* ---------- ① 구매 좌표 버튼 위계 ----------
+   · 수익 버튼(네이버 쇼핑커넥트 · 쿠팡) = 큰 Primary CTA
+   · 공식 상품 페이지 = 중간(Mid) · 단순 검색(무신사·11번가·네이버 검색) = 작은 칩 */
+.buy-row{align-items:flex-start}
+.buy-row a.cta,.buy-col .buy-row a.cta,.buy-cta a.cta{
+  flex:1 1 calc(50% - 4px);min-width:0;
+  display:inline-flex;align-items:center;justify-content:center;gap:5px;
+  padding:13px 10px;border:0;border-radius:13px;color:#fff;
+  font-size:13px;font-weight:800;letter-spacing:-.015em;line-height:1.25;text-align:center;word-break:keep-all;
+  box-shadow:0 6px 16px rgba(17,23,32,.14);transition:transform .15s ease,box-shadow .15s ease,filter .15s ease;
+}
+.buy-row a.cta:hover{transform:translateY(-1px);box-shadow:0 9px 20px rgba(17,23,32,.18);color:#fff}
+.buy-row a.cta:active{transform:translateY(0)}
+.buy-row a.cta-naver{background:linear-gradient(135deg,#0ecb76 0%,#03a05a 100%)}
+.buy-row a.cta-naver:hover{filter:brightness(1.05)}
+.buy-row a.cta-coupang{background:linear-gradient(135deg,#f2554a 0%,#d81f26 100%)}
+.buy-row a.cta-coupang:hover{filter:brightness(1.05)}
+.buy-row a.cta.wide{flex:1 1 100%}
+.buy-row a.mid,.buy-col .buy-row a.mid{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;
+  padding:9px 13px;border:1px solid var(--line-strong);border-radius:11px;background:#fff;
+  color:var(--ink);font-size:12.5px;font-weight:700;
+}
+.buy-row a.mid:hover{border-color:var(--ink);color:var(--ink)}
+.buy-row a.chip,.buy-col .buy-row a.chip{
+  flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;
+  padding:6px 11px;border:1px solid transparent;border-radius:999px;background:var(--soft);
+  color:var(--muted);font-size:11.5px;font-weight:600;
+}
+.buy-row a.chip:hover{color:var(--sub);background:#eef1f5}
+.buy-col-feature{grid-column:1/-1;border-color:#c9ecdc;background:linear-gradient(180deg,#f2fdf8,#ffffff)}
+.buy-col-feature .buy-btn.cta{margin-top:2px}
+@media (max-width:480px){
+  .buy-row a.cta,.buy-col .buy-row a.cta{flex:1 1 100%;padding:14px 12px;font-size:14px}
+  .buy-col-feature .buy-btn.cta{width:100%}
+}
+/* 구매 좌표로 이동할 때 고정 헤더·하단 바에 가리지 않게 */
+#buy,#buy-ootd{scroll-margin-top:96px}
+@media (max-width:760px){#buy,#buy-ootd{scroll-margin-top:132px}}
+.buy-btn.cta.is-flash{animation:ctaFlash 1.1s ease 2}
+@keyframes ctaFlash{0%,100%{box-shadow:0 6px 16px rgba(17,23,32,.14)}50%{box-shadow:0 0 0 4px rgba(49,130,246,.35),0 8px 22px rgba(17,23,32,.2)}}
+
+/* ---------- ② 모바일 첫 화면(390px) 압축 ---------- */
+@media (max-width:760px){
+  .ticker{font-size:10.5px;padding:5px 14px;line-height:1.45}
+  .ticker b{margin-right:6px}
+  .site-header{backdrop-filter:saturate(160%) blur(10px)}
+  .brand-mark{width:26px;height:26px;border-radius:8px;font-size:12px}
+  .brand-text{font-size:16px}
+  .brand-text small{font-size:8.5px;letter-spacing:.18em;margin-top:2px}
+  .closet-trigger{padding:7px 11px;font-size:12.5px;gap:5px}
+  .count{min-width:18px;height:18px;font-size:10.5px}
+  .hero{padding:24px 0 14px}
+  .hero-inner{gap:20px}
+  .post-note{font-size:11px;line-height:1.5;margin:0 0 10px}
+  .eyebrow{font-size:11px;letter-spacing:.1em;margin-bottom:8px}
+  .hero h1{font-size:clamp(27px,7.4vw,34px);line-height:1.16}
+  .hero-lead{margin-top:12px;font-size:15px;line-height:1.62}
+  .hero-search{margin-top:16px;padding:5px 5px 5px 16px}
+  .hero-search input{font-size:14.5px}
+  .hero-search button{padding:10px 16px;font-size:14px}
+  .hero-note{margin-top:9px;font-size:11.5px;line-height:1.5}
+  .hot-tags{margin-top:12px;gap:6px}
+  .hero-stats{margin-top:22px;padding-top:14px;gap:12px}
+  .hero-stats b{font-size:18px}
+  .hero-stats span{font-size:11.5px}
+  .hero-visual{gap:10px;max-width:100%}
+  .hv figcaption{font-size:10px;left:8px;right:8px;bottom:8px;padding:5px 7px}
+}
+
+/* ---------- ③ 내 옷장 원클릭 저장 버튼 ---------- */
+.look-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0 6px}
+.save-btn{
+  display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-strong);background:#fff;
+  color:var(--ink);font-size:13.5px;font-weight:800;padding:10px 16px;border-radius:999px;
+  transition:.15s ease;cursor:pointer;line-height:1;
+}
+.save-btn:hover{border-color:var(--ink)}
+.save-btn .save-ico{font-size:14px;line-height:1;color:var(--muted)}
+.save-btn .save-ico[data-on="1"]{color:#e0436f}
+.save-btn[aria-pressed="true"]{background:#fff0f4;border-color:#f3b7c8;color:#c02b55}
+.save-btn[aria-pressed="true"] .save-ico{color:#e0436f}
+.save-btn:active{transform:scale(.97)}
+.look-actions-closet{
+  display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--sub);
+  padding:8px 12px;border-radius:999px;background:var(--soft-2);border:1px solid var(--line);
+}
+.look-actions-closet b{color:var(--blue-deep);font-weight:800}
+.look-actions-toast{
+  font-size:11.5px;font-weight:700;color:#0b7a4b;background:#eafaf1;border:1px solid #c4ecd8;
+  padding:6px 10px;border-radius:999px;opacity:0;transition:opacity .2s ease;
+}
+.look-actions-toast.show{opacity:1}
+.sbb-btn.save{background:#fff;color:#c02b55;border:1px solid #f3b7c8;padding:9px 10px;font-size:13px}
+.sbb-btn.save[aria-pressed="true"]{background:#fff0f4}
+@media (max-width:760px){
+  .look-actions{margin:12px 0 8px;gap:6px}
+  .save-btn{padding:9px 14px;font-size:13px}
+}
+
+/* ---------- ④ 관련 코디 4편 · 이어보기 ---------- */
+.section-sub-sm{font-size:13px;color:var(--sub);line-height:1.6;margin:-4px 0 12px;word-break:keep-all}
+.look-strip.look-strip--4{grid-template-columns:repeat(4,1fr)}
+.look-strip-more{
+  display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 18px;
+  border:1px dashed var(--line-strong);border-radius:14px;padding:12px 14px;
+  font-size:13px;font-weight:800;color:var(--blue-deep);background:#fbfdff;transition:.15s;
+}
+.look-strip-more:hover{border-color:var(--blue);background:var(--blue-soft)}
+@media (max-width:760px){
+  .look-strip.look-strip--4{grid-template-columns:1fr 1fr;gap:10px}
+  .section-sub-sm{font-size:12.5px;margin:-6px 0 10px}
+}
+
+/* ---------- V4.1 모바일 상단 메뉴: 두 줄 안에서 잘리지 않게 + 본문 가로 넘침 제거 ---------- */
+@media (max-width:1080px){
+  .article-wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .site-nav{gap:5px;padding:0 0 8px}
+  .site-nav a{padding:5px 9px;font-size:12px;line-height:1.35}
+  .site-nav .nl{display:none}
+  .article-body{max-width:100%;min-width:0}
+  .article-table{table-layout:auto}
+  .article-table th{white-space:normal;width:auto;min-width:0}
+  .article-table th,.article-table td{word-break:keep-all}
+  .article-aside{grid-template-columns:1fr}
+}
+
+/* 칩 대비 보정 (제휴 CTA 아래 보조 링크가 '비활성'처럼 보이지 않게) */
+.buy-row a.chip,.buy-col .buy-row a.chip{color:#5b6673;background:#eef2f7;border-color:#e3e9f1}
+.buy-row a.chip:hover{color:#2f3a47;background:#e7edf5}

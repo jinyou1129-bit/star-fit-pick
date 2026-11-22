@@ -463,27 +463,25 @@
     // 네이버 쇼핑커넥트(브랜드커넥트)에서 실제 발급받은 고유 링크가 있는 검색어만 제휴 버튼으로 노출합니다.
     var nvItem = CFG.naverPick(qOfficial);
     var nvAlt = CFG.naverPick(look.alt.query);
-    function nvBtn(pick) {
-      if (!pick || !pick.u) return "";
-      return '<a class="buy-btn sub" href="' + esc(pick.u) + '" target="_blank" rel="noopener sponsored" title="' +
-        esc(pick.p || "네이버 쇼핑커넥트 상품") + '">네이버 쇼핑커넥트 ↗</a>';
-    }
+    // 수익 버튼(네이버 쇼핑커넥트·쿠팡)은 큰 CTA, 공식 페이지는 중간, 단순 검색은 작은 칩
     $("#modal-buy").innerHTML =
-      '<a class="buy-btn" href="' + esc(look.item.officialUrl) + '" target="_blank" rel="noopener sponsored">공식몰 · 상품 페이지 ↗</a>' +
-      '<a class="buy-btn sub" href="' + esc(CFG.buildLink("naver", qOfficial)) + '" target="_blank" rel="noopener sponsored">' +
-        (nvItem ? "네이버 쇼핑커넥트 ↗" : "네이버 쇼핑 검색 ↗") + "</a>" +
-      '<a class="buy-btn sub" href="' + esc(CFG.buildLink("musinsa", look.item.brand + " " + look.item.name)) + '" target="_blank" rel="noopener sponsored">무신사 검색 ↗</a>';
+      (nvItem ? '<a class="buy-btn cta cta-naver" href="' + esc(nvItem.u) + '" target="_blank" rel="noopener sponsored" title="' + esc(nvItem.p || "네이버 쇼핑커넥트 상품") + '">네이버 쇼핑커넥트 ↗</a>' : '') +
+      '<a class="buy-btn cta cta-coupang' + (nvItem ? '' : ' wide') + '" href="' + esc(CFG.buildLink("coupang", qOfficial)) + '" target="_blank" rel="noopener sponsored">쿠팡에서 비슷한 스타일 보기 ↗</a>' +
+      '<a class="buy-btn mid" href="' + esc(look.item.officialUrl) + '" target="_blank" rel="noopener sponsored">공식몰 · 상품 페이지 ↗</a>' +
+      (nvItem ? '' : '<a class="buy-btn chip" href="' + esc(CFG.buildLink("naver", qOfficial)) + '" target="_blank" rel="noopener sponsored">네이버 쇼핑 검색 ↗</a>') +
+      '<a class="buy-btn chip" href="' + esc(CFG.buildLink("musinsa", look.item.brand + " " + look.item.name)) + '" target="_blank" rel="noopener sponsored">무신사 검색 ↗</a>';
 
     $("#modal-alt").innerHTML =
       '<p class="alt-name">' + esc(look.alt.brand) + " · " + esc(look.alt.name) + "</p>" +
       '<p class="alt-meta">' + esc(look.alt.note) + "</p>" +
       '<div class="alt-price-row"><b>' + won(look.alt.price) + "</b><span>정품 " + won(cur) + " 대비 " + rate + "% 저렴 · 확인일 2026.11.20</span></div>" +
       '<div class="buy-row">' +
-        (look.alt.platform === "official" ? "" : nvBtn(nvAlt)) +
-        '<a class="buy-btn" href="' + esc(CFG.buildLink(look.alt.platform === "official" ? "naver" : look.alt.platform, look.alt.query)) + '" target="_blank" rel="noopener sponsored">' +
-          (look.alt.platform === "official" ? (nvAlt ? "네이버 쇼핑커넥트 ↗" : "공식 판매처 검색 ↗") : look.alt.platform === "coupang" ? "비슷한 스타일 쿠팡에서 보기 ↗" : look.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "11번가에서 보기 ↗") + "</a>" +
-        '<a class="buy-btn sub" href="' + esc(CFG.buildLink("coupang", look.alt.query)) + '" target="_blank" rel="noopener sponsored">쿠팡 검색 ↗</a>' +
-        '<a class="buy-btn sub" href="' + esc(CFG.buildLink("elevenst", look.alt.query)) + '" target="_blank" rel="noopener sponsored">11번가 검색 ↗</a>' +
+        (nvAlt ? '<a class="buy-btn cta cta-naver" href="' + esc(nvAlt.u) + '" target="_blank" rel="noopener sponsored" title="' + esc(nvAlt.p || "네이버 쇼핑커넥트 상품") + '">네이버 쇼핑커넥트 ↗</a>' : '') +
+        '<a class="buy-btn cta cta-coupang' + (nvAlt ? '' : ' wide') + '" href="' + esc(CFG.buildLink("coupang", look.alt.query)) + '" target="_blank" rel="noopener sponsored">쿠팡에서 비슷한 스타일 보기 ↗</a>' +
+        ((look.alt.platform === "coupang" || (nvAlt && look.alt.platform === "official")) ? "" :
+          '<a class="buy-btn mid" href="' + esc(CFG.buildLink(look.alt.platform === "official" ? "naver" : look.alt.platform, look.alt.query)) + '" target="_blank" rel="noopener sponsored">' +
+          (look.alt.platform === "official" ? (nvAlt ? "네이버 쇼핑커넥트 ↗" : "공식 판매처 검색 ↗") : look.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "11번가에서 보기 ↗") + "</a>") +
+        '<a class="buy-btn chip" href="' + esc(CFG.buildLink("elevenst", look.alt.query)) + '" target="_blank" rel="noopener sponsored">11번가 검색 ↗</a>' +
       '</div>' +
       '<p class="aff-note" style="font-size:11px;line-height:1.5;color:#8b8b8b;margin:8px 0 0">가상인물 포함 · 이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. 네이버 쇼핑커넥트 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다. ' +
         (nvAlt ? "네이버 쇼핑커넥트 버튼은 같은 무드의 네이버 판매 상품으로 연결됩니다." : "") + '</p>';

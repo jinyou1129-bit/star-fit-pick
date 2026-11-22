@@ -5,7 +5,8 @@
      주입받고, 이 스크립트가 다음을 렌더링한다.
      1) 히어로 사진 바로 아래 "착용 아이템" 가로 스크롤 미니 카드(번호 매칭)
      2) 모델 스펙 칩(키 · 무드 · 가상인물)
-     3) 모바일 하단 고정 최저가/코디 바 (≤760px, 히어로 통과 후 노출)
+     3) 내 옷장 원클릭 저장 버튼 (index.html의 찜 카운터와 같은 localStorage)
+     4) 모바일 하단 고정 최저가/코디 바 (≤760px, 히어로 통과 후 노출)
    · 기존 제휴 버튼·고지 문구는 그대로 두고, 카드는 페이지 내 #buy/#more 앵커로만 연결한다.
    ========================================================= */
 (function () {
@@ -14,6 +15,7 @@
   if (!D || !D.look) return;
   var look = D.look, model = D.model || null;
   var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -27,6 +29,98 @@
   function moreAnchor() {
     return $("#more") ? "#more" : "#guide";
   }
+
+  /* ---------- 내 옷장 (index.html과 동일한 저장소 키) ---------- */
+  var CLOSET_KEY = "sfp:closet:v1";
+  function readCloset() {
+    try {
+      var raw = localStorage.getItem(CLOSET_KEY);
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    } catch (e) { return []; }
+  }
+  function writeCloset(arr) {
+    try { localStorage.setItem(CLOSET_KEY, JSON.stringify(arr)); } catch (e) {}
+  }
+  function inCloset() { return readCloset().indexOf(look.id) > -1; }
+  function syncClosetUI(justAdded) {
+    var on = inCloset();
+    var n = readCloset().length;
+    $$(".sfp-save").forEach(function (b) {
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      var label = b.querySelector(".save-label");
+      if (label) label.textContent = on ? "옷장에 저장됨" : "내 옷장에 저장";
+      var ico = b.querySelector(".save-ico");
+      if (ico) { ico.textContent = on ? "♥" : "♡"; ico.setAttribute("data-on", on ? "1" : "0"); }
+      b.title = on ? "내 옷장에서 빼기" : "내 옷장에 저장";
+    });
+    $$("#closet-count").forEach(function (el) { el.textContent = n; });
+    $$(".look-actions-closet b").forEach(function (el) { el.textContent = n; });
+    var toast = $(".look-actions-toast");
+    if (toast) {
+      if (justAdded) {
+        toast.textContent = on ? "내 옷장 " + n + "개에 담았어요" : "내 옷장에서 뺐어요";
+        toast.classList.add("show");
+        clearTimeout(toast._t);
+        toast._t = setTimeout(function () { toast.classList.remove("show"); }, 2600);
+      } else {
+        toast.classList.remove("show");
+      }
+    }
+  }
+  function toggleCloset() {
+    var arr = readCloset();
+    var i = arr.indexOf(look.id);
+    var added;
+    if (i > -1) { arr.splice(i, 1); added = false; }
+    else { arr.push(look.id); added = true; }
+    writeCloset(arr);
+    syncClosetUI(added);
+  }
+  function bindSave(btn) {
+    btn.classList.add("sfp-save");
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      toggleCloset();
+    });
+  }
+
+  /* ---------- 제휴 CTA로 부드럽게 이동 (메인 제휴 버튼을 화면 중앙에) ---------- */
+  function mainCta() {
+    return $("#buy-official a.cta") || $("#buy-ootd a.cta") || $(".buy-panel a.cta") || $("a.buy-btn.cta");
+  }
+  function scrollToCta() {
+    var host = $("#buy") || $("#buy-ootd");
+    if (!host) { location.hash = "#more"; return; }
+    var target = mainCta() || host;
+    try {
+      var rect = target.getBoundingClientRect();
+      var barH = document.body.classList.contains("has-sbb") ? 74 : 0;
+      var top = window.pageYOffset + rect.top - Math.max(12, (window.innerHeight - barH - rect.height) / 2);
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    } catch (e) {
+      try { target.scrollIntoView({ block: "center" }); } catch (e2) { target.scrollIntoView(); }
+    }
+    if (target && target.classList) {
+      target.classList.remove("is-flash");
+      setTimeout(function () { target.classList.add("is-flash"); }, 300);
+      setTimeout(function () { target.classList.remove("is-flash"); }, 2800);
+    }
+  }
+  // #buy 로 향하는 모든 내부 링크(고정 바 · 아이템 카드 등)를 한 곳에서 처리
+  document.addEventListener("click", function (e) {
+    var el = e.target;
+    while (el && el !== document) {
+      if (el.tagName === "A") break;
+      el = el.parentElement;
+    }
+    if (!el || el.tagName !== "A") return;
+    var href = el.getAttribute("href") || "";
+    if (href !== "#buy" && href !== "#buy-ootd") return;
+    if (el.className && String(el.className).indexOf("buy-btn") > -1) return;
+    e.preventDefault();
+    scrollToCta();
+  }, true);
 
   /* ---------- 1) 착용 아이템 미니 카드 스트립 (무신사 스냅형) ---------- */
   var cards = [];
@@ -59,7 +153,7 @@
     sec.setAttribute("aria-label", "착용 아이템 좌표");
     sec.innerHTML =
       '<div class="its-head"><p class="its-kicker">착용 아이템 좌표</p>' +
-      '<p class="its-hint">카드를 누르면 아래 가격·구매 좌표로 이동합니다</p></div>' +
+      '<p class="its-hint">카드를 누르면 아래 구매 버튼으로 이동합니다</p></div>' +
       '<div class="its-scroll">' +
       cards.map(function (c) {
         return '<a class="its-card" href="' + buyAnchor() + '">' +
@@ -68,7 +162,7 @@
           '<span class="its-brand">' + esc(c.brand) + "</span>" +
           '<span class="its-name">' + esc(c.name) + "</span>" +
           '<span class="its-price">' + (c.price ? esc(won(c.price)) : "가격 좌표 확인") + "</span>" +
-          '<span class="its-go">좌표 보기 ↓</span>' +
+          '<span class="its-go">구매 버튼 보기 ↓</span>' +
           "</a>";
       }).join("") +
       "</div>";
@@ -76,8 +170,9 @@
     else body.insertAdjacentElement("afterbegin", sec);
   }
 
-  /* ---------- 2) 모델 스펙 칩 (스냅형 신뢰 배지) ---------- */
+  /* ---------- 2) 모델 스펙 칩 + 내 옷장 저장 버튼 ---------- */
   var meta = $(".article-meta");
+  var anchorEl = null;
   if (meta) {
     var chips = [];
     if (model && model.name) {
@@ -89,7 +184,21 @@
     row.className = "model-chips";
     row.innerHTML = chips.map(function (t) { return '<span class="mchip">' + esc(t) + "</span>"; }).join("");
     meta.insertAdjacentElement("afterend", row);
+    anchorEl = row;
   }
+
+  var actions = document.createElement("div");
+  actions.className = "look-actions";
+  actions.innerHTML =
+    '<button class="save-btn" type="button" aria-pressed="false">' +
+      '<span class="save-ico" aria-hidden="true">♡</span><span class="save-label">내 옷장에 저장</span>' +
+    "</button>" +
+    '<a class="look-actions-closet" href="index.html?closet=1">내 옷장 <b>0</b>개</a>' +
+    '<span class="look-actions-toast" role="status" aria-live="polite"></span>';
+  if (anchorEl) anchorEl.insertAdjacentElement("afterend", actions);
+  else if (meta) meta.insertAdjacentElement("afterend", actions);
+  bindSave($(".save-btn", actions));
+  syncClosetUI(false);
 
   /* ---------- 3) 모바일 하단 고정 바 (최저가 · 코디) ---------- */
   var alt = look.alt || null;
@@ -106,10 +215,14 @@
     bar.innerHTML =
       '<div class="sbb-info"><b>' + esc(won(alt.price)) + "</b><span>대안 " + esc(saveRate) + " · " + esc(alt.brand || "") + "</span></div>" +
       '<div class="sbb-actions">' +
-      '<a class="sbb-btn ghost" href="' + moreAnchor() + '">비슷한 코디</a>' +
+      '<button class="sbb-btn save" type="button" aria-pressed="false" title="내 옷장에 저장">' +
+        '<span class="save-ico" aria-hidden="true">♡</span>' +
+      "</button>" +
       '<a class="sbb-btn" href="' + buyAnchor() + '">최저가 좌표</a>' +
       "</div>";
     document.body.appendChild(bar);
+    bindSave($(".sbb-btn.save", bar));
+    syncClosetUI(false);
 
     var hero = $(".article-hero");
     var shown = false;
