@@ -70,13 +70,14 @@ ul,ol{padding:0;list-style:none}
 }
 .brand-text{display:flex;flex-direction:column;line-height:1.05;font-weight:800;font-size:17px;letter-spacing:-.03em}
 .brand-text small{font-size:9.5px;font-weight:600;letter-spacing:.22em;color:var(--muted);margin-top:3px}
-.site-nav{display:flex;gap:4px}
+.site-nav{display:flex;gap:4px;min-width:0;overflow-x:auto;scrollbar-width:none}
 .site-nav a{
-  font-size:14.5px;font-weight:600;color:var(--sub);padding:9px 12px;border-radius:10px;
+  font-size:14.5px;font-weight:600;color:var(--sub);padding:9px 12px;border-radius:10px;white-space:nowrap;flex:0 0 auto;
   transition:background .15s ease,color .15s ease;
 }
 .site-nav a:hover{background:var(--soft);color:var(--ink)}
 .site-nav a[aria-current="page"]{color:var(--ink)}
+.site-nav::-webkit-scrollbar{display:none}
 .closet-trigger{
   display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-strong);
   background:#fff;color:var(--ink);font-size:14px;font-weight:700;
