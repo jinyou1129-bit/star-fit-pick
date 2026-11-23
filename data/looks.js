@@ -4347,18 +4347,18 @@ window.SFP_LOOKS = [
       {label: "찰스앤키스 실라 체인 메리제인 펌프스 3colors CK1-60920443", url: "https://www.musinsa.com/products/7437135"},
       {label: "마뗑킴 BIAS QUILTED CHAIN MINI BAG IN BLACK", url: "https://www.musinsa.com/products/7541611"},
       {label: "오에이알 빈티지 무드 카메오 벨벳 슬림 헤어밴드 [블랙]", url: "https://www.musinsa.com/products/3898825"},
-      {label: "제로스트릿 [세트] 소프트 트위드 자켓 & 스커트 / 라이트 블루 (대안)", url: "https://www.musinsa.com/products/5927668"}
+      {label: "무신사 스탠다드 우먼 우먼즈 라운드 넥 트위드 재킷 [블루] (대안)", url: "https://www.musinsa.com/products/3790877"},
+      {label: "제로스트릿 [세트] 소프트 트위드 자켓 & 스커트 / 라이트 블루 (참고)", url: "https://www.musinsa.com/products/5927668"}
     ],
     alt: {
-      brand: "제로스트릿",
-      name: "[세트] 소프트 트위드 자켓 & 스커트 / 라이트 블루",
-      saveBasis: "set",
-      price: 76200,
+      brand: "무신사 스탠다드 우먼",
+      name: "우먼즈 라운드 넥 트위드 재킷 [블루]",
+      price: 40390,
       platform: "musinsa",
-      fit: "자켓과 스커트가 한 세트인 라이트블루 트위드, 허리까지 덮는 기장",
-      cons: "자켓이 크롭이 아니라 허리까지 덮어 원본보다 허리선이 덜 드러남",
-      note: "자켓과 스커트를 따로 사면 154,890원입니다.",
-      query: "제로스트릿 [세트] 소프트 트위드 자켓 & 스커트 / 라이트 블루"
+      fit: "라운드 넥 칼라리스, 허리 위에서 끊기는 크롭 기장의 트위드 재킷",
+      cons: "스카프 타이가 없고 색이 원본보다 진한 블루, 스커트는 따로 골라야 함",
+      note: "자켓이 8만 원대라 부담되면 무신사 스탠다드 우먼의 라운드 넥 트위드 재킷 블루(40,390원)가 대안입니다.",
+      query: "무신사 스탠다드 우먼 라운드 넥 트위드 재킷 블루"
     },
     ootd: [
       {
