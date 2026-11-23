@@ -273,7 +273,7 @@
         role: o.role || "",
         brand: o.brand || look.item.brand || "",
         name: o.name || "",
-        price: o.price || o.salePrice || "",
+        price: (o.salePrice && o.price && o.salePrice < o.price) ? o.salePrice : (o.price || o.salePrice || ""),
         tag: "",
         line: "match"
       });
