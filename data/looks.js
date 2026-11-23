@@ -4352,6 +4352,7 @@ window.SFP_LOOKS = [
     alt: {
       brand: "제로스트릿",
       name: "[세트] 소프트 트위드 자켓 & 스커트 / 라이트 블루",
+      saveBasis: "set",
       price: 76200,
       platform: "musinsa",
       fit: "자켓과 스커트가 한 세트인 라이트블루 트위드, 허리까지 덮는 기장",

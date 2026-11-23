@@ -280,13 +280,13 @@
     });
     if (look.alt && look.alt.price) {
       var opAll = (look.item && (look.item.salePrice || look.item.price)) || 0;
-      cards.push({ num: cards.length + 1, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, line: "alt", save: opAll > look.alt.price ? opAll - look.alt.price : 0 });
+      cards.push({ num: cards.length + 1, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, line: "alt", save: (look.alt.saveBasis === "set") ? 0 : (opAll > look.alt.price ? opAll - look.alt.price : 0) });
     }
   } else if (look.item) {
     cards.push({ num: 1, role: "정품", brand: look.item.brand || "", name: (look.item.name || ""), price: (look.item.salePrice || look.item.price || ""), tag: "", line: lineOf(look) });
     if (look.alt && look.alt.price) {
       var opOne = (look.item.salePrice || look.item.price) || 0;
-      cards.push({ num: 2, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, line: "alt", save: opOne > look.alt.price ? opOne - look.alt.price : 0 });
+      cards.push({ num: 2, role: "대안", brand: look.alt.brand || "", name: look.alt.name || "", price: look.alt.price, tag: "더 저렴", isAlt: true, line: "alt", save: (look.alt.saveBasis === "set") ? 0 : (opOne > look.alt.price ? opOne - look.alt.price : 0) });
     }
   }
 
@@ -391,7 +391,7 @@
     var saveRate = "";
     try {
       var op = (look.item && (look.item.salePrice || look.item.price)) || 0;
-      if (op > alt.price && op > 0) saveRate = Math.round((1 - alt.price / op) * 100) + "%↓";
+      if (op > alt.price && op > 0 && alt.saveBasis !== "set") saveRate = Math.round((1 - alt.price / op) * 100) + "%↓";
     } catch (e) {}
     bar.innerHTML =
       '<div class="sbb-info"><b>' + esc(won(alt.price)) + "</b><span>대안 " + esc(saveRate) + " · " + esc(alt.brand || "") + "</span></div>" +
