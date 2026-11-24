@@ -706,7 +706,7 @@
           (look.alt.platform === "official" ? (nvAlt ? "네이버 쇼핑커넥트 ↗" : "공식 판매처 검색 ↗") : look.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "11번가에서 보기 ↗") + "</a>") +
         '<a class="buy-btn chip" href="' + esc(CFG.buildLink("elevenst", look.alt.query)) + '" target="_blank" rel="noopener sponsored">11번가 검색 ↗</a>' +
       '</div>' +
-      '<p class="aff-note" style="font-size:11px;line-height:1.5;color:#8b8b8b;margin:8px 0 0">가상인물 포함 · 이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. 네이버 쇼핑커넥트 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다. ' +
+      '<p class="aff-note" style="font-size:11px;line-height:1.5;color:#8b8b8b;margin:8px 0 0">' + (look.model ? "가상인물 포함 · " : "방송 화면 캡처 · ") + '이 게시물은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다. 네이버 쇼핑커넥트 활동의 일환으로, 판매 발생 시 수수료를 제공받습니다. ' +
         (nvAlt ? "네이버 쇼핑커넥트 버튼은 같은 무드의 네이버 판매 상품으로 연결됩니다." : "") + '</p>';
 
     $("#modal-sources").innerHTML = look.sources.map(function (s) {

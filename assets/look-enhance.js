@@ -324,8 +324,10 @@
     if (model && model.name) {
       chips.push("모델 " + model.name + (model.height ? " · " + model.height + "cm" : ""));
       if (model.mood) chips.push(model.mood);
+      chips.push("가상인물 연출");
+    } else if (look.photo && look.photo.kind === "broadcast") {
+      chips.push("방송 화면 캡처");
     }
-    chips.push("가상인물 연출");
     var row = document.createElement("p");
     row.className = "model-chips";
     row.innerHTML = chips.map(function (t) { return '<span class="mchip">' + esc(t) + "</span>"; }).join("");
