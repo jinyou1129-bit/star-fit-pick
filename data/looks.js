@@ -4686,4 +4686,321 @@ window.SFP_LOOKS = [
     ],
     palette: ["#e6dff0", "#f5f3ee", "#1b1b1d"]
   }
+,
+{
+  id: "hyunjin-leather-coat",
+  celeb: "현진",
+  group: "스트레이 키즈",
+  type: "airport",
+  show: "공항",
+  line: "match",
+  scene: "2026.11.23 오후 인천국제공항 제2여객터미널 출국 (일본 도쿄)",
+  category: "outer",
+  mood: [
+    "street",
+    "minimal"
+  ],
+  headline: "블랙 레더 롱코트 + 올블랙",
+  image: "assets/looks/hyunjin-leather-coat.webp?v=2026112402",
+  imageJpg: "assets/looks/hyunjin-leather-coat.jpg?v=2026112402",
+  model: "백시온",
+  modelId: "baek-sion",
+  photo: {
+    label: "디스패치 · 뉴스엔",
+    kind: "photo",
+    what: "2026.11.23 인천국제공항 제2여객터미널 출국 현장 촬영",
+    url: "https://www.dispatch.co.kr/2351228"
+  },
+  imageAlt: "스타핏픽 전속 AI 모델 백시온이 블랙 레더 롱코트에 블랙 모크넥 니트, 블랙 와이드 울 슬랙스, 블랙 레더 첼시부츠, 블랙 레더 크로스백을 착용하고 공항을 걷는 연출 컷",
+  mediaType: "공항·출국",
+  program: "인천국제공항",
+  item: {
+    brand: "폼리쉬",
+    brandEn: "FORMLICH",
+    name: "LEATHER COAT / BLACK",
+    sku: "P00000JG",
+    price: 328000,
+    salePrice: 328000,
+    saleNote: "무신사 판매가 · 2026-11-24 확인",
+    material: "겉감 폴리우레탄 100% · 안감 폴리에스터 100% (판매 페이지 표기)",
+    colors: "블랙",
+    sizes: "1 · 2 · 3 (총장 87 / 89 / 91cm)",
+    maker: "폼리쉬 / 중국 제조",
+    season: "2026 ALL",
+    fit: "무릎 아래로 떨어지는 카코트 기장, 어깨가 자연스럽게 떨어지는 레귤러 핏, 후면 YKK 지퍼 벤트로 걸을 때 다리 폭 확보, 전면 캔톤 단추 7개",
+    cons: "겉감이 폴리우레탄이라 무게가 있고, 안쪽에 두꺼운 니트를 겹치면 어깨가 빡빡해짐",
+    officialUrl: "https://www.musinsa.com/products/7623077"
+  },
+  story: "스트레이 키즈가 11월 23일 오후 인천공항 제2여객터미널에서 일본 도쿄로 출국했습니다. 여덟 명 중에서도 카메라가 먼저 잡은 사람은 현진이었습니다. 검정으로만 맞춘 옷인데 사진이 밋밋하지 않은 이유는 소재입니다. 몸에 붙는 가죽 코트의 광택, 그 아래로 곧게 떨어지는 무광의 블랙 팬츠, 발목에서 끊기는 검정 가죽 부츠. 겨울 공항에서 올블랙을 입으면 대개 한 덩어리로 보이는데, 이 착장은 재질이 셋으로 나뉘어 있어 사람이 살아 있습니다.",
+  point: "사진에서 먼저 보이는 것은 코트 길이입니다. 무릎 아래로 떨어지는 카코트 기장에 어깨선이 과하게 뜨지 않는 레귤러 핏이라, 안에 무엇을 입든 상체가 하나의 긴 사각형으로 정리됩니다. 가죽 특유의 은은한 광택이 공항 조명을 받아 어깨와 소매에서만 살아나는 것도 이 코트의",
+  verified: "디스패치 2026.11.23 현장포토 「분위기, 美쳤다…현진, 청춘영화 남주」·「AI 아닙니다…현진, 조각 비주얼」에서 현진이 11월 23일 오후 인천국제공항 제2여객터미널로 일본 출국하며 올블랙 차림에 가죽 소재 롱코트를 입은 사실 확인. 같은 날 뉴스엔 포토엔HD 「현진만이 소화 가능한 가죽코트」·「패션쇼 런웨이가 따로없네」 사진으로 코트 기장·색 대조. 니트·슬랙스·신발·가방은 보도에서 브랜드가 확인되지 않아 같은 무드로 맞춘 구성입니다. 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.24 확인.",
+  sources: [
+    {
+      label: "디스패치 · 뉴스엔 — 현진 착장",
+      url: "https://www.dispatch.co.kr/2351228"
+    },
+    {
+      label: "폼리쉬 LEATHER COAT / BLACK",
+      url: "https://www.musinsa.com/products/7623077"
+    },
+    {
+      label: "애드호크 남녀공용 베이직 모크넥 니트 (BLACK) (HCALKA2)",
+      url: "https://www.musinsa.com/products/7290421"
+    },
+    {
+      label: "노이어 투 턱 울 와이드 슬랙스 (블랙)",
+      url: "https://www.musinsa.com/products/7689656"
+    },
+    {
+      label: "아날로그무드 (UNISEX) 스탠다드 라운드 레더 첼시부츠 (블랙)",
+      url: "https://www.musinsa.com/products/5226201"
+    },
+    {
+      label: "바이모스 핀턱 레더 크로스 숄더백 블랙 26CB1",
+      url: "https://www.musinsa.com/products/6035838"
+    },
+    {
+      label: "무센트 아르베 사이드 레더 더블 코트 남녀공용 (대안)",
+      url: "https://www.musinsa.com/products/5817819"
+    }
+  ],
+  alt: {
+    brand: "무센트",
+    name: "아르베 사이드 레더 더블 코트 남녀공용",
+    price: 135200,
+    was: 241000,
+    url: "https://www.musinsa.com/products/5817819",
+    platform: "musinsa",
+    fit: "",
+    cons: "",
+    note: "레더 코트가 32만 원대라 부담되면 무센트의 아르베 사이드 레더 더블 코트(135,200원)가 대안입니다.",
+    query: "무센트 아르베 사이드 레더 더블 코트 남녀공용"
+  },
+  ootd: [
+    {
+      role: "아우터",
+      brand: "폼리쉬",
+      name: "LEATHER COAT / BLACK",
+      sku: "P00000JG",
+      price: 328000,
+      salePrice: 328000,
+      colors: "블랙",
+      note: "무릎 아래 카코트 기장. 이 룩의 중심.",
+      officialUrl: "https://www.musinsa.com/products/7623077",
+      query: "폼리쉬 레더 코트 블랙"
+    },
+    {
+      role: "상의",
+      brand: "애드호크",
+      name: "남녀공용 베이직 모크넥 니트 (BLACK) (HCALKA2)",
+      sku: "HCALKA2-39",
+      price: 69000,
+      salePrice: 34500,
+      colors: "블랙",
+      note: "목을 감싸는 모크넥. 코트 깃 안에서 턱을 받쳐 줌.",
+      officialUrl: "https://www.musinsa.com/products/7290421",
+      query: "애드호크 베이직 모크넥 니트 블랙"
+    },
+    {
+      role: "하의",
+      brand: "노이어",
+      name: "투 턱 울 와이드 슬랙스 (블랙)",
+      sku: "N26WPT12-BK",
+      price: 189000,
+      salePrice: 151200,
+      colors: "블랙",
+      note: "허리 투 턱과 넓은 통. 밑단이 신발 위에서 한 번 접힘.",
+      officialUrl: "https://www.musinsa.com/products/7689656",
+      query: "노이어 투 턱 울 와이드 슬랙스 블랙"
+    },
+    {
+      role: "신발",
+      brand: "아날로그무드",
+      name: "(UNISEX) 스탠다드 라운드 레더 첼시부츠 (블랙)",
+      sku: "AN25S5101",
+      price: 105000,
+      salePrice: 49800,
+      colors: "블랙",
+      note: "짧은 목의 첼시부츠. 슬랙스 밑단과 이어짐.",
+      officialUrl: "https://www.musinsa.com/products/5226201",
+      query: "아날로그무드 스탠다드 라운드 레더 첼시부츠 블랙"
+    },
+    {
+      role: "가방",
+      brand: "바이모스",
+      name: "핀턱 레더 크로스 숄더백 블랙 26CB1",
+      sku: "26CB1",
+      price: 79800,
+      salePrice: 47490,
+      colors: "블랙",
+      note: "작게 떨어지는 레더 크로스백. 긴 코트의 균형을 잡아 줌.",
+      officialUrl: "https://www.musinsa.com/products/6035838",
+      query: "바이모스 핀턱 레더 크로스 숄더백 블랙"
+    }
+  ],
+  palette: [
+    "#101012",
+    "#2a2a2e",
+    "#6b6b70"
+  ],
+  num: 64
+},
+{
+  id: "wendy-grey-coat",
+  celeb: "웬디",
+  group: "레드벨벳",
+  type: "daily",
+  show: "일상",
+  line: "match",
+  scene: "2026.11.23 서울 양천구 목동 SBS 「웬디의 영스트리트」 생방송 출근길",
+  category: "outer",
+  mood: [
+    "lovely",
+    "classic"
+  ],
+  headline: "그레이 롱코트 + 브라운 머플러",
+  image: "assets/looks/wendy-grey-coat.webp?v=2026112402",
+  imageJpg: "assets/looks/wendy-grey-coat.jpg?v=2026112402",
+  model: "윤세라",
+  modelId: "yun-sera",
+  photo: {
+    label: "톱스타뉴스",
+    kind: "photo",
+    what: "2026.11.23 SBS 출근길 포토타임",
+    url: "https://www.topstarnews.net/news/articleView.html?idxno=16284290"
+  },
+  imageAlt: "스타핏픽 전속 AI 모델 윤세라가 그레이 울 롱코트에 크림 케이블 니트, 브라운 니트 머플러, 브라운 레더 앵클부츠, 블랙 스터드 미니백을 착용하고 걷는 연출 컷",
+  mediaType: "화보·일상",
+  program: "웬디의 영스트리트",
+  item: {
+    brand: "페이더먼트",
+    brandEn: "FADERMENT",
+    name: "울 모직 롱 코트 (그레이)",
+    sku: "F261021",
+    price: 140000,
+    salePrice: 85000,
+    saleNote: "무신사 39% 할인가 · 2026-11-24 확인",
+    material: "울 모직 혼방 (판매 페이지 표기)",
+    colors: "그레이 · 베이지 · 차콜",
+    sizes: "판매 페이지 표기 (구매처 확인)",
+    maker: "페이더먼트 / 한국",
+    season: "2026 FW",
+    fit: "무릎 아래로 떨어지는 더블 여밈 롱 코트, 같은 원단 벨트로 허리 고정, 어깨가 자연스럽게 떨어지는 오버핏",
+    cons: "울 혼방이라 털이 눌리면 보풀이 생기기 쉽고, 벨트를 묶지 않으면 실루엣이 크게 퍼짐",
+    officialUrl: "https://www.musinsa.com/products/7576515"
+  },
+  story: "겨울 출근룩은 대개 두 갈래로 갈립니다. 패딩으로 몸을 감싸거나, 코트로 하루의 형식을 갖추거나. 웬디는 11월 23일 목동 SBS로 들어가며 뒤쪽을 골랐습니다. 무릎 아래로 떨어지는 그레이 롱코트에 짙은 브라운 머플러, 발목을 감싸는 브라운 부츠. 사진에서 눈이 먼저 가는 곳은 얼굴 바로 아래까지 올라온 머플러입니다. 겨울 아침 라디오 출근길에는 그 한 겹이 표정을 바꿉니다.",
+  point: "웬디의 코트는 색보다 실루엣이 먼저 보입니다. 무릎 아래로 떨어지는 기장에 몸판이 크게 퍼지지 않고, 허리에 묶은 벨트가 상체를 한 번 잘라 줍니다. 코트를 열어 입으면 그 아래 크림 니트가 세로로 길게 드러나 키가 커 보이는 효과가 있습니다.",
+  verified: "톱스타뉴스 2026.11.23 HD포토 「웬디, 헤르미온느세요?…오늘은 복슬 완뭉이」·「어둠 속에서도 빛나는 햇살 비주얼」·「Before Sunrise」에서 웬디가 11월 23일 서울 양천구 목동 SBS 「웬디의 영스트리트」 생방송 출근길에 그레이 롱코트·짙은 브라운 머플러·빈티지 브라운 레더 부츠·스터드 장식 미니 핸드백을 착용한 사실 확인. 안쪽 니트 색과 브랜드는 보도에서 확인되지 않아 같은 무드로 맞춘 구성입니다. 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.24 확인.",
+  sources: [
+    {
+      label: "톱스타뉴스 — 웬디 착장",
+      url: "https://www.topstarnews.net/news/articleView.html?idxno=16284290"
+    },
+    {
+      label: "페이더먼트 울 모직 롱 코트 (그레이)",
+      url: "https://www.musinsa.com/products/7576515"
+    },
+    {
+      label: "미치코런던 코시노 피셔맨 케이블 울 니트 크림",
+      url: "https://www.musinsa.com/products/5587877"
+    },
+    {
+      label: "질바이질스튜어트 캐시울 솔리드 니트머플러",
+      url: "https://www.musinsa.com/products/7171296"
+    },
+    {
+      label: "사뿐 호레인 삭스 앵클부츠 (5cm) 다크브라운",
+      url: "https://www.musinsa.com/products/2898702"
+    },
+    {
+      label: "다이닛 TWO-WAY STUD MINI BAG IN BLACK",
+      url: "https://www.musinsa.com/products/7407207"
+    },
+    {
+      label: "플레이스 스튜디오 하이넥 클래식 싱글 코트 벨티드 블렌디드 발마칸 롱 코트 자켓 (대안)",
+      url: "https://www.musinsa.com/products/7500622"
+    }
+  ],
+  alt: {
+    brand: "플레이스 스튜디오",
+    name: "하이넥 클래식 싱글 코트 벨티드 블렌디드 발마칸 롱 코트 자켓",
+    price: 59400,
+    was: 99000,
+    url: "https://www.musinsa.com/products/7500622",
+    platform: "musinsa",
+    fit: "",
+    cons: "",
+    note: "코트가 8만 원대여도 부담되면 플레이스 스튜디오의 하이넥 클래식 싱글 코트(59,400원)가 대안입니다.",
+    query: "플레이스 스튜디오 하이넥 클래식 싱글 코트 벨티드 블렌디드 발마칸 롱 코트 자켓"
+  },
+  ootd: [
+    {
+      role: "아우터",
+      brand: "페이더먼트",
+      name: "울 모직 롱 코트 (그레이)",
+      sku: "F261021",
+      price: 140000,
+      salePrice: 85000,
+      colors: "그레이",
+      note: "무릎 아래 더블 롱 코트. 같은 원단 벨트 포함.",
+      officialUrl: "https://www.musinsa.com/products/7576515",
+      query: "페이더먼트 울 모직 롱 코트 그레이"
+    },
+    {
+      role: "상의",
+      brand: "미치코런던 코시노",
+      name: "피셔맨 케이블 울 니트 크림",
+      sku: "ML25FT10CR",
+      price: 89000,
+      salePrice: 68090,
+      colors: "크림",
+      note: "케이블 짜임 크림 니트. 코트를 열었을 때 화면을 채움.",
+      officialUrl: "https://www.musinsa.com/products/5587877",
+      query: "미치코런던 코시노 피셔맨 케이블 울 니트 크림"
+    },
+    {
+      role: "머플러",
+      brand: "질바이질스튜어트",
+      name: "캐시울 솔리드 니트머플러",
+      sku: "JLMU6F170CG",
+      price: 78000,
+      salePrice: 53040,
+      colors: "브라운 계열 (3colors)",
+      note: "목에 두 번 감는 캐시울 니트 머플러. 얼굴 쪽을 밝힘.",
+      officialUrl: "https://www.musinsa.com/products/7171296",
+      query: "질바이질스튜어트 캐시울 솔리드 니트머플러"
+    },
+    {
+      role: "신발",
+      brand: "사뿐",
+      name: "호레인 삭스 앵클부츠 (5cm) 다크브라운",
+      sku: "5006318320",
+      price: 67900,
+      salePrice: 45520,
+      colors: "다크브라운",
+      note: "발목을 감싸는 슬림 목과 블록 굽.",
+      officialUrl: "https://www.musinsa.com/products/2898702",
+      query: "사뿐 호레인 삭스 앵클부츠 다크브라운"
+    },
+    {
+      role: "가방",
+      brand: "다이닛",
+      name: "TWO-WAY STUD MINI BAG IN BLACK",
+      sku: "DMAW63GBS07BK",
+      price: 148000,
+      salePrice: 106560,
+      colors: "블랙",
+      note: "납작한 스터드가 박힌 미니백. 무채색 코트의 유일한 포인트.",
+      officialUrl: "https://www.musinsa.com/products/7407207",
+      query: "다이닛 투웨이 스터드 미니백 블랙"
+    }
+  ],
+  palette: [
+    "#4b4a48",
+    "#efe6d8",
+    "#5b3b2a"
+  ],
+  num: 65
+}
 ];

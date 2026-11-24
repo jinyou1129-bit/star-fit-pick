@@ -105,7 +105,7 @@ def main():
             if len(d[0]) < 60 if d else False: works["description 짧음"].append(name)
 
         for m in re.finditer(r"\d+편 전체 보기", s):
-            if m.group(0) != "63편 전체 보기":
+            if m.group(0) != "65편 전체 보기":
                 works["구형 편수 문구"].append((name, m.group(0)))
 
     for k, v in (("title 중복", titles), ("description 중복", descs), ("canonical 중복", canons)):
