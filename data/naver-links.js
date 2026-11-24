@@ -208,5 +208,7 @@ window.SFP_NAVER_BY_LOOK = {
   "jongmin-roaringrad-denim": {"u": "https://naver.me/xtN2KFDf", "p": "남자흑청자켓 오버핏 데님 연청 트러커재킷", "pr": 45800},
   "siwan-siecle-denim-shirt": {"u": "https://naver.me/G3vCsazQ", "p": "스파오 웨스턴 데님 셔츠 SPYJG49CY1", "pr": 29900},
   "martin-cortis-leather": {"u": "https://naver.me/Fhu92okB", "p": "남자가죽자켓 레더블루종 싱글라이더자켓", "pr": 69800},
-  "eunse-shearling-balaclava": {"u": "https://naver.me/FORU3AvH", "p": "여성 천연양모100 무스탕 스웨이드 자켓 리버시블 숏 브라운 양털 코트", "pr": 109000}
+  "eunse-shearling-balaclava": {"u": "https://naver.me/FORU3AvH", "p": "여성 천연양모100 무스탕 스웨이드 자켓 리버시블 숏 브라운 양털 코트", "pr": 109000},
+  "soonja34-offshoulder": {"u": "https://naver.me/xy7qbknO", "p": "[제로스트릿][3컬러] 오프닝 오프숄더 니트 OPENING OFF-SHOULDER KNIT", "pr": 43000},
+  "soonja34-lavender": {"u": "https://naver.me/Ftoa1CnR", "p": "바잇미 쿨썸머클럽 니트가디건 - 라벤더", "pr": 24560}
 };

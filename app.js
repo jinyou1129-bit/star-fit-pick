@@ -145,7 +145,7 @@
     if (look && look.model) return "가상인물 · AI 모델 " + look.model + " 착용 컷";
     var ph = look.photo || {};
     if (!ph.label) return "";
-    return (ph.kind === "product" ? "제품 이미지 · " : "사진 · ") + ph.label;
+    return (ph.kind === "product" ? "제품 이미지 · " : ph.kind === "broadcast" ? "방송 화면 · " : "사진 · ") + ph.label;
   }
   function artStyle() { return "background:#f4f6f8"; }
   var GLYPH = {
@@ -619,7 +619,7 @@
       '<span class="modal-art-shade" aria-hidden="true"></span>' +
       '<div class="modal-art-meta">' +
       '<span class="modal-art-label" id="modal-art-label"></span>' +
-      '<span class="modal-art-note">' + esc("가상인물 · 스타핏픽 전속 AI 모델 " + (look.model || "") + " 착용 연출 컷" + (ph.label ? " · 원본 착장 확인: " + ph.label + (ph.what ? " " + ph.what : "") : "")) + "</span>" +
+      '<span class="modal-art-note">' + esc((look.model ? "가상인물 · 스타핏픽 전속 AI 모델 " + look.model + " 착용 연출 컷" : "방송 화면 · 실제 착장") + (ph.label ? " · 원본 착장 확인: " + ph.label + (ph.what ? " " + ph.what : "") : "")) + "</span>" +
       (ph.url ? '<a class="modal-art-src" href="' + esc(ph.url) + '" target="_blank" rel="noopener nofollow">원본 착장 출처 열기 ↗</a>' : "") +
       '</div>';
     $("#modal-art-label").textContent = look.celeb + " · " + look.headline;

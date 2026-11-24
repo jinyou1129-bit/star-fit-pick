@@ -3,10 +3,10 @@
   <channel>
     <title>스타핏픽 — 화제 착장 전속 AI 모델 룩북과 브랜드·가격 좌표</title>
     <link>https://starfitpick.netlify.app/</link>
-    <description>드라마·예능·공항에서 화제가 된 착장을 스타핏픽 전속 AI 모델 6인이 착용한 연출 컷으로 소개하고, 원본 착장 출처·브랜드·제품명·정가·구매 좌표와 가성비 대안템을 비교합니다. 착장 포스팅 61편, 패션 가이드 20편, 검증 착장 61건, 착장 이상형 월드컵.</description>
+    <description>드라마·예능·공항에서 화제가 된 착장을 스타핏픽 전속 AI 모델 6인이 착용한 연출 컷으로 소개하고, 원본 착장 출처·브랜드·제품명·정가·구매 좌표와 가성비 대안템을 비교합니다. 착장 포스팅 63편, 패션 가이드 20편, 검증 착장 63건, 착장 이상형 월드컵.</description>
     <language>ko</language>
     <copyright>© 2026 스타핏픽</copyright>
-    <lastBuildDate>Mon, 23 Nov 2026 10:20:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 09:50:00 +0900</lastBuildDate>
     <pubDate>Fri, 20 Nov 2026 13:56:00 +0900</pubDate>
     <ttl>720</ttl>
     <generator>스타핏픽</generator>
@@ -16,7 +16,23 @@
       <title>스타핏픽</title>
       <link>https://starfitpick.netlify.app/</link>
     </image>
+        <item>
+      <title>나는 SOLO 34기 순자 연보라 니트, 7회 직진 룩</title>
+      <link>https://starfitpick.netlify.app/look-soonja34-lavender.html</link>
+      <guid isPermaLink="true">https://starfitpick.netlify.app/look-soonja34-lavender.html</guid>
+      <description>나는 SOLO 34기 7회에서 순자가 영호를 찾아갈 때 입은 연보라 니트와 화이트 팬츠 룩. 오헤시오 라벤더 니트 7만 560원부터 실제 판매 상품 5개, 총액 297,340원 정리.</description>
+      <category>착장 포스팅</category>
+      <pubDate>Tue, 24 Nov 2026 09:45:00 +0900</pubDate>
+    </item>
     <item>
+      <title>나는 SOLO 34기 순자 블랙 오프숄더, 자기소개 날 시크 룩</title>
+      <link>https://starfitpick.netlify.app/look-soonja34-offshoulder.html</link>
+      <guid isPermaLink="true">https://starfitpick.netlify.app/look-soonja34-offshoulder.html</guid>
+      <description>나는 SOLO 34기 순자가 자기소개 날 입은 블랙 오프숄더와 화이트 스커트 룩. 아틀리에 나인 원오프숄더 니트 6만 2,480원부터 코치 태비 백까지 실제 판매 상품 5개, 총액 1,140,840원 정리.</description>
+      <category>착장 포스팅</category>
+      <pubDate>Tue, 24 Nov 2026 09:40:00 +0900</pubDate>
+    </item>
+<item>
       <title>드라마·예능·공항 허브 — 방송·프로그램별 착장 59벌</title>
       <link>https://starfitpick.netlify.app/tv.html</link>
       <guid isPermaLink="true">https://starfitpick.netlify.app/tv.html</guid>
@@ -609,7 +625,7 @@
       <pubDate>Fri, 20 Nov 2026 07:12:00 +0900</pubDate>
     </item>
     <item>
-      <title>착장 포스팅 61편: 공항패션·예능 사복 셀럽 착장 리뷰 모음</title>
+      <title>착장 포스팅 63편: 공항패션·예능 사복 셀럽 착장 리뷰 모음</title>
       <link>https://starfitpick.netlify.app/posts.html</link>
       <guid isPermaLink="true">https://starfitpick.netlify.app/posts.html</guid>
       <description>공항패션·예능 사복·일상 착장 40편을 사진과 출처, 정품 가격, 아쉬운 점, 10만 원 이하 대안템까지 한 편씩 길게 정리했습니다.</description>

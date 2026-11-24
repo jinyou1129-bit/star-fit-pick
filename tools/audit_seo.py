@@ -2,7 +2,7 @@
 """스타핏픽 기술적 SEO 전수 점검 (읽기 전용)
 
   - title / meta description / og:title / og:description / canonical 누락·중복
-  - og:image 절대 URL·실제 파일 존재·최소 용량 검증 (61편 룩 대표 이미지 전수)
+  - og:image 절대 URL·실제 파일 존재·최소 용량 검증 (63편 룩 대표 이미지 전수)
   - look-*.html 의 Article · BreadcrumbList JSON-LD 존재
   - 히어로 이미지 fetchpriority=high, 그 외 loading=lazy + decoding=async
   - sitemap.xml · rss.xml URL 수와 실제 페이지 존재 여부
@@ -105,7 +105,7 @@ def main():
             if len(d[0]) < 60 if d else False: works["description 짧음"].append(name)
 
         for m in re.finditer(r"\d+편 전체 보기", s):
-            if m.group(0) != "61편 전체 보기":
+            if m.group(0) != "63편 전체 보기":
                 works["구형 편수 문구"].append((name, m.group(0)))
 
     for k, v in (("title 중복", titles), ("description 중복", descs), ("canonical 중복", canons)):
