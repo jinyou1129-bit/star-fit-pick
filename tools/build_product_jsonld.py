@@ -266,13 +266,20 @@ def rewrite(page_path, write=True):
 def main():
     write = "--check" not in sys.argv
     total = 0
+    skipped = []
     for p in sorted(glob.glob(os.path.join(ROOT, "look-*.html"))):
-        n = rewrite(p, write=write)
+        try:
+            n = rewrite(p, write=write)
+        except ValueError as exc:
+            skipped.append((os.path.basename(p), str(exc)))
+            continue
         if n is None:
-            print("skip", os.path.basename(p))
+            skipped.append((os.path.basename(p), "SFP_LOOK_DATA 없음"))
         else:
             total += n
-    print(f"{'점검' if not write else '보강'} 완료 · 상품 {total}개")
+    print(f"{'점검' if not write else '보강'} 완료 · 상품 {total}개 · 건너뜀 {len(skipped)}편")
+    for name, why in skipped:
+        print("  skip", name, "-", why)
 
 
 if __name__ == "__main__":
