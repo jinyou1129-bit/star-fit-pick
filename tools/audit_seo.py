@@ -39,15 +39,23 @@ AVAIL_OK = {"https://schema.org/InStock", "https://schema.org/OutOfStock",
             "/schema.org/InStock", "/schema.org/OutOfStock"}
 
 
-def _iter_products(node):
+def _iter_type(node, typename):
     if isinstance(node, dict):
-        if node.get("@type") == "Product":
+        t = node.get("@type")
+        if t == typename or (isinstance(t, list) and typename in t):
             yield node
         for v in node.values():
-            yield from _iter_products(v)
+            yield from _iter_type(v, typename)
     elif isinstance(node, list):
         for v in node:
-            yield from _iter_products(v)
+            yield from _iter_type(v, typename)
+
+
+def _iter_products(node):
+    yield from _iter_type(node, "Product")
+
+
+ISO_DT = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?(Z|[+-]\d{2}:\d{2})$")
 
 
 def product_problems(prod, page_name, canonical, sku_seen):
@@ -183,6 +191,10 @@ def main():
             except Exception as exc:
                 works["JSON-LD 문법 오류"].append((name, str(exc)[:70]))
                 continue
+            for art in _iter_type(ldjson, "Article"):
+                for key in ("datePublished", "dateModified"):
+                    if key in art and not ISO_DT.match(str(art[key])):
+                        works["Article 날짜 형식 오류"].append((name, key, str(art[key])[:24]))
             for prod in _iter_products(ldjson):
                 works_products.extend(product_problems(
                     prod, name, c[0] if len(c) == 1 else "", sku_seen))

@@ -249,6 +249,11 @@ def rewrite(page_path, write=True):
         return None
 
     node = find_article(graph.get("@graph", graph))
+    # Article 날짜는 시간대까지 있는 ISO 8601 형식이어야 Google 리치 결과가 유효하다
+    for key in ("datePublished", "dateModified"):
+        v = node.get(key)
+        if isinstance(v, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", v):
+            node[key] = v + "T00:00:00+09:00"
     products = node.get("about") or []
     if len(products) != len(items):
         raise ValueError(f"{name}: 상품 수 불일치 {len(products)} != {len(items)}")
@@ -262,6 +267,40 @@ def rewrite(page_path, write=True):
     if write and new_html != html:
         open(page_path, "w", encoding="utf-8").write(new_html)
     return len(items)
+
+
+def normalize_dates(page_path, write=True):
+    """Article datePublished/dateModified 를 시간대 포함 ISO 8601 로 정규화."""
+    html = open(page_path, encoding="utf-8").read()
+    changed = 0
+    out = html
+    for m in list(re.finditer(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)):
+        try:
+            graph = json.loads(m.group(1))
+        except Exception:
+            continue
+
+        def walk(o):
+            nonlocal changed
+            if isinstance(o, dict):
+                if o.get("@type") == "Article":
+                    for key in ("datePublished", "dateModified"):
+                        v = o.get(key)
+                        if isinstance(v, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", v):
+                            o[key] = v + "T00:00:00+09:00"
+                            changed += 1
+                for v in o.values():
+                    walk(v)
+            elif isinstance(o, list):
+                for v in o:
+                    walk(v)
+
+        walk(graph)
+        payload = json.dumps(graph, ensure_ascii=False, separators=(", ", ": "))
+        out = out[:m.start(1)] + payload + out[m.end(1):]
+    if changed and write:
+        open(page_path, "w", encoding="utf-8").write(out)
+    return changed
 
 
 def main():
@@ -278,7 +317,10 @@ def main():
             skipped.append((os.path.basename(p), "SFP_LOOK_DATA 없음"))
         else:
             total += n
-    print(f"{'점검' if not write else '보강'} 완료 · 상품 {total}개 · 건너뜀 {len(skipped)}편")
+    dates = 0
+    for p in sorted(glob.glob(os.path.join(ROOT, "*.html"))):
+        dates += normalize_dates(p, write=write)
+    print(f"{'점검' if not write else '보강'} 완료 · 상품 {total}개 · 날짜 정규화 {dates}건 · 건너뜀 {len(skipped)}편")
     for name, why in skipped:
         print("  skip", name, "-", why)
 
