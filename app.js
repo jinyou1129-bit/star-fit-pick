@@ -690,7 +690,7 @@
     $("#modal-buy").innerHTML =
       (nvItem ? '<a class="buy-btn cta cta-naver" href="' + esc(nvItem.u) + '" target="_blank" rel="noopener sponsored" title="' + esc(nvItem.p || "네이버 쇼핑커넥트 상품") + '">네이버 쇼핑커넥트 ↗</a>' : '') +
       '<a class="buy-btn cta cta-coupang' + (nvItem ? '' : ' wide') + '" href="' + esc(CFG.buildLink("coupang", qOfficial)) + '" target="_blank" rel="noopener sponsored">쿠팡에서 비슷한 스타일 보기 ↗</a>' +
-      '<a class="buy-btn mid" href="' + esc(look.item.officialUrl) + '" target="_blank" rel="noopener sponsored">공식몰 · 상품 페이지 ↗</a>' +
+      '<a class="buy-btn chip" href="' + esc(look.item.officialUrl) + '" target="_blank" rel="noopener sponsored">원본 상품·품번 참고 ↗</a>' +
       (nvItem ? '' : '<a class="buy-btn chip" href="' + esc(CFG.buildLink("naver", qOfficial)) + '" target="_blank" rel="noopener sponsored">네이버 쇼핑 검색 ↗</a>') +
       '<a class="buy-btn chip" href="' + esc(CFG.buildLink("musinsa", look.item.brand + " " + look.item.name)) + '" target="_blank" rel="noopener sponsored">무신사 검색 ↗</a>';
 
@@ -702,7 +702,7 @@
         (nvAlt ? '<a class="buy-btn cta cta-naver" href="' + esc(nvAlt.u) + '" target="_blank" rel="noopener sponsored" title="' + esc(nvAlt.p || "네이버 쇼핑커넥트 상품") + '">네이버 쇼핑커넥트 ↗</a>' : '') +
         '<a class="buy-btn cta cta-coupang' + (nvAlt ? '' : ' wide') + '" href="' + esc(CFG.buildLink("coupang", look.alt.query)) + '" target="_blank" rel="noopener sponsored">쿠팡에서 비슷한 스타일 보기 ↗</a>' +
         ((look.alt.platform === "coupang" || (nvAlt && look.alt.platform === "official")) ? "" :
-          '<a class="buy-btn mid" href="' + esc(CFG.buildLink(look.alt.platform === "official" ? "naver" : look.alt.platform, look.alt.query)) + '" target="_blank" rel="noopener sponsored">' +
+          '<a class="buy-btn chip" href="' + esc(CFG.buildLink(look.alt.platform === "official" ? "naver" : look.alt.platform, look.alt.query)) + '" target="_blank" rel="noopener sponsored">' +
           (look.alt.platform === "official" ? (nvAlt ? "네이버 쇼핑커넥트 ↗" : "공식 판매처 검색 ↗") : look.alt.platform === "musinsa" ? "무신사에서 보기 ↗" : "11번가에서 보기 ↗") + "</a>") +
         '<a class="buy-btn chip" href="' + esc(CFG.buildLink("elevenst", look.alt.query)) + '" target="_blank" rel="noopener sponsored">11번가 검색 ↗</a>' +
       '</div>' +
