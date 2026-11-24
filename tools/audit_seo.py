@@ -33,11 +33,97 @@ def pages():
     return out
 
 
+SKU_RE = re.compile(r"^SFP-L\d{3}-\d{2}$")
+AVAIL_OK = {"https://schema.org/InStock", "https://schema.org/OutOfStock",
+            "https://schema.org/PreOrder", "https://schema.org/BackOrder",
+            "/schema.org/InStock", "/schema.org/OutOfStock"}
+
+
+def _iter_products(node):
+    if isinstance(node, dict):
+        if node.get("@type") == "Product":
+            yield node
+        for v in node.values():
+            yield from _iter_products(v)
+    elif isinstance(node, list):
+        for v in node:
+            yield from _iter_products(v)
+
+
+def product_problems(prod, page_name, canonical, sku_seen):
+    """Product 1건의 판매자 목록(Merchant listings) 필수·권장 항목 점검."""
+    out = []
+    name = prod.get("name") or ""
+    if not name.strip():
+        out.append((page_name, "Product name 누락"))
+    imgs = prod.get("image")
+    imgs = imgs if isinstance(imgs, list) else [imgs] if imgs else []
+    if not imgs:
+        out.append((page_name, f"{name[:20]} image 누락"))
+    for u in imgs:
+        if not str(u).startswith(SITE):
+            out.append((page_name, f"{name[:20]} image 절대 URL 아님"))
+            continue
+        rel = str(u)[len(SITE):].split("?")[0]
+        if not os.path.exists(os.path.join(ROOT, rel)):
+            out.append((page_name, f"{name[:20]} image 파일 없음 {rel}"))
+    desc = (prod.get("description") or "").strip()
+    if len(desc) < 60:
+        out.append((page_name, f"{name[:20]} description 짧음/누락({len(desc)})"))
+    sku = (prod.get("sku") or "").strip()
+    if not sku:
+        out.append((page_name, f"{name[:20]} sku 누락"))
+    elif not SKU_RE.match(sku):
+        out.append((page_name, f"{name[:20]} sku 형식 오류 {sku[:20]}"))
+    else:
+        sku_seen.setdefault(sku, []).append(page_name)
+    if canonical and prod.get("url") and prod["url"] != canonical:
+        out.append((page_name, f"{name[:20]} Product url ≠ canonical"))
+    off = prod.get("offers") or {}
+    if isinstance(off, list):
+        off = off[0] if off else {}
+    price = str(off.get("price") or "")
+    if not re.fullmatch(r"\d+", price):
+        out.append((page_name, f"{name[:20]} offers.price 오류({price[:12]})"))
+    if off.get("priceCurrency") != "KRW":
+        out.append((page_name, f"{name[:20]} priceCurrency 누락"))
+    if off.get("availability") not in AVAIL_OK:
+        out.append((page_name, f"{name[:20]} availability 오류"))
+    if not str(off.get("itemCondition", "")).endswith("NewCondition"):
+        out.append((page_name, f"{name[:20]} itemCondition 누락"))
+    sd = off.get("shippingDetails") or {}
+    if not sd:
+        out.append((page_name, f"{name[:20]} shippingDetails 누락"))
+    else:
+        rate = sd.get("shippingRate") or {}
+        if not (rate.get("value") and rate.get("currency") == "KRW"):
+            out.append((page_name, f"{name[:20]} shippingRate 오류"))
+        dest = sd.get("shippingDestination") or {}
+        if dest.get("addressCountry") != "KR":
+            out.append((page_name, f"{name[:20]} shippingDestination 오류"))
+        dt = sd.get("deliveryTime") or {}
+        if not (dt.get("transitTime") and dt.get("handlingTime")):
+            out.append((page_name, f"{name[:20]} deliveryTime 누락"))
+    rp = off.get("hasMerchantReturnPolicy") or {}
+    if not rp:
+        out.append((page_name, f"{name[:20]} hasMerchantReturnPolicy 누락"))
+    else:
+        if rp.get("applicableCountry") != "KR":
+            out.append((page_name, f"{name[:20]} returnPolicy applicableCountry 오류"))
+        if not str(rp.get("returnPolicyCategory", "")).endswith("ReturnWindow"):
+            out.append((page_name, f"{name[:20]} returnPolicyCategory 오류"))
+        if not rp.get("merchantReturnDays"):
+            out.append((page_name, f"{name[:20]} merchantReturnDays 누락"))
+    return out
+
+
 def main():
     P = pages()
     works = collections.defaultdict(list)
     titles, descs, canons = collections.Counter(), collections.Counter(), collections.Counter()
     og_checked = set()
+    works_products = []
+    sku_seen = {}
 
     for name, s in P:
         def one(pat):
@@ -88,6 +174,17 @@ def main():
                 if hero and os.path.splitext(og_url.split("?")[0])[0] != os.path.splitext(SITE + hero[0].split("?")[0].lstrip("./"))[0]:
                     works["og:image ≠ 히어로 이미지"].append((name, og_url.split("/")[-1], hero[0]))
 
+        # ---- JSON-LD 구조화 데이터 (판매자 목록·제품 스니펫) ----
+        for ld in one(r'<script type="application/ld\+json">(.*?)</script>'):
+            try:
+                ldjson = json.loads(ld)
+            except Exception as exc:
+                works["JSON-LD 문법 오류"].append((name, str(exc)[:70]))
+                continue
+            for prod in _iter_products(ldjson):
+                works_products.extend(product_problems(
+                    prod, name, c[0] if len(c) == 1 else "", sku_seen))
+
         if name.startswith("look-"):
             if '"@type": "Article"' not in s and '"@type":"Article"' not in s: works["Article 없음"].append(name)
             if "BreadcrumbList" not in s: works["BreadcrumbList 없음"].append(name)
@@ -107,6 +204,13 @@ def main():
         for m in re.finditer(r"\d+편 전체 보기", s):
             if m.group(0) != "65편 전체 보기":
                 works["구형 편수 문구"].append((name, m.group(0)))
+
+    if works_products:
+        works["Product 판매자 목록 항목"] = works_products[:20]
+    dup_skus = [(k, v) for k, v in sku_seen.items() if len(v) > 1]
+    if dup_skus:
+        works["sku 중복"] = dup_skus[:10]
+    print("Product 항목:", sum(len(v) for v in sku_seen.values()), "개 · og:image:", len(og_checked))
 
     for k, v in (("title 중복", titles), ("description 중복", descs), ("canonical 중복", canons)):
         dups = [(t, n) for t, n in v.items() if n > 1]
