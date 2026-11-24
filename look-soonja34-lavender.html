@@ -225,6 +225,16 @@
       '</div></div>';
   });
   host.innerHTML = html;
+  // 대안 아이템도 네이버 쇼핑커넥트·쿠팡 제휴 버튼을 1순위로 노출합니다(무신사는 품번 참고용 칩).
+  var altBuy = {name: "빈트릴 빈트릴 헤어리 니트(퍼플)", q: "빈트릴 빈트릴 헤어리 니트(퍼플)", price: 19000, url: "https://www.musinsa.com/products/4587148"};
+  var nvAltBuy = cfg.naverPick(altBuy.q);
+  host.insertAdjacentHTML('beforeend',
+    '<div class="buy-col"><p class="buy-kicker">대안 · ' + esc(altBuy.name) + ' · ' + altBuy.price.toLocaleString('ko-KR') + '원</p>' +
+    '<div class="buy-row">' +
+    (nvAltBuy ? a(nvAltBuy.u, '네이버 쇼핑커넥트 ↗', 'cta cta-naver') : '') +
+    a(cfg.buildLink('coupang', altBuy.q), '쿠팡에서 비슷한 스타일 보기 ↗', 'cta cta-coupang' + (nvAltBuy ? '' : ' wide')) +
+    a(altBuy.url, '원본 상품·품번 참고 ↗', 'chip') +
+    '</div></div>');
   var nvLook = (window.SFP_NAVER_BY_LOOK || {})[LOOK_ID];
   if (nvLook) {
     host.insertAdjacentHTML('beforeend',
