@@ -114,6 +114,8 @@ def product_problems(prod, page_name, canonical, sku_seen):
             out.append((page_name, f"{name[:20]} returnPolicyCategory 오류"))
         if not rp.get("merchantReturnDays"):
             out.append((page_name, f"{name[:20]} merchantReturnDays 누락"))
+        if str(rp.get("returnFees", "")).endswith("ReturnShippingFees") and not rp.get("returnShippingFeesAmount"):
+            out.append((page_name, f"{name[:20]} returnShippingFeesAmount 누락"))
     return out
 
 

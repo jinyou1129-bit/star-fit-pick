@@ -41,6 +41,7 @@ RETURN_POLICY = {
     "merchantReturnDays": 7,
     "returnMethod": "https://schema.org/ReturnByMail",
     "returnFees": "https://schema.org/ReturnShippingFees",
+    "returnShippingFeesAmount": {"@type": "MonetaryAmount", "value": "3000", "currency": "KRW"},
 }
 
 ROLE_BY_CATEGORY = {
