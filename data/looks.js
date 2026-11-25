@@ -5003,4 +5003,321 @@ window.SFP_LOOKS = [
   ],
   num: 65
 }
+,
+{
+  id: "nayoung-white-suit",
+  celeb: "이나영",
+  group: "배우",
+  type: "daily",
+  show: "일상",
+  line: "match",
+  scene: "2026.11.24 서울 중구 장충동 코브 더 장충 · 포페(FOPE) 국내 론칭 2주년 포토콜",
+  category: "outer",
+  mood: [
+    "classic",
+    "minimal"
+  ],
+  headline: "올화이트 수트 + 골드 체인",
+  image: "assets/looks/nayoung-white-suit.webp?v=2026112501",
+  imageJpg: "assets/looks/nayoung-white-suit.jpg?v=2026112501",
+  model: "엘라 린드그렌",
+  modelId: "ella-lindgren",
+  photo: {
+    label: "스포츠서울 · 매일경제",
+    kind: "photo",
+    what: "2026.11.24 포페(FOPE) 포토콜 포토타임",
+    url: "https://www.sportsseoul.com/news/read/1652092"
+  },
+  imageAlt: "스타핏픽 전속 AI 모델 엘라 린드그렌이 오프화이트 오버사이즈 블레이저에 화이트 케이블 니트, 화이트 와이드 슬랙스, 화이트 스틸레토 펌프스, 골드 체인 초커를 착용하고 거리를 걷는 연출 컷",
+  mediaType: "화보·일상",
+  program: "포페(FOPE) 포토콜",
+  item: {
+    brand: "기준",
+    brandEn: "KIJUN",
+    name: "Shirring Pocket Blazer Off-White",
+    sku: "KWEJC1A10-OW",
+    price: 116760,
+    salePrice: 116760,
+    saleNote: "무신사 58% 할인가 · 2026-11-25 확인",
+    material: "판매 페이지 표기 (혼용률 상세는 구매처 확인)",
+    colors: "Off-White",
+    sizes: "판매 페이지 표기 (구매처 확인)",
+    maker: "기준 / 한국",
+    season: "ALL",
+    fit: "넓은 노치 라펠의 싱글 브레이스트 블레이저, 어깨가 자연스럽게 떨어지는 오버사이즈 핏, 소매 끝에 브라운 호박 단추 4개, 허벅지 중간까지 떨어지는 기장, 스트링으로 조절하는 포켓",
+    cons: "오프화이트라 오염에 약하고, 오버사이즈 핏이라 안에 두꺼운 니트를 넣으면 어깨가 더 커 보임",
+    officialUrl: "https://www.musinsa.com/products/4787792"
+  },
+  story: "11월 24일 오후 서울 중구 장충동 코브 더 장충. 이탈리아 주얼리 브랜드 포페(FOPE)의 국내 론칭 2주년 기념 포토콜에서 카메라가 가장 오래 머문 사람은 이나영이었습니다. 머리부터 발끝까지 흰색 하나로 맞춘 수트, 넓게 열린 라펠, 허벅지까지 내려오는 재킷, 발등을 덮는 와이드 팬츠. 여기에 골드 메시 목걸이와 반지가 얹혔습니다. 흰색은 원래 사진에서 잘 날아가는데, 이날은 민트빛 포토월 앞에서 옷의 선이 또렷하게 남았습니다. 색이 아니라 실루엣으로 버틴 룩입니다.",
+  point: "포토월 사진에서 먼저 눈에 들어오는 것은 색이 아니라 길이입니다. 어깨선을 세운 흰 재킷이 허벅지 중간까지 내려오고, 넓게 열린 라펠이 목선에서 가슴까지 긴 삼각형을 만듭니다. 172cm의 키에 오버사이즈 실루엣이 얹혔는데도 옷이 사람을 삼키지 않는 이유는 어깨선이 단",
+  verified: "스포츠서울 1652092(2026.11.25 09:20)·매일경제 12217368(2026.11.24 17:28)·K라이프저니 1065614423151965(2026.11.24 21:00) 보도에서 이나영이 11월 24일 서울 중구 장충동 코브 더 장충에서 열린 포페(FOPE) 국내 론칭 2주년 기념 포토콜에 넓은 라펠의 흰색 재킷과 같은 톤 와이드 팬츠, 골드 목걸이·반지·브레이슬릿을 착용한 사실 확인. 안쪽 니트와 신발은 사진에서 확인되지 않아 같은 무드로 맞춘 구성입니다. 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.25 확인.",
+  sources: [
+    {
+      label: "스포츠서울 · 매일경제 — 이나영 착장",
+      url: "https://www.sportsseoul.com/news/read/1652092"
+    },
+    {
+      label: "기준 Shirring Pocket Blazer Off-White",
+      url: "https://www.musinsa.com/products/4787792"
+    },
+    {
+      label: "비버리힐스 폴로클럽 여성 어텀 케이블 포인트 라운드 니트 TK105 화이트",
+      url: "https://www.musinsa.com/products/7551757"
+    },
+    {
+      label: "와이와이아이엠 YY_White wide leg pants",
+      url: "https://www.musinsa.com/products/5125302"
+    },
+    {
+      label: "세라 베이직 소가죽 스틸레토 펌프스 R56P457 화이트",
+      url: "https://www.musinsa.com/products/7753839"
+    },
+    {
+      label: "하와 Chained up choker 골드",
+      url: "https://www.musinsa.com/products/1287814"
+    },
+    {
+      label: "숲 히든 후크 테일러드 재킷(SY5JK82) (대안)",
+      url: "https://www.musinsa.com/products/4120296"
+    }
+  ],
+  alt: {
+    brand: "숲",
+    name: "히든 후크 테일러드 재킷(SY5JK82)",
+    price: 47900,
+    was: 169000,
+    url: "https://www.musinsa.com/products/4120296",
+    platform: "musinsa",
+    fit: "",
+    cons: "",
+    note: "재킷 하나에 11만 원이 부담되면 숲(SOUP)의 히든 후크 테일러드 재킷(47,900원)이 대안입니다.",
+    query: "숲 히든 후크 테일러드 재킷(SY5JK82)"
+  },
+  ootd: [
+    {
+      role: "아우터",
+      brand: "기준",
+      name: "Shirring Pocket Blazer Off-White",
+      sku: "KWEJC1A10-OW",
+      price: 116760,
+      salePrice: 116760,
+      colors: "Off-White",
+      note: "넓은 노치 라펠 오버사이즈 블레이저. 허벅지 중간 기장, 호박 단추.",
+      officialUrl: "https://www.musinsa.com/products/4787792",
+      query: "기준 Shirring Pocket Blazer Off-White"
+    },
+    {
+      role: "상의",
+      brand: "비버리힐스 폴로클럽",
+      name: "여성 어텀 케이블 포인트 라운드 니트 TK105 화이트",
+      sku: "B14TK105M3",
+      price: 28900,
+      salePrice: 28900,
+      colors: "화이트 (6Color)",
+      note: "케이블 짜임 라운드 니트. 재킷을 열었을 때 세로 결을 만듦.",
+      officialUrl: "https://www.musinsa.com/products/7551757",
+      query: "비버리힐스 폴로클럽 여성 어텀 케이블 포인트 라운드 니트 화이트"
+    },
+    {
+      role: "하의",
+      brand: "와이와이아이엠",
+      name: "YY_White wide leg pants",
+      sku: "m1037_1476348",
+      price: 124000,
+      salePrice: 99200,
+      colors: "화이트",
+      note: "허리에서 곧게 떨어지는 와이드 팬츠. 밑단이 발등을 덮음.",
+      officialUrl: "https://www.musinsa.com/products/5125302",
+      query: "와이와이아이엠 YY_White wide leg pants"
+    },
+    {
+      role: "신발",
+      brand: "세라",
+      name: "베이직 소가죽 스틸레토 펌프스 R56P457 화이트",
+      sku: "5011885705",
+      price: 69000,
+      salePrice: 69000,
+      colors: "블랙 · 베이지 · 화이트",
+      note: "뾰족한 앞코의 낮은 굽 스틸레토. 팬츠 밑단 아래로 앞코만 보임.",
+      officialUrl: "https://www.musinsa.com/products/7753839",
+      query: "세라 베이직 소가죽 스틸레토 펌프스 화이트"
+    },
+    {
+      role: "목걸이",
+      brand: "하와",
+      name: "Chained up choker 골드",
+      sku: "19812",
+      price: 39000,
+      salePrice: 31200,
+      colors: "골드",
+      note: "두께가 있는 골드 체인 초커. 길이 조절 가능.",
+      officialUrl: "https://www.musinsa.com/products/1287814",
+      query: "하와 Chained up choker 골드"
+    }
+  ],
+  palette: [
+    "#f4f2ed",
+    "#c9c3b6",
+    "#b08d4f"
+  ],
+  num: 66
+},
+{
+  id: "yujin-mama-arrival",
+  celeb: "안유진",
+  group: "IVE",
+  type: "airport",
+  show: "공항",
+  line: "match",
+  scene: "2026.11.22 오후 인천국제공항 제2여객터미널 입국 (2026 MAMA AWARDS 일정 마침)",
+  category: "outer",
+  mood: [
+    "lovely",
+    "minimal"
+  ],
+  headline: "아이보리 뽀글이 + 연청 데님",
+  image: "assets/looks/yujin-mama-arrival.webp?v=2026112501",
+  imageJpg: "assets/looks/yujin-mama-arrival.jpg?v=2026112501",
+  model: "서아린",
+  modelId: "seo-arin",
+  photo: {
+    label: "뉴스엔 · 스타뉴스",
+    kind: "photo",
+    what: "2026.11.22 인천국제공항 제2여객터미널 입국 현장 촬영",
+    url: "https://www.newsen.com/news_view.php?uid=202611221502263510"
+  },
+  imageAlt: "스타핏픽 전속 AI 모델 서아린이 아이보리 뽀글이 재킷에 화이트 골지 니트, 연청 스트레이트 데님, 베이지 양털 로퍼, 네이비 볼캡을 착용하고 캐리어를 끌며 공항을 걷는 연출 컷",
+  mediaType: "공항·출국",
+  program: "인천국제공항",
+  item: {
+    brand: "썸플레이스",
+    brandEn: "SOME PLACE",
+    name: "베이직 소프트 볼륨 윈터 싱글 카라 오버핏 뽀글이 양털 후리스 점퍼 자켓 (아이보리)",
+    sku: "26W7771952",
+    price: 71000,
+    salePrice: 42600,
+    saleNote: "무신사 40% 할인가 · 2026-11-25 확인",
+    material: "보아(양털) 표면 (상세 혼용률은 판매 페이지 확인)",
+    colors: "아이보리 · 블랙 (2COLOR)",
+    sizes: "판매 페이지 표기 (구매처 확인)",
+    maker: "썸플레이스 / 한국",
+    season: "2026 ALL",
+    fit: "턱 아래까지 올라오는 싱글 칼라, 어깨가 떨어지는 오버사이즈 핏, 엉덩이를 덮는 기장, 앞 지퍼, 둥근 패치 포켓 2개, 안쪽 플라워 패턴 트리밍",
+    cons: "보아 소재라 털이 눌리면 자국이 남고, 밝은 아이보리라 소매 끝이 쉽게 더러워짐",
+    officialUrl: "https://www.musinsa.com/products/7626085"
+  },
+  story: "11월 22일 오후 인천국제공항 제2여객터미널. 이틀 전 오사카 교세라돔에서 '베스트 여자 그룹'과 '베스트 송 톱 10' 두 개의 트로피를 들고 돌아온 아이브 여섯 명 중, 안유진은 시상식 드레스 대신 아이보리 뽀글이 재킷을 입고 걸어 나왔습니다. 어깨가 아래로 떨어지는 오버사이즈 핏, 엉덩이를 덮는 기장, 턱 아래까지 올라오는 칼라. 아래로는 연청 스트레이트 데님이 발등까지 이어지고, 머리에는 네이비 볼캡 하나. 이동이 긴 날의 공항룩은 결국 아우터 한 벌과 다리 길이로 결정된다는 것을 보여 주는 착장입니다.",
+  point: "입국장 사진에서 재킷은 몸보다 한참 큰 실루엣입니다. 어깨가 아래로 떨어지고 소매가 손등을 덮으며, 칼라가 턱 아래까지 올라옵니다. 여섯 명이 나란히 걷는 장면에서도 이 재킷만 표면이 곱슬하게 일어나 있어, 같은 아이보리 계열인 다른 멤버들의 아우터와도 질감으로 구분됩",
+  verified: "뉴스엔 포토엔HD 202611221502263510·202611221331501310(2026.11.22)과 스타뉴스 2026112213240999184(2026.11.22) 보도로 아이브가 2026 MAMA AWARDS 일정을 마치고 11월 22일 오후 인천국제공항 제2여객터미널로 입국한 사실, 이 시상식에서 '베스트 여자 그룹'과 '베스트 송 톱 10' 2관왕을 한 사실을 확인. 같은 날 안유진의 아이보리 컬리 재킷·연청 스트레이트 데님·네이비 볼캡·베이지 톤 신발·흰 줄 이어폰 구성은 스타일스냅(stylesnapkr99) 2026.11.24 착장 분석에서 항목별로 확인했습니다. 안쪽 이너 종류와 신발의 정확한 형태는 사진에서 확정되지 않아 같은 무드로 맞췄습니다. 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.25 확인.",
+  sources: [
+    {
+      label: "뉴스엔 · 스타뉴스 — 안유진 착장",
+      url: "https://www.newsen.com/news_view.php?uid=202611221502263510"
+    },
+    {
+      label: "썸플레이스 베이직 소프트 볼륨 윈터 싱글 카라 오버핏 뽀글이 점퍼 자켓 (아이보리)",
+      url: "https://www.musinsa.com/products/7626085"
+    },
+    {
+      label: "코이리스 소픈 골지 니트 버튼 긴팔 티 (화이트)",
+      url: "https://www.musinsa.com/products/6013187"
+    },
+    {
+      label: "르세지엠 릴렉스 스트레이트 데님팬츠 라이트블루",
+      url: "https://www.musinsa.com/products/4186329"
+    },
+    {
+      label: "마뗑킴 LACED SHEARLING LOAFER IN BEIGE",
+      url: "https://www.musinsa.com/products/7541563"
+    },
+    {
+      label: "마뗑킴 MATIN MINI LOGO BALL CAP IN NAVY",
+      url: "https://www.musinsa.com/products/5758707"
+    },
+    {
+      label: "와키윌리 스트레이트 데님 팬츠 연청 (대안)",
+      url: "https://www.musinsa.com/products/4445339"
+    }
+  ],
+  alt: {
+    brand: "와키윌리",
+    name: "스트레이트 데님 팬츠 연청",
+    price: 25000,
+    was: 100000,
+    url: "https://www.musinsa.com/products/4445339",
+    platform: "musinsa",
+    fit: "",
+    cons: "",
+    note: "데님에 5만 원대가 부담되면 와키윌리의 스트레이트 데님 팬츠 연청(25,000원)이 대안입니다.",
+    query: "와키윌리 스트레이트 데님 팬츠 연청"
+  },
+  ootd: [
+    {
+      role: "아우터",
+      brand: "썸플레이스",
+      name: "베이직 소프트 볼륨 윈터 싱글 카라 오버핏 뽀글이 점퍼 자켓 (아이보리)",
+      sku: "26W7771952",
+      price: 71000,
+      salePrice: 42600,
+      colors: "아이보리 (2COLOR)",
+      note: "턱 아래 칼라의 보아 재킷. 엉덩이를 덮는 기장, 둥근 패치 포켓.",
+      officialUrl: "https://www.musinsa.com/products/7626085",
+      query: "썸플레이스 베이직 소프트 볼륨 윈터 싱글 카라 오버핏 뽀글이 점퍼 자켓 아이보리"
+    },
+    {
+      role: "상의",
+      brand: "코이리스",
+      name: "소픈 골지 니트 버튼 긴팔 티 (화이트)",
+      sku: "C-P00000EA",
+      price: 23730,
+      salePrice: 23730,
+      colors: "화이트 · 크림 (2컬러)",
+      note: "가는 골지 짜임의 라운드 긴팔 티. 재킷 안에서 목선을 정리.",
+      officialUrl: "https://www.musinsa.com/products/6013187",
+      query: "코이리스 소픈 골지 니트 버튼 긴팔 티"
+    },
+    {
+      role: "하의",
+      brand: "르세지엠",
+      name: "릴렉스 스트레이트 데님팬츠 라이트블루",
+      sku: "5010897225",
+      price: 55840,
+      salePrice: 55840,
+      colors: "라이트블루",
+      note: "허벅지부터 발목까지 일정한 스트레이트 핏. 밑단이 발등을 덮음.",
+      officialUrl: "https://www.musinsa.com/products/4186329",
+      query: "르세지엠 릴렉스 스트레이트 데님팬츠 라이트블루"
+    },
+    {
+      role: "신발",
+      brand: "마뗑킴",
+      name: "LACED SHEARLING LOAFER IN BEIGE",
+      sku: "MK269OSO006MBE",
+      price: 169000,
+      salePrice: 128520,
+      colors: "베이지",
+      note: "천연가죽 겉감에 양털 안감. 데님 밑단 아래로 발끝만 보임.",
+      officialUrl: "https://www.musinsa.com/products/7541563",
+      query: "마뗑킴 LACED SHEARLING LOAFER IN BEIGE"
+    },
+    {
+      role: "모자",
+      brand: "마뗑킴",
+      name: "MATIN MINI LOGO BALL CAP IN NAVY",
+      sku: "MK2600HT042VNA",
+      price: 48000,
+      salePrice: 40800,
+      colors: "네이비",
+      note: "면 100% 6패널 볼캡. 워싱감 있는 네이비.",
+      officialUrl: "https://www.musinsa.com/products/5758707",
+      query: "마뗑킴 MATIN MINI LOGO BALL CAP IN NAVY"
+    }
+  ],
+  palette: [
+    "#efe9dd",
+    "#a9c4de",
+    "#1f2a44"
+  ],
+  num: 67
+}
 ];
