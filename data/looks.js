@@ -5320,4 +5320,305 @@ window.SFP_LOOKS = [
   ],
   num: 67
 }
+,
+{
+  id: "dahyun-hotfix-setup",
+  celeb: "다현",
+  group: "TWICE",
+  type: "airport",
+  show: "공항",
+  line: "match",
+  scene: "2026.11.25 오후 인천국제공항 출국 (싱가포르 · 방송 촬영 일정)",
+  category: "outer",
+  mood: [
+    "street",
+    "casual"
+  ],
+  headline: "블랙 핫픽스 셋업 + 레더 더플백",
+  image: "assets/looks/dahyun-hotfix-setup.webp?v=2026112601",
+  imageJpg: "assets/looks/dahyun-hotfix-setup.jpg?v=2026112601",
+  model: "서아린",
+  modelId: "seo-arin",
+  photo: {
+    label: "싱글리스트 · OSEN · 패션서울",
+    kind: "photo",
+    what: "2026.11.25 인천국제공항 출국 현장 촬영",
+    url: "https://www.slist.kr/news/articleView.html?idxno=784772"
+  },
+  imageAlt: "스타핏픽 전속 AI 모델 서아린이 블랙 핫픽스 후드집업에 화이트 크롭 티셔츠, 블랙 와이드 스웨트팬츠, 화이트 플랫폼 스니커즈를 착용하고 검은 레더 더플백을 들고 공항을 걷는 연출 컷",
+  mediaType: "공항·출국",
+  program: "인천국제공항",
+  item: {
+    brand: "어반디타입",
+    brandEn: "URBANDTYPE",
+    name: "워시드 써킷 핫픽스 후드집업_블랙",
+    sku: "UBFFTZ004BK",
+    price: 89000,
+    salePrice: 47410,
+    saleNote: "무신사 47% 할인가 · 2026-11-26 확인",
+    material: "코튼 워싱 원단 (혼용률 상세는 판매 페이지 확인)",
+    colors: "블랙",
+    sizes: "판매 페이지 표기 (구매처 확인)",
+    maker: "어반디타입 / 한국",
+    season: "2026 FW",
+    fit: "어깨가 떨어지는 루즈핏, 허리선 위에서 끊기는 크롭 기장, 투웨이 지퍼, 캥거루 포켓 2개, 리브 소맷단·밑단, 원단 전체에 잔 결정 핫픽스 장식",
+    cons: "핫픽스 장식이 세탁 마찰에 약해 뒤집어 단독 세탁해야 하고, 크롭 기장이라 안에 입는 티셔츠 허리선이 그대로 드러남",
+    officialUrl: "https://www.musinsa.com/products/7158012"
+  },
+  story: "11월 25일 오후 인천국제공항. 방송 촬영 일정으로 싱가포르로 떠나는 트와이스 다현은 시상식 드레스도, 코트도 아닌 검은 후드 셋업을 입고 나타났습니다. 후디와 팬츠 전체에 촘촘히 박힌 크리스털 핫픽스가 걸음마다 은은하게 빛을 흩뿌리고, 그 위로 주름진 가죽 더플백이 묵직하게 걸립니다. 허리선 위에서 끊기는 크롭 후디와 발등을 덮는 와이드 팬츠가 만나 다리만 길게 남는 실루엣을 만들었습니다. 평범한 트레이닝복을 하이엔드 스트리트 룩으로 바꾸는 방법은 색이 아니라 표면이었습니다.",
+  point: "공항 사진에서 다현의 옷은 멀리서 보면 그냥 검은 트레이닝복입니다. 가까이 붙으면 다릅니다. 후디 앞면과 소매, 팬츠 전체에 작은 결정이 촘촘히 박혀 있어 형광등 아래에서 표면이 미세하게 반짝입니다. 무채색 셋업이 운동복처럼 보이지 않는 이유가 여기에 있습니다. 색을 ",
+  verified: "싱글리스트 784772(2026.11.25 16:37)·조선비즈/OSEN GY2DQNLGGJTDCN3CGY2DMNZUMM(2026.11.25 13:19)·RNX 923585(2026.11.25 21:38)·패션서울 277485(2026.11.25)·bntnews bnt202611260120(2026.11.26 08:42) 보도로 다현이 11월 25일 오후 방송 촬영 일정으로 인천국제공항을 통해 싱가포르로 출국한 사실, 착용 제품이 알렉산더왕의 '올오버 핫픽스 후디드 집업'·'핫픽스 미드라이즈 릴렉스트 스웨트팬츠'·'로코(Rocco) 라지 더플백'임을 확인했습니다. 패션서울은 크롭 후디 + 와이드 팬츠 비율, 안쪽 화이트 티셔츠 레이어드, 파스텔 민트 헤드폰·토끼 키링 포인트를 함께 짚었습니다. 안쪽 티셔츠와 신발의 브랜드는 사진에서 확정되지 않아 같은 무드로 맞췄습니다. 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.26 확인.",
+  sources: [
+    {
+      label: "싱글리스트 · OSEN · 패션서울 — 다현 착장",
+      url: "https://www.slist.kr/news/articleView.html?idxno=784772"
+    },
+    {
+      label: "어반디타입 워시드 써킷 핫픽스 후드집업_블랙",
+      url: "https://www.musinsa.com/products/7158012"
+    },
+    {
+      label: "프린트스타 14수 7.4oz 크롭 헤비웨이트 무지 반팔 티셔츠 화이트",
+      url: "https://www.musinsa.com/products/7220056"
+    },
+    {
+      label: "다미쉬 크로스 와이드 원턱 스웨트 팬츠_블랙",
+      url: "https://www.musinsa.com/products/6046599"
+    },
+    {
+      label: "오찌 로미타 플랫폼 메쉬 스니커즈 화이트 OZPDGA103W",
+      url: "https://www.musinsa.com/products/5988541"
+    },
+    {
+      label: "9999아카이브 Offset Wrinkle Duffel Bag (Vegan Leather)",
+      url: "https://www.musinsa.com/products/7502673"
+    },
+    {
+      label: "코드그라피 (우먼) 코튼 후드 집업_3color (대안)",
+      url: "https://www.musinsa.com/products/3837517"
+    }
+  ],
+  alt: {
+    brand: "코드그라피",
+    name: "(우먼) 코튼 후드 집업_3color",
+    price: 19900,
+    was: 99500,
+    url: "https://www.musinsa.com/products/3837517",
+    platform: "musinsa",
+    fit: "",
+    cons: "",
+    note: "후드집업 하나에 4만 7천 원이 부담되면 코드그라피의 (우먼) 코튼 후드 집업(19,900원 · 판매 페이지 80% 할인 표기)이 대안입니다.",
+    query: "코드그라피 (우먼) 코튼 후드 집업_3color"
+  },
+  ootd: [
+    {
+      role: "아우터",
+      brand: "어반디타입",
+      name: "워시드 써킷 핫픽스 후드집업_블랙",
+      sku: "UBFFTZ004BK",
+      price: 89000,
+      salePrice: 47410,
+      colors: "블랙",
+      note: "워싱 코튼에 잔 결정 핫픽스. 크롭 기장 루즈핏, 투웨이 지퍼.",
+      officialUrl: "https://www.musinsa.com/products/7158012",
+      query: "어반디타입 워시드 써킷 핫픽스 후드집업 블랙"
+    },
+    {
+      role: "상의",
+      brand: "프린트스타",
+      name: "14수 7.4oz 크롭 헤비웨이트 무지 반팔 티셔츠 화이트",
+      sku: "HVT-CR",
+      price: 15900,
+      salePrice: 15900,
+      colors: "화이트 (4 COLOR)",
+      note: "두꺼운 14수 코튼 크롭 티. 후디 아래에서 허리선 경계를 만듦.",
+      officialUrl: "https://www.musinsa.com/products/7220056",
+      query: "프린트스타 14수 크롭 헤비웨이트 무지 반팔 티셔츠 화이트"
+    },
+    {
+      role: "하의",
+      brand: "다미쉬",
+      name: "크로스 와이드 원턱 스웨트 팬츠_블랙",
+      sku: "DMS26SWPBL1",
+      price: 31860,
+      salePrice: 31860,
+      colors: "블랙",
+      note: "원턱 와이드 스웨트 팬츠. 밑단이 발등을 덮고 포켓 아래 자수.",
+      officialUrl: "https://www.musinsa.com/products/6046599",
+      query: "다미쉬 크로스 와이드 원턱 스웨트 팬츠 블랙"
+    },
+    {
+      role: "신발",
+      brand: "오찌",
+      name: "로미타 플랫폼 메쉬 스니커즈 화이트 OZPDGA103W",
+      sku: "OZPDGA103W",
+      price: 42150,
+      salePrice: 42150,
+      colors: "화이트",
+      note: "굽이 두툼한 플랫폼 스니커즈. 검은 팬츠 밑단 아래 흰 밑창만 보임.",
+      officialUrl: "https://www.musinsa.com/products/5988541",
+      query: "오찌 로미타 플랫폼 메쉬 스니커즈 화이트"
+    },
+    {
+      role: "가방",
+      brand: "9999아카이브",
+      name: "Offset Wrinkle Duffel Bag (Vegan Leather)",
+      sku: "9AK26FADFBGBK",
+      price: 94500,
+      salePrice: 94500,
+      colors: "블랙",
+      note: "표면이 구겨진 비건 레더 더플백. 더블 탑 핸들, 지퍼 클로저.",
+      officialUrl: "https://www.musinsa.com/products/7502673",
+      query: "9999아카이브 Offset Wrinkle Duffel Bag 비건 레더"
+    }
+  ],
+  palette: [
+    "#2b2b2d",
+    "#f2f2f0",
+    "#c9c3b8"
+  ],
+  num: 68
+},
+{
+  id: "dohyun-musinsa-longcoat",
+  celeb: "이도현",
+  group: "배우",
+  type: "airport",
+  show: "공항",
+  line: "match",
+  scene: "2026.11.25 오후 인천국제공항 출국 (무신사 스탠다드 필리핀 1호점 오픈 행사 · 마닐라)",
+  category: "outer",
+  mood: [
+    "classic",
+    "minimal"
+  ],
+  headline: "올블랙 롱코트 + 반폴라 니트",
+  image: "assets/looks/dohyun-musinsa-longcoat.webp?v=2026112601",
+  imageJpg: "assets/looks/dohyun-musinsa-longcoat.jpg?v=2026112601",
+  model: "차우진",
+  modelId: "cha-ujin",
+  photo: {
+    label: "OSEN · 디스패치 · 스포츠조선",
+    kind: "photo",
+    what: "2026.11.25 인천국제공항 출국 현장 촬영",
+    url: "https://www.osen.co.kr/article/G1112915143"
+  },
+  imageAlt: "스타핏픽 전속 AI 모델 차우진이 블랙 오버핏 더블 롱코트에 블랙 반폴라 니트, 블랙 와이드 슬랙스, 블랙 스퀘어 더비슈즈를 착용하고 공항을 걷는 연출 컷",
+  mediaType: "공항·출국",
+  program: "인천국제공항",
+  item: {
+    brand: "후어",
+    brandEn: "HOOR",
+    name: "울 롱 더블 로브 코트_3COLOR",
+    sku: "HM0014",
+    price: 199000,
+    salePrice: 99400,
+    saleNote: "무신사 50% 할인가 · 2026-11-26 확인",
+    material: "울 혼방 (혼용률 상세는 판매 페이지 확인)",
+    colors: "블랙 · 그레이 · 브라운 (3COLOR)",
+    sizes: "FREE",
+    maker: "후어 / 한국",
+    season: "2025 FW",
+    fit: "어깨가 떨어지는 오버핏 더블 론, 무릎 아래로 내려오는 롱 기장, 넓은 라펠, 앞 더블 버튼, 양쪽 사이드 포켓, 안감 구성",
+    cons: "울 혼방이라 무게가 있고, 오버핏 롱 기장이라 키가 작으면 옷에 잠겨 보일 수 있음",
+    officialUrl: "https://www.musinsa.com/products/5683256"
+  },
+  story: "11월 25일 오후 인천국제공항. 무신사 스탠다드의 필리핀 1호점(마카티 글로리에타) 오픈 행사에 참석하러 마닐라로 떠나는 이도현은 머리부터 발끝까지 검정 하나로 맞춰 나왔습니다. 어깨가 떨어지는 오버핏 롱코트가 무릎 아래까지 내려오고, 그 아래로 반폴라 니트와 와이드 슬랙스가 이어집니다. 색이 하나뿐이라 옷의 정보는 전부 실루엣과 기장에서 나옵니다. 겨울 공항에서 남자 옷이 가장 단정해 보이는 순간은 장식을 더했을 때가 아니라 선을 지웠을 때라는 것을 보여 주는 착장입니다.",
+  point: "출국 사진에서 이도현의 코트는 무릎 아래까지 내려옵니다. 어깨선은 자연스럽게 떨어지고 라펠은 넓게 열려, 목에서 가슴까지 긴 삼각형이 생깁니다. 코트를 열고 다니기 때문에 안쪽 니트와 슬랙스가 세로로 이어져 보이고, 그 선이 키를 그대로 씁니다. 옆에서 보면 어깨에서 ",
+  verified: "OSEN G1112915143(2026.11.25 22:32)·디스패치 2351348(2026.11.25 17:21)·스포츠조선 202611250100155450014321(2026.11.25 17:51)·PAP매거진(2026.11.25)·필스타 2569919(2026.11.19) 보도로 이도현이 11월 25일 오후 인천국제공항을 통해 필리핀 마닐라로 출국한 사실과, 무신사 스탠다드 필리핀 1호점(마카티 글로리에타)이 11월 26일 문을 열고 그가 글로벌 앰버서더로 참석한다는 사실을 확인했습니다. 같은 보도에서 오버핏 블랙 롱코트·블랙 이너·블랙 슬랙스의 올블랙 구성이 확인됐고, 신발과 가방은 사진에서 확정되지 않아 신발만 같은 무드로 맞췄습니다. 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.26 확인.",
+  sources: [
+    {
+      label: "OSEN · 디스패치 · 스포츠조선 — 이도현 착장",
+      url: "https://www.osen.co.kr/article/G1112915143"
+    },
+    {
+      label: "후어 울 롱 더블 로브 코트_3COLOR (블랙)",
+      url: "https://www.musinsa.com/products/5683256"
+    },
+    {
+      label: "폴리그램 라이트 이너핏 반폴라 니트 - 8COLOR (블랙)",
+      url: "https://www.musinsa.com/products/5763565"
+    },
+    {
+      label: "굿라이프웍스 이지 와이드 밴딩 슬랙스 블랙",
+      url: "https://www.musinsa.com/products/2060743"
+    },
+    {
+      label: "아날로그무드 와이드 스퀘어 더비슈즈 (블랙)",
+      url: "https://www.musinsa.com/products/3250503"
+    },
+    {
+      label: "플레이스스튜디오맨 클래식 블렌디드 카라 비조 스탠다드 발마칸 롱 코트 자켓 (2COLOR) (대안)",
+      url: "https://www.musinsa.com/products/7588152"
+    }
+  ],
+  alt: {
+    brand: "플레이스스튜디오맨",
+    name: "클래식 블렌디드 카라 비조 스탠다드 발마칸 롱 코트 자켓 (2COLOR)",
+    price: 66060,
+    was: 102000,
+    url: "https://www.musinsa.com/products/7588152",
+    platform: "musinsa",
+    fit: "",
+    cons: "",
+    note: "코트 하나에 10만 원이 부담되면 플레이스스튜디오맨의 클래식 블렌디드 카라 비조 스탠다드 발마칸 롱 코트 자켓(66,060원 · 정가 102,000원)이 대안입니다.",
+    query: "플레이스스튜디오맨 클래식 블렌디드 카라 비조 스탠다드 발마칸 롱 코트 자켓 (2COLOR)"
+  },
+  ootd: [
+    {
+      role: "아우터",
+      brand: "후어",
+      name: "울 롱 더블 로브 코트_3COLOR (블랙)",
+      sku: "HM0014",
+      price: 199000,
+      salePrice: 99400,
+      colors: "블랙 (3COLOR)",
+      note: "오버핏 더블 롱 코트. 무릎 아래 기장, 넓은 라펠.",
+      officialUrl: "https://www.musinsa.com/products/5683256",
+      query: "후어 울 롱 더블 로브 코트 블랙"
+    },
+    {
+      role: "상의",
+      brand: "폴리그램",
+      name: "라이트 이너핏 반폴라 니트 - 8COLOR (블랙)",
+      sku: "5010326616",
+      price: 17900,
+      salePrice: 17900,
+      colors: "블랙 (8COLOR)",
+      note: "얇은 게이지 반폴라 니트. 코트 안에서 목선을 정리.",
+      officialUrl: "https://www.musinsa.com/products/5763565",
+      query: "폴리그램 라이트 이너핏 반폴라 니트 블랙"
+    },
+    {
+      role: "하의",
+      brand: "굿라이프웍스",
+      name: "이지 와이드 밴딩 슬랙스 블랙",
+      sku: "21FLGP06BK",
+      price: 55000,
+      salePrice: 33000,
+      colors: "블랙",
+      note: "허리 밴딩 와이드 슬랙스. 밑단이 발등을 덮음.",
+      officialUrl: "https://www.musinsa.com/products/2060743",
+      query: "굿라이프웍스 이지 와이드 밴딩 슬랙스 블랙"
+    },
+    {
+      role: "신발",
+      brand: "아날로그무드",
+      name: "와이드 스퀘어 더비슈즈 (블랙)",
+      sku: "AM234601",
+      price: 44820,
+      salePrice: 44820,
+      colors: "블랙",
+      note: "넓은 스퀘어 토 더비. 두툼한 성형 밑창.",
+      officialUrl: "https://www.musinsa.com/products/3250503",
+      query: "아날로그무드 와이드 스퀘어 더비슈즈 블랙"
+    }
+  ],
+  palette: [
+    "#1d1d1f",
+    "#5a5a5c",
+    "#d8d2c6"
+  ],
+  num: 69
+}
 ];
