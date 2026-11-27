@@ -5621,4 +5621,305 @@ window.SFP_LOOKS = [
   ],
   num: 69
 }
+,
+{
+    id: "bws-adercardigan",
+    celeb: "변우석",
+    group: "배우",
+    type: "airport",
+    show: "공항",
+    line: "match",
+    scene: "2026.11.26 오전 인천국제공항 출국 (아더에러 홀리데이 'Merry Home' 도쿄 스페이스 행사)",
+    category: "top",
+    mood: [
+      "minimal",
+      "casual"
+    ],
+    headline: "그레이 카라 니트 + 블랙 크로스백",
+    image: "assets/looks/bws-adercardigan.webp?v=2026112701",
+    imageJpg: "assets/looks/bws-adercardigan.jpg?v=2026112701",
+    model: "백시온",
+    modelId: "baek-sion",
+    photo: {
+      label: "스타뉴스 · PAP매거진 · PEPPERIT",
+      kind: "photo",
+      what: "2026.11.26 인천국제공항 출국 현장 촬영",
+      url: "https://www.starnewskorea.com/music/2026/11/26/2026112609492975620"
+    },
+    imageAlt: "스타핏픽 전속 AI 모델 백시온이 멜란지 그레이 카라 니트 카디건에 블랙 와이드 울 팬츠, 블랙 레더 크로스백, 블랙 더비 슈즈를 착용하고 인천공항을 걷는 연출 컷",
+    mediaType: "공항·출국",
+    program: "인천국제공항",
+    item: {
+      brand: "아웃스탠딩",
+      brandEn: "OUTSTANDING",
+      name: "LS STRIPE COLLAR KNIT CARDIGAN_MELANGE GRAY",
+      sku: "OS26SSKN05MGR",
+      price: 98000,
+      salePrice: 49000,
+      saleNote: "무신사 50% 할인가 · 2026-11-27 확인",
+      material: "울 블렌드 니트 (혼용률 상세는 판매 페이지 확인)",
+      colors: "멜란지 그레이",
+      sizes: "판매 페이지 표기 (구매처 확인)",
+      maker: "아웃스탠딩 / 한국",
+      season: "2026 SS",
+      fit: "어깨가 여유 있게 떨어지는 세미 오버핏, 앞으로 꺾이는 포인트 칼라, 앞 단추 5개, 밑단·소매 리브, 엉덩이를 살짝 덮는 기장, 소매가 손등 가까이 내려오는 길이",
+      cons: "원본의 파란 꽃 자수는 없고 세로 스트라이프 조직이라 표면 장식이 단조롭고, SS 시즌 제품이라 한겨울 아우터로 쓰기에는 두께가 얇습니다",
+      officialUrl: "https://www.musinsa.com/products/5936091"
+    },
+    story: "11월 26일 이른 아침 인천국제공항. 아더에러의 홀리데이 캠페인 'Merry Home' 도쿄 스페이스 행사에 참석하러 떠나는 변우석은 회색 카라 니트 하나에 검정 팬츠, 검정 가방, 검정 구두만 걸치고 나타났습니다. 색은 세 가지, 옷은 네 벌. 그런데도 사진이 멀리서도 눈에 들어오는 이유는 목선과 어깨선, 그리고 발목까지 떨어지는 팬츠의 기장이 만들어 내는 선 때문입니다. 겨울 공항에서 남자 옷이 정돈돼 보이는 방법은 장식을 더하는 것이 아니라 색을 줄이고 선을 살리는 쪽에 있었습니다.",
+    point: "변우석의 상체는 카디건 하나입니다. 안에 셔츠를 받치지 않았고, 칼라를 세우지도 접지도 않았습니다. 앞 단추를 위에서 두 개만 잠그고 아래는 열어 두어 칼라가 자연스럽게 벌어지고, 그 틈으로 목과 쇄골이 그대로 드러납니다. 회색 니트가 얼굴 바로 아래에서 시작되니 피부",
+    verified: "스타뉴스 2026112609492975620(2026.11.26 09:49)·머니투데이 202611260954247708(09:46)·PAP매거진(2026.11.26)·PEPPERIT(2026.11.26) 보도로 변우석이 11월 26일 오전 인천국제공항을 통해 일본 도쿄로 출국했고, 목적이 아더에러 홀리데이 캠페인 'Merry Home' 도쿄 스페이스 행사 참석임을 확인했습니다. 보도 사진에서 회색 카라 니트 카디건에 앞 단추를 절반만 잠그고 파란 꽃 자수가 가슴·소매에 놓인 구성, 블랙 와이드 팬츠, 버클이 달린 블랙 레더 크로스백을 확인했고, 신발은 사진에서 앞코만 보여 검정 구두로 맞췄습니다. 아더에러가 2026 홀리데이 프로젝트 'Merry Home'의 캠페인 모델로 변우석을 기용했다는 사실은 한국경제(2026.11.20)·싱글리스트 783244(2026.11.20) 보도로 확인했습니다. 착용 제품의 브랜드는 보도에서 확정되지 않아 같은 색·같은 실루엣의 실제 판매 제품으로 구성했습니다. 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.27 확인.",
+    sources: [
+      {
+        label: "스타뉴스 · PAP매거진 · PEPPERIT — 변우석 착장",
+        url: "https://www.starnewskorea.com/music/2026/11/26/2026112609492975620"
+      },
+      {
+        label: "아웃스탠딩 LS STRIPE COLLAR KNIT CARDIGAN_MELANGE GRAY",
+        url: "https://www.musinsa.com/products/5936091"
+      },
+      {
+        label: "토마스모어 울 스트링 팬츠-블랙",
+        url: "https://www.musinsa.com/products/4505835"
+      },
+      {
+        label: "에스에스알엘 Brevity Flap Buckle Bag / Black",
+        url: "https://www.musinsa.com/products/2059496"
+      },
+      {
+        label: "파스코로젠 25Paco JC1311 Header Basic Derby shoes 58.5",
+        url: "https://www.musinsa.com/products/5679583"
+      },
+      {
+        label: "제로 빈티지 워시드 라운드 넥 카디건 (대안)",
+        url: "https://www.musinsa.com/products/4768071"
+      }
+    ],
+    alt: {
+      brand: "제로",
+      name: "빈티지 워시드 라운드 넥 카디건",
+      price: 19510,
+      was: 19510,
+      url: "https://www.musinsa.com/products/4768071",
+      platform: "musinsa",
+      fit: "",
+      cons: "",
+      note: "카디건 하나에 5만 원이 부담되면 제로의 빈티지 워시드 라운드 넥 카디건(19,510원 · 판매 페이지 70% 할인 표기)이 대안입니다.",
+      query: "제로 빈티지 워시드 라운드 넥 카디건"
+    },
+    ootd: [
+      {
+        role: "상의",
+        brand: "아웃스탠딩",
+        name: "LS STRIPE COLLAR KNIT CARDIGAN_MELANGE GRAY",
+        sku: "OS26SSKN05MGR",
+        price: 98000,
+        salePrice: 49000,
+        colors: "멜란지 그레이",
+        note: "포인트 칼라 멜란지 그레이 니트 카디건. 앞 단추 5개, 리브 밑단·소매.",
+        officialUrl: "https://www.musinsa.com/products/5936091",
+        query: "아웃스탠딩 LS 스트라이프 카라 니트 카디건 멜란지 그레이"
+      },
+      {
+        role: "하의",
+        brand: "토마스모어",
+        name: "울 스트링 팬츠-블랙",
+        sku: "TE3-PT06",
+        price: 107000,
+        salePrice: 64200,
+        colors: "블랙",
+        note: "울 혼방 스트링 팬츠. 일자로 떨어지는 세미 와이드, 핀턱 하나.",
+        officialUrl: "https://www.musinsa.com/products/4505835",
+        query: "토마스모어 울 스트링 팬츠 블랙"
+      },
+      {
+        role: "가방",
+        brand: "에스에스알엘",
+        name: "Brevity Flap Buckle Bag / Black",
+        sku: "SB15ACR010101",
+        price: 54900,
+        salePrice: 54900,
+        colors: "블랙",
+        note: "나일론 플랩 크로스백. 검정 니켈 버클, 탈부착 미니 파우치.",
+        officialUrl: "https://www.musinsa.com/products/2059496",
+        query: "에스에스알엘 Brevity Flap Buckle Bag 블랙"
+      },
+      {
+        role: "신발",
+        brand: "파스코로젠",
+        name: "25Paco JC1311 Header Basic Derby shoes 58.5",
+        sku: "JC1311",
+        price: 99000,
+        salePrice: 49500,
+        colors: "블랙",
+        note: "둥근 토 더비. 두툼한 성형 밑창, 5.8cm 굽.",
+        officialUrl: "https://www.musinsa.com/products/5679583",
+        query: "파스코로젠 헤더 베이직 더비 슈즈 블랙"
+      }
+    ],
+    palette: [
+      "#9a9a97",
+      "#1b1b1d",
+      "#d9d5cc"
+    ],
+    num: 70
+  },
+{
+    id: "chaewon-polarfleece",
+    celeb: "김채원",
+    group: "르세라핌",
+    type: "airport",
+    show: "공항",
+    line: "match",
+    scene: "2026.11.26 오후 인천국제공항 제2여객터미널 출국 (LE SSERAFIM TOUR 'PUREFLOW' IN SINGAPORE)",
+    category: "outer",
+    mood: [
+      "lovely",
+      "street"
+    ],
+    headline: "크림 시어링 크롭 + 그레이 스웨트팬츠",
+    image: "assets/looks/chaewon-polarfleece.webp?v=2026112701",
+    imageJpg: "assets/looks/chaewon-polarfleece.jpg?v=2026112701",
+    model: "서아린",
+    modelId: "seo-arin",
+    photo: {
+      label: "뉴스엔 · 스타뉴스 · 스포탈코리아",
+      kind: "photo",
+      what: "2026.11.26 인천국제공항 제2여객터미널 출국 현장 촬영",
+      url: "https://www.newsen.com/news_view.php?uid=202611261558003510"
+    },
+    imageAlt: "스타핏픽 전속 AI 모델 서아린이 크림 아이보리 시어링 크롭 자켓에 연그레이 와이드 핀턱 스웨트팬츠, 화이트 스니커즈, 블랙 미니 숄더백, 블랙 볼캡을 착용하고 공항을 걷는 연출 컷",
+    mediaType: "공항·출국",
+    program: "인천국제공항",
+    item: {
+      brand: "비비씨 어스",
+      brandEn: "BBC EARTH",
+      name: "W 시어링 스트링 크롭 자켓_Ivory",
+      sku: "BE42JA01W400",
+      price: 79000,
+      salePrice: 79000,
+      saleNote: "무신사 72% 할인가 · 2026-11-27 확인",
+      material: "시어링(양모) 겉감 · 안감 구성 (혼용률 상세는 판매 페이지 확인)",
+      colors: "아이보리",
+      sizes: "판매 페이지 표기 (구매처 확인)",
+      maker: "비비씨 어스 / 한국",
+      season: "2024 FW",
+      fit: "허리선에서 끊기는 크롭 기장, 도톰하게 올라오는 퍼 칼라, 앞 지퍼, 허리에 묶는 스트링, 소매와 밑단에 퍼 밴딩, 앞면에 포켓 2개",
+      cons: "시어링이라 비·눈에 약하고 드라이클리닝이 필요하며, 크롭 기장이라 상체가 긴 사람이 입으면 허리선이 그대로 드러납니다",
+      officialUrl: "https://www.musinsa.com/products/4078614"
+    },
+    story: "11월 26일 오후 인천국제공항 제2여객터미널. 싱가포르 투어 'PUREFLOW' 일정으로 출국하는 르세라핌 김채원은 검정 볼캡을 푹 눌러쓰고 크림색 시어링 점퍼를 걸쳤습니다. 목에는 회색 마스크를 턱 아래로 내렸고, 아래로는 연회색 트레이닝 팬츠와 흰 스니커즈. 카메라 앞에서 팬들이 부른 별명은 '백곰'이었습니다. 겨울 공항에서 가장 포근해 보이는 조합은 퍼와 스웨트팬츠, 그리고 그 사이를 잇는 회색 한 톤이었습니다.",
+    point: "김채원의 상체는 털이 길게 올라온 크림색 시어링 점퍼입니다. 목을 감싸는 퍼 칼라에 앞 지퍼, 허리에는 얇은 스트링이 묶여 있습니다. 아래는 정반대로 편한 옷입니다. 연회색 와이드 트레이닝 팬츠에 흰 스니커즈. 퍼 자켓은 보통 코트나 슬랙스와 맞추는데, 이날은 일부러 ",
+    verified: "뉴스엔 202611261558003510(2026.11.26 16:02)·뉴스엔 202611261427303510(14:27)·스타뉴스 2026112614400995168(14:44)·스포탈코리아 2025052909553734342(2026.11.26 14:44) 보도로 르세라핌 김채원·사쿠라·허윤진·카즈하·홍은채가 11월 26일 오후 인천국제공항 제2여객터미널을 통해 'LE SSERAFIM TOUR 'PUREFLOW' IN SINGAPORE' 일정으로 싱가포르로 출국한 사실을 확인했습니다. 같은 날 촬영된 보도 사진에서 김채원이 크림 아이보리 시어링 크롭 자켓(퍼 칼라·앞 지퍼·허리 스트링)에 연회색 와이드 핀턱 스웨트팬츠, 흰 스니커즈, 검정 볼캡, 작은 검정 숄더백을 착용한 구성을 확인했습니다. 뉴스엔은 이날 김채원의 차림을 '귀여운 백곰'으로 표현했습니다. 착용 제품의 브랜드는 보도에서 확정되지 않아 같은 색·같은 실루엣의 실제 판매 제품으로 구성했습니다. 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.27 확인.",
+    sources: [
+      {
+        label: "뉴스엔 · 스타뉴스 · 스포탈코리아 — 김채원 착장",
+        url: "https://www.newsen.com/news_view.php?uid=202611261558003510"
+      },
+      {
+        label: "비비씨 어스 W 시어링 스트링 크롭 자켓_Ivory",
+        url: "https://www.musinsa.com/products/4078614"
+      },
+      {
+        label: "고스트리퍼블릭 커브드 사이드 핀턱 벌룬 스웨트팬츠 GLP-650_그레이",
+        url: "https://www.musinsa.com/products/5308541"
+      },
+      {
+        label: "휠라 에샤페 MS v2(1XM02367H102)",
+        url: "https://www.musinsa.com/products/4791166"
+      },
+      {
+        label: "무센트 바엘 크로스 레더 패치 미니 숄더백",
+        url: "https://www.musinsa.com/products/6069975"
+      },
+      {
+        label: "엠엘비 클래식 나노 로고 언스트럭쳐 볼캡 NY (Black)",
+        url: "https://www.musinsa.com/products/7706191"
+      },
+      {
+        label: "플레이스 스튜디오 오버핏 리버시블 스웨이드 크롭 양털 자켓 무스탕 점퍼 2COLOR (대안)",
+        url: "https://www.musinsa.com/products/3001135"
+      }
+    ],
+    alt: {
+      brand: "플레이스 스튜디오",
+      name: "오버핏 리버시블 스웨이드 크롭 양털 자켓 무스탕 점퍼 2COLOR",
+      price: 39700,
+      was: 39700,
+      url: "https://www.musinsa.com/products/3001135",
+      platform: "musinsa",
+      fit: "",
+      cons: "",
+      note: "시어링 자켓이 8만 원 가까이 되면 플레이스 스튜디오의 오버핏 리버시블 스웨이드 크롭 양털 자켓(39,700원 · 판매 페이지 65% 할인 표기)이 대안입니다.",
+      query: "플레이스 스튜디오 오버핏 리버시블 스웨이드 크롭 양털 자켓 무스탕 점퍼"
+    },
+    ootd: [
+      {
+        role: "아우터",
+        brand: "비비씨 어스",
+        name: "W 시어링 스트링 크롭 자켓_Ivory",
+        sku: "BE42JA01W400",
+        price: 79000,
+        salePrice: 79000,
+        colors: "아이보리",
+        note: "시어링 크롭 자켓. 퍼 칼라, 앞 지퍼, 허리 스트링.",
+        officialUrl: "https://www.musinsa.com/products/4078614",
+        query: "비비씨 어스 W 시어링 스트링 크롭 자켓 아이보리"
+      },
+      {
+        role: "하의",
+        brand: "고스트리퍼블릭",
+        name: "커브드 사이드 핀턱 벌룬 스웨트팬츠 GLP-650_그레이",
+        sku: "GLP-650gray",
+        price: 26900,
+        salePrice: 26900,
+        colors: "그레이",
+        note: "멜란지 그레이 벌룬 스웨트팬츠. 곡선 사이드 핀턱, 밴딩 허리.",
+        officialUrl: "https://www.musinsa.com/products/5308541",
+        query: "고스트리퍼블릭 커브드 사이드 핀턱 벌룬 스웨트팬츠 그레이"
+      },
+      {
+        role: "신발",
+        brand: "휠라",
+        name: "에샤페 MS v2(1XM02367H102)",
+        sku: "1XM02367H102",
+        price: 118000,
+        salePrice: 59000,
+        colors: "화이트",
+        note: "메쉬·스웨이드 로우톱 러너. 팬츠 밑단 위로 흰 갑피만 보임.",
+        officialUrl: "https://www.musinsa.com/products/4791166",
+        query: "휠라 에샤페 MS v2 화이트"
+      },
+      {
+        role: "가방",
+        brand: "무센트",
+        name: "바엘 크로스 레더 패치 미니 숄더백",
+        sku: "P0000CDI",
+        price: 38290,
+        salePrice: 38290,
+        colors: "블랙",
+        note: "레더 패치 플랩 미니 숄더백. 어깨에 붙는 사이즈.",
+        officialUrl: "https://www.musinsa.com/products/6069975",
+        query: "무센트 바엘 크로스 레더 패치 미니 숄더백"
+      },
+      {
+        role: "모자",
+        brand: "엠엘비",
+        name: "클래식 나노 로고 언스트럭쳐 볼캡 NY (Black)",
+        sku: "3ACPB386N-50BKS",
+        price: 39000,
+        salePrice: 33150,
+        colors: "블랙",
+        note: "작은 로고의 언스트럭쳐 볼캡. 낮게 눌러 쓰기 좋음.",
+        officialUrl: "https://www.musinsa.com/products/7706191",
+        query: "엠엘비 클래식 나노 로고 언스트럭쳐 볼캡 NY 블랙"
+      }
+    ],
+    palette: [
+      "#efe8da",
+      "#c9c9c6",
+      "#1a1a1c"
+    ],
+    num: 71
+  }
 ];
