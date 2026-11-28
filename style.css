@@ -1880,3 +1880,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 
 /* 허브 히어로·카드: 한글 단어 중간 줄바꿈 방지 (모바일에서 '4 / 개'처럼 끊기지 않게) */
 .tv-hero .hero-lead,.tv-hero h1,.tv-panel h2,.tv-how p,.tv-card h3,.tv-card-kicker{word-break:keep-all}
+
+/* FAQ 블록(v8): 홈·가이드 허브 — 구조화 데이터(FAQPage)와 같은 문구를 화면에 노출 */
+.faq-block{padding:56px 0 8px;border-top:1px solid var(--line);margin-top:40px}
+.faq-block .eyebrow{color:var(--blue);font-weight:800;letter-spacing:.08em;font-size:12px}
+.faq-block h2{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.03em;font-weight:800;color:var(--ink);margin:6px 0 0}
+.faq-list{max-width:860px;margin-top:16px}
+.faq-list details{background:var(--soft-2);border:1px solid var(--line);border-radius:var(--radius-m);padding:14px 18px;margin-bottom:10px}
+.faq-list summary{cursor:pointer;font-weight:700;color:var(--text);list-style:none;display:flex;gap:8px;align-items:flex-start;word-break:keep-all}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::before{content:"Q";color:var(--blue);font-weight:800;flex:0 0 auto}
+.faq-list p{margin-top:10px;padding-left:18px;color:var(--sub);font-size:14.5px;line-height:1.75;word-break:keep-all}
+.faq-more{margin-top:12px;font-size:13.5px;color:var(--muted)}
+.faq-more a{color:var(--blue-deep);text-decoration:underline;text-underline-offset:2px}

@@ -215,6 +215,17 @@ def main():
             if not re.search(r"<title>[^<]{10,}", s): works["title 짧음"].append(name)
             if len(d[0]) < 60 if d else False: works["description 짧음"].append(name)
 
+        # ---- v8: 브레드크럼 · FAQ 본문 노출 · 패밀리 사이트 링크 ----
+        if name != "index.html" and "BreadcrumbList" not in s:
+            works["BreadcrumbList 없음(비홈)"].append(name)
+        if "FAQPage" in s:
+            body = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
+            if "자주 묻는 질문" not in body:
+                works["FAQPage 본문 미노출"].append(name)
+        for site in ("seoul-bites-guide", "seoul-glow-guide"):
+            if site not in s and name != "404.html":
+                works["패밀리 사이트 링크 없음"].append((name, site))
+
         for m in re.finditer(r"\d+편 전체 보기", s):
             if m.group(0) != "73편 전체 보기":
                 works["구형 편수 문구"].append((name, m.group(0)))
@@ -241,6 +252,17 @@ def main():
             missing.append(loc)
     if missing:
         works["sitemap 404 후보"] = missing
+
+    # sitemap 정합: 모든 페이지 수록 · lastmod 형식
+    loc_rel = {l.replace(SITE, "").split("?")[0] for l in locs}
+    absent = [n for n, _ in pages() if n != "404.html" and (n if n != "index.html" else "") not in loc_rel]
+    if absent:
+        works["sitemap 누락 페이지"] = absent
+    ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    bad_lm = [u.findtext(ns + "loc") for u in tree.getroot().iter(ns + "url")
+              if not re.match(r"^\d{4}-\d{2}-\d{2}$", (u.findtext(ns + "lastmod") or ""))]
+    if bad_lm:
+        works["sitemap lastmod 누락/형식"].append(len(bad_lm))
 
     rss = open(os.path.join(ROOT, "rss.xml"), encoding="utf-8").read()
     rss_links = re.findall(r"<link>([^<]+)</link>", rss)
