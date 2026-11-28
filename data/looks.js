@@ -6018,7 +6018,7 @@ window.SFP_LOOKS = [
     "fit": "",
     "cons": "",
     "note": "신발에 13만 원을 쓰기 부담되면 컨버스의 척테일러 올스타 리프트 캔버스 화이트(54,500원 · 판매 페이지 50% 할인 표기)가 대안입니다.",
-    query: "컨버스 척테일러 올스타 리프트 캔버스 화이트 560251C"
+    query: "컨버스 척테일러 올스타 리프트 캔버스 화이트 560251C", saveBasis: "set"
   },
   "ootd": [
     {
@@ -6200,7 +6200,7 @@ window.SFP_LOOKS = [
     "fit": "",
     "cons": "",
     "note": "선글라스에 16만 원을 쓰기 부담되면 바스카라의 VS5828 선글라스(22,100원 · 판매 페이지 61% 할인 표기)가 대안입니다.",
-    query: "바스카라 VS5828 (4color) SUNGLASSES"
+    query: "바스카라 VS5828 (4color) SUNGLASSES", saveBasis: "set"
   },
   "ootd": [
     {
