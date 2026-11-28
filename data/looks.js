@@ -147,7 +147,7 @@ window.SFP_LOOKS = [
         "fit": "정핏에 가까운 후디드 집업, 소매가 짧게 떨어짐",
         "cons": "털 결이 짧고 광택이 적어 사진 속 부클 볼륨과는 다름",
         "note": "정가 89,900원, 무신사 10% 적용 80,910원. 퍼 대신 양털 플리스로 같은 크림 톤 볼륨을 만들고, 후드를 세워 입으면 목선이 따뜻합니다.",
-        "query": "무신사 스탠다드 우먼 시어링 플리스 후디드 집업"
+        query: "무신사 스탠다드 우먼 시어링 플리스 후디드 집업"
     },
     "palette": [
         "#e8ddcb",
@@ -225,7 +225,7 @@ window.SFP_LOOKS = [
         "fit": "하이넥·정핏, 어깨가 각지게 잡힘",
         "cons": "리버시블 구조가 아니고 기장이 짧은 편",
         "note": "정가 159,000원, 무신사 51% 적용 78,000원. 퍼 카라를 세워 목을 덮는 실루엣이 비슷하고, 가격은 원본의 6분의 1 수준입니다.",
-        "query": "비엔엑스 하이넥 시어링 양털 포켓 자켓"
+        query: "비엔엑스 하이넥 시어링 양털 포켓 자켓"
     },
     "palette": [
         "#ead9c5",
@@ -303,7 +303,7 @@ window.SFP_LOOKS = [
         "fit": "크롭 기장, 어깨는 정핏",
         "cons": "곡선 퀼팅과 NY 자수가 없고 광택이 적음",
         "note": "정가 72,000원, 무신사 31% 적용 49,900원. 크림 컬러 크롭 패딩이라 같은 '짧은 패딩 + 긴 팬츠' 비율을 5만 원 아래로 만들 수 있습니다.",
-        "query": "페이지시시 SiiSii 숏패딩"
+        query: "페이지시시 SiiSii 숏패딩"
     },
     "palette": [
         "#141416",
@@ -381,7 +381,7 @@ window.SFP_LOOKS = [
         "fit": "루즈핏, 어깨 패드 없이 떨어짐",
         "cons": "인조 가죽이라 광택과 주름 결이 다르고 퍼넬넥이 아님",
         "note": "정가 149,000원, 무신사 62% 적용 55,900원. 브라운 대신 블랙이지만 카라넥과 밴딩 소매로 보머 실루엣을 5만 원대에 맞췄습니다.",
-        "query": "위시드 베이직 카라넥 루즈핏 레더 블루종"
+        query: "위시드 베이직 카라넥 루즈핏 레더 블루종"
     },
     "palette": [
         "#3a2519",
@@ -459,7 +459,7 @@ window.SFP_LOOKS = [
         "fit": "헤비 플리스 오버핏, 소매가 길게 떨어짐",
         "cons": "체크 패턴이 없고 겉면이 보아 털이라 결이 다름",
         "note": "정가 77,500원, 무신사 30% 적용 54,300원. 두꺼운 보아 플리스에 후드까지 달려 있어, 체크 대신 실루엣과 보온만 가져가는 선택입니다.",
-        "query": "에이지오디 리버시블 헤비 플리스 보아 후드 집업"
+        query: "에이지오디 리버시블 헤비 플리스 보아 후드 집업"
     },
     "palette": [
         "#5b5b5b",
@@ -541,7 +541,7 @@ window.SFP_LOOKS = [
         "fit": "하프 기장 정핏, 앞여밈은 스냅",
         "cons": "가죽 스트랩 버클이 없고 퍼 결이 짧은 인조 퍼",
         "note": "정가 99,900원, 무신사 20% 적용 79,900원. 크림 인조 퍼 코트로 아이보리 무스탕의 밝기와 볼륨을 8만 원 아래에서 맞춥니다.",
-        "query": "스파오 신세틱레더 페이크 퍼 하프 코트"
+        query: "스파오 신세틱레더 페이크 퍼 하프 코트"
     },
     "palette": [
         "#efe7d7",
@@ -618,7 +618,7 @@ window.SFP_LOOKS = [
         "fit": "하프 기장 정핏, 어깨선이 부드러움",
         "cons": "하이넥이 아니고 단추가 작아 목선 강조가 약함",
         "note": "정가 99,900원, 무신사 5% 적용 94,900원. 울 블렌드 하프 코트로 검정 대신 차콜을 고르면 같은 단정한 무드를 10만 원 아래로 유지합니다.",
-        "query": "스파오 울블렌드 하프 코트"
+        query: "스파오 울블렌드 하프 코트"
     },
     "palette": [
         "#17171a",
@@ -700,7 +700,7 @@ window.SFP_LOOKS = [
         "fit": "슬림핏 리브드 니트, 몸에 붙음",
         "cons": "스트라이프 패턴이 없고 루즈한 실루엣도 아님",
         "note": "정가 79,900원, 무신사 30% 적용 55,930원. 같은 회색 니트 후드 집업으로, 스트라이프 대신 골지 조직과 가격을 가져가는 대안입니다.",
-        "query": "무신사 스탠다드 우먼 리브드 슬림 니트 후디드 집업"
+        query: "무신사 스탠다드 우먼 리브드 슬림 니트 후디드 집업"
     },
     "palette": [
         "#9aa0a6",
@@ -778,7 +778,7 @@ window.SFP_LOOKS = [
         "fit": "릴랙스 핏, 소매를 롤업해 입는 구조",
         "cons": "스터드 장식이 없고 검정 대신 멜란지 그레이",
         "note": "정가 113,000원, 무신사 17% 적용 93,790원. 니트 소재 후드 집업이라 검정 스웨트보다 부드럽고, 같은 '후드 세우고 지퍼 올리기'가 가능합니다.",
-        "query": "씨타 Soft Roll-Up Cuff Knit Hood Zip-up"
+        query: "씨타 Soft Roll-Up Cuff Knit Hood Zip-up"
     },
     "palette": [
         "#121214",
@@ -852,7 +852,7 @@ window.SFP_LOOKS = [
         "fit": "크롭 기장, 어깨는 루즈하게 떨어짐",
         "cons": "V넥이 아닌 라운드넥이고 와인 컬러가 아님",
         "note": "정가 59,800원, 무신사 20% 적용 47,800원. 모헤어 털 결로 앙고라의 뽀글한 질감을 살리고, 크롭 기장이라 허리선이 드러납니다.",
-        "query": "언노운 플래닛 헤어리 모헤어 크롭 가디건"
+        query: "언노운 플래닛 헤어리 모헤어 크롭 가디건"
     },
     "palette": [
         "#5b2330",
@@ -5922,4 +5922,353 @@ window.SFP_LOOKS = [
     ],
     num: 71
   }
+,
+{
+  "id": "sehun-leather-bomber",
+  "celeb": "세훈",
+  "group": "EXO",
+  "type": "airport",
+  "show": "공항",
+  "line": "match",
+  "scene": "2026.11.27 오후 인천국제공항 제1터미널 출국 (홍콩 해외 일정)",
+  "category": "outer",
+  "mood": [
+    "street",
+    "minimal"
+  ],
+  "headline": "블랙 레더 봄버 + 멜란지 후드집업",
+  "image": "assets/looks/sehun-leather-bomber.webp?v=2026112801",
+  "imageJpg": "assets/looks/sehun-leather-bomber.jpg?v=2026112801",
+  "model": "백시온",
+  "modelId": "baek-sion",
+  "photo": {
+    "label": "디스패치",
+    "kind": "photo",
+    "what": "2026.11.27 인천국제공항 출국 현장 촬영",
+    "url": "https://www.dispatch.co.kr/2351482"
+  },
+  "imageAlt": "스타핏픽 전속 AI 모델 백시온이 블랙 레더 봄버 자켓에 멜란지 그레이 후드집업, 화이트 티셔츠, 다크 인디고 스트레이트 데님, 화이트 스니커즈, 블랙 레더 보스턴백, 블랙 울 비니를 착용하고 공항을 걷는 연출 컷",
+  "mediaType": "공항·출국",
+  "program": "인천국제공항",
+  "item": {
+    "brand": "도프제이슨",
+    "brandEn": "DOFFJASON",
+    "name": "오버핏 비건레더 보머 자켓",
+    "sku": "DJCOVLJ002BLK",
+    "price": 168000,
+    "salePrice": 91980,
+    "saleNote": "무신사 45% 할인가 · 2026-11-28 확인",
+    "material": "비건레더(폴리우레탄 계열 합성가죽) · 안감 폴리에스터 (혼용률 상세는 판매 페이지 확인)",
+    "colors": "블랙",
+    "sizes": "판매 페이지 표기 (구매처 확인)",
+    "maker": "도프제이슨 / 한국",
+    "season": "ALL",
+    "fit": "어깨가 넓게 떨어지는 오버핏 보머. 앞 지퍼, 접이식 칼라, 밑단에는 넓은 고무 밴딩, 앞면에 사선 웰트 포켓 2개, 소매 끝은 단추 여밈",
+    "cons": "합성가죽이라 진짜 가죽 특유의 표면 결이 없고, 겨울에 영하로 떨어지면 소재가 조금 뻣뻣해지며, 밑단 밴딩이 넓어 배 쪽에 부피가 생깁니다",
+    "officialUrl": "https://www.musinsa.com/products/2086731"
+  },
+  "story": "11월 27일 오후 인천국제공항 제1터미널. 홍콩 일정으로 떠나는 엑소 세훈은 검정 비니를 눈썹까지 끌어내리고 그 위로 회색 후드를 뒤집어쓴 채 나타났습니다. 그 위에 검정 가죽 자켓을 걸치고, 아래는 어두운 인디고 데님과 흰 스니커즈. 흰 마스크를 턱까지 올렸지만 사진에서 먼저 눈에 들어오는 건 얼굴이 아니라 어깨였습니다. 겨울 남자 공항패션이 후줄근해지지 않는 방법은 두꺼운 옷을 한 겹 더 입는 게 아니라, 같은 색 계열 안에서 결이 다른 옷을 세 겹 쌓는 쪽에 있었습니다.",
+  "point": "세훈의 상체는 세 겹입니다. 맨 안쪽에 흰 반팔 티셔츠, 그 위에 멜란지 그레이 후드집업, 가장 바깥에 검정 가죽 자켓. 셋 다 후줄근한 옷인데 사진에서 정돈돼 보이는 이유는 결이 다르기 때문입니다. 면 스웨트는 무광에 가깝고, 가죽은 빛을 받아 약하게 번들거리며, 흰",
+  "verified": "디스패치 2026.11.27 18:26 보도(이호준 기자)로 엑소 세훈이 11월 27일 오후 인천국제공항을 통해 홍콩으로 출국했음을 확인했습니다. 같은 기사에 실린 출국 사진에서 검정 비니 위로 회색 후드를 뒤집어쓰고, 흰 마스크를 턱까지 올린 채 블랙 레더 봄버 자켓(앞 지퍼·리브 밴딩·소매 지퍼 포켓)에 흰 티셔츠, 다크 인디고 스트레이트 데님, 어깨에 건 대형 블랙 레더 보스턴백을 착용한 구성을 확인했습니다. 신발은 사진 구도상 하단이 잘려 확인되지 않아 흰 스니커즈로 맞췄습니다. 착용 제품의 브랜드는 보도에서 확정되지 않아 같은 색·같은 실루엣의 실제 판매 제품으로 구성했고, 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.28 확인했습니다.",
+  "sources": [
+    {
+      "label": "디스패치 — 세훈 착장",
+      "url": "https://www.dispatch.co.kr/2351482"
+    },
+    {
+      "label": "도프제이슨 오버핏 비건레더 보머 자켓",
+      "url": "https://www.musinsa.com/products/2086731"
+    },
+    {
+      "label": "브렌슨 (Renew Ver.) 루즈핏 2Way 스웨트 후드집업 (5Color)",
+      "url": "https://www.musinsa.com/products/2385283"
+    },
+    {
+      "label": "페르노브 에센셜 반팔 티셔츠 5color",
+      "url": "https://www.musinsa.com/products/6183432"
+    },
+    {
+      "label": "플랙 MINIMAL O07 023 STRAIGHT DARK INDIGO",
+      "url": "https://www.musinsa.com/products/4847057"
+    },
+    {
+      "label": "뉴발란스 NBPDGF718W / MR530SG (WHITE)",
+      "url": "https://www.musinsa.com/products/4238000"
+    },
+    {
+      "label": "노이즈 크랙 레더 보스턴 트래블백 - 블랙",
+      "url": "https://www.musinsa.com/products/4694157"
+    },
+    {
+      "label": "파르티멘토 홀가먼트 울 비니 블랙",
+      "url": "https://www.musinsa.com/products/7602119"
+    },
+    {
+      "label": "컨버스 척테일러 올스타 리프트 캔버스 화이트 560251C (대안)",
+      "url": "https://www.musinsa.com/products/1494180"
+    }
+  ],
+  "alt": {
+    "brand": "컨버스",
+    "name": "척테일러 올스타 리프트 캔버스 화이트 560251C",
+    "price": 54500,
+    "was": 54500,
+    "url": "https://www.musinsa.com/products/1494180",
+    "platform": "musinsa",
+    "fit": "",
+    "cons": "",
+    "note": "신발에 13만 원을 쓰기 부담되면 컨버스의 척테일러 올스타 리프트 캔버스 화이트(54,500원 · 판매 페이지 50% 할인 표기)가 대안입니다.",
+    query: "컨버스 척테일러 올스타 리프트 캔버스 화이트 560251C"
+  },
+  "ootd": [
+    {
+      "role": "아우터",
+      "brand": "도프제이슨",
+      "name": "오버핏 비건레더 보머 자켓",
+      "sku": "DJCOVLJ002BLK",
+      "price": 168000,
+      "salePrice": 91980,
+      "colors": "블랙",
+      "note": "블랙 비건레더 보머. 접이식 칼라, 앞 지퍼, 넓은 밑단 밴딩.",
+      "officialUrl": "https://www.musinsa.com/products/2086731",
+      query: "도프제이슨 오버핏 비건레더 보머 자켓 블랙"
+    },
+    {
+      "role": "상의",
+      "brand": "브렌슨",
+      "name": "(Renew Ver.) 루즈핏 2Way 스웨트 후드집업 (5Color)",
+      "sku": "BR721",
+      "price": 43700,
+      "salePrice": 19900,
+      "colors": "멜란지 그레이 외 5색",
+      "note": "멜란지 그레이 루즈핏 후드집업. 후드·드로스트링, 캥거루 포켓.",
+      "officialUrl": "https://www.musinsa.com/products/2385283",
+      query: "브렌슨 루즈핏 2Way 스웨트 후드집업 멜란지 그레이"
+    },
+    {
+      "role": "이너",
+      "brand": "페르노브",
+      "name": "에센셜 반팔 티셔츠 5color",
+      "sku": "FNDHS14",
+      "price": 30000,
+      "salePrice": 12900,
+      "colors": "화이트 외 5색",
+      "note": "흰 크루넥 반팔 티셔츠. 후드 지퍼 사이로 한 줄만 보이게.",
+      "officialUrl": "https://www.musinsa.com/products/6183432",
+      query: "페르노브 에센셜 반팔 티셔츠 화이트"
+    },
+    {
+      "role": "하의",
+      "brand": "플랙",
+      "name": "MINIMAL O07 023 STRAIGHT DARK INDIGO",
+      "sku": "PJTI5SZO071DI1",
+      "price": 99000,
+      "salePrice": 59400,
+      "colors": "다크 인디고",
+      "note": "진청 스트레이트 데님. 밑단이 신발 위에서 한 번 쌓이는 기장.",
+      "officialUrl": "https://www.musinsa.com/products/4847057",
+      query: "플랙 MINIMAL O07 023 스트레이트 다크 인디고 데님"
+    },
+    {
+      "role": "신발",
+      "brand": "뉴발란스",
+      "name": "NBPDGF718W / MR530SG (WHITE)",
+      "sku": "NBPDGF718W",
+      "price": 139000,
+      "salePrice": 129000,
+      "colors": "화이트·실버",
+      "note": "메쉬·스웨트 러닝화. 두툼한 미드솔, 흰색 위주.",
+      "officialUrl": "https://www.musinsa.com/products/4238000",
+      query: "뉴발란스 MR530SG 화이트"
+    },
+    {
+      "role": "가방",
+      "brand": "노이즈",
+      "name": "크랙 레더 보스턴 트래블백 - 블랙",
+      "sku": "NM5APB6110BK",
+      "price": 89000,
+      "salePrice": 69000,
+      "colors": "블랙",
+      "note": "크랙 레더 보스턴백. 짧은 손잡이, 어깨에 걸치는 크기.",
+      "officialUrl": "https://www.musinsa.com/products/4694157",
+      query: "노이즈 크랙 레더 보스턴 트래블백 블랙"
+    },
+    {
+      "role": "모자",
+      "brand": "파르티멘토",
+      "name": "홀가먼트 울 비니 블랙",
+      "sku": "PRAN-2601 BK",
+      "price": 41200,
+      "salePrice": 31260,
+      "colors": "블랙",
+      "note": "이음새 없는 울 비니. 후드 안에 넣어도 정수리가 두껍지 않음.",
+      "officialUrl": "https://www.musinsa.com/products/7602119",
+      query: "파르티멘토 홀가먼트 울 비니 블랙"
+    }
+  ],
+  "palette": [
+    "#1b1b1d",
+    "#9d9d9c",
+    "#f2f0ea"
+  ],
+  "num": 72
+},
+{
+  "id": "soyeon-drape-denim",
+  "celeb": "소연",
+  "group": "(여자)아이들",
+  "type": "airport",
+  "show": "공항",
+  "line": "match",
+  "scene": "2026.11.27 오후 인천국제공항 제2여객터미널 출국 (KPOP PLANET in TAIPEI)",
+  "category": "top",
+  "mood": [
+    "street",
+    "chic"
+  ],
+  "headline": "그레이 드레이프 블라우스 + 숏 데님 + 니하이 부츠",
+  "image": "assets/looks/soyeon-drape-denim.webp?v=2026112801",
+  "imageJpg": "assets/looks/soyeon-drape-denim.jpg?v=2026112801",
+  "model": "윤세라",
+  "modelId": "yun-sera",
+  "photo": {
+    "label": "뉴스엔 · 일간스포츠",
+    "kind": "photo",
+    "what": "2026.11.27 인천국제공항 제2여객터미널 출국 현장 촬영",
+    "url": "https://www.newsen.com/news_view.php?uid=202611271556073510"
+  },
+  "imageAlt": "스타핏픽 전속 AI 모델 윤세라가 연회색 드레이프 스카프 블라우스에 쿨그레이 숏 데님, 버클 장식 블랙 레더 니하이 플랫폼 부츠, 블랙 퀼팅 체인 숄더백, 블랙 스퀘어 선글라스를 착용하고 공항을 걷는 연출 컷",
+  "mediaType": "공항·출국",
+  "program": "인천국제공항",
+  "item": {
+    "brand": "페이지플린",
+    "brandEn": "PAIGEFLYNN",
+    "name": "드레이프 스카프 블라우스_P6CBL008C",
+    "sku": "P6CBL008C",
+    "price": 83000,
+    "salePrice": 41500,
+    "saleNote": "무신사 50% 할인가 · 2026-11-28 확인",
+    "material": "폴리에스터 100% (판매 페이지 표기)",
+    "colors": "라이트 그레이 (판매 페이지 대표 컬러)",
+    "sizes": "판매 페이지 표기 (구매처 확인)",
+    "maker": "페이지플린 / 한국",
+    "season": "2025 FW",
+    "fit": "어깨가 여유 있게 떨어지는 오버핏. 목에는 카울처럼 겹쳐지는 스카프 드레이프, 앞으로 길게 흘러내리는 스카프 패널, 소매 끝 단추 커프스",
+    "cons": "폴리에스터 새틴이라 정전기가 붙기 쉽고, 스카프 패널이 길어 가방을 멜 때 천이 자주 끼며, 흰 톤이라 겨울 코트 안쪽과 마찰하면 보풀이 생깁니다",
+    "officialUrl": "https://www.musinsa.com/products/7495399"
+  },
+  "story": "11월 27일 오후 인천국제공항 제2여객터미널. 'KPOP PLANET in TAIPEI' 공연을 위해 타이베이로 떠나는 (여자)아이들 소연은 짙은 회색 옷 한 벌에 검정 롱부츠, 검정 사각 선글라스만 더하고 나타났습니다. 목에는 스카프를 두른 것처럼 천이 겹겹이 쌓여 있고, 아래로는 짧은 데님과 무릎을 넘는 부츠. 겨울 공항에서 대부분이 코트를 꺼내 입을 때, 그는 얇은 옷 한 장과 두꺼운 신발 하나로 계절을 맞췄습니다. 이 조합이 성립하는 이유는 어깨부터 허리까지의 천 부피와, 무릎부터 발끝까지의 검정 덩어리가 서로 균형을 잡기 때문입니다.",
+  "point": "소연의 상체에서 먼저 보이는 건 목입니다. 스카프를 따로 두른 것처럼 천이 턱 아래에서 한 번 접히고, 그 끝이 가슴 앞으로 길게 떨어집니다. 실제로는 블라우스에 붙어 있는 드레이프입니다. 카울 네크라인이 목을 감싸고, 같은 천이 세로로 길게 늘어져 몸통을 반으로 가릅",
+  "verified": "뉴스엔 202611271556073510(2026.11.27 15:56, 지수진 기자)와 일간스포츠 isp202611270083(2026.11.27 14:56) 보도로 (여자)아이들 소연이 11월 27일 오후 인천국제공항 제2여객터미널을 통해 'KPOP PLANET in TAIPEI' 공연 일정으로 대만 타이베이로 출국했음을 확인했습니다. 같은 날 촬영된 출국 사진에서 연회색 드레이프 스카프 블라우스(카울처럼 겹치는 목선·앞으로 흘러내리는 패널)에 워시드 그레이 숏 데님, 하네스 버클이 달린 블랙 레더 니하이 플랫폼 부츠, 블랙 사각 선글라스, 카키·올리브 톤 퀼팅 체인 숄더백, 긴 검정 네일을 확인했습니다. 일간스포츠는 이날 소연의 차림을 '선글라스 낀 시크한 공항룩'으로 전했습니다. 착용 제품의 브랜드는 보도에서 확정되지 않아 같은 색·같은 실루엣의 실제 판매 제품으로 구성했고, 가방은 원본과 색이 달라 검정 퀼팅백으로 대체했습니다. 상품명·품번·가격은 무신사 판매 페이지에서 2026.11.28 확인했습니다.",
+  "sources": [
+    {
+      "label": "뉴스엔 · 일간스포츠 — 소연 착장",
+      "url": "https://www.newsen.com/news_view.php?uid=202611271556073510"
+    },
+    {
+      "label": "페이지플린 드레이프 스카프 블라우스_P6CBL008C",
+      "url": "https://www.musinsa.com/products/7495399"
+    },
+    {
+      "label": "살롱드서울 하이웨이스트 A라인 데님 숏팬츠W - 쿨 그레이",
+      "url": "https://www.musinsa.com/products/5528867"
+    },
+    {
+      "label": "착한구두 렉터 하네스 플랫폼 롱부츠 BLLTR4i160",
+      "url": "https://www.musinsa.com/products/7096520"
+    },
+    {
+      "label": "마뗑킴 BIAS QUILTED CHAIN SHOULDER BAG IN BLACK",
+      "url": "https://www.musinsa.com/products/7541632"
+    },
+    {
+      "label": "백퍼센트 레제르 스퀘어, 폴리쉬드 블랙 - 스모크",
+      "url": "https://www.musinsa.com/products/4652637"
+    },
+    {
+      "label": "바스카라 VS5828 (4color) SUNGLASSES (대안)",
+      "url": "https://www.musinsa.com/products/4426826"
+    }
+  ],
+  "alt": {
+    "brand": "바스카라",
+    "name": "VS5828 (4color) SUNGLASSES",
+    "price": 22100,
+    "was": 22100,
+    "url": "https://www.musinsa.com/products/4426826",
+    "platform": "musinsa",
+    "fit": "",
+    "cons": "",
+    "note": "선글라스에 16만 원을 쓰기 부담되면 바스카라의 VS5828 선글라스(22,100원 · 판매 페이지 61% 할인 표기)가 대안입니다.",
+    query: "바스카라 VS5828 (4color) SUNGLASSES"
+  },
+  "ootd": [
+    {
+      "role": "상의",
+      "brand": "페이지플린",
+      "name": "드레이프 스카프 블라우스_P6CBL008C",
+      "sku": "P6CBL008C",
+      "price": 83000,
+      "salePrice": 41500,
+      "colors": "라이트 그레이",
+      "note": "카울 드레이프 목선, 앞으로 흘러내리는 스카프 패널, 단추 커프스.",
+      "officialUrl": "https://www.musinsa.com/products/7495399",
+      query: "페이지플린 드레이프 스카프 블라우스 라이트 그레이"
+    },
+    {
+      "role": "하의",
+      "brand": "살롱드서울",
+      "name": "하이웨이스트 A라인 데님 숏팬츠W - 쿨 그레이",
+      "sku": "HPS5",
+      "price": 56000,
+      "salePrice": 39200,
+      "colors": "쿨 그레이",
+      "note": "짙은 회색 워싱 숏 데님. 하이웨이스트 A라인, 흰 스티치.",
+      "officialUrl": "https://www.musinsa.com/products/5528867",
+      query: "살롱드서울 하이웨이스트 A라인 데님 숏팬츠 쿨 그레이"
+    },
+    {
+      "role": "신발",
+      "brand": "착한구두",
+      "name": "렉터 하네스 플랫폼 롱부츠 BLLTR4i160",
+      "sku": "BLLTR4i160",
+      "price": 85900,
+      "salePrice": 73010,
+      "colors": "블랙",
+      "note": "무릎 위까지 오는 블랙 레더 롱부츠. 하네스 버클, 두꺼운 러그 밑창.",
+      "officialUrl": "https://www.musinsa.com/products/7096520",
+      query: "착한구두 렉터 하네스 플랫폼 롱부츠 블랙"
+    },
+    {
+      "role": "가방",
+      "brand": "마뗑킴",
+      "name": "BIAS QUILTED CHAIN SHOULDER BAG IN BLACK",
+      "sku": "MK269OBG083MBB",
+      "price": 168000,
+      "salePrice": 136080,
+      "colors": "블랙",
+      "note": "다이아몬드 퀼팅 숄더백. 은색 체인 스트랩, 작은 사이즈.",
+      "officialUrl": "https://www.musinsa.com/products/7541632",
+      query: "마뗑킴 BIAS 퀼팅 체인 숄더백 블랙"
+    },
+    {
+      "role": "액세서리",
+      "brand": "백퍼센트",
+      "name": "레제르 스퀘어, 폴리쉬드 블랙 - 스모크",
+      "sku": "60020-00009",
+      "price": 180000,
+      "salePrice": 162000,
+      "colors": "폴리쉬드 블랙·스모크 렌즈",
+      "note": "두꺼운 사각 아세테이트 선글라스. 넓은 프레임, 짙은 렌즈.",
+      "officialUrl": "https://www.musinsa.com/products/4652637",
+      query: "백퍼센트 레제르 스퀘어 선글라스 블랙"
+    }
+  ],
+  "palette": [
+    "#cfcfcc",
+    "#2a2a2c",
+    "#8d8a83"
+  ],
+  "num": 73
+}
 ];
