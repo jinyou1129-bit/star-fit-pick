@@ -227,7 +227,7 @@ def main():
                 works["패밀리 사이트 링크 없음"].append((name, site))
 
         for m in re.finditer(r"\d+편 전체 보기", s):
-            if m.group(0) != "73편 전체 보기":
+            if m.group(0) != "76편 전체 보기":
                 works["구형 편수 문구"].append((name, m.group(0)))
 
     if works_products:
